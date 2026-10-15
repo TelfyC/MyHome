@@ -163,6 +163,34 @@ export function buildHome() {
     const bounds=new THREE.Box3().setFromObject(leaf);
     colliders.push({minX:bounds.min.x,maxX:bounds.max.x,minZ:bounds.min.z,maxZ:bounds.max.z,name:'open door'});
   }
+  function kitchenSlidingDoor(x:number,z1:number,z2:number) {
+    const width=z2-z1;
+    const panelWidth=width/2;
+    const trackX=x+.155;
+    wall(x,z1,x,z2,.55,2.15);
+    for(const z of [z1,z2]) box(x,1.075,z,.055,2.15,.08,doorFrame,architecture);
+    box(x,2.15,(z1+z2)/2,.25,.055,width+.07,doorFrame,architecture);
+    // The two panels park against the wall on opposite sides of the opening.
+    box(trackX,2.105,(z1+z2)/2,.025,.025,width*2+.12,metal,architecture);
+    for(const [index,centerZ] of [z1-panelWidth/2,z2+panelWidth/2].entries()) {
+      const panel=new THREE.Group();
+      panel.name=`厨房移门${index+1}`;
+      panel.position.set(trackX,0,centerZ);
+      architecture.add(panel);
+      const height=2.08,bottom=.015,border=.034,bar=.022;
+      for(const dz of [-1,1]) box(0,bottom+height/2,dz*(panelWidth-border)/2,.045,height,border,doorFrame,panel,.003);
+      for(const y of [bottom+border/2,bottom+height-border/2]) box(0,y,0,.045,border,panelWidth,doorFrame,panel,.003);
+      const paneHeight=(height-border*2-bar*3)/4;
+      for(let row=0;row<4;row++) {
+        const y=bottom+border+paneHeight/2+row*(paneHeight+bar);
+        box(0,y,0,.018,paneHeight,panelWidth-border*2,doorGlass,panel);
+        if(row<3) box(0,bottom+border+paneHeight+bar/2+row*(paneHeight+bar),0,.045,bar,panelWidth-border*2,doorFrame,panel,.002);
+      }
+      box(-.04,1.03,index===0?panelWidth/2-.09:-panelWidth/2+.09,.045,.13,.025,metal,panel,.008);
+      const bounds=new THREE.Box3().setFromObject(panel);
+      colliders.push({minX:bounds.min.x,maxX:bounds.max.x,minZ:bounds.min.z,maxZ:bounds.max.z,name:'kitchen sliding door'});
+    }
+  }
   // Dimensions are taken from newStructure.jpg; partitions follow the accepted design.
   // Guest and master side walls have no windows, as confirmed by the user.
   wall(X.guestWest,0,2.685,0);windowWall(2.685,0,4.035,0);wall(4.035,0,X.bathroomWest,0);
@@ -179,7 +207,7 @@ export function buildHome() {
   wall(X.livingEast,Z.upperBalconyNorth,X.livingEast,0);
   wall(X.livingEast,0,10.685,0);windowWall(10.685,0,11.785,0);wall(11.785,0,X.kitchenEast,0);
   wall(X.kitchenEast,0,X.kitchenEast,.975);windowWall(X.kitchenEast,.975,X.kitchenEast,2.10,1.2);wall(X.kitchenEast,2.10,X.kitchenEast,Z.kitchenSouth);
-  wall(X.livingEast,0,X.livingEast,.75);doorGap(X.livingEast,.75,X.livingEast,1.8,false,1);wall(X.livingEast,1.8,X.livingEast,Z.kitchenSouth);
+  wall(X.livingEast,0,X.livingEast,.75);kitchenSlidingDoor(X.livingEast,.75,1.8);wall(X.livingEast,1.8,X.livingEast,Z.kitchenSouth);
   wall(X.livingEast,Z.kitchenSouth,X.kitchenEast,Z.kitchenSouth);
   // Entrance and the existing stepped living-room contour.
   wall(X.entranceEast,Z.kitchenSouth,X.entranceEast,2.89);doorGap(X.entranceEast,2.89,X.entranceEast,3.91,false,1);wall(X.entranceEast,3.91,X.entranceEast,Z.entranceSouth);
