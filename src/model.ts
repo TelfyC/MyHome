@@ -79,7 +79,11 @@ export function buildHome() {
   const wallMat=mat(HOME_STYLE.wall,.93);
   const capMat=mat('#b8ac99');
   const archWhite=mat(HOME_STYLE.trim),archMetal=metal.clone(),archGlass=glass.clone();
-  architecturalMaterials.push(wallMat,capMat,archWhite,archMetal,archGlass);
+  const windowFrame=mat(HOME_STYLE.windowFrame,.57,.12);windowFrame.name='黑色窗框';
+  const doorFrame=mat(HOME_STYLE.doorFrame,.48);doorFrame.name='白色细框玻璃门骨架';
+  // Opaque frosting: no transparency or transmission, including at night.
+  const doorGlass=mat(HOME_STYLE.doorGlass,.88);doorGlass.name='不透明乳白磨砂门玻璃';
+  architecturalMaterials.push(wallMat,capMat,archWhite,archMetal,archGlass,windowFrame,doorFrame,doorGlass);
   function box(x:number,y:number,z:number,w:number,h:number,d:number,m:THREE.Material=white,parent:THREE.Object3D=furniture,round=0) {
     const mesh=new THREE.Mesh(round?new RoundedBoxGeometry(w,h,d,2,Math.min(round,w/3,h/3,d/3)):new THREE.BoxGeometry(w,h,d),m);
     mesh.position.set(x,y,z);mesh.castShadow=true;mesh.receiveShadow=true;parent.add(mesh);return mesh;
@@ -131,18 +135,28 @@ export function buildHome() {
     wall(x1,z1,x2,z2,sill);wall(x1,z1,x2,z2,WALL_HEIGHT-top,top);
     const x=(x1+x2)/2,z=(z1+z2)/2;
     box(x,(sill+top)/2,z,alongX?len:.035,top-sill,alongX?.035:len,archGlass,architecture);
-    for(const y of [sill,top]) box(x,y,z,alongX?len:.12,.045,alongX?.12:len,archWhite,architecture);
-    for(let i=0;i<=panes;i++) box(x1+(x2-x1)*i/panes,(sill+top)/2,z1+(z2-z1)*i/panes,alongX?.045:.12,top-sill,alongX?.12:.045,archWhite,architecture);
+    for(const y of [sill,top]) box(x,y,z,alongX?len:.12,.045,alongX?.12:len,windowFrame,architecture);
+    for(let i=0;i<=panes;i++) box(x1+(x2-x1)*i/panes,(sill+top)/2,z1+(z2-z1)*i/panes,alongX?.045:.12,top-sill,alongX?.12:.045,windowFrame,architecture);
     box(x,sill-.025,z,alongX?len+.08:.34,.045,alongX?.34:len+.08,archWhite,architecture);
   }
   function doorGap(x1:number,z1:number,x2:number,z2:number,hingeAtEnd=false,swing=1) {
     const alongX=Math.abs(x2-x1)>.01,len=Math.hypot(x2-x1,z2-z1);
     wall(x1,z1,x2,z2,.55,2.15);
-    for(const [x,z] of [[x1,z1],[x2,z2]]) box(x,1.075,z,alongX?.055:.25,2.15,alongX?.25:.055,archWhite,architecture);
-    box((x1+x2)/2,2.15,(z1+z2)/2,alongX?len+.07:.25,.055,alongX?.25:len+.07,archWhite,architecture);
+    for(const [x,z] of [[x1,z1],[x2,z2]]) box(x,1.075,z,alongX?.055:.25,2.15,alongX?.25:.055,doorFrame,architecture);
+    box((x1+x2)/2,2.15,(z1+z2)/2,alongX?len+.07:.25,.055,alongX?.25:len+.07,doorFrame,architecture);
     const leaf=new THREE.Group();leaf.userData.calibrated=true;leaf.position.set(hingeAtEnd?x2:x1,0,hingeAtEnd?z2:z1);furniture.add(leaf);
     const sign=hingeAtEnd?-1:1;
-    box(sign*len/2,1.04,0,len-.045,2.08,.045,oak,leaf,.015);
+    const width=len-.045,height=2.08,bottom=.015,border=.034,bar=.022,cx=sign*len/2;
+    // One central vertical bar and three horizontal bars form exactly 2 × 4 panes.
+    for(const dx of [-1,1]) box(cx+dx*(width-border)/2,bottom+height/2,0,border,height,.045,doorFrame,leaf,.003);
+    for(const y of [bottom+border/2,bottom+height-border/2]) box(cx,y,0,width,border,.045,doorFrame,leaf,.003);
+    box(cx,bottom+height/2,0,bar,height-border*2,.045,doorFrame,leaf,.002);
+    const paneWidth=(width-border*2-bar)/2,paneHeight=(height-border*2-bar*3)/4;
+    for(let row=0;row<4;row++) {
+      const y=bottom+border+paneHeight/2+row*(paneHeight+bar);
+      for(const side of [-1,1]) box(cx+side*(paneWidth+bar)/2,y,0,paneWidth,paneHeight,.018,doorGlass,leaf);
+      if(row<3) box(cx,bottom+border+paneHeight+bar/2+row*(paneHeight+bar),0,width-border*2,bar,.045,doorFrame,leaf,.002);
+    }
     box(sign*(len-.13),1.03,-.045,.13,.025,.045,metal,leaf,.008);
     leaf.rotation.y=(alongX?0:-Math.PI/2)+swing*Math.PI/2;
     // Doors stay open; their leaves are slim obstacles but the original opening is passable.
@@ -191,8 +205,8 @@ export function buildHome() {
   const glassPanel=box(X.studyEast,(GLASS.top+GLASS.sill)/2,(GLASS.z1+GLASS.z2)/2,.035,GLASS.top-GLASS.sill,GLASS.z2-GLASS.z1,archGlass,architecture);
   glassPanel.name='fixed-study-glass';glassPanel.castShadow=false;
   obstruction(X.studyEast,(GLASS.z1+GLASS.z2)/2,.1,GLASS.z2-GLASS.z1,'fixed glass',false);
-  for(const z of [GLASS.z1,GLASS.z2]) box(X.studyEast,(GLASS.sill+GLASS.top)/2,z,.07,GLASS.top-GLASS.sill,.04,archWhite,architecture);
-  for(const y of [GLASS.sill,GLASS.top]) box(X.studyEast,y,(GLASS.z1+GLASS.z2)/2,.07,.04,GLASS.z2-GLASS.z1,archWhite,architecture);
+  for(const z of [GLASS.z1,GLASS.z2]) box(X.studyEast,(GLASS.sill+GLASS.top)/2,z,.07,GLASS.top-GLASS.sill,.04,windowFrame,architecture);
+  for(const y of [GLASS.sill,GLASS.top]) box(X.studyEast,y,(GLASS.z1+GLASS.z2)/2,.07,.04,GLASS.z2-GLASS.z1,windowFrame,architecture);
   const curtain=new THREE.Group();architecture.add(curtain);
   const curtainMat=fabric.clone();curtainMat.side=THREE.DoubleSide;architecturalMaterials.push(curtainMat);
   const curtainPanels:THREE.Mesh[]=[];
@@ -206,23 +220,83 @@ export function buildHome() {
   const shadowCanvas=document.createElement('canvas');shadowCanvas.width=shadowCanvas.height=128;
   const sc=shadowCanvas.getContext('2d')!,sg=sc.createRadialGradient(64,64,8,64,64,64);sg.addColorStop(0,'rgba(50,40,28,.26)');sg.addColorStop(.5,'rgba(50,40,28,.13)');sg.addColorStop(1,'rgba(50,40,28,0)');sc.fillStyle=sg;sc.fillRect(0,0,128,128);
   const shadowMat=new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(shadowCanvas),transparent:true,depthWrite:false});
-  function contact(x:number,z:number,w:number,d:number) {const mesh=new THREE.Mesh(new THREE.PlaneGeometry(w,d),shadowMat);mesh.rotation.x=-Math.PI/2;mesh.position.set(x,.028,z);furniture.add(mesh);}
+  function contact(x:number,z:number,w:number,d:number) {const mesh=new THREE.Mesh(new THREE.PlaneGeometry(w,d),shadowMat);mesh.rotation.x=-Math.PI/2;mesh.position.set(x,.028,z);furniture.add(mesh);return mesh;}
   function rug(x:number,z:number,w:number,d:number,color='#d6ccb9') {
     const m=mat(color);m.map=linenTex;m.bumpMap=linenTex;m.bumpScale=.02;
     box(x,.036,z,w,.025,d,m,furniture,.012);
     for(let k=0;k<2;k++) {box(x,.05,z+(d/2-.08)*(k?1:-1),w-.12,.004,.012,oatmeal);}
   }
-  function plant(x:number,z:number,size=.65,base=0) {
-    const pot=mat('#e3ddcc');cylinder(x,base+size*.2,z,size*.22,size*.4,pot,furniture,size*.17);
-    cylinder(x,base+size*.405,z,size*.185,.014,mat('#514638'));
-    const leafMats=[mat('#6a8052'),mat('#8c9d67'),mat('#4f6a43')];
-    for(let i=0;i<11;i++) {
-      const a=i*2.4, h=size*(.65+random()*.6);
-      const end=new THREE.Vector3(x+Math.sin(a)*size*.35,base+h,z+Math.cos(a)*size*.35);
-      const start=new THREE.Vector3(x,base+size*.4,z),delta=end.clone().sub(start);
-      const stem=new THREE.Mesh(new THREE.CylinderGeometry(.008,.012,delta.length(),5),leafMats[2]);stem.position.copy(start.add(end).multiplyScalar(.5));stem.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),delta.normalize());furniture.add(stem);
-      const leaf=sphere(end.x,end.y,end.z,size*.115,size*.28,size*.045,leafMats[i%3]);leaf.rotation.set(.4*Math.cos(a),a,.8*Math.sin(a));
+  const plantPot=mat('#d8cbb7',.91),plantSoil=mat('#46372b'),plantBark=mat('#786046');
+  const plantStem=mat('#45603a');
+  const leafMats=['#315d37','#547949','#77915b'].map(color=>{
+    const m=mat(color,.53);m.side=THREE.DoubleSide;return m;
+  });
+  function plant(x:number,z:number,size=.65,base=0,kind:'rubber'|'lily'|'pothos'='pothos') {
+    // Keep each complete plant together when the room coordinates are calibrated.
+    const group=new THREE.Group();group.position.set(x,0,z);group.name=`plant-${kind}`;furniture.add(group);
+    const potHeight=size*.30,potRadius=size*.17;
+    cylinder(0,base+potHeight/2,0,potRadius,potHeight,plantPot,group,potRadius*.78);
+    cylinder(0,base+potHeight+.003,0,potRadius*.88,.008,plantSoil,group);
+    const rim=new THREE.Mesh(new THREE.TorusGeometry(potRadius*.96,size*.009,8,32),plantPot);
+    rim.rotation.x=Math.PI/2;rim.position.y=base+potHeight;rim.castShadow=true;group.add(rim);
+    function stem(start:THREE.Vector3,end:THREE.Vector3,radius:number,material=plantStem) {
+      const middle=start.clone().lerp(end,.5);middle.y+=size*.035;
+      const mesh=new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([start,middle,end]),7,radius,5,false),material);
+      mesh.castShadow=true;group.add(mesh);
     }
+    function leaf(start:THREE.Vector3,end:THREE.Vector3,width:number,material:THREE.Material) {
+      // A thin, curved surface with pointed ends and a raised midrib reads as a
+      // real broad leaf from both sides, instead of a thick upright ellipsoid.
+      const direction=end.clone().sub(start),length=direction.length();
+      const side=new THREE.Vector3(direction.z,0,-direction.x).normalize();
+      if(side.lengthSq()<.01)side.set(1,0,0);
+      const normal=direction.clone().cross(side).normalize();
+      const vertices:number[]=[],uv:number[]=[],indices:number[]=[];
+      const centerAt=(t:number)=>start.clone().addScaledVector(direction,t).add(new THREE.Vector3(0,Math.sin(t*Math.PI)*length*.13,0));
+      for(let row=0;row<=10;row++) {
+        const t=row/10,outline=Math.pow(Math.sin(t*Math.PI),.72);
+        for(let column=0;column<=4;column++) {
+          const across=column/2-1;
+          const point=centerAt(t).addScaledVector(side,across*width*outline)
+            .addScaledVector(normal,(1-Math.abs(across))*outline*length*.055);
+          vertices.push(point.x,point.y,point.z);uv.push(column/4,t);
+          if(row<10&&column<4) {
+            const i=row*5+column;indices.push(i,i+5,i+1,i+1,i+5,i+6);
+          }
+        }
+      }
+      const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));
+      geometry.setAttribute('uv',new THREE.Float32BufferAttribute(uv,2));geometry.setIndex(indices);geometry.computeVertexNormals();
+      const mesh=new THREE.Mesh(geometry,material);mesh.castShadow=true;mesh.receiveShadow=true;group.add(mesh);
+      const veinCurve=new THREE.CatmullRomCurve3([start,centerAt(.5).addScaledVector(normal,length*.055+size*.001),end]);
+      group.add(new THREE.Mesh(new THREE.TubeGeometry(veinCurve,10,size*.0018,4,false),plantStem));
+    }
+    if(kind==='rubber') {
+      stem(new THREE.Vector3(0,base+potHeight*.8,0),new THREE.Vector3(size*.025,base+size*1.12,0),size*.012,plantBark);
+      for(let i=0;i<14;i++) {
+        const angle=i*2.4,level=i/13,spread=size*(.29-.08*level);
+        const start=new THREE.Vector3(size*.02,base+size*(.43+.67*level),0);
+        const joint=new THREE.Vector3(Math.sin(angle)*spread*.47,start.y+size*.045,Math.cos(angle)*spread*.47);
+        const tip=new THREE.Vector3(Math.sin(angle)*spread*1.2,base+size*(.50+.70*level),Math.cos(angle)*spread*1.2);
+        stem(start,joint,size*.0045,plantBark);leaf(joint,tip,size*(.095-.015*level),leafMats[i%3]);
+      }
+      leaf(new THREE.Vector3(size*.025,base+size*1.10,0),new THREE.Vector3(size*.10,base+size*1.25,size*.04),size*.065,leafMats[1]);
+    } else {
+      for(let i=0;i<13;i++) {
+        const angle=i*2.4,spread=size*(.30+random()*.23);
+        const start=new THREE.Vector3(0,base+potHeight,0);
+        const joint=new THREE.Vector3(Math.sin(angle)*spread*.25,base+size*(.43+random()*.12),Math.cos(angle)*spread*.25);
+        const tip=new THREE.Vector3(Math.sin(angle)*spread,base+size*(kind==='lily'?.72+random()*.48:.56+random()*.34),Math.cos(angle)*spread);
+        stem(start,joint,size*.004);leaf(joint,tip,size*(kind==='lily'?.09:.13),leafMats[i%3]);
+      }
+      if(kind==='pothos')for(let i=0;i<5;i++) {
+        const angle=i*2.4,start=new THREE.Vector3(0,base+potHeight,0);
+        const joint=new THREE.Vector3(Math.sin(angle)*size*.24,base+size*.38,Math.cos(angle)*size*.24);
+        const tip=new THREE.Vector3(Math.sin(angle)*size*.48,base+size*.17,Math.cos(angle)*size*.48);
+        stem(start,joint,size*.004);leaf(joint,tip,size*.12,leafMats[i%3]);
+      }
+    }
+    return group;
   }
   function table(x:number,z:number,w:number,d:number,h=.74,surface:THREE.Material=cherry) {
     contact(x,z,w+.4,d+.4);box(x,h,z,w,.07,d,surface,furniture,.045);
@@ -302,7 +376,12 @@ export function buildHome() {
   box(0,.978,.012,1.439,.809,.007,screen,tv,.006);
   box(0,.563,.013,.028,.004,.006,metal,tv,.001);
   obstruction(6.72,7.28,.42,1.80,'TV console');contact(6.72,7.28,.76,2.12);
-  sideTable(8.20,8.23);book(8.20,.505,8.23);plant(9.22,5.94,.57);
+  // Left when seated on the sofa facing the screen: the south end of the TV.
+  const tvPlantX=X.studyEast+.69,tvPlantZ=Z.livingStep+.35;
+  const tvPlant=plant(tvPlantX,tvPlantZ,1.35,0,'rubber');tvPlant.userData.calibrated=true;
+  obstruction(tvPlantX,tvPlantZ,.46,.46,'TV-side plant pot',false);
+  contact(tvPlantX,tvPlantZ,.70,.70).userData.calibrated=true;
+  sideTable(8.20,8.23);book(8.20,.505,8.23);plant(9.22,5.94,.57,0,'lily');
   cylinder(7.68,.28,10.02,.30,.46,fabric);contact(7.68,10.02,.8,.8);obstruction(7.68,10.02,.6,.6,'stool');
   lamp(8.10,9.85,.08,2.4);
   // Study: no large storage in front of borrowed-light glass.
@@ -387,7 +466,7 @@ export function buildHome() {
   const drum=cylinder(7.65,.46,.086,.21,.025,metal);drum.rotation.x=Math.PI/2;
   const drumGlass=cylinder(7.65,.46,.11,.16,.03,charcoal);drumGlass.rotation.x=Math.PI/2;
   box(7.65,.79,.077,.5,.09,.015,white);box(7.65,.94,-.25,.66,.06,.69,wood,furniture,.01);
-  obstruction(7.65,-.25,.66,.69,'laundry');plant(9.32,-.38,.65);plant(9.41,.45,.35);
+  obstruction(7.65,-.25,.66,.69,'laundry');plant(9.32,-.38,.65,0,'rubber');plant(9.41,.45,.35,0,'lily');
   wardrobe(11.12,5.63,.85,.34,1.12,-Math.PI/2);
   box(11.12,1.13,5.63,.36,.035,.87,cherry,furniture,.012);
   plant(11.11,5.6,.2,1.15);

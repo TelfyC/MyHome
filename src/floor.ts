@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { HOME_STYLE } from './style-palette';
 
 // The texture covers 1.60 × 2.40 m: 200 mm boards with staggered 1.20 m ends.
-// A pale warm wood-look tile, distinct from the richer cherry furniture.
+// A warm medium-brown wood-look tile, distinct from the cherry furniture.
 export const FLOOR_TILE_WIDTH = 1.6;
 export const FLOOR_TILE_LENGTH = 2.4;
 
@@ -118,12 +118,12 @@ export function createOakFloorMaterial() {
   bumpMap.anisotropy = 8;
 
   return new THREE.MeshStandardMaterial({
-    name: '浅暖木色柔光木纹砖 · 200 × 1200 mm 概念规格',
+    name: '暖棕木色柔光木纹砖 · 200 × 1200 mm 概念规格',
     color: '#ffffff',
     map,
     bumpMap,
     bumpScale: .00065,
-    roughness: .70,
+    roughness: .78,
     metalness: 0,
   });
 }
