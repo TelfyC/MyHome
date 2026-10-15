@@ -22,6 +22,12 @@ npm run test:e2e    # 浏览器交互、模型连通性与移动端检查，先�
 
 浏览器检查默认使用 `/usr/bin/google-chrome`，可通过 `CHROME_PATH` 指定可执行文件，通过 `BASE_URL` 更改测试地址。需要支持 WebGL 2 的浏览器。`dist` 可直接部署至静态网页服务器。
 
+## 在线网站
+
+网站地址：[https://telfyc.github.io/MyHome/](https://telfyc.github.io/MyHome/)。推送到 `main` 后，GitHub Actions 会自动安装依赖、运行单元测试、构建并发布到 GitHub Pages。也可以在仓库的 Actions 页面手动运行 `Deploy to GitHub Pages`。
+
+部署构建使用 `VITE_BASE_PATH=/MyHome/`，以适配 GitHub Pages 的仓库子路径；本地开发和普通构建仍使用根路径 `/`。
+
 ## 操作
 
 - 全屋鸟瞰：左键拖动旋转，滚轮缩放，右键平移；触屏单指旋转，双指缩放/平移。
