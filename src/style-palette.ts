@@ -1,0 +1,23 @@
+// Visual interpretation of docs/山月知心的家_装修总体风格指导.md.
+// These are rendering swatches, not verified paint codes or the creator's products.
+export const HOME_STYLE = {
+  wall: '#f3e8d8',
+  ceiling: '#f8f1e6',
+  cabinet: '#f2ebdf',
+  trim: '#eee4d5',
+  floor: { red: 222, green: 192, blue: 149, swatch: '#dec095' },
+  cherry: '#bd7e56',
+  cherryEdge: '#a76b47',
+  cherryFront: '#c68b63',
+  whiteOak: '#dec59e',
+  whiteOakEdge: '#cbb087',
+  linen: '#f1e8d9',
+  oatmeal: '#d1baa0',
+  sage: '#96a184',
+  stone: '#e5ded0',
+  daylight: '#fff7eb',
+  skyLight: '#f5f2e9',
+  reflectedLight: '#c4ad8d',
+  fillLight: '#f1f3ed',
+  lamplight: '#ffecd4',
+} as const;

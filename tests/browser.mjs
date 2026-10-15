@@ -18,8 +18,35 @@ try {
  const data=await diag();
  assert.equal(data.mode,'orbit');assert.equal(data.room,'all');assert.ok(data.triangles>100000,'real furnished geometry renders');assert.ok(data.meshes<350,'static batching keeps draw calls manageable');
  assert.ok(data.spawnChecks.every(r=>r.valid),'every room arrival point is collision-free');
+ // Check the geometry's shared anchors against the supplied measurements,
+ // including the user's confirmation that the 3.45 m includes the upper balcony.
+ const {X,Z}=data.sizing.anchors,t=data.sizing.wallThickness;
+ const near=(actual,expected,label)=>assert.ok(Math.abs(actual-expected)<1e-6,`${label}: ${actual} vs ${expected}`);
+ near(X.bathroomWest-X.guestWest-t,3.05,'guest clear width');
+ near(X.studyEast-X.studyWest-t,2.75,'study clear width');
+ near(Z.studySouth-Z.studyNorth-t,3.40,'study clear depth');
+ near(X.diningWest-X.bathroomWest-t,1.65,'central bathroom clear width');
+ near(Z.upperSouth-Z.north-t,3.70,'central bathroom clear depth');
+ near(X.kitchenEast-X.livingEast-t,2.62,'kitchen clear width');
+ near(Z.kitchenSouth-Z.north-t,2.44,'kitchen clear depth');
+ near(Z.kitchenSouth-Z.upperBalconyNorth-t,3.45,'dining plus upper balcony');
+ near(Z.studyNorth-Z.upperSouth-t,1.03,'public passage');
+ near(Z.masterSouth-t/2-Z.masterSleepingNorth,3.35,'master sleeping depth');
+ near(Z.livingStep-Z.kitchenSouth-t,4.60,'open living main depth');
+ near(X.lowerAlcoveEast-X.studyEast-t,1.95,'lower alcove width');
+ near(Z.livingSouth-Z.livingStep-t,1.80,'lower alcove depth');
+ assert.equal(data.windows.some(w=>Math.abs(w.x1-w.x2)<1e-6 &&
+   (Math.abs(w.x1-X.masterWest)<1e-6||Math.abs(w.x1-X.guestWest)<1e-6)),false,'both bedroom side windows must be absent');
+ assert.ok(data.windows.some(w=>Math.abs(w.z1-Z.masterSouth)<1e-6 && Math.abs(w.z2-Z.masterSouth)<1e-6),'master bottom window remains');
+ assert.ok(data.windows.some(w=>Math.abs(w.z1)<1e-6 && Math.abs(w.z2)<1e-6 && w.x1>X.guestWest && w.x2<X.bathroomWest),'guest top window remains');
+ const tvConsole=data.colliders.find(c=>c.name==='TV console');
+ near(tvConsole.maxX-tvConsole.minX,.42,'TV console product depth');
+ near(tvConsole.maxZ-tvConsole.minZ,1.80,'TV console product length');
  // Flood-fill the actual runtime collision layout: every room must connect to the entrance.
- const {rooms,outline,colliders}=data,step=.08,minX=-.4,minZ=-1.2,w=164,h=154;
+ const {rooms,outline,colliders}=data,step=.08;
+ const minX=Math.min(...outline.map(p=>p[0]))-.3,minZ=Math.min(...outline.map(p=>p[1]))-.3;
+ const w=Math.ceil((Math.max(...outline.map(p=>p[0]))-minX+.3)/step)+1;
+ const h=Math.ceil((Math.max(...outline.map(p=>p[1]))-minZ+.3)/step)+1;
  const free=new Uint8Array(w*h),visited=new Uint8Array(w*h);
  for(let iz=0;iz<h;iz++)for(let ix=0;ix<w;ix++)free[iz*w+ix]=Number(canOccupy(minX+ix*step,minZ+iz*step,outline,colliders));
  const index=([x,z])=>Math.round((z-minZ)/step)*w+Math.round((x-minX)/step);
@@ -54,6 +81,8 @@ try {
  await page.locator('[data-map="guest"]').click();await settled();assert.equal((await diag()).room,'guest');
  await page.locator('#labels-btn').click();await page.locator('.room-label').first().waitFor({state:'hidden'});assert.equal(await page.locator('.room-label:visible').count(),0);await page.locator('#labels-btn').click();
  await page.locator('#reference-btn').click();assert.equal(await page.locator('#reference-modal').evaluate(d=>d.open),true);
+ assert.match(await page.locator('#reference-image').getAttribute('src'),/dimensions.jpg$/);
+ await page.waitForFunction(()=>document.querySelector('#reference-image').naturalWidth>0);
  await page.locator('[data-ref="night"]').click();assert.match(await page.locator('#reference-image').getAttribute('src'),/night.png$/);await page.keyboard.press('Escape');
  await page.locator('#help-btn').click();await page.locator('#help-start').click();assert.equal(await page.locator('#help-modal').evaluate(d=>d.open),false);
  const downloadPromise=page.waitForEvent('download');await page.locator('#capture-btn').click();const download=await downloadPromise;assert.match(download.suggestedFilename(),/\.png$/);
@@ -68,5 +97,5 @@ try {
  const pad=await page.locator('[data-key="KeyS"]').boundingBox();await page.mouse.move(pad.x+pad.width/2,pad.y+pad.height/2);await page.mouse.down();await page.waitForTimeout(450);await page.mouse.up();
  const touchAfter=(await diag()).position;assert.ok(Math.hypot(touchBefore.x-touchAfter.x,touchBefore.z-touchAfter.z)>.01,'on-screen directions move camera');
  assert.deepEqual(errors,[],'no browser runtime errors');
- console.log('PASS: rendered 3D, all 9 room spawns and entrance paths, fixed-glass collision, keyboard/drag/touch navigation, all views, day/night, curtain, minimap, reference dialogs, PNG export, mobile layout; no browser errors.');
+ console.log('PASS: calibrated dimensions, both side windows removed, original end windows retained, product scales preserved, all 9 rooms reachable, collision, keyboard/drag/touch, all views, lighting, curtain, references, PNG export and mobile layout; no browser errors.');
 } catch(error) { const d=await diag();console.error('Last browser state:',JSON.stringify({mode:d.mode,room:d.room,keys:d.keys,frame:d.frame,position:d.position}));throw error; } finally {await browser.close();}

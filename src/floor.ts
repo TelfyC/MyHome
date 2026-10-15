@@ -1,7 +1,8 @@
 import * as THREE from 'three';
+import { HOME_STYLE } from './style-palette';
 
 // The texture covers 1.60 × 2.40 m: 200 mm boards with staggered 1.20 m ends.
-// Keep this independent of the furniture veneer so the floor stays pale and matte.
+// A pale warm wood-look tile, distinct from the richer cherry furniture.
 export const FLOOR_TILE_WIDTH = 1.6;
 export const FLOOR_TILE_LENGTH = 2.4;
 
@@ -28,20 +29,21 @@ export function createOakFloorMaterial() {
       const ctx = board.getContext('2d')!;
       const x = 0;
       const y = 0;
-      const tone = (random() - .5) * 7;
+      const tone = (random() - .5) * 6;
       ctx.save();
       ctx.beginPath();
       ctx.rect(x, y, boardWidth, boardLength);
       ctx.clip();
-      ctx.fillStyle = `rgb(${201 + tone},${190 + tone},${171 + tone})`;
+      const { red, green, blue } = HOME_STYLE.floor;
+      ctx.fillStyle = `rgb(${red + tone},${green + tone},${blue + tone})`;
       ctx.fillRect(x, y, boardWidth, boardLength);
 
       // Broad, feathered variations give the oak depth without a printed pinstripe look.
       const wash = ctx.createLinearGradient(x, y, x + boardWidth, y);
-      wash.addColorStop(0, 'rgba(255,251,239,.045)');
-      wash.addColorStop(.32, 'rgba(105,88,65,.025)');
-      wash.addColorStop(.72, 'rgba(255,251,239,.055)');
-      wash.addColorStop(1, 'rgba(105,88,65,.018)');
+      wash.addColorStop(0, 'rgba(255,245,224,.045)');
+      wash.addColorStop(.32, 'rgba(135,97,56,.025)');
+      wash.addColorStop(.72, 'rgba(255,245,224,.055)');
+      wash.addColorStop(1, 'rgba(135,97,56,.018)');
       ctx.fillStyle = wash;
       ctx.fillRect(x, y, boardWidth, boardLength);
 
@@ -116,12 +118,12 @@ export function createOakFloorMaterial() {
   bumpMap.anisotropy = 8;
 
   return new THREE.MeshStandardMaterial({
-    name: '低饱和浅橡木地板 · 200 × 1200 mm',
+    name: '浅暖木色柔光木纹砖 · 200 × 1200 mm 概念规格',
     color: '#ffffff',
     map,
     bumpMap,
-    bumpScale: .002,
-    roughness: .86,
+    bumpScale: .00065,
+    roughness: .70,
     metalness: 0,
   });
 }

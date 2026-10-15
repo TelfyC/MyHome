@@ -5,6 +5,8 @@ import { buildHome } from './model';
 import { rooms, outline, roomById } from './plan';
 import { moveWithCollision, pointInPolygon, canOccupy } from './navigation.mjs';
 import type { RoomId } from './plan';
+import { HOME_STYLE } from './style-palette';
+import { MEASUREMENTS, WALL_THICKNESS, X, Z } from './dimensions';
 
 export type Mode = 'orbit' | 'walk' | 'plan';
 export class HomeViewer {
@@ -21,9 +23,9 @@ export class HomeViewer {
   curtainClosed = false;
   keys = new Set<string>();
   yaw=0;pitch=0;
-  private hemisphere = new THREE.HemisphereLight('#edf2f2','#baa98c',1.35);
-  private sun = new THREE.DirectionalLight('#fff1d4',1.9);
-  private fill = new THREE.DirectionalLight('#dce9f3',.55);
+  private hemisphere = new THREE.HemisphereLight(HOME_STYLE.skyLight,HOME_STYLE.reflectedLight,1.55);
+  private sun = new THREE.DirectionalLight(HOME_STYLE.daylight,1.75);
+  private fill = new THREE.DirectionalLight(HOME_STYLE.fillLight,.65);
   private ground:THREE.Mesh;
   private labels: {element:HTMLButtonElement;position:THREE.Vector3}[]=[];
   private transition: {time:number;from:THREE.Vector3;to:THREE.Vector3;fromTarget:THREE.Vector3;toTarget:THREE.Vector3;done?:()=>void}|null=null;
@@ -41,7 +43,7 @@ export class HomeViewer {
     const software=debug && /swiftshader|llvmpipe|software|softpipe/i.test(String(gl.getParameter(debug.UNMASKED_RENDERER_WEBGL)));
     this.renderer.setPixelRatio(software?.65:Math.min(devicePixelRatio,1.75));
     this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.autoUpdate=false;this.renderer.shadowMap.needsUpdate=true;this.renderer.shadowMap.type=THREE.PCFShadowMap;
-    this.renderer.localClippingEnabled=true;this.renderer.toneMapping=THREE.ACESFilmicToneMapping;this.renderer.toneMappingExposure=.92;
+    this.renderer.localClippingEnabled=true;this.renderer.toneMapping=THREE.ACESFilmicToneMapping;this.renderer.toneMappingExposure=.98;
     this.renderer.outputColorSpace=THREE.SRGBColorSpace;
     container.prepend(this.renderer.domElement);
     this.renderer.domElement.setAttribute('aria-label','可旋转、缩放和漫游的装修房屋三维模型');
@@ -49,7 +51,7 @@ export class HomeViewer {
     this.scene.background=new THREE.Color('#e7e7df');
     const pmrem=new THREE.PMREMGenerator(this.renderer),environment=new RoomEnvironment();
     this.scene.environment=pmrem.fromScene(environment,.04).texture;
-    this.scene.environmentIntensity=.25;environment.dispose();pmrem.dispose();
+    this.scene.environmentIntensity=.28;environment.dispose();pmrem.dispose();
     this.scene.add(this.hemisphere,this.sun,this.fill,this.model.root);
     this.sun.position.set(-3,15,8);this.sun.target.position.set(5,0,5);this.scene.add(this.sun.target);
     this.sun.castShadow=true;this.sun.shadow.mapSize.set(2048,2048);this.sun.shadow.camera.left=-11;this.sun.shadow.camera.right=11;this.sun.shadow.camera.top=11;this.sun.shadow.camera.bottom=-11;
@@ -59,13 +61,13 @@ export class HomeViewer {
     this.ground.rotation.x=-Math.PI/2;this.ground.position.set(5,-.25,5);this.ground.receiveShadow=true;this.scene.add(this.ground);
     this.controls=new OrbitControls(this.camera,this.renderer.domElement);
     this.controls.enableDamping=true;this.controls.dampingFactor=.07;this.controls.maxPolarAngle=Math.PI/2-.05;this.controls.minDistance=3;this.controls.maxDistance=70;
-    this.controls.target.set(6,.3,5);this.camera.position.set(16,23,24);
+    this.controls.target.set(6,.3,4.27);this.camera.position.set(16,23,24);
     this.controls.addEventListener('start',()=>this.transition=null);
     this.addLabels();this.addEvents();
     new ResizeObserver(()=>this.resize()).observe(container);this.resize();
     this.reset(false);
     this.renderer.setAnimationLoop(t=>this.animate(t));
-    const diagnostics=()=>({mode:this.mode,room:this.activeRoom,night:this.night,cutaway:this.cutaway,curtain:this.curtainClosed,transitioning:!!this.transition,frame:this.frameCount,keys:[...this.keys],outline,rooms:rooms.map(r=>({id:r.id,spawn:r.spawn})),position:{x:this.camera.position.x,y:this.camera.position.y,z:this.camera.position.z},yaw:this.yaw,meshes:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,colliders:this.model.colliders,spawnChecks:rooms.map(r=>({id:r.id,valid:canOccupy(...r.spawn,outline,this.model.colliders)}))});
+    const diagnostics=()=>({mode:this.mode,room:this.activeRoom,night:this.night,cutaway:this.cutaway,curtain:this.curtainClosed,sizing:{source:'newStructure.jpg',measurements:MEASUREMENTS,wallThickness:WALL_THICKNESS,anchors:{X,Z}},windows:this.model.windows,transitioning:!!this.transition,frame:this.frameCount,keys:[...this.keys],outline,rooms:rooms.map(r=>({id:r.id,spawn:r.spawn})),position:{x:this.camera.position.x,y:this.camera.position.y,z:this.camera.position.z},yaw:this.yaw,meshes:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,colliders:this.model.colliders,spawnChecks:rooms.map(r=>({id:r.id,valid:canOccupy(...r.spawn,outline,this.model.colliders)}))});
     Object.assign(window,{__homeDiagnostics:diagnostics});
   }
   private resize() {const {clientWidth:w,clientHeight:h}=this.container;if(!w||!h)return;this.camera.aspect=w/h;this.camera.updateProjectionMatrix();this.renderer.setSize(w,h);this.dirty=true;}
@@ -167,9 +169,9 @@ export class HomeViewer {
     this.model.setCutaway(this.cutaway);this.hooks.onRoom('all');this.hooks.onMode('orbit');this.keys.clear();
     const aspect=this.container.clientWidth/this.container.clientHeight;
     const compact=aspect<1.1;
-    const target=new THREE.Vector3(6,compact?-2.3:.35,4.9);
+    const target=new THREE.Vector3(6,compact?-2.3:.35,4.27);
     const distanceScale=Math.max(1.25,1.1/aspect);
-    const pos=compact?target.clone().add(new THREE.Vector3(5.5,20.5,14).multiplyScalar(distanceScale)):new THREE.Vector3(11.5,19.5,17.5);
+    const pos=compact?target.clone().add(new THREE.Vector3(5.5,20.5,14).multiplyScalar(distanceScale)):new THREE.Vector3(11.5,19.5,16.87);
     if(animate)this.go(pos,target);else{this.camera.position.copy(pos);this.controls.target.copy(target);this.camera.lookAt(target);}
   }
   setMode(mode:Mode) {
@@ -177,7 +179,7 @@ export class HomeViewer {
     if(mode==='walk'){this.enterRoom((this.activeRoom==='all'?'entry':this.activeRoom) as RoomId);return;}
     this.mode=mode;this.camera.fov=40;this.camera.updateProjectionMatrix();this.controls.enabled=true;this.controls.enableRotate=mode!=='plan';this.model.ceilings.visible=false;this.renderer.shadowMap.needsUpdate=true;
     this.model.setCutaway(this.cutaway||mode==='plan');this.hooks.onMode(mode);
-    if(mode==='plan'){this.go(new THREE.Vector3(6,23,5.001),new THREE.Vector3(6,0,5));}
+    if(mode==='plan'){this.go(new THREE.Vector3(6,23,4.271),new THREE.Vector3(6,0,4.27));}
     else this.reset();
   }
   enterRoom(id:RoomId) {
@@ -188,10 +190,10 @@ export class HomeViewer {
     this.hooks.onRoom(id);this.hooks.onMode('walk');this.renderer.domElement.focus({preventScroll:true});
   }
   setNight(night:boolean) {
-    this.dirty=true;this.night=night;this.model.setNight(night);this.hemisphere.intensity=night?.35:1.35;this.sun.intensity=night?.24:1.9;this.fill.intensity=night?.15:.55;
-    this.sun.color.set(night?'#afc7ee':'#fff1d4');this.scene.environmentIntensity=night?.10:.25;
+    this.dirty=true;this.night=night;this.model.setNight(night);this.hemisphere.intensity=night?.40:1.55;this.sun.intensity=night?.20:1.75;this.fill.intensity=night?.17:.65;
+    this.sun.color.set(night?'#c3d1e3':HOME_STYLE.daylight);this.scene.environmentIntensity=night?.12:.28;
     this.scene.background=new THREE.Color(night?'#242c32':'#e7e7df');(this.ground.material as THREE.MeshStandardMaterial).color.set(night?'#252e34':'#e1e2da');
-    this.renderer.toneMappingExposure=night?1.35:.92;
+    this.renderer.toneMappingExposure=night?1.20:.98;
   }
   setCutaway(value:boolean) {this.renderer.shadowMap.needsUpdate=true;this.cutaway=value;this.model.setCutaway(this.mode==='walk'?false:this.mode==='plan'||value);}
   setCurtain(value:boolean) {this.renderer.shadowMap.needsUpdate=true;this.curtainClosed=value;this.model.setCurtain(value);}
