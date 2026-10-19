@@ -3,7 +3,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import { canOccupy } from '../src/navigation.mjs';
 
-const url=process.env.BASE_URL||'http://localhost:5173';
+const modelUrl=new URL(process.env.BASE_URL||'http://localhost:5173');
+modelUrl.searchParams.set('view','model');
+const url=modelUrl.href;
 const browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'/usr/bin/google-chrome',headless:true,args:['--no-sandbox','--enable-webgl','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const errors=[];
 const page=await browser.newPage({viewport:{width:1440,height:960},deviceScaleFactor:1});

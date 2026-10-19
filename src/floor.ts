@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { HOME_STYLE } from './style-palette';
 
 // The texture covers 1.60 × 2.40 m: 200 mm boards with staggered 1.20 m ends.
-// A warm medium-brown wood-look tile, distinct from the cherry furniture.
+// A warm medium-brown wood-look tile, paired with natural oak furniture.
 export const FLOOR_TILE_WIDTH = 1.6;
 export const FLOOR_TILE_LENGTH = 2.4;
 

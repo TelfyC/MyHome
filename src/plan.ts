@@ -8,8 +8,8 @@ export interface Room {
 const rect = (x1: number, z1: number, x2: number, z2: number): Point[] => [[x1,z1],[x2,z1],[x2,z2],[x1,z2]];
 export const rooms: Room[] = [
   { id:'living', name:'客厅', english:'LIVING ROOM', icon:'sofa', subtitle:'把中央，留给生活', dimension:'净宽 3.30 m · 公区主段进深 4.60 m',
-    description:'65 英寸电视搭配樱桃木色矮柜，居中正对沙发。暖白墙面、暖棕木纹地面与米色织物形成层次；电视仍会遮住部分景窗。',
-    features:['65 英寸电视 · 正对沙发','1.80 × 0.42 m 樱桃木色电视柜','电视左侧 · 约 1.7 m 阔叶绿植'],
+    description:'65 英寸电视搭配自然橡木矮柜，居中正对沙发。MUJI 风的暖白墙面、暖棕橡木纹地面与本色棉麻形成层次；电视仍会遮住部分景窗。',
+    features:['65 英寸电视 · 正对沙发','1.80 × 0.42 m 自然橡木电视柜','电视左侧 · 约 1.7 m 阔叶绿植'],
     polygon:[[X.studyEast,Z.studyNorth],[X.livingEast,Z.studyNorth],[X.livingEast,Z.livingStep],[X.lowerAlcoveEast,Z.livingStep],[X.lowerAlcoveEast,Z.livingSouth],[X.studyEast,Z.livingSouth]],center:[8.1,6.4],spawn:[8.35,6.65],look:[6.72,6.70],color:'#bba68a' },
   { id:'study', name:'书房 / 客卧', english:'STUDY & GUEST', icon:'book-open', subtitle:'一扇景窗，让光相遇', dimension:'净尺寸 2.75 × 3.40 m',
     description:'共享墙中段保留固定清玻璃，两端为实体承重段。双人桌靠原有外窗，高柜在上侧；客厅更新后的电视会遮住部分玻璃，隐私帘仍可收拢。',
@@ -24,8 +24,8 @@ export const rooms: Room[] = [
     features:['1.50 m 床垫','独立房门 · 保留实体墙','书桌与低收纳 · 灵活转换'],
     polygon:rect(X.guestWest,-.11,X.bathroomWest,Z.upperSouth),center:[3.56,2.0],spawn:[4.60,3.05],look:[3.4,1.3],color:'#b1b69a' },
   { id:'dining', name:'餐厅', english:'DINING ROOM', icon:'utensils', subtitle:'两个人，也认真吃饭', dimension:'宽 2.50 m · 含上方阳台总深 3.45 m',
-    description:'樱桃木色餐桌与长凳、活动椅建立暖棕层次，米色座垫和少量茶具柔化桌面。右侧保留从玄关通向阳台的主要通道。',
-    features:['1.20 × 0.70 m 樱桃木色餐桌','左侧长凳 · 右侧活动椅','独立餐桌吊灯'],
+    description:'自然橡木餐桌与长凳、活动椅建立暖棕层次，米色座垫和少量茶具柔化桌面。右侧保留从玄关通向阳台的主要通道。',
+    features:['1.20 × 0.70 m 自然橡木餐桌','左侧长凳 · 右侧活动椅','独立餐桌吊灯'],
     polygon:rect(X.diningWest,Z.diningNorth,X.livingEast,Z.kitchenSouth),center:[8.45,1.55],spawn:[9.2,2.45],look:[8.0,1.35],color:'#c0a27e' },
   { id:'kitchen', name:'厨房', english:'KITCHEN', icon:'cooking-pot', subtitle:'封闭 L 形，高效而明亮', dimension:'净尺寸 2.62 × 2.44 m',
     description:'保留封闭 L 形厨房，入口采用两扇向两侧滑开的磨砂玻璃移门。水槽沿上方窗布置，灶台在右侧，冰箱靠入口一侧，浅色柜体配易清洁台面。',

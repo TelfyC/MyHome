@@ -1,0 +1,47 @@
+import { chromium } from '@playwright/test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+const browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'/usr/bin/google-chrome',headless:true,args:['--no-sandbox','--enable-webgl','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const page=await browser.newPage({viewport:{width:1440,height:960},deviceScaleFactor:1});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));
+const diag=()=>page.evaluate(()=>window.__panoramaDiagnostics());
+const ready=id=>page.waitForFunction(id=>window.__panoramaDiagnostics?.().loaded===id,id,{timeout:60000});
+const base=process.env.BASE_URL||'http://localhost:5173';
+await fs.mkdir('artifacts',{recursive:true});
+try{
+ await page.goto(base);await ready('living');
+ assert.equal((await diag()).room,'living');
+ await page.locator('#tour-stage').focus();const before=(await diag()).yaw;await page.keyboard.press('ArrowRight');assert.ok((await diag()).yaw>before);
+ await page.locator('#tour-zoom-in').click();assert.ok((await diag()).fov<80);
+ await page.mouse.move(700,400);await page.mouse.down();await page.mouse.move(900,440,{steps:8});await page.mouse.up();assert.ok((await diag()).pitch>-.15);
+ await page.locator('#tour-auto').click();assert.equal((await diag()).auto,true);await page.locator('#tour-auto').click();
+ await page.locator('.tour-nav[data-room="dining"]').click();await ready('dining');
+ await page.locator('#tour-map-open').click();assert.equal(await page.locator('#tour-map-modal').evaluate(el=>el.open),true);
+ await page.locator('[data-map-room="living"]').first().click();await ready('living');
+ // A delayed prior request may not overwrite the latest selected room.
+ await page.route('**/panoramas/dining.jpg',async route=>{await new Promise(r=>setTimeout(r,500));await route.continue();});
+ await page.locator('.tour-nav[data-room="dining"]').click();await page.locator('.tour-nav[data-room="living"]').click();await ready('living');await page.waitForTimeout(900);assert.equal((await diag()).loaded,'living');
+ await page.unroute('**/panoramas/dining.jpg');
+ // A failed image has a visible retry path that recovers without reloading the application.
+ await page.route('**/panoramas/dining.jpg',route=>route.abort());await page.locator('.tour-nav[data-room="dining"]').click();await page.locator('#tour-error').waitFor({state:'visible'});assert.equal((await diag()).error,true);await page.unroute('**/panoramas/dining.jpg');await page.locator('#tour-retry').click();await ready('dining');
+ await page.locator('.tour-nav[data-room="living"]').click();await ready('living');
+ const download=page.waitForEvent('download');await page.locator('#tour-capture').click();assert.ok((await download).suggestedFilename().endsWith('.png'));
+ await page.screenshot({path:'artifacts/panorama-desktop.png'});
+ await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.locator('#tour-mobile-map').click();await page.locator('#tour-map-close').click();await page.locator('.tour-thumb[data-room="dining"]').click();await ready('dining');const cdp=await page.context().newCDPSession(page);
+ const mobileYaw=(await diag()).yaw;
+ await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:120,y:350}]});
+ await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:220,y:390}]});
+ await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+ assert.notEqual((await diag()).yaw,mobileYaw,'touch drag rotates panorama');
+ const mobileFov=(await diag()).fov;
+ await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:120,y:350},{x:220,y:350}]});
+ await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:90,y:350},{x:250,y:350}]});
+ await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+ assert.ok((await diag()).fov<mobileFov,'pinch out zooms in');
+ await cdp.detach();
+ await page.screenshot({path:'artifacts/panorama-mobile.png'});
+ await page.setViewportSize({width:1440,height:960});
+ for(const id of ['master','study','guest','kitchen','bathroom']){await page.locator(`.tour-nav[data-room="${id}"]`).click();await ready(id);assert.equal((await diag()).error,false);}
+ assert.deepEqual(errors,[]);
+ console.log('PASS panorama: real images, room switching, latest-request wins, failure/retry, drag, keyboard, zoom, autorotate, map, screenshot and mobile.');
+}finally{await browser.close();}
