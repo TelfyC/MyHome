@@ -10,6 +10,16 @@ const base=process.env.BASE_URL||'http://localhost:5173';
 await fs.mkdir('artifacts',{recursive:true});
 try{
  await page.goto(base);await ready('living');
+ // Ship every full panorama AND thumbnail; a working first room must not hide missing rooms.
+ for(const id of ['living','dining','master','study','guest','kitchen','bathroom']){
+  const dimensions=await page.evaluate(async id=>{
+   const inspect=src=>new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>resolve([image.naturalWidth,image.naturalHeight]);image.onerror=()=>reject(new Error(`Missing panorama asset: ${src}`));image.src=src;});
+   const root=new URL('.',location.href);
+   return {full:await inspect(new URL(`panoramas/${id}.jpg`,root).href),thumb:await inspect(new URL(`panoramas/${id}-thumb.jpg`,root).href)};
+  },id);
+  assert.equal(dimensions.full[0],dimensions.full[1]*2,`${id}: panorama must be a full 2:1 sphere`);
+  assert.ok(dimensions.thumb[0]>0&&dimensions.thumb[0]<=640,`${id}: thumbnail must exist and stay small`);
+ }
  assert.equal((await diag()).room,'living');
  await page.locator('#tour-stage').focus();const before=(await diag()).yaw;await page.keyboard.press('ArrowRight');assert.ok((await diag()).yaw>before);
  await page.locator('#tour-zoom-in').click();assert.ok((await diag()).fov<80);
@@ -41,7 +51,8 @@ try{
  await cdp.detach();
  await page.screenshot({path:'artifacts/panorama-mobile.png'});
  await page.setViewportSize({width:1440,height:960});
- for(const id of ['master','study','guest','kitchen','bathroom']){await page.locator(`.tour-nav[data-room="${id}"]`).click();await ready(id);assert.equal((await diag()).error,false);}
+ for(const id of ['master','study','guest','kitchen','bathroom']){await page.locator(`.tour-nav[data-room="${id}"]`).click();await ready(id);assert.equal((await diag()).error,false);await page.screenshot({path:`artifacts/panorama-${id}.png`});}
+ assert.equal((await page.request.get(new URL('review/summary.md',base.endsWith('/')?base:base+'/').href)).ok(),true,'review summary must be deployed');
  assert.deepEqual(errors,[]);
  console.log('PASS panorama: real images, room switching, latest-request wins, failure/retry, drag, keyboard, zoom, autorotate, map, screenshot and mobile.');
 }finally{await browser.close();}

@@ -20,7 +20,6 @@ export class HomeViewer {
   night = false;
   cutaway = false;
   labelsVisible = true;
-  curtainClosed = false;
   keys = new Set<string>();
   yaw=0;pitch=0;
   private hemisphere = new THREE.HemisphereLight(HOME_STYLE.skyLight,HOME_STYLE.reflectedLight,1.55);
@@ -67,7 +66,7 @@ export class HomeViewer {
     new ResizeObserver(()=>this.resize()).observe(container);this.resize();
     this.reset(false);
     this.renderer.setAnimationLoop(t=>this.animate(t));
-    const diagnostics=()=>({mode:this.mode,room:this.activeRoom,night:this.night,cutaway:this.cutaway,curtain:this.curtainClosed,sizing:{source:'newStructure.jpg',measurements:MEASUREMENTS,wallThickness:WALL_THICKNESS,anchors:{X,Z}},windows:this.model.windows,transitioning:!!this.transition,frame:this.frameCount,keys:[...this.keys],outline,rooms:rooms.map(r=>({id:r.id,spawn:r.spawn})),position:{x:this.camera.position.x,y:this.camera.position.y,z:this.camera.position.z},yaw:this.yaw,meshes:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,colliders:this.model.colliders,spawnChecks:rooms.map(r=>({id:r.id,valid:canOccupy(...r.spawn,outline,this.model.colliders)}))});
+    const diagnostics=()=>({mode:this.mode,room:this.activeRoom,night:this.night,cutaway:this.cutaway,layout:this.model.layout,sizing:{source:'newStructure.jpg',measurements:MEASUREMENTS,wallThickness:WALL_THICKNESS,anchors:{X,Z}},windows:this.model.windows,walls:this.model.walls,transitioning:!!this.transition,frame:this.frameCount,keys:[...this.keys],outline,rooms:rooms.map(r=>({id:r.id,spawn:r.spawn})),position:{x:this.camera.position.x,y:this.camera.position.y,z:this.camera.position.z},yaw:this.yaw,meshes:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,colliders:this.model.colliders,spawnChecks:rooms.map(r=>({id:r.id,valid:canOccupy(...r.spawn,outline,this.model.colliders)}))});
     Object.assign(window,{__homeDiagnostics:diagnostics});
   }
   private resize() {const {clientWidth:w,clientHeight:h}=this.container;if(!w||!h)return;this.camera.aspect=w/h;this.camera.updateProjectionMatrix();this.renderer.setSize(w,h);this.dirty=true;}
@@ -196,7 +195,6 @@ export class HomeViewer {
     this.renderer.toneMappingExposure=night?1.20:.98;
   }
   setCutaway(value:boolean) {this.renderer.shadowMap.needsUpdate=true;this.cutaway=value;this.model.setCutaway(this.mode==='walk'?false:this.mode==='plan'||value);}
-  setCurtain(value:boolean) {this.renderer.shadowMap.needsUpdate=true;this.curtainClosed=value;this.model.setCurtain(value);}
   zoom(amount:number) {if(this.mode==='walk')return;this.camera.position.sub(this.controls.target).multiplyScalar(amount).add(this.controls.target);}
   screenshot() {
     this.renderer.render(this.scene,this.camera);

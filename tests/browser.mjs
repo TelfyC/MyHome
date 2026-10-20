@@ -1,7 +1,7 @@
 import { chromium } from '@playwright/test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import { canOccupy } from '../src/navigation.mjs';
+import { canOccupy, moveWithCollision } from '../src/navigation.mjs';
 
 const modelUrl=new URL(process.env.BASE_URL||'http://localhost:5173');
 modelUrl.searchParams.set('view','model');
@@ -41,6 +41,36 @@ try {
    (Math.abs(w.x1-X.masterWest)<1e-6||Math.abs(w.x1-X.guestWest)<1e-6)),false,'both bedroom side windows must be absent');
  assert.ok(data.windows.some(w=>Math.abs(w.z1-Z.masterSouth)<1e-6 && Math.abs(w.z2-Z.masterSouth)<1e-6),'master bottom window remains');
  assert.ok(data.windows.some(w=>Math.abs(w.z1)<1e-6 && Math.abs(w.z2)<1e-6 && w.x1>X.guestWest && w.x2<X.bathroomWest),'guest top window remains');
+ // Inspect walls created by the model, then exercise its actual collision geometry.
+ assert.equal(data.layout.studyLivingWall.kind,'solid');
+ assert.equal(data.layout.kitchen.kind,'open');
+ assert.equal(data.layout.kitchen.slidingDoor,false);
+ assert.equal('curtain' in data,false,'obsolete curtain diagnostic is removed');
+ assert.equal(await page.locator('#curtain-btn').count(),0,'obsolete curtain control is removed');
+ const tvWall=data.walls.find(w=>w.name==='solid-tv-backdrop');
+ assert.ok(tvWall?.opaque,'former glazing is replaced by opaque wall material');
+ near(tvWall.base,0,'TV wall starts at floor');near(tvWall.height,2.7,'TV wall is full height');
+ near(tvWall.z1,data.layout.studyLivingWall.infillFrom,'TV wall fills original opening start');
+ near(tvWall.z2,data.layout.studyLivingWall.infillTo,'TV wall fills original opening end');
+ assert.ok(data.walls.some(w=>w.name==='bearing-wall-upper'),'upper existing solid segment remains');
+ assert.ok(data.walls.some(w=>w.name==='bearing-wall-lower'),'lower existing solid segment remains');
+ assert.equal(data.colliders.some(c=>['fixed glass','glass-sill','kitchen sliding door'].includes(c.name)),false,'glass and sliding-door obstacles removed');
+ assert.equal(data.walls.some(w=>w.x1===X.livingEast&&w.x2===X.livingEast&&Math.max(w.z1,w.z2)>0&&Math.min(w.z1,w.z2)<Z.kitchenSouth),false,'kitchen dining-side partition absent');
+ assert.equal(data.walls.some(w=>w.z1===Z.kitchenSouth&&w.z2===Z.kitchenSouth&&Math.min(w.x1,w.x2)<X.entranceEast),false,'kitchen entry-side partition absent');
+ const exteriorReturn=data.walls.find(w=>w.name==='kitchen-exterior-return');
+ near(exteriorReturn.x1,X.entranceEast,'retain southeast exterior wall start');near(exteriorReturn.x2,X.kitchenEast,'retain southeast exterior wall end');
+ assert.ok(data.windows.some(w=>w.z1===0&&w.z2===0&&w.x1>X.livingEast),'kitchen top exterior window remains');
+ assert.ok(data.windows.some(w=>w.x1===X.kitchenEast&&w.x2===X.kitchenEast),'kitchen right exterior window remains');
+ const directWalk=(from,to,label)=>{
+   assert.ok(canOccupy(from.x,from.z,data.outline,data.colliders),`${label} starts in free space`);
+   const arrived=moveWithCollision(from,to.x-from.x,to.z-from.z,data.outline,data.colliders);
+   assert.ok(Math.hypot(arrived.x-to.x,arrived.z-to.z)<1e-6,`${label} passes former partition directly`);
+ };
+ directWalk({x:9.4,z:1.2},{x:10.8,z:1.2},'dining to open kitchen');
+ directWalk({x:11,z:3.3},{x:11,z:1.6},'entry to open kitchen');
+ const blocked=moveWithCollision({x:X.studyEast-.5,z:7.2},1,0,data.outline,data.colliders);
+ assert.ok(blocked.x<X.studyEast-.25,'solid TV backdrop blocks walking from study');
+ for(let z=tvWall.z1;z<=tvWall.z2;z+=.1)assert.equal(canOccupy(X.studyEast,z,data.outline,data.colliders),false,'TV wall has no collision gaps');
  const tvConsole=data.colliders.find(c=>c.name==='TV console');
  near(tvConsole.maxX-tvConsole.minX,.42,'TV console product depth');
  near(tvConsole.maxZ-tvConsole.minZ,1.80,'TV console product length');
@@ -64,8 +94,7 @@ try {
  await page.locator('#enter-btn').click();assert.equal((await diag()).mode,'walk');
  const before=(await diag()).position;
  await page.keyboard.down('w');await page.waitForFunction(p=>{const a=window.__homeDiagnostics().position;return Math.hypot(a.x-p.x,a.z-p.z)>.08},before,{timeout:30000});await page.keyboard.up('w');
- const moved=(await diag()).position;assert.ok(Math.hypot(moved.x-before.x,moved.z-before.z)>.05,'keyboard moves camera');assert.ok(moved.x<6.1,'fixed glass blocks eastward walking');
- await page.locator('#curtain-btn').click();assert.equal((await diag()).curtain,true);await page.locator('#curtain-btn').click();assert.equal((await diag()).curtain,false);
+ const moved=(await diag()).position;assert.ok(Math.hypot(moved.x-before.x,moved.z-before.z)>.05,'keyboard moves camera');assert.ok(moved.x<6.1,'solid TV wall blocks eastward walking');
  await page.keyboard.press('Escape');await settled();assert.equal((await diag()).mode,'orbit');
  for(const r of rooms) {
   await page.locator(`[data-nav="${r.id}"]`).click();if((await diag()).mode!=='walk')await page.locator('#enter-btn').click();
@@ -99,5 +128,5 @@ try {
  const pad=await page.locator('[data-key="KeyS"]').boundingBox();await page.mouse.move(pad.x+pad.width/2,pad.y+pad.height/2);await page.mouse.down();await page.waitForTimeout(450);await page.mouse.up();
  const touchAfter=(await diag()).position;assert.ok(Math.hypot(touchBefore.x-touchAfter.x,touchBefore.z-touchAfter.z)>.01,'on-screen directions move camera');
  assert.deepEqual(errors,[],'no browser runtime errors');
- console.log('PASS: calibrated dimensions, both side windows removed, original end windows retained, product scales preserved, all 9 rooms reachable, collision, keyboard/drag/touch, all views, lighting, curtain, references, PNG export and mobile layout; no browser errors.');
-} catch(error) { const d=await diag();console.error('Last browser state:',JSON.stringify({mode:d.mode,room:d.room,keys:d.keys,frame:d.frame,position:d.position}));throw error; } finally {await browser.close();}
+ console.log('PASS: calibrated dimensions, both side windows removed, original end windows retained, product scales preserved, all 9 rooms reachable, collision, keyboard/drag/touch, all views, lighting, solid TV wall, open kitchen paths, references, PNG export and mobile layout; no browser errors.');
+} catch(error) { const d=await diag().catch(()=>null);console.error('Last browser state:',JSON.stringify(d&&{mode:d.mode,room:d.room,keys:d.keys,frame:d.frame,position:d.position}));throw error; } finally {await browser.close();}

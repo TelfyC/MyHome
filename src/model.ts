@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
-import { rooms, outline, GLASS, WALL_HEIGHT } from './plan';
+import { rooms, outline, LAYOUT, WALL_HEIGHT } from './plan';
 import type { Point } from './plan';
 import type { Collider } from './navigation.mjs';
 import { createOakFloorMaterial, FLOOR_TILE_WIDTH, FLOOR_TILE_LENGTH } from './floor';
@@ -21,6 +21,7 @@ export function buildHome() {
   const luminous: THREE.MeshStandardMaterial[] = [];
   const floorMeshes: THREE.Mesh[] = [];
   const windows: {x1:number;z1:number;x2:number;z2:number}[]=[];
+  const walls: {name:string;x1:number;z1:number;x2:number;z2:number;base:number;height:number;opaque:boolean;color:string}[]=[];
   let seed = 42;
   const random = () => { seed = (seed * 16807) % 2147483647; return (seed-1)/2147483646; };
   const mat = (color: THREE.ColorRepresentation, roughness=.75, metalness=0) => new THREE.MeshStandardMaterial({color,roughness,metalness});
@@ -122,6 +123,7 @@ export function buildHome() {
     const w=Math.abs(x2-x1)||.22,d=Math.abs(z2-z1)||.22;
     const mesh=box((x1+x2)/2,base+h/2,(z1+z2)/2,w,h,d,wallMat,architecture);
     mesh.name=name;
+    walls.push({name,x1,z1,x2,z2,base,height:h,opaque:!wallMat.transparent,color:`#${wallMat.color.getHexString()}`});
     box((x1+x2)/2,base+h+.003,(z1+z2)/2,w,.015,d,capMat,architecture);
     if(base<.3) {
       obstruction((x1+x2)/2,(z1+z2)/2,w,d,name,false);
@@ -163,34 +165,6 @@ export function buildHome() {
     const bounds=new THREE.Box3().setFromObject(leaf);
     colliders.push({minX:bounds.min.x,maxX:bounds.max.x,minZ:bounds.min.z,maxZ:bounds.max.z,name:'open door'});
   }
-  function kitchenSlidingDoor(x:number,z1:number,z2:number) {
-    const width=z2-z1;
-    const panelWidth=width/2;
-    const trackX=x+.155;
-    wall(x,z1,x,z2,.55,2.15);
-    for(const z of [z1,z2]) box(x,1.075,z,.055,2.15,.08,doorFrame,architecture);
-    box(x,2.15,(z1+z2)/2,.25,.055,width+.07,doorFrame,architecture);
-    // The two panels park against the wall on opposite sides of the opening.
-    box(trackX,2.105,(z1+z2)/2,.025,.025,width*2+.12,metal,architecture);
-    for(const [index,centerZ] of [z1-panelWidth/2,z2+panelWidth/2].entries()) {
-      const panel=new THREE.Group();
-      panel.name=`厨房移门${index+1}`;
-      panel.position.set(trackX,0,centerZ);
-      architecture.add(panel);
-      const height=2.08,bottom=.015,border=.034,bar=.022;
-      for(const dz of [-1,1]) box(0,bottom+height/2,dz*(panelWidth-border)/2,.045,height,border,doorFrame,panel,.003);
-      for(const y of [bottom+border/2,bottom+height-border/2]) box(0,y,0,.045,border,panelWidth,doorFrame,panel,.003);
-      const paneHeight=(height-border*2-bar*3)/4;
-      for(let row=0;row<4;row++) {
-        const y=bottom+border+paneHeight/2+row*(paneHeight+bar);
-        box(0,y,0,.018,paneHeight,panelWidth-border*2,doorGlass,panel);
-        if(row<3) box(0,bottom+border+paneHeight+bar/2+row*(paneHeight+bar),0,.045,bar,panelWidth-border*2,doorFrame,panel,.002);
-      }
-      box(-.04,1.03,index===0?panelWidth/2-.09:-panelWidth/2+.09,.045,.13,.025,metal,panel,.008);
-      const bounds=new THREE.Box3().setFromObject(panel);
-      colliders.push({minX:bounds.min.x,maxX:bounds.max.x,minZ:bounds.min.z,maxZ:bounds.max.z,name:'kitchen sliding door'});
-    }
-  }
   // Dimensions are taken from newStructure.jpg; partitions follow the accepted design.
   // Guest and master side walls have no windows, as confirmed by the user.
   wall(X.guestWest,0,2.685,0);windowWall(2.685,0,4.035,0);wall(4.035,0,X.bathroomWest,0);
@@ -207,8 +181,9 @@ export function buildHome() {
   wall(X.livingEast,Z.upperBalconyNorth,X.livingEast,0);
   wall(X.livingEast,0,10.685,0);windowWall(10.685,0,11.785,0);wall(11.785,0,X.kitchenEast,0);
   wall(X.kitchenEast,0,X.kitchenEast,.975);windowWall(X.kitchenEast,.975,X.kitchenEast,2.10,1.2);wall(X.kitchenEast,2.10,X.kitchenEast,Z.kitchenSouth);
-  wall(X.livingEast,0,X.livingEast,.75);kitchenSlidingDoor(X.livingEast,.75,1.8);wall(X.livingEast,1.8,X.livingEast,Z.kitchenSouth);
-  wall(X.livingEast,Z.kitchenSouth,X.kitchenEast,Z.kitchenSouth);
+  // Both interior kitchen partitions are removed. The short southeast return
+  // is part of the exterior outline, so it remains a complete exterior wall.
+  wall(X.entranceEast,Z.kitchenSouth,X.kitchenEast,Z.kitchenSouth,WALL_HEIGHT,0,'kitchen-exterior-return');
   // Entrance and the existing stepped living-room contour.
   wall(X.entranceEast,Z.kitchenSouth,X.entranceEast,2.89);doorGap(X.entranceEast,2.89,X.entranceEast,3.91,false,1);wall(X.entranceEast,3.91,X.entranceEast,Z.entranceSouth);
   wall(X.livingEast,Z.entranceSouth,X.entranceEast,Z.entranceSouth);
@@ -223,27 +198,13 @@ export function buildHome() {
   wall(X.masterWest,Z.upperSouth,X.masterWest,Z.masterSouth);
   wall(X.masterWest,Z.masterSouth,.65,Z.masterSouth);windowWall(.65,Z.masterSouth,2.3,Z.masterSouth);wall(2.3,Z.masterSouth,X.studyWest,Z.masterSouth);
   wall(X.studyWest,Z.studyNorth,X.studyWest,Z.masterSouth);
-  // Existing study door and lower exterior window; glazing is fixed, not a route.
+  // Study uses its original upper door; the TV backdrop is a complete solid wall.
   wall(X.studyWest,Z.studyNorth,5.15,Z.studyNorth);doorGap(5.15,Z.studyNorth,6.22,Z.studyNorth,true,1);
   wall(X.studyWest,Z.studySouth,4.55,Z.studySouth);windowWall(4.55,Z.studySouth,X.studyEast,Z.studySouth,.84,2.25);
-  wall(X.studyEast,Z.studyNorth,X.studyEast,GLASS.z1,WALL_HEIGHT,0,'bearing-wall-upper');
-  wall(X.studyEast,GLASS.z2,X.studyEast,Z.livingSouth,WALL_HEIGHT,0,'bearing-wall-lower');
-  wall(X.studyEast,GLASS.z1,X.studyEast,GLASS.z2,GLASS.sill,0,'glass-sill');
-  wall(X.studyEast,GLASS.z1,X.studyEast,GLASS.z2,WALL_HEIGHT-GLASS.top,GLASS.top,'glass-lintel');
-  const glassPanel=box(X.studyEast,(GLASS.top+GLASS.sill)/2,(GLASS.z1+GLASS.z2)/2,.035,GLASS.top-GLASS.sill,GLASS.z2-GLASS.z1,archGlass,architecture);
-  glassPanel.name='fixed-study-glass';glassPanel.castShadow=false;
-  obstruction(X.studyEast,(GLASS.z1+GLASS.z2)/2,.1,GLASS.z2-GLASS.z1,'fixed glass',false);
-  for(const z of [GLASS.z1,GLASS.z2]) box(X.studyEast,(GLASS.sill+GLASS.top)/2,z,.07,GLASS.top-GLASS.sill,.04,windowFrame,architecture);
-  for(const y of [GLASS.sill,GLASS.top]) box(X.studyEast,y,(GLASS.z1+GLASS.z2)/2,.07,.04,GLASS.z2-GLASS.z1,windowFrame,architecture);
-  const curtain=new THREE.Group();architecture.add(curtain);
-  const curtainMat=fabric.clone();curtainMat.side=THREE.DoubleSide;architecturalMaterials.push(curtainMat);
-  const curtainPanels:THREE.Mesh[]=[];
-  for(let i=0;i<30;i++) {
-    const panel=box(6.17+Math.sin(i*Math.PI)*.025,1.41,0,.045,1.9,.058,curtainMat,curtain,.015);
-    curtainPanels.push(panel);
-  }
-  const setCurtain=(closed:boolean)=>curtainPanels.forEach((p,i)=>{p.position.z=closed?GLASS.z1+.025+i*(GLASS.z2-GLASS.z1-.05)/30:GLASS.z1-.24+i*.012;p.position.x=6.16+Math.sin(i*2.8)*.035;});
-  setCurtain(false);
+  const sharedWall=LAYOUT.studyLivingWall;
+  wall(X.studyEast,Z.studyNorth,X.studyEast,sharedWall.infillFrom,WALL_HEIGHT,0,'bearing-wall-upper');
+  wall(X.studyEast,sharedWall.infillTo,X.studyEast,Z.livingSouth,WALL_HEIGHT,0,'bearing-wall-lower');
+  wall(X.studyEast,sharedWall.infillFrom,X.studyEast,sharedWall.infillTo,WALL_HEIGHT,0,'solid-tv-backdrop');
   // Soft contact shadows supplement real-time directional shadows.
   const shadowCanvas=document.createElement('canvas');shadowCanvas.width=shadowCanvas.height=128;
   const sc=shadowCanvas.getContext('2d')!,sg=sc.createRadialGradient(64,64,8,64,64,64);sg.addColorStop(0,'rgba(50,40,28,.26)');sg.addColorStop(.5,'rgba(50,40,28,.13)');sg.addColorStop(1,'rgba(50,40,28,0)');sc.fillStyle=sg;sc.fillRect(0,0,128,128);
@@ -367,7 +328,7 @@ export function buildHome() {
   }
   function book(x:number,y:number,z:number,w=.22,color='#7c8c72') {box(x,y,z,w,.035,.17,mat(color),furniture,.006);box(x,y+.008,z+.002,w-.015,.018,.173,white);}
   // Revised living arrangement: a 65-inch screen and low oak console face the sofa.
-  // The user prefers the middle position; it partially screens the original glass.
+  // The centered television now sits against a complete warm-white wall.
   rug(8.15,7.28,1.45,2.25,'#d9d0bf');
   const sofa=new THREE.Group();sofa.position.set(9.15,0,7.28);sofa.rotation.y=Math.PI/2;furniture.add(sofa);
   box(0,.24,0,2.05,.22,.87,cherryEdge,sofa,.06);
@@ -394,7 +355,7 @@ export function buildHome() {
   box(0,.195,.06,.35,.035,.22,charcoal,tv,.008);
   box(0,.332,.04,.31,.038,.22,oatmeal,tv,.004);
   box(0,.36,.04,.29,.014,.215,white,tv,.003);
-  // Two short feet sit on the console; the display is supported independently of glass.
+  // Two short feet support the display on the timber console.
   for(const x of [-.51,.51]) {
     box(x,.49,.015,.13,.025,.24,charcoal,tv,.008);
     box(x,.53,-.015,.028,.08,.035,charcoal,tv,.006);
@@ -412,7 +373,7 @@ export function buildHome() {
   sideTable(8.20,8.23);book(8.20,.505,8.23);plant(9.22,5.94,.57,0,'lily');
   cylinder(7.68,.28,10.02,.30,.46,fabric);contact(7.68,10.02,.8,.8);obstruction(7.68,10.02,.6,.6,'stool');
   lamp(8.10,9.85,.08,2.4);
-  // Study: no large storage in front of borrowed-light glass.
+  // Study: original outer window remains clear of tall storage.
   wardrobe(4.22,6.04,1.3,.55,2.25);
   table(4.73,9.35,1.70,.58,.75,wood);chair(4.20,9.18,Math.PI);chair(5.18,8.72,Math.PI);
   const laptop=new THREE.Group();laptop.position.set(4.78,.80,9.36);furniture.add(laptop);
@@ -542,6 +503,6 @@ export function buildHome() {
       geometries.forEach(g=>g.dispose());
     }
   }
-  batch(furniture);batch(architecture,curtain);
-  return {root,architecture,furniture,ceilings,colliders,floorMeshes,windows,setCutaway,setNight,setCurtain,glassPanel};
+  batch(furniture);batch(architecture);
+  return {root,architecture,furniture,ceilings,colliders,floorMeshes,windows,walls,layout:LAYOUT,setCutaway,setNight};
 }

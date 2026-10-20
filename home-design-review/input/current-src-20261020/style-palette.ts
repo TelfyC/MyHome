@@ -1,0 +1,26 @@
+// MUJI-inspired natural oak, warm white and unbleached textiles.
+// These are rendering swatches, not verified paint codes or the creator's products.
+export const HOME_STYLE = {
+  wall: '#f2eee5',
+  ceiling: '#f8f6f0',
+  cabinet: '#eeeae1',
+  trim: '#ece8de',
+  floor: { red: 177, green: 143, blue: 103, swatch: '#b18f67' },
+  doorFrame: '#f5f4ee',
+  doorGlass: '#c9d0c9',
+  windowFrame: '#1d211f',
+  cherry: '#c2a37a',
+  cherryEdge: '#a98a62',
+  cherryFront: '#c8ac85',
+  whiteOak: '#d6c09a',
+  whiteOakEdge: '#bca27b',
+  linen: '#e9e4d8',
+  oatmeal: '#c8bfad',
+  sage: '#929b83',
+  stone: '#e5ded0',
+  daylight: '#fff7eb',
+  skyLight: '#f5f2e9',
+  reflectedLight: '#c4ad8d',
+  fillLight: '#f1f3ed',
+  lamplight: '#ffecd4',
+} as const;

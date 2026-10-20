@@ -1,0 +1,104 @@
+{
+  "reviewDate": "2026-10-20",
+  "note": "Final images visually checked; hashes bind this review to assets. Geometry and dimensions remain governed by measured model.",
+  "assets": [
+    {
+      "asset": "public/panoramas/bathroom-thumb.jpg",
+      "width": 320,
+      "height": 160,
+      "bytes": 8023,
+      "sha256": "859d7b629ac5e54f36fcb41e21c7d082182b4a0db6c522f8b19b762ef0a2fc01"
+    },
+    {
+      "asset": "public/panoramas/bathroom.jpg",
+      "width": 1774,
+      "height": 887,
+      "bytes": 248236,
+      "sha256": "1e45a45da6563d661fca15886221a2de5954c35dc5ac94223f8db1e29e85bae3"
+    },
+    {
+      "asset": "public/panoramas/dining-thumb.jpg",
+      "width": 320,
+      "height": 160,
+      "bytes": 8269,
+      "sha256": "6ba32ea496f136edba53dc5ee78abad794adc2e38b6abc87ea24fe5650971319"
+    },
+    {
+      "asset": "public/panoramas/dining.jpg",
+      "width": 1774,
+      "height": 887,
+      "bytes": 264762,
+      "sha256": "05fc83fe999cfd20de46698409de9cb0f8a18ccf5f81f04f7e4f70c42e22cb3c"
+    },
+    {
+      "asset": "public/panoramas/guest-thumb.jpg",
+      "width": 320,
+      "height": 160,
+      "bytes": 8300,
+      "sha256": "1199a955aa2cdb21926fb7bad580262ab423e87e8442d0e7fb41b0d6ae7fba7b"
+    },
+    {
+      "asset": "public/panoramas/guest.jpg",
+      "width": 1774,
+      "height": 887,
+      "bytes": 289634,
+      "sha256": "3f3ac97ec340fc97a830e2e0655dadcea8ff7118796c0ccd9978d0b3ae533540"
+    },
+    {
+      "asset": "public/panoramas/kitchen-thumb.jpg",
+      "width": 320,
+      "height": 160,
+      "bytes": 8345,
+      "sha256": "c175745bb4185d9c9ce74c730e19124642daccc673195688b0bfdb9f645a5ef3"
+    },
+    {
+      "asset": "public/panoramas/kitchen.jpg",
+      "width": 1774,
+      "height": 887,
+      "bytes": 248363,
+      "sha256": "25571b57bb78810e8ccee0eeccadfd84292bf7cf764a4a0bc5850c45592baf93"
+    },
+    {
+      "asset": "public/panoramas/living-thumb.jpg",
+      "width": 320,
+      "height": 160,
+      "bytes": 9168,
+      "sha256": "914a4f9417147b455eaaa998b0dcd0c150116dc98073fa490233e649eac7974d"
+    },
+    {
+      "asset": "public/panoramas/living.jpg",
+      "width": 1774,
+      "height": 887,
+      "bytes": 322269,
+      "sha256": "bfe16afda4861ae101aa5f9301e0a3f2ebd73d50ba5aeafb95ce3efedc02859e"
+    },
+    {
+      "asset": "public/panoramas/master-thumb.jpg",
+      "width": 320,
+      "height": 160,
+      "bytes": 7506,
+      "sha256": "c590b51c7d35f104978f9da385ae5c5eb8164afa00cac8e78cfe0474d1e95762"
+    },
+    {
+      "asset": "public/panoramas/master.jpg",
+      "width": 1774,
+      "height": 887,
+      "bytes": 255607,
+      "sha256": "2bddf2cfeb9a4d48d948b3c26e2257de36661db7267e953dc696ebd71fc16ecf"
+    },
+    {
+      "asset": "public/panoramas/study-thumb.jpg",
+      "width": 320,
+      "height": 160,
+      "bytes": 7895,
+      "sha256": "f5f8e28923866d9453e1d8592c1b5b9b62d46d6196cf83bc6ac05d36fb5fe46c"
+    },
+    {
+      "asset": "public/panoramas/study.jpg",
+      "width": 1774,
+      "height": 887,
+      "bytes": 248599,
+      "sha256": "bc05f44e25923ab3b836510bacdbbc58180967cf077dfe94549f83df61c0322d"
+    }
+  ]
+}

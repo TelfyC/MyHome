@@ -1,0 +1,43 @@
+{
+  "reviewDate": "2026-10-20",
+  "source": "current-src-20261020/model.ts & plan.ts; concept model, not measured demolition authorization",
+  "studyLivingWall": {
+    "kind": "solid",
+    "x": 6.33,
+    "infillFromZ": 6.47,
+    "infillToZ": 7.94,
+    "preserveOriginalUpperAndLowerSolidSegments": true,
+    "curtain": false
+  },
+  "kitchen": {
+    "kind": "open",
+    "slidingDoor": false,
+    "removedInteriorCenterlines": [
+      {
+        "x": 9.85,
+        "zFrom": 0,
+        "zTo": 2.66
+      },
+      {
+        "z": 2.66,
+        "xFrom": 9.85,
+        "xTo": 11.72
+      }
+    ],
+    "retainedExteriorReturn": {
+      "z": 2.66,
+      "xFrom": 11.72,
+      "xTo": 12.69
+    },
+    "retainedOuterWindows": true,
+    "retainedLCounter": true
+  },
+  "notMeasured": [
+    "structuralWallClassification",
+    "localOpenKitchenEnergyConditions",
+    "exhaustAndMakeUpAir",
+    "noise",
+    "realWindowSizesAndOrientation",
+    "installationDetails"
+  ]
+}
