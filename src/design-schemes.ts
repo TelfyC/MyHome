@@ -1,7 +1,7 @@
 import { HOME_STYLE } from './style-palette';
 import type { PanoramaId } from './panorama-data';
 
-export type SchemeId = 'cream' | 'forest';
+export type SchemeId = 'cream' | 'forest' | 'japanese' | 'french';
 export interface MaterialSample { name:string; note:string; color:string; wood?:boolean }
 export interface DesignScheme {
   id:SchemeId; name:string; english:string; eyebrow:string; title:[string,string]; introduction:[string,string];
@@ -34,5 +34,34 @@ export const designSchemes:Record<SchemeId,DesignScheme> = {
     roomMaterials:{living:'深樱桃木电视柜 · 自然木作 · 伞叶榕与蕨叶',dining:'樱桃木餐桌与咖啡柜 · 层板垂叶 · 苔绿亚麻',master:'深樱桃木低床 · 温润木饰面 · 苔绿床品',study:'原木书桌 · 樱桃木小柜 · 窗边垂叶',guest:'木质低床 · 浅亚麻 · 窗边一盆蕨',kitchen:'原木与奶油白柜体 · 角部冰箱 · 林间餐厨',bathroom:'洗衣台盆共台 · 樱桃木柜门 · 温润石感'},
     roomNotes:{living:'在木纹与叶影之间，把日子慢下来。',dining:'咖啡香、木桌与一片垂落的绿。',master:'像林中小屋一样，安静地休息。',study:'把窗边的一角，留给阅读。',guest:'木与亚麻，接住一夜好眠。',kitchen:'餐厨相连，也与绿意相望。',bathroom:'石、木与柔光，照顾日常。'},
   },
+  japanese:{
+    id:'japanese',name:'现代日式中古风',english:'JAPANESE MID-CENTURY / 2026',eyebrow:'WALNUT · PAPER LIGHT · QUIET FORM',
+    title:['旧时光，','新日常。'],introduction:['胡桃木的线条，纸灯的柔光。','留一点橄榄绿，让家慢慢呼吸。'],
+    paletteLabel:'暖白 / 胡桃木 / 橄榄绿 / 陶土色',materialIntro:'以暖白留出呼吸感，胡桃木集中在低矮家具；橄榄绿、陶土色与手作陶器点出中古气息。',
+    samples:[
+      {name:'暖白墙面',note:'柔和哑光，保留空间亮度',color:'#eee9df'},
+      {name:'中深胡桃木',note:'细直纹与温润棕色，低矮木作重点',color:'#79553d',wood:true},
+      {name:'烟熏柚木地面',note:'中性暖棕，连续且低反光',color:'#a48968',wood:true},
+      {name:'橄榄绿与陶土色',note:'在织物和小件上少量点缀',color:'#727960'},
+    ],
+    roomMaterials:{living:'胡桃木矮柜 · 几何地毯 · 纸灯与橄榄绿',dining:'胡桃木餐桌 · 编织餐椅 · 手作陶器',master:'低矮胡桃木床 · 亚麻床品 · 纸罩床灯',study:'柚木书桌 · 中古台灯 · 陶器与藏书',guest:'胡桃木低床 · 橄榄绿薄毯 · 几何织毯',kitchen:'暖白柜体 · 胡桃木下柜 · 陶器与香草',bathroom:'暖白石面 · 防潮胡桃木色柜门 · 柔光圆镜'},
+    roomNotes:{living:'低矮木作与柔和灯光，让生活有自己的节奏。',dining:'一张胡桃木桌，容纳三餐与闲谈。',master:'木色沉下来，睡眠也慢下来。',study:'一盏灯、一本书，刚好够用。',guest:'简洁而有温度的留宿角落。',kitchen:'器物有秩序，做饭也从容。',bathroom:'木色与石感，收住日常的安静。'},
+  },
+  french:{
+    id:'french',name:'轻法式复古原木风',english:'LIGHT FRENCH VINTAGE / 2026',eyebrow:'IVORY · HONEY OAK · SOFT VINTAGE',
+    title:['把优雅，','过成日常。'],introduction:['浅木色和奶油白铺开明亮底色。','一点灰蓝与旧玫瑰，留住柔软。'],
+    paletteLabel:'象牙白 / 蜂蜜橡木 / 灰蓝 / 旧玫瑰',materialIntro:'轻薄线条和浅蜂蜜木为主，复古图案、黄铜与灰蓝粉色只作为细节，保持明亮而不繁复。',
+    samples:[
+      {name:'象牙白墙面',note:'细腻墙面与克制的线条装饰',color:'#f2eee5'},
+      {name:'蜂蜜橡木',note:'浅暖木色，家具带柔和曲线',color:'#c7a777',wood:true},
+      {name:'浅原木地面',note:'柔和低色差，不偏橙黄',color:'#c4ad8b',wood:true},
+      {name:'灰蓝与旧玫瑰',note:'靠垫、床品和花纹的轻点缀',color:'#8a9aa2'},
+    ],
+    roomMaterials:{living:'蜂蜜木电视柜 · 复古花纹地毯 · 灰蓝织物',dining:'浅木弧线餐桌 · 藤编椅 · 亚麻桌旗',master:'浅木床 · 象牙白亚麻 · 旧玫瑰床毯',study:'浅木写字桌 · 黄铜灯 · 小幅植物画',guest:'柔和木床 · 灰蓝靠垫 · 复古小花纹',kitchen:'象牙白柜体 · 浅木细节 · 陶器与黄铜',bathroom:'奶油石感 · 防潮浅木柜门 · 黄铜细节'},
+    roomNotes:{living:'木色和旧物，让明亮空间更有故事。',dining:'花、陶器与木桌，把三餐摆得轻松。',master:'轻柔的织物，把一天安放下来。',study:'窗边写字，灯下读书。',guest:'带一点旧时光的温柔客房。',kitchen:'明亮餐厨里，也有顺手的小器物。',bathroom:'浅木、石面和柔光，简单地精致。'},
+  },
 };
-export function schemeFromSearch(search:string):SchemeId {return new URLSearchParams(search).get('design')==='forest'?'forest':'cream';}
+export function schemeFromSearch(search:string):SchemeId {
+  const value=new URLSearchParams(search).get('design');
+  return value==='forest'||value==='japanese'||value==='french'?value:'cream';
+}

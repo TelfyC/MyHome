@@ -1,3 +1,5 @@
+import type { SchemeId } from './design-schemes';
+
 export type PanoramaId = 'living' | 'dining' | 'master' | 'study' | 'guest' | 'kitchen' | 'bathroom';
 export interface PanoramaRoom { id: PanoramaId; name: string; english: string; note: string; material: string; links: PanoramaId[] }
 export const panoramaRooms: PanoramaRoom[] = [
@@ -9,5 +11,5 @@ export const panoramaRooms: PanoramaRoom[] = [
   { id:'kitchen', name:'开放式厨房', english:'KITCHEN', note:'餐厨相连，让做饭融入日常。', material:'角部冰箱高柜 · 洗切炒台面 · 开放餐厨', links:['dining','bathroom'] },
   { id:'bathroom', name:'卫生间', english:'BATH', note:'干净、克制，回到日常的舒适。', material:'洗衣与台盆共台 · 奶白柜体 · 灰米砖', links:['master','dining'] },
 ];
-export const panoramaAsset = (id: PanoramaId, design:'cream'|'forest'='cream') => `${import.meta.env.BASE_URL}panoramas/${design==='forest'?'forest/':''}${id}.jpg`;
-export const panoramaThumbnail = (id:PanoramaId, design:'cream'|'forest'='cream') => `${import.meta.env.BASE_URL}panoramas/${design==='forest'?'forest/':''}${id}-thumb.jpg`;
+export const panoramaAsset = (id: PanoramaId, design:SchemeId='cream') => `${import.meta.env.BASE_URL}panoramas/${design==='cream'?'':`${design}/`}${id}.jpg`;
+export const panoramaThumbnail = (id:PanoramaId, design:SchemeId='cream') => `${import.meta.env.BASE_URL}panoramas/${design==='cream'?'':`${design}/`}${id}-thumb.jpg`;
