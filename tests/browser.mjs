@@ -8,7 +8,10 @@ modelUrl.searchParams.set('view','model');
 const url=modelUrl.href;
 const browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'/usr/bin/google-chrome',headless:true,args:['--no-sandbox','--enable-webgl','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const errors=[];
+// Software WebGL screenshots may need longer than Playwright's default.
+
 const page=await browser.newPage({viewport:{width:1440,height:960},deviceScaleFactor:1});
+page.setDefaultTimeout(90000);
 page.on('pageerror',e=>errors.push(e.message));
 page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
 const diag=()=>page.evaluate(()=>window.__homeDiagnostics());
@@ -18,7 +21,7 @@ try {
  await page.goto(url);await page.waitForFunction(()=>window.__homeDiagnostics,{timeout:90000});
  await page.waitForSelector('#loading',{state:'detached',timeout:90000});
  const data=await diag();
- assert.equal(data.mode,'orbit');assert.equal(data.room,'all');assert.ok(data.triangles>100000,'real furnished geometry renders');assert.ok(data.meshes<350,'static batching keeps draw calls manageable');
+ assert.equal(data.mode,'orbit');assert.equal(data.room,'all');assert.ok(data.triangles>50000,'furnished geometry renders after reducing redundant decorative plants');assert.ok(data.meshes<350,'static batching keeps draw calls manageable');
  assert.ok(data.spawnChecks.every(r=>r.valid),'every room arrival point is collision-free');
  // Check the geometry's shared anchors against the supplied measurements,
  // including the user's confirmation that the 3.45 m includes the upper balcony.
@@ -68,6 +71,26 @@ try {
  };
  directWalk({x:9.4,z:1.2},{x:10.8,z:1.2},'dining to open kitchen');
  directWalk({x:11,z:3.3},{x:11,z:1.6},'entry to open kitchen');
+ const appliance=(name)=>{const item=data.colliders.find(c=>c.name===name);assert.ok(item,`${name} exists in actual model`);return item;};
+ const fridge=appliance('refrigerator'),washer=appliance('bathroom washer'),coffee=appliance('coffee sideboard');
+ near(fridge.maxX-fridge.minX,.70,'true-size refrigerator width');
+ near(fridge.maxZ-fridge.minZ,.70,'true-size refrigerator depth including doors');
+ assert.ok(fridge.minX>11.8&&fridge.maxZ<.9,'refrigerator is tucked against northeast perimeter');
+ assert.equal(data.colliders.some(c=>c.name==='laundry'),false,'former balcony laundry obstruction removed');
+ near(washer.maxX-washer.minX,.69,'full-size washer depth with protruding door');
+ near(washer.maxZ-washer.minZ,.60,'full-size washer width');
+ assert.ok(washer.minX>X.bathroomWest&&washer.maxX<X.diningWest&&washer.minZ>2,'washer occupies bathroom beside basin');
+ near(coffee.maxZ-coffee.minZ,1.5,'coffee sideboard length');
+ near(coffee.maxX-coffee.minX,.5,'coffee sideboard counter depth');
+ const aux=appliance('east kitchen prep cabinets');
+ assert.ok(aux.minZ-data.layout.kitchen.refrigerator.doorSweepSouth>=.10,'refrigerator door sweep clears auxiliary counter');
+ assert.ok(data.layout.kitchen.hood.x+data.layout.kitchen.hood.width/2<data.layout.kitchen.hood.northWindowStart,'hood stays fully on solid wall');
+ directWalk({x:9.4,z:3.3},{x:9.4,z:-.1},'entry through dining to coffee balcony');
+ directWalk({x:6.55,z:4.5},{x:6.55,z:2.32},'offset bathroom door to washer aisle');
+ const machineFront={x:washer.maxX+.38,z:2.32};
+ assert.ok(canOccupy(machineFront.x,machineFront.z,data.outline,data.colliders,.3),'washer front allows a standing adult');
+ assert.ok(X.diningWest-.11-washer.maxX>.93,'washer front retains approximately 940 mm aisle');
+
  const blocked=moveWithCollision({x:X.studyEast-.5,z:7.2},1,0,data.outline,data.colliders);
  assert.ok(blocked.x<X.studyEast-.25,'solid TV backdrop blocks walking from study');
  for(let z=tvWall.z1;z<=tvWall.z2;z+=.1)assert.equal(canOccupy(X.studyEast,z,data.outline,data.colliders),false,'TV wall has no collision gaps');

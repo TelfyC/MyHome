@@ -1,0 +1,13 @@
+{
+  "mode": "built-in image_gen",
+  "corrections": [
+    {
+      "id": "living",
+      "prompt": "Use case: precise-object-edit. EDIT ONLY the white-framed bathroom DOOR LEAF visible in the center-background, slightly left of the dining area. Its panes currently reveal a washing machine and cabinetry. Make ALL panes fully OPAQUE satin milky cream glass, NO see-through detail, NO visible washing-machine silhouette or objects THROUGH THE GLASS. Keep thin WHITE outer frame, exactly ONE middle VERTICAL and THREE HORIZONTAL rails, 2columns x4rows =8panes. The door is the existing center-background white grid door ONLY, not any exterior black window. Keep original door position and all surrounding details. ABSOLUTELY EVERYTHING ELSE UNCHANGED: entire full 360x180 equirectangular2:1 projection, wall colors, wood colors, neutral diffuse daylight, furniture positions, refrigerator at far perimeter, coffee corner, tree shape, textures, edge continuity. No cropping, new objects, global re-render or style shift."
+    },
+    {
+      "id": "master",
+      "prompt": "Use case: precise-object-edit. Remove ONLY the small green trailing POTTED PLANT on the wooden ledge directly BELOW THE ROUND MIRROR in the CENTER of this master bedroom equirectangular panorama. The ledge must remain plain empty wood. This room should contain NO plants. Keep ALL OTHER pixels/content as unchanged as possible: cream milk-white walls, neutral daylight, soft shadows, bed/linen/grain texture, wardrobe, mirror, wood shelf, window, exact full360x180 spherical panorama2:1 aspect/projection and matching left-right edges. No crop, no extra decorations, no global light/style/color changes, no text."
+    }
+  ]
+}

@@ -23,8 +23,8 @@ export class HomeViewer {
   keys = new Set<string>();
   yaw=0;pitch=0;
   private hemisphere = new THREE.HemisphereLight(HOME_STYLE.skyLight,HOME_STYLE.reflectedLight,1.55);
-  private sun = new THREE.DirectionalLight(HOME_STYLE.daylight,1.75);
-  private fill = new THREE.DirectionalLight(HOME_STYLE.fillLight,.65);
+  private sun = new THREE.DirectionalLight(HOME_STYLE.daylight,1.05);
+  private fill = new THREE.DirectionalLight(HOME_STYLE.fillLight,.95);
   private ground:THREE.Mesh;
   private labels: {element:HTMLButtonElement;position:THREE.Vector3}[]=[];
   private transition: {time:number;from:THREE.Vector3;to:THREE.Vector3;fromTarget:THREE.Vector3;toTarget:THREE.Vector3;done?:()=>void}|null=null;
@@ -189,7 +189,7 @@ export class HomeViewer {
     this.hooks.onRoom(id);this.hooks.onMode('walk');this.renderer.domElement.focus({preventScroll:true});
   }
   setNight(night:boolean) {
-    this.dirty=true;this.night=night;this.model.setNight(night);this.hemisphere.intensity=night?.40:1.55;this.sun.intensity=night?.20:1.75;this.fill.intensity=night?.17:.65;
+    this.dirty=true;this.night=night;this.model.setNight(night);this.hemisphere.intensity=night?.40:1.55;this.sun.intensity=night?.20:1.05;this.fill.intensity=night?.17:.95;
     this.sun.color.set(night?'#c3d1e3':HOME_STYLE.daylight);this.scene.environmentIntensity=night?.12:.28;
     this.scene.background=new THREE.Color(night?'#242c32':'#e7e7df');(this.ground.material as THREE.MeshStandardMaterial).color.set(night?'#252e34':'#e1e2da');
     this.renderer.toneMappingExposure=night?1.20:.98;

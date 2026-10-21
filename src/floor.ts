@@ -29,7 +29,7 @@ export function createOakFloorMaterial() {
       const ctx = board.getContext('2d')!;
       const x = 0;
       const y = 0;
-      const tone = (random() - .5) * 6;
+      const tone = (random() - .5) * 4;
       ctx.save();
       ctx.beginPath();
       ctx.rect(x, y, boardWidth, boardLength);
@@ -40,21 +40,21 @@ export function createOakFloorMaterial() {
 
       // Broad, feathered variations give the oak depth without a printed pinstripe look.
       const wash = ctx.createLinearGradient(x, y, x + boardWidth, y);
-      wash.addColorStop(0, 'rgba(255,245,224,.045)');
-      wash.addColorStop(.32, 'rgba(135,97,56,.025)');
-      wash.addColorStop(.72, 'rgba(255,245,224,.055)');
-      wash.addColorStop(1, 'rgba(135,97,56,.018)');
+      wash.addColorStop(0, 'rgba(249,248,243,.035)');
+      wash.addColorStop(.32, 'rgba(100,93,82,.018)');
+      wash.addColorStop(.72, 'rgba(249,248,243,.04)');
+      wash.addColorStop(1, 'rgba(100,93,82,.015)');
       ctx.fillStyle = wash;
       ctx.fillRect(x, y, boardWidth, boardLength);
 
       const phase = random() * Math.PI * 2;
       const bend = 2 + random() * 5;
-      for (let line = 0; line < 35; line++) {
+      for (let line = 0; line < 24; line++) {
         const start = x + random() * boardWidth;
         const brightness = line % 3 === 0;
         ctx.strokeStyle = brightness
-          ? `rgba(255,249,231,${.035 + random() * .045})`
-          : `rgba(102,84,60,${.025 + random() * .035})`;
+          ? `rgba(249,248,241,${.022 + random() * .025})`
+          : `rgba(86,80,71,${.018 + random() * .025})`;
         ctx.lineWidth = .55 + random() * 1.25;
         ctx.beginPath();
         for (let step = 0; step <= 32; step++) {
@@ -69,7 +69,7 @@ export function createOakFloorMaterial() {
       }
 
       // Some planks have the open, elongated arches characteristic of oak grain.
-      if (random() > .36) {
+      if (random() > .87) {
         const centerX = x + boardWidth * (.28 + random() * .44);
         const centerY = y + boardLength * (.2 + random() * .6);
         for (let ring = 0; ring < 9; ring++) {
@@ -118,7 +118,7 @@ export function createOakFloorMaterial() {
   bumpMap.anisotropy = 8;
 
   return new THREE.MeshStandardMaterial({
-    name: '暖棕木色柔光木纹砖 · 200 × 1200 mm 概念规格',
+    name: '中性灰棕细纹橡木砖 · 200 × 1200 mm 概念规格',
     color: '#ffffff',
     map,
     bumpMap,

@@ -1,0 +1,114 @@
+{
+  "reviewDate": "2026-10-20",
+  "revision": "cream-neutral-oak-integrated-kitchen-bathroom-laundry",
+  "note": "All seven panoramas and seven thumbnails regenerated for this user revision; individually visually reviewed. Generated images are design concepts. Model geometry governs dimensions, door opacity and exact grids.",
+  "promptFile": "home-design-review/logs/奶白细纹橡木与餐厨卫全景提示词.json",
+  "promptSha256": "920af1d2372f03910150e61a4561d010ec47135151f90d6d2774d14fde09640d",
+  "totalBytes": 1901341,
+  "assets": [
+    {
+      "asset": "public/panoramas/bathroom-thumb.jpg",
+      "width": 320,
+      "height": 160,
+      "bytes": 7817,
+      "sha256": "2f5383657d4aa8bdfee3459a48ff5b84335b9aadac64f9949a987a25f648fb10"
+    },
+    {
+      "asset": "public/panoramas/bathroom.jpg",
+      "width": 1774,
+      "height": 887,
+      "bytes": 243940,
+      "sha256": "2794d405e5691e81fabb1beb83c51971c4d402900d0924c8d8b388277a8c58c6"
+    },
+    {
+      "asset": "public/panoramas/dining-thumb.jpg",
+      "width": 320,
+      "height": 160,
+      "bytes": 8809,
+      "sha256": "68364d961280a02760c58c5aab1a1c8b1eb8ce9519dad0bf0f995a844c63ad02"
+    },
+    {
+      "asset": "public/panoramas/dining.jpg",
+      "width": 1774,
+      "height": 887,
+      "bytes": 266011,
+      "sha256": "067630665cfd601e341891dd9d64ebb4631882956405b7fab29ee3209bb95aea"
+    },
+    {
+      "asset": "public/panoramas/guest-thumb.jpg",
+      "width": 320,
+      "height": 160,
+      "bytes": 8113,
+      "sha256": "5a9e2f73171d49586137b4ee36fb97d280878fe2a0805383bb77e046dd613f60"
+    },
+    {
+      "asset": "public/panoramas/guest.jpg",
+      "width": 1774,
+      "height": 887,
+      "bytes": 274149,
+      "sha256": "44118d425b7817da2364c0866ba2212917f53978d19a5520f97d2c5cb763de98"
+    },
+    {
+      "asset": "public/panoramas/kitchen-thumb.jpg",
+      "width": 320,
+      "height": 160,
+      "bytes": 9180,
+      "sha256": "06acd265a925f25aa50f283ea6f693ac6306654138d69f1fd56786c577836c41"
+    },
+    {
+      "asset": "public/panoramas/kitchen.jpg",
+      "width": 1774,
+      "height": 887,
+      "bytes": 263587,
+      "sha256": "7c9dae69a9c0a12a3d9feed3d39ac28e9d6962a11e7058874332f94002037204"
+    },
+    {
+      "asset": "public/panoramas/living-thumb.jpg",
+      "width": 320,
+      "height": 160,
+      "bytes": 9558,
+      "sha256": "302045f03859bd788c3adc413035e89bd1360b55489f2762d4710aeeec35112e"
+    },
+    {
+      "asset": "public/panoramas/living.jpg",
+      "width": 1774,
+      "height": 887,
+      "bytes": 312911,
+      "sha256": "15284b285441a99a1d23c96dee8e80dc6b93c804ba321fbe9dc28d0b149095de"
+    },
+    {
+      "asset": "public/panoramas/master-thumb.jpg",
+      "width": 320,
+      "height": 160,
+      "bytes": 7945,
+      "sha256": "e7a5ff0013c723f3c79812daa5304812846fe47997885758cee056324ac8e285"
+    },
+    {
+      "asset": "public/panoramas/master.jpg",
+      "width": 1774,
+      "height": 887,
+      "bytes": 245890,
+      "sha256": "754002b8c1735ebb2349a9d9bcf472dfff6a00efa49e46fb3328c8b29d5b723a"
+    },
+    {
+      "asset": "public/panoramas/study-thumb.jpg",
+      "width": 320,
+      "height": 160,
+      "bytes": 8246,
+      "sha256": "8363e26cb111465675f70183cc600243191f5b0ae28265da9b3581c8e6449eea"
+    },
+    {
+      "asset": "public/panoramas/study.jpg",
+      "width": 1774,
+      "height": 887,
+      "bytes": 235185,
+      "sha256": "e9f4900df1ccab35890ddd4e7dc924fe719c3bdb0625f03170d45c33d870501e"
+    }
+  ],
+  "correctionPromptFile": "home-design-review/logs/奶白细纹橡木全景局部修正提示词.json",
+  "correctionPromptSha256": "aad1d2847fef7138961c1ff3dd1975bcdc583e289eae825e004cf88c6c256de0",
+  "corrections": [
+    "living: opaque eight-pane white grid door replaces initial transparent glass; directly viewed final asset",
+    "master: extra generated mirror-shelf plant removed; directly viewed final asset"
+  ]
+}

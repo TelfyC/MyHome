@@ -30,16 +30,16 @@ export function buildHome() {
     const ctx=c.getContext('2d')!;
     if(kind==='wood') {
       // Furniture veneer has long quiet fibers, with no floorboard joints.
-      ctx.fillStyle='#f2e8d8'; ctx.fillRect(0,0,1024,1024);
+      ctx.fillStyle='#ebeae6'; ctx.fillRect(0,0,1024,1024);
       const wash=ctx.createLinearGradient(0,0,1024,0);
-      wash.addColorStop(0,'rgba(122,87,53,.02)');
-      wash.addColorStop(.4,'rgba(255,249,230,.12)');
-      wash.addColorStop(.75,'rgba(122,87,53,.035)');
-      wash.addColorStop(1,'rgba(255,249,230,.06)');
+      wash.addColorStop(0,'rgba(80,73,62,.015)');
+      wash.addColorStop(.4,'rgba(255,255,253,.05)');
+      wash.addColorStop(.75,'rgba(80,73,62,.020)');
+      wash.addColorStop(1,'rgba(255,255,253,.035)');
       ctx.fillStyle=wash;ctx.fillRect(0,0,1024,1024);
       for(let j=0;j<175;j++) {
         const x=random()*1024,phase=random()*6;
-        ctx.strokeStyle=`rgba(112,77,45,${.025+random()*.05})`;ctx.lineWidth=.6+random()*1.4;
+        ctx.strokeStyle=`rgba(80,73,62,${.018+random()*.033})`;ctx.lineWidth=.6+random()*1.4;
         ctx.beginPath();ctx.moveTo(x,0);
         for(let y=0;y<=1024;y+=32)ctx.lineTo(x+Math.sin(y/230+phase)*5+Math.sin(y/410+phase)*8,y);
         ctx.stroke();
@@ -63,11 +63,11 @@ export function buildHome() {
   }
   const woodTex=texture('wood'),linenTex=texture('linen'),tileTex=texture('tile');
   const floorOak=createOakFloorMaterial();
-  const wood=mat(HOME_STYLE.whiteOak,.64);wood.map=woodTex;
-  const oak=mat(HOME_STYLE.whiteOakEdge,.68);oak.map=woodTex;
-  const cherry=mat(HOME_STYLE.cherry,.61);cherry.map=woodTex;
-  const cherryEdge=mat(HOME_STYLE.cherryEdge,.65);cherryEdge.map=woodTex;
-  const cherryFront=mat(HOME_STYLE.cherryFront,.63);cherryFront.map=woodTex;
+  const wood=mat(HOME_STYLE.whiteOak,.70);wood.map=woodTex;
+  const oak=mat(HOME_STYLE.whiteOakEdge,.72);oak.map=woodTex;
+  const cherry=mat(HOME_STYLE.cherry,.69);cherry.map=woodTex;
+  const cherryEdge=mat(HOME_STYLE.cherryEdge,.72);cherryEdge.map=woodTex;
+  const cherryFront=mat(HOME_STYLE.cherryFront,.71);cherryFront.map=woodTex;
   const darkWood=mat('#8e5c3e');
   const white=mat(HOME_STYLE.cabinet);
   const fabric=mat(HOME_STYLE.linen);fabric.map=linenTex;fabric.bumpMap=linenTex;fabric.bumpScale=.012;
@@ -114,7 +114,7 @@ export function buildHome() {
   const slab=new THREE.Mesh(slabGeo,mat('#d0cabd'));slab.position.y=-.22;slab.receiveShadow=true;root.add(slab);
   shapeMesh(outline,.003,floorOak);
   for(const r of rooms) {
-    const fm=r.id==='bathroom'||r.id==='kitchen'||r.id==='balcony'?new THREE.MeshStandardMaterial({map:tileTex,roughness:.72,color:r.id==='bathroom'?'#c6d1cb':'#eee9dd'}):floorOak;
+    const fm=r.id==='bathroom'?new THREE.MeshStandardMaterial({map:tileTex,roughness:.83,color:'#d6d2c8'}):floorOak;
     const mesh=shapeMesh(r.polygon,.014,fm);mesh.userData.roomId=r.id;floorMeshes.push(mesh);
     const roof=shapeMesh(r.polygon,WALL_HEIGHT,mat(HOME_STYLE.ceiling),ceilings);(roof.material as THREE.Material).side=THREE.DoubleSide;
   }
@@ -174,7 +174,8 @@ export function buildHome() {
   // One central bathroom; no old bathroom partitions are copied from the size image.
   windowWall(X.bathroomWest+.11,0,X.diningWest-.11,0,1.45,2.3);
   wall(X.diningWest,0,X.diningWest,Z.upperSouth);
-  wall(X.bathroomWest,Z.upperSouth,5.55,Z.upperSouth);doorGap(5.55,Z.upperSouth,6.55,Z.upperSouth,true,-1);wall(6.55,Z.upperSouth,X.diningWest,Z.upperSouth);
+  // Offset the concept doorway so its open leaf parks against the east wall.
+  wall(X.bathroomWest,Z.upperSouth,6.15,Z.upperSouth);doorGap(6.15,Z.upperSouth,7.02,Z.upperSouth,true,-1);wall(7.02,Z.upperSouth,X.diningWest,Z.upperSouth);
   // Dining and its upper balcony share the confirmed 3.45 m clear depth.
   wall(X.diningWest,Z.upperBalconyNorth,X.diningWest,0);
   windowWall(X.diningWest,Z.upperBalconyNorth,X.livingEast,Z.upperBalconyNorth,.6,2.45,3);
@@ -215,12 +216,12 @@ export function buildHome() {
     box(x,.036,z,w,.025,d,m,furniture,.012);
     for(let k=0;k<2;k++) {box(x,.05,z+(d/2-.08)*(k?1:-1),w-.12,.004,.012,oatmeal);}
   }
-  const plantPot=mat('#d8cbb7',.91),plantSoil=mat('#46372b'),plantBark=mat('#786046');
+  const plantPot=mat('#eeece4',.94),plantSoil=mat('#46372b'),plantBark=mat('#786046');
   const plantStem=mat('#45603a');
   const leafMats=['#315d37','#547949','#77915b'].map(color=>{
     const m=mat(color,.53);m.side=THREE.DoubleSide;return m;
   });
-  function plant(x:number,z:number,size=.65,base=0,kind:'rubber'|'lily'|'pothos'='pothos') {
+  function plant(x:number,z:number,size=.65,base=0,kind:'bengal'|'coffee'|'pothos'='pothos') {
     // Keep each complete plant together when the room coordinates are calibrated.
     const group=new THREE.Group();group.position.set(x,0,z);group.name=`plant-${kind}`;furniture.add(group);
     const potHeight=size*.30,potRadius=size*.17;
@@ -260,29 +261,38 @@ export function buildHome() {
       const veinCurve=new THREE.CatmullRomCurve3([start,centerAt(.5).addScaledVector(normal,length*.055+size*.001),end]);
       group.add(new THREE.Mesh(new THREE.TubeGeometry(veinCurve,10,size*.0018,4,false),plantStem));
     }
-    if(kind==='rubber') {
-      stem(new THREE.Vector3(0,base+potHeight*.8,0),new THREE.Vector3(size*.025,base+size*1.12,0),size*.012,plantBark);
-      for(let i=0;i<14;i++) {
-        const angle=i*2.4,level=i/13,spread=size*(.29-.08*level);
-        const start=new THREE.Vector3(size*.02,base+size*(.43+.67*level),0);
-        const joint=new THREE.Vector3(Math.sin(angle)*spread*.47,start.y+size*.045,Math.cos(angle)*spread*.47);
-        const tip=new THREE.Vector3(Math.sin(angle)*spread*1.2,base+size*(.50+.70*level),Math.cos(angle)*spread*1.2);
-        stem(start,joint,size*.0045,plantBark);leaf(joint,tip,size*(.095-.015*level),leafMats[i%3]);
+    if(kind==='bengal') {
+      // Ficus benghalensis: slender branching trunk and spaced oval leaves.
+      stem(new THREE.Vector3(0,base+potHeight*.8,0),new THREE.Vector3(size*.025,base+size*.87,0),size*.012,plantBark);
+      for(let branch=0;branch<3;branch++) {
+        const angle=branch*2.1+.35;
+        const start=new THREE.Vector3(size*.02,base+size*(.62+branch*.09),0);
+        const tip=new THREE.Vector3(Math.sin(angle)*size*.26,base+size*(.91+branch*.13),Math.cos(angle)*size*.26);
+        stem(start,tip,size*.007,plantBark);
+        for(let i=0;i<4;i++) {
+          const joint=start.clone().lerp(tip,.43+i*.18);
+          const direction=angle+(i%2?1:-1)*1.05;
+          const leafTip=joint.clone().add(new THREE.Vector3(Math.sin(direction)*size*.25,size*(.05-i*.008),Math.cos(direction)*size*.25));
+          leaf(joint,leafTip,size*.075,leafMats[(branch+i)%3]);
+        }
       }
-      leaf(new THREE.Vector3(size*.025,base+size*1.10,0),new THREE.Vector3(size*.10,base+size*1.25,size*.04),size*.065,leafMats[1]);
+      leaf(new THREE.Vector3(size*.025,base+size*.87,0),new THREE.Vector3(size*.08,base+size*1.25,size*.02),size*.065,leafMats[1]);
+    } else if(kind==='coffee') {
+      // Coffea arabica has opposite pairs of glossy pointed leaves.
+      stem(new THREE.Vector3(0,base+potHeight,0),new THREE.Vector3(0,base+size*1.05,0),size*.009,plantBark);
+      for(let row=0;row<4;row++)for(const sign of [-1,1]) {
+        const angle=row*.82,spread=size*(.35-row*.045);
+        const joint=new THREE.Vector3(0,base+size*(.45+row*.15),0);
+        const tip=new THREE.Vector3(Math.sin(angle)*spread*sign,joint.y+size*.12,Math.cos(angle)*spread*sign);
+        leaf(joint,tip,size*.065,leafMats[row%3]);
+      }
     } else {
-      for(let i=0;i<13;i++) {
-        const angle=i*2.4,spread=size*(.30+random()*.23);
-        const start=new THREE.Vector3(0,base+potHeight,0);
-        const joint=new THREE.Vector3(Math.sin(angle)*spread*.25,base+size*(.43+random()*.12),Math.cos(angle)*spread*.25);
-        const tip=new THREE.Vector3(Math.sin(angle)*spread,base+size*(kind==='lily'?.72+random()*.48:.56+random()*.34),Math.cos(angle)*spread);
-        stem(start,joint,size*.004);leaf(joint,tip,size*(kind==='lily'?.09:.13),leafMats[i%3]);
-      }
-      if(kind==='pothos')for(let i=0;i<5;i++) {
+      // A single trailing pothos is confined to the bright dining-window shelf.
+      for(let i=0;i<8;i++) {
         const angle=i*2.4,start=new THREE.Vector3(0,base+potHeight,0);
-        const joint=new THREE.Vector3(Math.sin(angle)*size*.24,base+size*.38,Math.cos(angle)*size*.24);
-        const tip=new THREE.Vector3(Math.sin(angle)*size*.48,base+size*.17,Math.cos(angle)*size*.48);
-        stem(start,joint,size*.004);leaf(joint,tip,size*.12,leafMats[i%3]);
+        const joint=new THREE.Vector3(Math.sin(angle)*size*.18,base+size*.4,Math.cos(angle)*size*.18);
+        const tip=new THREE.Vector3(Math.sin(angle)*size*.4,base+size*(i<3?.08:.59),Math.cos(angle)*size*.4);
+        stem(start,joint,size*.004);leaf(joint,tip,size*.11,leafMats[i%3]);
       }
     }
     return group;
@@ -367,10 +377,10 @@ export function buildHome() {
   obstruction(6.72,7.28,.42,1.80,'TV console');contact(6.72,7.28,.76,2.12);
   // Left when seated on the sofa facing the screen: the south end of the TV.
   const tvPlantX=X.studyEast+.69,tvPlantZ=Z.livingStep+.35;
-  const tvPlant=plant(tvPlantX,tvPlantZ,1.35,0,'rubber');tvPlant.userData.calibrated=true;
+  const tvPlant=plant(tvPlantX,tvPlantZ,1.35,0,'bengal');tvPlant.userData.calibrated=true;
   obstruction(tvPlantX,tvPlantZ,.46,.46,'TV-side plant pot',false);
   contact(tvPlantX,tvPlantZ,.70,.70).userData.calibrated=true;
-  sideTable(8.20,8.23);book(8.20,.505,8.23);plant(9.22,5.94,.57,0,'lily');
+  sideTable(8.20,8.23);book(8.20,.505,8.23);
   cylinder(7.68,.28,10.02,.30,.46,fabric);contact(7.68,10.02,.8,.8);obstruction(7.68,10.02,.6,.6,'stool');
   lamp(8.10,9.85,.08,2.4);
   // Study: original outer window remains clear of tall storage.
@@ -379,7 +389,7 @@ export function buildHome() {
   const laptop=new THREE.Group();laptop.position.set(4.78,.80,9.36);furniture.add(laptop);
   box(0,0,0,.34,.016,.24,metal,laptop,.007);const lid=box(0,.12,.115,.34,.23,.012,charcoal,laptop,.007);lid.rotation.x=-.15;
   box(0,.12,.104,.30,.19,.005,screen,laptop);
-  book(5.22,.81,9.35);lamp(4.03,9.38,.8,.65);plant(5.4,9.40,.20,.80);
+  book(5.22,.81,9.35);lamp(4.03,9.38,.8,.65);
   // A compact foldable guest bed/daybed on the left. It is not a permanent bedroom.
   box(3.96,.23,7.75,.82,.25,1.90,cherryEdge,furniture,.04);
   box(3.96,.42,7.75,.80,.20,1.86,fabric,furniture,.07);
@@ -388,77 +398,119 @@ export function buildHome() {
   obstruction(3.96,7.75,.82,1.9,'folding bed');contact(3.96,7.75,1.2,2.3);
   // Master bed follows the concept plan, with headboard at the lower end.
   rug(1.57,9.13,2.65,2.80,'#d9cfbd');bed(1.55,9.10,1.80,Math.PI);
-  sideTable(.32,9.88);lamp(.32,9.88);sideTable(2.72,9.88);plant(2.72,9.88,.22,.5);
+  sideTable(.32,9.88);lamp(.32,9.88);sideTable(2.72,9.88);
   wardrobe(1.22,6.55,1.75,.6,2.38);wardrobe(.25,5.3,1.32,.48,2.38,Math.PI/2);
   const mirror=new THREE.Mesh(new THREE.CircleGeometry(.35,48),mat('#b8c4be',.15,.7));mirror.position.set(1.85,1.5,4.44);furniture.add(mirror);
-  box(1.85,.75,4.64,.7,.05,.28,wood,furniture,.025);plant(1.65,4.65,.18,.8);
+  box(1.85,.75,4.64,.7,.05,.28,wood,furniture,.025);
   // Guest room / future children's room.
   rug(3.59,2.0,2.25,2.8,'#d1d1b9');bed(3.65,1.45,1.50);
-  table(2.38,1.8,.50,1.18,.74,wood);chair(2.38,2.85);book(2.39,.8,1.5);plant(2.39,1.4,.2,.8);
+  table(2.38,1.8,.50,1.18,.74,wood);chair(2.38,2.85);book(2.39,.8,1.5);
   wardrobe(2.98,3.88,1.6,.42,1.02,Math.PI);
   sideTable(4.7,.60);lamp(4.7,.6);
-  // Dining is 1200 x 700, with left bench and right chairs.
-  table(7.98,2.63,.70,1.20);
-  box(7.38,.44,2.63,.35,.09,1.20,cherry,furniture,.035);
-  for(const z of [2.2,3.05])box(7.38,.22,z,.22,.44,.05,cherryEdge);
-  obstruction(7.38,2.63,.35,1.2,'dining bench');chair(8.68,2.24,Math.PI/2);chair(8.68,3.03,Math.PI/2);
-  plant(7.98,2.63,.25,.79);book(7.96,.80,3.0,.18,'#c3b697');
-  // A small, concentrated tea setting keeps the table useful and the styling lived-in.
-  const teaGlaze=mat('#eee2ce',.31),tea=mat('#8a6749',.4);
-  for(const [x,z] of [[7.89,2.19],[8.12,2.95]]) {
-    cylinder(x,.79,z,.069,.008,wood);
-    cylinder(x,.823,z,.047,.058,teaGlaze,furniture,.039);
-    cylinder(x,.854,z,.039,.003,tea);
-    const handle=new THREE.Mesh(new THREE.TorusGeometry(.022,.006,7,14),teaGlaze);
-    handle.position.set(x+.051,.828,z);furniture.add(handle);
+  // New integrated assemblies use measured coordinates and true-size appliances.
+  function fixedGroup(name:string) {
+    const g=new THREE.Group();g.name=name;g.userData.calibrated=true;furniture.add(g);return g;
   }
-  cylinder(7.98,2.52,2.63,.018,.36,charcoal);
-  const pendantMat=mat('#f7efe3');pendantMat.emissive=new THREE.Color('#ffe4c2');pendantMat.emissiveIntensity=.18;luminous.push(pendantMat);
-  const shade=new THREE.Mesh(new THREE.SphereGeometry(.25,32,16,0,Math.PI*2,0,Math.PI/2),pendantMat);shade.position.set(7.98,2.30,2.63);furniture.add(shade);
-  // Kitchen cabinetry, countertop, sink, appliances.
-  const counter=mat('#f0e9dc',.35),steel=mat('#929f9d',.25,.75);
-  function cabinet(x:number,z:number,w:number,d:number,rot=0) {
-    const g=new THREE.Group();g.position.set(x,0,z);g.rotation.y=rot;furniture.add(g);
-    box(0,.43,0,w,.80,d,white,g,.015);box(0,.86,0,w+.02,.055,d+.03,counter,g,.012);
-    const count=Math.max(1,Math.round(w/.48));
-    for(let i=0;i<count;i++){box(-w/2+(i+.5)*w/count,.43,d/2+.01,w/count-.012,.74,.02,white,g,.005);box(-w/2+(i+.5)*w/count,.75,d/2+.03,.17,.012,.015,metal,g);}
-    obstruction(x,z,rot?d:w,rot?w:d,'kitchen cabinet');
+  const dining=fixedGroup('integrated-dining');
+  const tableX=8.08,tableZ=1.60;
+  box(tableX,.75,tableZ,.70,.055,1.20,wood,dining,.025);
+  for(const dx of [-.25,.25])for(const dz of [-.49,.49])box(tableX+dx,.375,tableZ+dz,.045,.72,.045,oak,dining,.007);
+  box(7.43,.46,tableZ,.36,.075,1.20,wood,dining,.025);
+  for(const z of [1.13,2.07])box(7.43,.23,z,.26,.44,.045,oak,dining,.005);
+  obstruction(tableX,tableZ,.70,1.20,'dining table',false);
+  obstruction(7.43,tableZ,.36,1.20,'dining bench',false);
+  for(const z of [1.20,2.00]) {
+    box(8.72,.45,z,.43,.075,.44,fabric,dining,.035);
+    box(8.90,.70,z,.055,.44,.43,wood,dining,.025);
+    for(const dx of [-.15,.15])for(const dz of [-.15,.15])box(8.72+dx,.22,z+dz,.035,.44,.035,oak,dining);
+    obstruction(8.72,z,.43,.44,'dining chair',false);
   }
-  cabinet(11.02,.33,2.55,.6);cabinet(11.79,1.77,1.85,.6,-Math.PI/2);
-  box(10.90,.894,.33,.69,.025,.43,steel,furniture,.06);box(10.90,.91,.33,.55,.025,.31,charcoal,furniture,.06);
-  cylinder(11.20,1.04,.19,.018,.32,metal);box(11.12,1.20,.19,.17,.025,.025,metal,furniture,.01);
-  box(11.78,.905,1.65,.46,.035,.71,charcoal,furniture,.02);
-  for(const z of [1.45,1.88]) {cylinder(11.78,.93,z,.13,.013,metal);cylinder(11.78,.943,z,.09,.018,charcoal);}
-  cylinder(11.78,1.04,1.88,.11,.20,steel);cylinder(11.78,1.15,1.88,.12,.015,metal);
-  box(11.92,1.99,1.65,.39,.15,.74,metal,furniture,.02);box(12.02,2.28,1.65,.18,.45,.35,white);
-  const worklight=mat('#fff3df',.45);worklight.emissive=new THREE.Color(HOME_STYLE.lamplight);worklight.emissiveIntensity=.13;luminous.push(worklight);
-  box(11.84,1.907,1.65,.08,.012,.62,worklight,furniture,.004);
-  const taskLight=new THREE.PointLight(HOME_STYLE.lamplight,0,2.1,2);
-  const [taskX,taskZ]=relocateFurniture(11.65,1.65);taskLight.position.set(taskX,1.70,taskZ);root.add(taskLight);lamps.push({light:taskLight,nightIntensity:.8});
-  wardrobe(10.33,2.55,.65,.66,1.80);box(10.33,1.48,2.89,.61,.6,.035,metal,furniture,.02);box(10.33,.68,2.89,.61,.9,.035,metal,furniture,.02);
-  plant(10.23,.33,.2,.9);
-  // Bathroom: shower north, toilet middle, shallow basin south.
-  const bathTile=mat('#bec8c0',.46);box(6.2,.05,.71,1.52,.07,1.28,bathTile,furniture,.015);
-  const shower=box(5.85,1.1,1.38,.8,2.1,.025,glass);shower.castShadow=false;
-  box(5.85,2.15,1.38,.83,.025,.03,metal);box(6.2,1.9,.17,.035,.95,.035,metal);
-  cylinder(6.2,2.35,.38,.14,.025,metal);box(6.2,2.3,.28,.025,.1,.3,metal);
-  // Shower enclosure has a walkthrough access on the right; no false full-width collision.
-  obstruction(5.85,1.38,.8,.03,'shower glass');
-  box(5.73,.55,2.27,.39,.72,.19,porcelain,furniture,.06);sphere(5.92,.38,2.27,.31,.19,.24,porcelain);sphere(5.97,.48,2.27,.27,.035,.21,white);
-  obstruction(5.85,2.27,.70,.5,'toilet');
-  box(5.72,.52,3.45,.45,.6,.65,oak,furniture,.02);box(5.72,.85,3.45,.49,.08,.69,porcelain,furniture,.03);
-  sphere(5.72,.90,3.45,.18,.025,.24,mat('#bdc6bf'));box(5.55,1.02,3.45,.025,.25,.025,metal);
-  box(5.43,1.55,3.45,.025,.75,.58,mat('#aab9b2',.1,.8),furniture,.04);
-  obstruction(5.72,3.45,.5,.7,'basin');
-  // Laundry and small plants do not fill the balcony glazing.
-  box(7.65,.46,-.25,.62,.9,.64,white,furniture,.025);
-  const drum=cylinder(7.65,.46,.086,.21,.025,metal);drum.rotation.x=Math.PI/2;
-  const drumGlass=cylinder(7.65,.46,.11,.16,.03,charcoal);drumGlass.rotation.x=Math.PI/2;
-  box(7.65,.79,.077,.5,.09,.015,white);box(7.65,.94,-.25,.66,.06,.69,wood,furniture,.01);
-  obstruction(7.65,-.25,.66,.69,'laundry');plant(9.32,-.38,.65,0,'rubber');plant(9.41,.45,.35,0,'lily');
+  const teaGlaze=mat('#eee8de',.31),tea=mat('#8a6749',.4);
+  box(tableX,.785,tableZ,.29,.014,.36,oak,dining,.02);
+  for(const z of [1.51,1.71]) {
+    cylinder(8.07,.82,z,.045,.055,teaGlaze,dining,.038);
+    cylinder(8.07,.85,z,.037,.003,tea,dining);
+  }
+  cylinder(tableX,2.51,tableZ,.012,.38,charcoal,dining);
+  const pendantMat=mat('#f7f3eb');pendantMat.emissive=new THREE.Color('#fff1dc');pendantMat.emissiveIntensity=.12;luminous.push(pendantMat);
+  const shade=new THREE.Mesh(new THREE.SphereGeometry(.25,32,16,0,Math.PI*2,0,Math.PI/2),pendantMat);shade.position.set(tableX,2.28,tableZ);dining.add(shade);
+
+  const counter=mat('#ede9df',.51),steel=mat('#929a97',.28,.75);
+  function cabinetActual(parent:THREE.Group,x:number,z:number,w:number,d:number,name:string,rot=0) {
+    const g=new THREE.Group();g.position.set(x,0,z);g.rotation.y=rot;parent.add(g);
+    box(0,.45,0,w,.78,d,white,g,.006);box(0,.875,0,w,.05,d,counter,g,.005);
+    box(0,.055,0,w-.08,.11,d-.08,charcoal,g);
+    const count=Math.max(1,Math.round(w/.60));
+    for(let i=0;i<count;i++) {
+      const px=-w/2+(i+.5)*w/count;
+      box(px,.465,d/2+.009,w/count-.006,.75,.018,white,g,.003);
+      box(px,.81,d/2+.021,w/count-.08,.012,.015,oak,g);
+    }
+    obstruction(x,z,rot?d:w,rot?w:d,name,false);return g;
+  }
+  const kitchen=fixedGroup('integrated-open-kitchen');
+  cabinetActual(kitchen,10.89,.44,1.80,.60,'north kitchen cabinets');
+  cabinetActual(kitchen,12.28,2.075,.85,.60,'east kitchen prep cabinets',-Math.PI/2);
+  // Hob and hood fit the solid north-wall segment, clear of both original windows.
+  box(10.28,.91,.44,.58,.025,.48,charcoal,kitchen,.012);
+  for(const x of [10.12,10.44]) {
+    cylinder(x,.932,.44,.105,.010,steel,kitchen);cylinder(x,.941,.44,.080,.012,charcoal,kitchen);
+  }
+  cylinder(10.44,1.025,.44,.105,.16,steel,kitchen);cylinder(10.44,1.112,.44,.112,.012,metal,kitchen);
+  box(10.28,1.92,.35,.60,.13,.45,steel,kitchen,.012);box(10.28,2.28,.24,.24,.61,.22,white,kitchen,.006);
+  const worklight=mat('#fff9eb',.45);worklight.emissive=new THREE.Color(HOME_STYLE.lamplight);worklight.emissiveIntensity=.13;luminous.push(worklight);
+  box(10.28,1.846,.43,.47,.008,.22,worklight,kitchen);
+  box(11.45,.906,.44,.60,.02,.43,steel,kitchen,.035);box(11.45,.916,.44,.49,.022,.32,charcoal,kitchen,.025);
+  cylinder(11.45,1.04,.23,.017,.27,metal,kitchen);box(11.45,1.173,.29,.025,.025,.15,metal,kitchen,.01);
+  // The refrigerator is against the northeast perimeter, with its doors facing south.
+  box(12.18,.985,.46,.70,1.93,.64,white,kitchen,.018);
+  box(12.18,1.35,.792,.674,1.12,.026,white,kitchen,.010);box(12.18,.38,.792,.674,.72,.026,white,kitchen,.010);
+  box(11.89,1.18,.82,.020,.32,.022,metal,kitchen,.006);box(11.89,.59,.82,.020,.18,.022,metal,kitchen,.006);
+  box(11.805,1.335,.49,.025,2.63,.70,white,kitchen,.004);box(12.555,1.335,.49,.025,2.63,.70,white,kitchen,.004);
+  box(12.18,2.26,.49,.725,.48,.70,white,kitchen,.005);
+  obstruction(12.18,.49,.70,.70,'refrigerator',false);
+  const taskLight=new THREE.PointLight(HOME_STYLE.lamplight,0,2.1,2);taskLight.position.set(10.8,1.7,.8);root.add(taskLight);lamps.push({light:taskLight,nightIntensity:.8});
+
+  // Original laundry niche: 1500 × 480 mm sideboard with a real working surface.
+  const coffee=fixedGroup('coffee-sideboard');
+  box(7.50,.45,-.10,.48,.84,1.50,oak,coffee,.007);box(7.50,.895,-.10,.50,.05,1.50,counter,coffee,.006);
+  box(7.50,.055,-.10,.39,.10,1.42,charcoal,coffee);
+  for(const z of [-.60,-.10,.40]) {
+    box(7.75,.47,z,.018,.76,.49,wood,coffee,.004);box(7.768,.80,z,.012,.012,.37,oak,coffee);
+  }
+  box(7.40,1.76,-.48,.30,.66,.73,white,coffee,.006);box(7.555,1.76,-.48,.018,.63,.70,white,coffee,.004);
+  box(7.41,1.59,.28,.32,.035,.65,oak,coffee,.004);box(7.41,1.98,.28,.32,.035,.65,oak,coffee,.004);
+  // Espresso machine and grinder face east into the free preparation aisle.
+  box(7.52,1.095,.08,.31,.35,.29,steel,coffee,.018);box(7.687,1.10,.08,.025,.23,.24,charcoal,coffee,.008);
+  box(7.72,.94,.08,.12,.03,.29,steel,coffee,.006);box(7.725,1.17,.08,.12,.017,.035,charcoal,coffee,.005);
+  cylinder(7.54,1.028,.41,.072,.21,charcoal,coffee);cylinder(7.54,1.19,.41,.07,.12,mat('#857869',.3),coffee,.055);
+  obstruction(7.50,-.10,.50,1.50,'coffee sideboard',false);
+  const coffeeTree=plant(7.50,-.58,.27,.92,'coffee');coffeeTree.userData.calibrated=true;
+  const trailingPlant=plant(7.41,.28,.23,1.61,'pothos');trailingPlant.userData.calibrated=true;
+
+  // Bathroom: shower → WC → washer → basin, all service fronts facing east.
+  const bathroom=fixedGroup('bathroom-laundry');
+  const bathTile=mat('#d3d0c6',.62);box(6.19,.05,.62,1.58,.07,.98,bathTile,bathroom,.008);
+  const shower=box(5.80,1.10,1.15,.80,2.10,.025,glass,bathroom);shower.castShadow=false;
+  box(5.80,2.155,1.15,.83,.025,.03,metal,bathroom);box(6.17,1.90,.17,.035,.95,.035,metal,bathroom);
+  cylinder(6.17,2.35,.37,.14,.025,metal,bathroom);box(6.17,2.30,.27,.025,.10,.30,metal,bathroom);
+  obstruction(5.80,1.15,.80,.03,'shower glass',false);
+  box(5.49,.55,1.57,.20,.72,.39,porcelain,bathroom,.05);sphere(5.76,.38,1.57,.31,.19,.24,porcelain,bathroom);sphere(5.81,.48,1.57,.27,.035,.21,white,bathroom);
+  obstruction(5.75,1.57,.70,.50,'toilet',false);
+  const washer=new THREE.Group();washer.position.set(5.71,0,2.32);washer.rotation.y=Math.PI/2;bathroom.add(washer);
+  box(0,.445,0,.60,.85,.64,white,washer,.014);
+  const drum=cylinder(0,.44,.331,.205,.025,metal,washer);drum.rotation.x=Math.PI/2;
+  const drumGlass=cylinder(0,.44,.349,.158,.025,charcoal,washer);drumGlass.rotation.x=Math.PI/2;
+  box(0,.775,.329,.54,.085,.018,white,washer,.004);cylinder(-.19,.78,.347,.025,.015,steel,washer).rotation.x=Math.PI/2;
+  obstruction(5.735,2.32,.69,.60,'bathroom washer',false);
+  box(5.65,.48,3.10,.52,.78,.65,oak,bathroom,.007);box(5.92,.48,3.10,.018,.74,.63,wood,bathroom,.004);
+  box(5.71,.90,2.71,.66,.055,1.48,counter,bathroom,.006);
+  box(5.70,.944,3.10,.43,.055,.53,porcelain,bathroom,.055);sphere(5.70,.976,3.10,.17,.01,.215,mat('#c6cbc5'),bathroom);
+  box(5.44,1.07,3.10,.025,.25,.025,metal,bathroom);box(5.39,1.56,3.10,.025,.75,.60,mat('#aab9b2',.1,.8),bathroom,.025);
+  obstruction(5.71,3.10,.66,.70,'basin',false);
+  // Dining balcony now belongs to the calm dining and coffee zone.
   wardrobe(11.12,5.63,.85,.34,1.12,-Math.PI/2);
   box(11.12,1.13,5.63,.36,.035,.87,cherry,furniture,.012);
-  plant(11.11,5.6,.2,1.15);
   // Framed artwork: simple relief forms, no external image dependencies.
   const art=new THREE.Group();art.position.set(9.715,1.72,7.3);art.rotation.y=-Math.PI/2;furniture.add(art);
   box(0,0,0,.84,.64,.025,oak,art,.015);box(0,0,.018,.77,.57,.008,white,art);

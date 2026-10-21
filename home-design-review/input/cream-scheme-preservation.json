@@ -1,0 +1,20 @@
+{
+  "public/panoramas/bathroom-thumb.jpg": "2f5383657d4aa8bdfee3459a48ff5b84335b9aadac64f9949a987a25f648fb10",
+  "public/panoramas/bathroom.jpg": "2794d405e5691e81fabb1beb83c51971c4d402900d0924c8d8b388277a8c58c6",
+  "public/panoramas/dining-thumb.jpg": "68364d961280a02760c58c5aab1a1c8b1eb8ce9519dad0bf0f995a844c63ad02",
+  "public/panoramas/dining.jpg": "067630665cfd601e341891dd9d64ebb4631882956405b7fab29ee3209bb95aea",
+  "public/panoramas/guest-thumb.jpg": "5a9e2f73171d49586137b4ee36fb97d280878fe2a0805383bb77e046dd613f60",
+  "public/panoramas/guest.jpg": "44118d425b7817da2364c0866ba2212917f53978d19a5520f97d2c5cb763de98",
+  "public/panoramas/kitchen-thumb.jpg": "06acd265a925f25aa50f283ea6f693ac6306654138d69f1fd56786c577836c41",
+  "public/panoramas/kitchen.jpg": "7c9dae69a9c0a12a3d9feed3d39ac28e9d6962a11e7058874332f94002037204",
+  "public/panoramas/living-thumb.jpg": "302045f03859bd788c3adc413035e89bd1360b55489f2762d4710aeeec35112e",
+  "public/panoramas/living.jpg": "15284b285441a99a1d23c96dee8e80dc6b93c804ba321fbe9dc28d0b149095de",
+  "public/panoramas/master-thumb.jpg": "e7a5ff0013c723f3c79812daa5304812846fe47997885758cee056324ac8e285",
+  "public/panoramas/master.jpg": "754002b8c1735ebb2349a9d9bcf472dfff6a00efa49e46fb3328c8b29d5b723a",
+  "public/panoramas/study-thumb.jpg": "8363e26cb111465675f70183cc600243191f5b0ae28265da9b3581c8e6449eea",
+  "public/panoramas/study.jpg": "e9f4900df1ccab35890ddd4e7dc924fe719c3bdb0625f03170d45c33d870501e",
+  "src/floor.ts": "f008c5dedebf19de204279ea55c7fc34ca640cbcdb3f52aa4dd9763ece40a373",
+  "src/model.ts": "5f8e69331f11b6056dc2462b70c270040c839651c9665a5e46225dae224b39e3",
+  "src/style-palette.ts": "7a5a423a3aadf117c6643c317a879aa520b5b5438eae9223545ebc7ef6351f15",
+  "src/viewer.ts": "e0d653d82469d88bed0987d572cb2c020468f7ad6731034509d50894de1e1daf"
+}

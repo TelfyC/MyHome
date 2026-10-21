@@ -19,8 +19,27 @@ try{
   },id);
   assert.equal(dimensions.full[0],dimensions.full[1]*2,`${id}: panorama must be a full 2:1 sphere`);
   assert.ok(dimensions.thumb[0]>0&&dimensions.thumb[0]<=640,`${id}: thumbnail must exist and stay small`);
+  const forest=await page.evaluate(async id=>{
+   const inspect=src=>new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>resolve([image.naturalWidth,image.naturalHeight]);image.onerror=()=>reject(new Error(`Missing forest asset: ${src}`));image.src=src;});
+   return {full:await inspect(`panoramas/forest/${id}.jpg`),thumb:await inspect(`panoramas/forest/${id}-thumb.jpg`)};
+  },id);
+  assert.equal(forest.full[0],forest.full[1]*2,`${id}: forest panorama must be 2:1`);
+  assert.deepEqual(forest.thumb,[320,160]);
  }
  assert.equal((await diag()).room,'living');
+ assert.equal((await diag()).scheme,'cream');
+ await page.locator('[data-scheme="forest"]').click();await ready('living');
+ assert.equal((await diag()).scheme,'forest');
+ assert.match(page.url(),/design=forest/);
+ assert.match(await page.locator('#tour-material').innerText(),/深樱桃木/);
+ assert.match(await page.locator('.tour-thumb[data-room="living"] img').getAttribute('src'),/panoramas\/forest\/living-thumb.jpg/);
+ await page.locator('#tour-materials-open').click();await page.locator('#tour-material-modal').waitFor({state:'visible'});
+ assert.match(await page.locator('#tour-material-modal').innerText(),/深色樱桃木/);await page.locator('#tour-materials-close').click();
+ await page.locator('[data-scheme="cream"]').click();await ready('living');
+ assert.equal((await diag()).scheme,'cream');
+ assert.doesNotMatch(page.url(),/design=forest/);
+ await page.locator('#tour-materials-open').click();await page.locator('#tour-material-modal').waitFor({state:'visible'});
+ assert.match(await page.locator('#tour-material-modal').innerText(),/奶白墙面/);await page.locator('#tour-materials-close').click();
  await page.locator('#tour-stage').focus();const before=(await diag()).yaw;await page.keyboard.press('ArrowRight');assert.ok((await diag()).yaw>before);
  await page.locator('#tour-zoom-in').click();assert.ok((await diag()).fov<80);
  await page.mouse.move(700,400);await page.mouse.down();await page.mouse.move(900,440,{steps:8});await page.mouse.up();assert.ok((await diag()).pitch>-.15);
@@ -37,7 +56,7 @@ try{
  await page.locator('.tour-nav[data-room="living"]').click();await ready('living');
  const download=page.waitForEvent('download');await page.locator('#tour-capture').click();assert.ok((await download).suggestedFilename().endsWith('.png'));
  await page.screenshot({path:'artifacts/panorama-desktop.png'});
- await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.locator('#tour-mobile-map').click();await page.locator('#tour-map-close').click();await page.locator('.tour-thumb[data-room="dining"]').click();await ready('dining');const cdp=await page.context().newCDPSession(page);
+ await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.locator('#tour-materials-mobile').click();await page.locator('#tour-materials-close').click();await page.locator('#tour-mobile-map').click();await page.locator('#tour-map-close').click();await page.locator('.tour-thumb[data-room="dining"]').click();await ready('dining');const cdp=await page.context().newCDPSession(page);
  const mobileYaw=(await diag()).yaw;
  await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:120,y:350}]});
  await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:220,y:390}]});
