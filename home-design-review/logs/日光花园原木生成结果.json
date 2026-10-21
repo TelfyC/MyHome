@@ -1,0 +1,30 @@
+[
+  {
+    "room": "living",
+    "path": "/home/juntao.ji@formal-tech.group/.codex/generated_images/01a15c1f-a80b-77d3-8af0-de1f0888681a/exec-f3ad6efc-4544-4db3-b0a3-3d13479a0e43.png"
+  },
+  {
+    "room": "dining",
+    "path": "/home/juntao.ji@formal-tech.group/.codex/generated_images/01a15c1f-a80b-77d3-8af0-de1f0888681a/exec-4b035e63-f470-435d-a788-7f4bd762c1a6.png"
+  },
+  {
+    "room": "master",
+    "path": "/home/juntao.ji@formal-tech.group/.codex/generated_images/01a15c1f-a80b-77d3-8af0-de1f0888681a/exec-4a12103e-4607-46a3-9f99-42848089d2ce.png"
+  },
+  {
+    "room": "study",
+    "path": "/home/juntao.ji@formal-tech.group/.codex/generated_images/01a15c1f-a80b-77d3-8af0-de1f0888681a/exec-6dcd2ae5-a7c3-47c4-b25e-b6cd7a99efcd.png"
+  },
+  {
+    "room": "guest",
+    "path": "/home/juntao.ji@formal-tech.group/.codex/generated_images/01a15c1f-a80b-77d3-8af0-de1f0888681a/exec-f7762442-5e02-480d-bd9e-8ada81748b61.png"
+  },
+  {
+    "room": "kitchen",
+    "path": "/home/juntao.ji@formal-tech.group/.codex/generated_images/01a15c1f-a80b-77d3-8af0-de1f0888681a/exec-5da9271d-bd5c-4430-9132-d14f3a13bdda.png"
+  },
+  {
+    "room": "bathroom",
+    "path": "/home/juntao.ji@formal-tech.group/.codex/generated_images/01a15c1f-a80b-77d3-8af0-de1f0888681a/exec-0996ac88-a495-49a6-8d9e-6eb00b76362c.png"
+  }
+]

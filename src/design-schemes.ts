@@ -1,12 +1,13 @@
 import { HOME_STYLE } from './style-palette';
 import type { PanoramaId } from './panorama-data';
 
-export type SchemeId = 'cream' | 'forest' | 'japanese' | 'french';
+export type SchemeId = 'cream' | 'forest' | 'japanese' | 'french' | 'sunlit';
 export interface MaterialSample { name:string; note:string; color:string; wood?:boolean }
 export interface DesignScheme {
   id:SchemeId; name:string; english:string; eyebrow:string; title:[string,string]; introduction:[string,string];
   paletteLabel:string; materialIntro:string; samples:MaterialSample[];
   roomMaterials:Record<PanoramaId,string>; roomNotes:Partial<Record<PanoramaId,string>>;
+  source?:{title:string;url:string};
 }
 export const designSchemes:Record<SchemeId,DesignScheme> = {
   cream:{
@@ -60,8 +61,23 @@ export const designSchemes:Record<SchemeId,DesignScheme> = {
     roomMaterials:{living:'蜂蜜木电视柜 · 复古花纹地毯 · 灰蓝织物',dining:'浅木弧线餐桌 · 藤编椅 · 亚麻桌旗',master:'浅木床 · 象牙白亚麻 · 旧玫瑰床毯',study:'浅木写字桌 · 黄铜灯 · 小幅植物画',guest:'柔和木床 · 灰蓝靠垫 · 复古小花纹',kitchen:'象牙白柜体 · 浅木细节 · 陶器与黄铜',bathroom:'奶油石感 · 防潮浅木柜门 · 黄铜细节'},
     roomNotes:{living:'木色和旧物，让明亮空间更有故事。',dining:'花、陶器与木桌，把三餐摆得轻松。',master:'轻柔的织物，把一天安放下来。',study:'窗边写字，灯下读书。',guest:'带一点旧时光的温柔客房。',kitchen:'明亮餐厨里，也有顺手的小器物。',bathroom:'浅木、石面和柔光，简单地精致。'},
   },
+  sunlit:{
+    id:'sunlit',name:'日光花园原木',english:'SUNLIT GARDEN HOME / 2026',eyebrow:'PALE WOOD · STRIPES · LIVING GREEN',
+    title:['让日光，','长成花园。'],introduction:['浅木、细条纹与窗边的绿。','把喜欢的器物，放进每一天。'],
+    paletteLabel:'暖白 / 蜂蜜木 / 米白条纹 / 鲜叶绿',
+    materialIntro:'参考「奥仔不吃奥利奥」的 89 平原木风 Room Tour：浅木边白台面、细条纹布艺、开放咖啡层板与窗边成组绿植。卧室加入偏深木色和柔粉织物；独立客房与卫浴为同风格延伸设计。色卡为方案示意，并非视频实测色号。',
+    source:{title:'奥仔不吃奥利奥 · 89平原木风 Room Tour',url:'https://www.bilibili.com/video/BV1tm576NEwz/'},
+    samples:[
+      {name:'暖白与浅灰米墙面',note:'保持通透，日光下带柔和暖意',color:'#f1eee5'},
+      {name:'浅蜂蜜木',note:'木框、层板与家具边缘形成暖色线条',color:'#c5a06a',wood:true},
+      {name:'米白细条纹',note:'沙发与床品的轻纹理，搭少量柔粉色',color:'#e8e3d8'},
+      {name:'窗边鲜叶绿',note:'高低植物架与蕨叶，集中在有光的位置',color:'#788c50'},
+    ],
+    roomMaterials:{living:'木边白台面 · 米白细条纹 · 窗边植物架',dining:'白柜木台面 · 开放杯架 · 咖啡与陶器',master:'偏深木色床与梳妆角 · 木百叶 · 柔粉薄毯',study:'木边书桌 · 书与器物 · 窗边垂叶',guest:'浅木低床 · 细条纹床品 · 小幅植物画',kitchen:'白色方砖 · 浅木下柜 · 通铺木色地面',bathroom:'浅木色防潮柜门 · 米白方砖 · 条纹毛巾'},
+    roomNotes:{living:'把绿意留在窗边，把柔软留给日常。',dining:'杯子、咖啡和喜欢的小物，都有自己的位置。',master:'木百叶筛过日光，薄毯接住一天的疲惫。',study:'桌面留给工作，层板留给喜欢的事。',guest:'沿用浅木和细条纹，留一个温柔的房间。',kitchen:'明亮台面与顺手器物，让三餐从容。',bathroom:'将浅木、白砖与柔软织物延续到日常洗漱。'},
+  },
 };
 export function schemeFromSearch(search:string):SchemeId {
   const value=new URLSearchParams(search).get('design');
-  return value==='forest'||value==='japanese'||value==='french'?value:'cream';
+  return value==='forest'||value==='japanese'||value==='french'||value==='sunlit'?value:'cream';
 }

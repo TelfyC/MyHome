@@ -1,0 +1,128 @@
+[
+  {
+    "path": "public/panoramas/sunlit/bathroom-thumb.jpg",
+    "size": [
+      320,
+      160
+    ],
+    "bytes": 9391,
+    "sha256": "8f14dab42050ae64fdeb6243959437c80c9acf394479383cc71f0c4fda0f0af7"
+  },
+  {
+    "path": "public/panoramas/sunlit/bathroom.jpg",
+    "size": [
+      1774,
+      887
+    ],
+    "bytes": 263051,
+    "sha256": "a00f1edf38f1f002f2982d4b1409cfe7c53faeeddd93f65435c0ad2658fb1168"
+  },
+  {
+    "path": "public/panoramas/sunlit/dining-thumb.jpg",
+    "size": [
+      320,
+      160
+    ],
+    "bytes": 10272,
+    "sha256": "7189a3edd90f45b32c798a1afa91b1c4cf6674aa36593e887ffff6efb89679ab"
+  },
+  {
+    "path": "public/panoramas/sunlit/dining.jpg",
+    "size": [
+      1774,
+      887
+    ],
+    "bytes": 278757,
+    "sha256": "3ffc1f51961e480e45b7b01f133d369c595b4beca7800421f34adb847c967679"
+  },
+  {
+    "path": "public/panoramas/sunlit/guest-thumb.jpg",
+    "size": [
+      320,
+      160
+    ],
+    "bytes": 8741,
+    "sha256": "1513cc5b6a00467c7ca6aa7c5381c4f048e139d9dae434d0e75de070f1a48568"
+  },
+  {
+    "path": "public/panoramas/sunlit/guest.jpg",
+    "size": [
+      1774,
+      887
+    ],
+    "bytes": 232538,
+    "sha256": "5acc2eb066aec6a14a4bdeb38f75b5e984cf7297c8d0308b1c03323cf91dbe76"
+  },
+  {
+    "path": "public/panoramas/sunlit/kitchen-thumb.jpg",
+    "size": [
+      320,
+      160
+    ],
+    "bytes": 9588,
+    "sha256": "2c18f9d5c2450c4afc6fa0f7d9654fafd713583ebc9e1500722873e64a73bf88"
+  },
+  {
+    "path": "public/panoramas/sunlit/kitchen.jpg",
+    "size": [
+      1774,
+      887
+    ],
+    "bytes": 263749,
+    "sha256": "42785556e7785cd10f9965654f3e208666c826b99fdf2b902d98b4eef05d91d6"
+  },
+  {
+    "path": "public/panoramas/sunlit/living-thumb.jpg",
+    "size": [
+      320,
+      160
+    ],
+    "bytes": 11553,
+    "sha256": "cec0c3b71e0dc1b6dd544873c6f57a28f93c95453063876da1479c2f55f6195d"
+  },
+  {
+    "path": "public/panoramas/sunlit/living.jpg",
+    "size": [
+      1774,
+      887
+    ],
+    "bytes": 358123,
+    "sha256": "42fcead2de3860af49f90801a7440af86c9547742590018a15a9f2b6bc76e4e5"
+  },
+  {
+    "path": "public/panoramas/sunlit/master-thumb.jpg",
+    "size": [
+      320,
+      160
+    ],
+    "bytes": 8604,
+    "sha256": "1e2bc5e48632d4b7ca4f513d23dd4423e1eeb8e15a981a489df620d749f07fc5"
+  },
+  {
+    "path": "public/panoramas/sunlit/master.jpg",
+    "size": [
+      1774,
+      887
+    ],
+    "bytes": 233086,
+    "sha256": "7926ec23038ab71d29c9c47187bcc645d6961f473961a6bbf5c0338713ca30c7"
+  },
+  {
+    "path": "public/panoramas/sunlit/study-thumb.jpg",
+    "size": [
+      320,
+      160
+    ],
+    "bytes": 10506,
+    "sha256": "ad9926523099f0378a3e0d2f016f2245e7b659256b5b480917eeb3d6f1534af6"
+  },
+  {
+    "path": "public/panoramas/sunlit/study.jpg",
+    "size": [
+      1774,
+      887
+    ],
+    "bytes": 277314,
+    "sha256": "a874ad0d1a706caddba50d2f839f69b502090f30355537990180a715ea54368e"
+  }
+]
