@@ -1,0 +1,32 @@
+{
+  "tool": "built-in imagegen",
+  "date": "2026-10-21",
+  "correctionPrompt": "Precise local edit only. Keep this exact 2:1 equirectangular panorama, architecture, all furniture positions, desk facing wall, original style palette, wood, lighting, chair, monitor, glass toy cabinet, door and window completely unchanged. Remove the small plant(s) on the PEGBOARD above the monitor/PC, including all hanging vines near the PC. Replace that single pegboard planter with a small neutral fabric accessory basket for cables. Remove the potted plant on the DESKTOP to the left of the monitor so no water or leaves sit near electronics, leaving the desk lamp and ceramic mug untouched. Keep ALL window-side plants unchanged. Cabinet figures unchanged. No other edits. Preserve full spherical mapping and seamless edges. Return same 2:1 format.",
+  "records": [
+    {
+      "scheme": "cream",
+      "initial": "/home/juntao.ji@formal-tech.group/.codex/generated_images/01a15c1f-a80b-77d3-8af0-de1f0888681a/exec-874a0fff-fcef-409d-85ed-2c7af1b55bbd.png",
+      "final": "/home/juntao.ji@formal-tech.group/.codex/generated_images/01a15c1f-a80b-77d3-8af0-de1f0888681a/exec-4d1e692a-83c0-4883-bb88-dd99f4a006db.png"
+    },
+    {
+      "scheme": "forest",
+      "initial": "/home/juntao.ji@formal-tech.group/.codex/generated_images/01a15c1f-a80b-77d3-8af0-de1f0888681a/exec-9c6e1c62-3119-4682-92e9-89e885d13da5.png",
+      "final": "/home/juntao.ji@formal-tech.group/.codex/generated_images/01a15c1f-a80b-77d3-8af0-de1f0888681a/exec-e9a2c7e7-1a76-4f15-b33a-4d804117c41c.png"
+    },
+    {
+      "scheme": "japanese",
+      "initial": "/home/juntao.ji@formal-tech.group/.codex/generated_images/01a15c1f-a80b-77d3-8af0-de1f0888681a/exec-d1b5646e-b5a6-41c4-8fdd-230fdee540a4.png",
+      "final": "/home/juntao.ji@formal-tech.group/.codex/generated_images/01a15c1f-a80b-77d3-8af0-de1f0888681a/exec-93fc0cb8-0fb5-4d8b-aedf-c1f92af1906a.png"
+    },
+    {
+      "scheme": "french",
+      "initial": "/home/juntao.ji@formal-tech.group/.codex/generated_images/01a15c1f-a80b-77d3-8af0-de1f0888681a/exec-80447427-0e5b-43a7-97e3-ac316ec4109b.png",
+      "final": "/home/juntao.ji@formal-tech.group/.codex/generated_images/01a15c1f-a80b-77d3-8af0-de1f0888681a/exec-09557cbc-1d48-48b0-81f1-8d457631ce44.png"
+    },
+    {
+      "scheme": "sunlit",
+      "initial": "/home/juntao.ji@formal-tech.group/.codex/generated_images/01a15c1f-a80b-77d3-8af0-de1f0888681a/exec-7705c71e-8637-4f41-a425-3ced00f6041f.png",
+      "final": "/home/juntao.ji@formal-tech.group/.codex/generated_images/01a15c1f-a80b-77d3-8af0-de1f0888681a/exec-105479a8-f956-491d-85b4-d87b23d84211.png"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "revision": "gaming-room-all-five-styles",
+  "date": "2026-10-21",
+  "assets": [
+    {
+      "asset": "public/panoramas/study.jpg",
+      "width": 1774,
+      "height": 887,
+      "sha256": "2217e07a8f92bbf58f04dec254c25b6cb46303414d063d25217b7e3da6ff5454"
+    },
+    {
+      "asset": "public/panoramas/study-thumb.jpg",
+      "width": 320,
+      "height": 160,
+      "sha256": "60ea79b5be0358bb75253aa9162eaf1d6e442f8e827fcac0df50c40fb80fa949"
+    },
+    {
+      "asset": "public/panoramas/forest/study.jpg",
+      "width": 1774,
+      "height": 887,
+      "sha256": "931f861b0d480af0326db2c35b93770a3e8ecff60d54c8b525c394c0bf0874b6"
+    },
+    {
+      "asset": "public/panoramas/forest/study-thumb.jpg",
+      "width": 320,
+      "height": 160,
+      "sha256": "6d7f72114a493d14db7d88ade581192a6b59b5d7c22af696aac3732a00f11785"
+    },
+    {
+      "asset": "public/panoramas/japanese/study.jpg",
+      "width": 1774,
+      "height": 887,
+      "sha256": "1578c91b2a5bd7fbff3e749ed1164d2188ec8845235520c04c9f503fa5d67caa"
+    },
+    {
+      "asset": "public/panoramas/japanese/study-thumb.jpg",
+      "width": 320,
+      "height": 160,
+      "sha256": "d30f851aa3c2eac9c3ce9fe661d1e5d86857cbe8deab9cc415036f50d09d1b4a"
+    },
+    {
+      "asset": "public/panoramas/french/study.jpg",
+      "width": 1774,
+      "height": 887,
+      "sha256": "cde129b361356119ca90a8b0347f9161b83f3bd11dffe51ac70665f65689a567"
+    },
+    {
+      "asset": "public/panoramas/french/study-thumb.jpg",
+      "width": 320,
+      "height": 160,
+      "sha256": "b924fd056790d4425bc82b713cf8d74b2aff4600023ea318551b41beb62f7fd4"
+    },
+    {
+      "asset": "public/panoramas/sunlit/study.jpg",
+      "width": 1774,
+      "height": 887,
+      "sha256": "b7566a44b771dc2447b9154a89fbd44b58f1f2b1bf681bac6a07c009d48264d0"
+    },
+    {
+      "asset": "public/panoramas/sunlit/study-thumb.jpg",
+      "width": 320,
+      "height": 160,
+      "sha256": "a0c5322b642e153ab8e4f6f88a8a3ed76f9f24394b2216ce9fee4914056ba3f7"
+    }
+  ]
+}

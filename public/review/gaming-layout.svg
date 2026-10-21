@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="960" viewBox="0 0 1120 960" role="img" aria-labelledby="title desc">
+<title id="title">电竞房桌向与走线平面</title><desc id="desc">电竞桌沿左侧主卧共墙，座椅面向左，玻璃柜靠上侧且避开右上门洞，下侧原窗保留。座椅后通道约一点零九米。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="none" stroke="#597365" stroke-width="1.5"/></marker></defs>
+<rect width="1120" height="960" fill="#faf8f3"/>
+<g font-family="Noto Sans CJK SC, sans-serif" fill="#353e38">
+<text x="70" y="52" font-size="27" font-weight="600">电竞房 · 面向主卧共墙</text><text x="70" y="82" font-size="15" fill="#72786e">五套风格共用布局 ｜ 图纸方向，不代表地理朝向</text>
+<rect x="140" y="120" width="550" height="680" fill="#eee3d2"/>
+<path d="M476 120H140V800H356 M690 120V800" fill="none" stroke="#777a6c" stroke-width="14"/>
+<path d="M356 800H690" stroke="#9bb9ba" stroke-width="9"/><path d="M356 792H690" stroke="#4f6669" stroke-width="2"/>
+<path d="M476 120A214 214 0 0 0 690 334" fill="none" stroke="#a4aaa0" stroke-dasharray="7 6"/>
+<path d="M690 120V334" stroke="#9a9d8c" stroke-width="7"/>
+<text x="500" y="107" font-size="18">原门洞 · 入口</text>
+<rect x="181" y="125" width="210" height="80" rx="5" fill="#bacdca" stroke="#8a7051" stroke-width="5"/>
+<path d="M181 194H391M286 132V194" stroke="#f5f7ed" stroke-width="4"/>
+<text x="210" y="157" font-size="17">玻璃移门柜</text><text x="201" y="182" font-size="14">1.05 × 0.40 m</text>
+<rect x="150" y="284" width="150" height="360" rx="6" fill="#c4a37c" stroke="#9a7b5a" stroke-width="2"/>
+<rect x="146" y="284" width="7" height="360" fill="#718069"/><text x="228" y="515" font-size="18" transform="rotate(-90 228 515)">电竞桌 1.80 × 0.75 m</text>
+<rect x="198" y="430" width="10" height="170" rx="2" fill="#34443c"/><rect x="251" y="460" width="23" height="82" rx="3" fill="#ede9dd"/>
+<rect x="190" y="311" width="74" height="44" rx="5" fill="#f9f7f0"/><text x="203" y="339" font-size="14">机箱</text>
+<path d="M168 614V300M184 614V300" stroke="#9c6552" stroke-width="4" stroke-dasharray="6 4"/><circle cx="168" cy="300" r="8" fill="#9c6552"/>
+<rect x="336" y="416" width="136" height="136" rx="24" fill="#adbaa4" stroke="#647461" stroke-width="2"/><rect x="451" y="422" width="20" height="124" rx="8" fill="#7b8f78"/>
+<path d="M407 484H313" stroke="#597365" stroke-width="3" marker-end="url(#arrow)"/><text x="358" y="581" font-size="17">面向墙使用</text>
+<path d="M480 610H680" stroke="#597365" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="493" y="642" font-size="17">常用椅位后</text><text x="506" y="667" font-size="20" font-weight="600">约 1.09 m</text>
+<path d="M584 160V555" stroke="#597365" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrow)"/>
+<circle cx="614" cy="714" r="28" fill="#8d9c71"/><text x="571" y="765" font-size="16">窗边绿植</text>
+<text x="75" y="490" font-size="21" transform="rotate(-90 75 490)">主卧共墙</text><text x="728" y="460" font-size="17" transform="rotate(90 728 460)">客厅实体墙</text>
+<text x="414" y="838" font-size="18">原窗 · 侧向采光</text>
+<path d="M140 885H690" stroke="#969a90" marker-start="url(#arrow)" marker-end="url(#arrow)"/><text x="370" y="913" font-size="18">净宽 2.75 m</text>
+<g transform="translate(790 180)"><text font-size="21" font-weight="600">桌面清爽，走线集中</text>
+<text y="48" font-size="17">① 桌后留 5 cm 空隙</text><text y="83" font-size="17">② 穿线孔进入桌下双槽</text><text y="118" font-size="17">③ 电源与信号分别收线</text><text y="153" font-size="17">④ 沿墙落线，不跨过道</text>
+<text y="235" font-size="21" font-weight="600">洞洞板 + 收藏柜</text><text y="280" font-size="17">洞洞板在桌面上方</text><text y="315" font-size="17">挂耳机、手柄与配件</text><text y="350" font-size="17">玻璃柜采用移门</text><text y="385" font-size="17">与房门开启范围错开</text>
+<text y="485" font-size="15" fill="#747c70">净进深 3.40 m</text><text y="515" font-size="15" fill="#747c70">桌向与尺寸以模型为准</text><text y="545" font-size="15" fill="#747c70">插座 / 网口为建议点位</text></g>
+</g></svg>

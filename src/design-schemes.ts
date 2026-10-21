@@ -20,7 +20,7 @@ export const designSchemes:Record<SchemeId,DesignScheme> = {
       {name:'灰棕木纹地面',note:'餐厨一体通铺，柔光、低色差',color:HOME_STYLE.floor.swatch,wood:true},
       {name:'本色棉麻',note:'米白与浅燕麦色织物',color:HOME_STYLE.linen},
     ],
-    roomMaterials:{living:'细纹中性橡木 · 棉麻 · 奶白墙面',dining:'1.5 m 咖啡餐边柜 · 橡木餐桌 · 贯通通道',master:'低床 · 原木 · 燕麦色床品',study:'橡木书桌 · 完整实墙 · 浅色收纳',guest:'浅木家具 · 米白织物 · 低收纳',kitchen:'角部冰箱高柜 · 洗切炒台面 · 开放餐厨',bathroom:'洗衣与台盆共台 · 奶白柜体 · 灰米砖'},roomNotes:{},
+    roomMaterials:{living:'细纹中性橡木 · 棉麻 · 奶白墙面',dining:'1.5 m 咖啡餐边柜 · 橡木餐桌 · 贯通通道',master:'低床 · 原木 · 燕麦色床品',study:'浅橡木电竞桌 · 木色洞洞板 · 玻璃展示柜',guest:'浅木家具 · 米白织物 · 低收纳',kitchen:'角部冰箱高柜 · 洗切炒台面 · 开放餐厨',bathroom:'洗衣与台盆共台 · 奶白柜体 · 灰米砖'},roomNotes:{study:'桌靠主卧共墙，桌下分槽理线，让桌面和心情都轻松。'},
   },
   forest:{
     id:'forest',name:'林中树屋',english:'WOODLAND RETREAT / 2026',eyebrow:'WOOD · LEAVES · A SLOWER LIFE',
@@ -32,8 +32,8 @@ export const designSchemes:Record<SchemeId,DesignScheme> = {
       {name:'自然棕原木',note:'细腻木纹，餐厨地面连续',color:'#ae9574',wood:true},
       {name:'苔绿与本色亚麻',note:'用织物和绿植增加林间层次',color:'#697451'},
     ],
-    roomMaterials:{living:'深樱桃木电视柜 · 自然木作 · 伞叶榕与蕨叶',dining:'樱桃木餐桌与咖啡柜 · 层板垂叶 · 苔绿亚麻',master:'深樱桃木低床 · 温润木饰面 · 苔绿床品',study:'原木书桌 · 樱桃木小柜 · 窗边垂叶',guest:'木质低床 · 浅亚麻 · 窗边一盆蕨',kitchen:'原木与奶油白柜体 · 角部冰箱 · 林间餐厨',bathroom:'洗衣台盆共台 · 樱桃木柜门 · 温润石感'},
-    roomNotes:{living:'在木纹与叶影之间，把日子慢下来。',dining:'咖啡香、木桌与一片垂落的绿。',master:'像林中小屋一样，安静地休息。',study:'把窗边的一角，留给阅读。',guest:'木与亚麻，接住一夜好眠。',kitchen:'餐厨相连，也与绿意相望。',bathroom:'石、木与柔光，照顾日常。'},
+    roomMaterials:{living:'深樱桃木电视柜 · 自然木作 · 伞叶榕与蕨叶',dining:'樱桃木餐桌与咖啡柜 · 层板垂叶 · 苔绿亚麻',master:'深樱桃木低床 · 温润木饰面 · 苔绿床品',study:'原木电竞桌 · 洞洞板 · 深樱桃木玻璃柜',guest:'木质低床 · 浅亚麻 · 窗边一盆蕨',kitchen:'原木与奶油白柜体 · 角部冰箱 · 林间餐厨',bathroom:'洗衣台盆共台 · 樱桃木柜门 · 温润石感'},
+    roomNotes:{living:'在木纹与叶影之间，把日子慢下来。',dining:'咖啡香、木桌与一片垂落的绿。',master:'像林中小屋一样，安静地休息。',study:'桌靠主卧共墙，林间木色里也有自己的游戏角。',guest:'木与亚麻，接住一夜好眠。',kitchen:'餐厨相连，也与绿意相望。',bathroom:'石、木与柔光，照顾日常。'},
   },
   japanese:{
     id:'japanese',name:'现代日式中古风',english:'JAPANESE MID-CENTURY / 2026',eyebrow:'WALNUT · PAPER LIGHT · QUIET FORM',
@@ -45,8 +45,8 @@ export const designSchemes:Record<SchemeId,DesignScheme> = {
       {name:'烟熏柚木地面',note:'中性暖棕，连续且低反光',color:'#a48968',wood:true},
       {name:'橄榄绿与陶土色',note:'在织物和小件上少量点缀',color:'#727960'},
     ],
-    roomMaterials:{living:'胡桃木矮柜 · 几何地毯 · 纸灯与橄榄绿',dining:'胡桃木餐桌 · 编织餐椅 · 手作陶器',master:'低矮胡桃木床 · 亚麻床品 · 纸罩床灯',study:'柚木书桌 · 中古台灯 · 陶器与藏书',guest:'胡桃木低床 · 橄榄绿薄毯 · 几何织毯',kitchen:'暖白柜体 · 胡桃木下柜 · 陶器与香草',bathroom:'暖白石面 · 防潮胡桃木色柜门 · 柔光圆镜'},
-    roomNotes:{living:'低矮木作与柔和灯光，让生活有自己的节奏。',dining:'一张胡桃木桌，容纳三餐与闲谈。',master:'木色沉下来，睡眠也慢下来。',study:'一盏灯、一本书，刚好够用。',guest:'简洁而有温度的留宿角落。',kitchen:'器物有秩序，做饭也从容。',bathroom:'木色与石感，收住日常的安静。'},
+    roomMaterials:{living:'胡桃木矮柜 · 几何地毯 · 纸灯与橄榄绿',dining:'胡桃木餐桌 · 编织餐椅 · 手作陶器',master:'低矮胡桃木床 · 亚麻床品 · 纸罩床灯',study:'胡桃木电竞桌 · 洞洞板 · 中古玻璃柜',guest:'胡桃木低床 · 橄榄绿薄毯 · 几何织毯',kitchen:'暖白柜体 · 胡桃木下柜 · 陶器与香草',bathroom:'暖白石面 · 防潮胡桃木色柜门 · 柔光圆镜'},
+    roomNotes:{living:'低矮木作与柔和灯光，让生活有自己的节奏。',dining:'一张胡桃木桌，容纳三餐与闲谈。',master:'木色沉下来，睡眠也慢下来。',study:'桌靠主卧共墙，低调设备与中古木色相伴。',guest:'简洁而有温度的留宿角落。',kitchen:'器物有秩序，做饭也从容。',bathroom:'木色与石感，收住日常的安静。'},
   },
   french:{
     id:'french',name:'轻法式复古原木风',english:'LIGHT FRENCH VINTAGE / 2026',eyebrow:'IVORY · HONEY OAK · SOFT VINTAGE',
@@ -58,8 +58,8 @@ export const designSchemes:Record<SchemeId,DesignScheme> = {
       {name:'浅原木地面',note:'柔和低色差，不偏橙黄',color:'#c4ad8b',wood:true},
       {name:'灰蓝与旧玫瑰',note:'靠垫、床品和花纹的轻点缀',color:'#8a9aa2'},
     ],
-    roomMaterials:{living:'蜂蜜木电视柜 · 复古花纹地毯 · 灰蓝织物',dining:'浅木弧线餐桌 · 藤编椅 · 亚麻桌旗',master:'浅木床 · 象牙白亚麻 · 旧玫瑰床毯',study:'浅木写字桌 · 黄铜灯 · 小幅植物画',guest:'柔和木床 · 灰蓝靠垫 · 复古小花纹',kitchen:'象牙白柜体 · 浅木细节 · 陶器与黄铜',bathroom:'奶油石感 · 防潮浅木柜门 · 黄铜细节'},
-    roomNotes:{living:'木色和旧物，让明亮空间更有故事。',dining:'花、陶器与木桌，把三餐摆得轻松。',master:'轻柔的织物，把一天安放下来。',study:'窗边写字，灯下读书。',guest:'带一点旧时光的温柔客房。',kitchen:'明亮餐厨里，也有顺手的小器物。',bathroom:'浅木、石面和柔光，简单地精致。'},
+    roomMaterials:{living:'蜂蜜木电视柜 · 复古花纹地毯 · 灰蓝织物',dining:'浅木弧线餐桌 · 藤编椅 · 亚麻桌旗',master:'浅木床 · 象牙白亚麻 · 旧玫瑰床毯',study:'浅木电竞桌 · 象牙白洞洞板 · 黄铜玻璃柜',guest:'柔和木床 · 灰蓝靠垫 · 复古小花纹',kitchen:'象牙白柜体 · 浅木细节 · 陶器与黄铜',bathroom:'奶油石感 · 防潮浅木柜门 · 黄铜细节'},
+    roomNotes:{living:'木色和旧物，让明亮空间更有故事。',dining:'花、陶器与木桌，把三餐摆得轻松。',master:'轻柔的织物，把一天安放下来。',study:'桌靠主卧共墙，暖灯照亮游戏与收藏。',guest:'带一点旧时光的温柔客房。',kitchen:'明亮餐厨里，也有顺手的小器物。',bathroom:'浅木、石面和柔光，简单地精致。'},
   },
   sunlit:{
     id:'sunlit',name:'日光花园原木',english:'SUNLIT GARDEN HOME / 2026',eyebrow:'PALE WOOD · STRIPES · LIVING GREEN',
@@ -73,8 +73,8 @@ export const designSchemes:Record<SchemeId,DesignScheme> = {
       {name:'米白细条纹',note:'沙发与床品的轻纹理，搭少量柔粉色',color:'#e8e3d8'},
       {name:'窗边鲜叶绿',note:'高低植物架与蕨叶，集中在有光的位置',color:'#788c50'},
     ],
-    roomMaterials:{living:'木边白台面 · 米白细条纹 · 窗边植物架',dining:'白柜木台面 · 开放杯架 · 咖啡与陶器',master:'偏深木色床与梳妆角 · 木百叶 · 柔粉薄毯',study:'木边书桌 · 书与器物 · 窗边垂叶',guest:'浅木低床 · 细条纹床品 · 小幅植物画',kitchen:'白色方砖 · 浅木下柜 · 通铺木色地面',bathroom:'浅木色防潮柜门 · 米白方砖 · 条纹毛巾'},
-    roomNotes:{living:'把绿意留在窗边，把柔软留给日常。',dining:'杯子、咖啡和喜欢的小物，都有自己的位置。',master:'木百叶筛过日光，薄毯接住一天的疲惫。',study:'桌面留给工作，层板留给喜欢的事。',guest:'沿用浅木和细条纹，留一个温柔的房间。',kitchen:'明亮台面与顺手器物，让三餐从容。',bathroom:'将浅木、白砖与柔软织物延续到日常洗漱。'},
+    roomMaterials:{living:'木边白台面 · 米白细条纹 · 窗边植物架',dining:'白柜木台面 · 开放杯架 · 咖啡与陶器',master:'偏深木色床与梳妆角 · 木百叶 · 柔粉薄毯',study:'木边白电竞桌 · 木色洞洞板 · 玻璃收藏柜',guest:'浅木低床 · 细条纹床品 · 小幅植物画',kitchen:'白色方砖 · 浅木下柜 · 通铺木色地面',bathroom:'浅木色防潮柜门 · 米白方砖 · 条纹毛巾'},
+    roomNotes:{living:'把绿意留在窗边，把柔软留给日常。',dining:'杯子、咖啡和喜欢的小物，都有自己的位置。',master:'木百叶筛过日光，薄毯接住一天的疲惫。',study:'桌靠主卧共墙，绿意在窗边，玩偶在玻璃柜里。',guest:'沿用浅木和细条纹，留一个温柔的房间。',kitchen:'明亮台面与顺手器物，让三餐从容。',bathroom:'将浅木、白砖与柔软织物延续到日常洗漱。'},
   },
 };
 export function schemeFromSearch(search:string):SchemeId {

@@ -72,6 +72,25 @@ try {
  directWalk({x:9.4,z:1.2},{x:10.8,z:1.2},'dining to open kitchen');
  directWalk({x:11,z:3.3},{x:11,z:1.6},'entry to open kitchen');
  const appliance=(name)=>{const item=data.colliders.find(c=>c.name===name);assert.ok(item,`${name} exists in actual model`);return item;};
+ // The gaming desk is along the master wall, with an unobstructed entrance and
+ // a real aisle behind the chair. Use actual runtime furniture bounds.
+ const gaming=data.layout.gamingRoom;
+ const gamingDesk=appliance('gaming desk'),gamingChair=appliance('gaming chair'),display=appliance('gaming glass display');
+ near(gamingDesk.minX-(X.studyWest+t/2),.05,'desk cable gap at master wall');
+ near(gamingDesk.maxX-gamingDesk.minX,.75,'gaming desk depth');
+ near(gamingDesk.maxZ-gamingDesk.minZ,1.80,'gaming desk length along master wall');
+ assert.equal(gaming.facing,'west');assert.equal(gaming.sharedWall,'master');
+ assert.ok(gamingChair.minX>gamingDesk.maxX,'chair is east of desk, facing master wall');
+ near(X.studyEast-t/2-gamingChair.maxX,1.09,'normal chair-back aisle');
+ near(display.maxX-display.minX,1.05,'glass cabinet width');
+ near(display.maxZ-display.minZ,.40,'glass cabinet depth');
+ assert.ok(display.maxX<5.15,'display stays entirely outside the original doorway');
+ assert.ok(display.maxZ<gamingDesk.minZ,'display and desk do not intersect');
+ assert.equal(gaming.display.doors,'sliding');
+ assert.equal(data.colliders.some(c=>c.name==='folding bed'),false,'guest bed removed from gaming room');
+ directWalk({x:5.55,z:4.8},{x:5.55,z:7.95},'gaming entrance to chair-back aisle');
+ directWalk({x:5.55,z:6.00},{x:4.85,z:6.00},'gaming display access');
+ assert.ok(canOccupy(5.55,7.10,data.outline,data.colliders,.3),'adult can pass behind gaming chair');
  const fridge=appliance('refrigerator'),washer=appliance('bathroom washer'),coffee=appliance('coffee sideboard');
  near(fridge.maxX-fridge.minX,.70,'true-size refrigerator width');
  near(fridge.maxZ-fridge.minZ,.70,'true-size refrigerator depth including doors');

@@ -46,6 +46,15 @@ try{
  }
  assert.equal(await page.locator('.tour-sidebar .tour-source-link').getAttribute('href'),'https://www.bilibili.com/video/BV1tm576NEwz/');
  await page.reload();await ready('living');assert.equal((await diag()).scheme,'sunlit','direct style link survives reload');
+ await page.locator('.tour-nav[data-room="study"]').click();await ready('study');
+ for(const style of ['cream','forest','japanese','french','sunlit']){
+  await page.locator(`[data-scheme="${style}"]`).click();await ready('study');
+  assert.equal((await diag()).scheme,style);assert.equal((await diag()).yaw,0,'gaming room opens facing desk');
+  assert.match(await page.locator('.tour-nav[data-room="study"]').innerText(),/电竞房/);
+  assert.match(await page.locator('#tour-material').innerText(),/洞洞板/);
+  assert.match(await page.locator('#tour-material').innerText(),/玻璃/);
+  await page.screenshot({path:`artifacts/gaming-${style}.png`});
+ }
  for(const id of ['dining','master','study','guest','kitchen','bathroom','living']){await page.locator(`.tour-nav[data-room="${id}"]`).click();await ready(id);assert.equal((await diag()).error,false);}
  await page.locator('#tour-materials-open').click();
  assert.match(await page.locator('#tour-material-modal').innerText(),/延伸设计/);

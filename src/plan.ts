@@ -11,10 +11,10 @@ export const rooms: Room[] = [
     description:'65 英寸电视搭配自然橡木矮柜，居中正对沙发。MUJI 风的奶白墙面、自然棕橡木纹地面与本色棉麻形成层次；电视背后补为完整奶白实体墙。',
     features:['65 英寸电视 · 正对沙发','1.80 × 0.42 m 自然橡木电视柜','电视左侧 · 约 1.7 m 孟加拉榕'],
     polygon:[[X.studyEast,Z.studyNorth],[X.livingEast,Z.studyNorth],[X.livingEast,Z.livingStep],[X.lowerAlcoveEast,Z.livingStep],[X.lowerAlcoveEast,Z.livingSouth],[X.studyEast,Z.livingSouth]],center:[8.1,6.4],spawn:[8.35,6.65],look:[6.72,6.70],color:'#bba68a' },
-  { id:'study', name:'书房 / 客卧', english:'STUDY & GUEST', icon:'book-open', subtitle:'安静工作，留一处自己的空间', dimension:'净尺寸 2.75 × 3.40 m',
-    description:'与客厅之间为完整奶白实体墙，两端原实体段保留。双人桌靠原有外窗，高柜在上侧；通过原上方房门出入，照明以外窗和工作灯配合。',
-    features:['1.70 × 0.58 m 白橡木双人桌','完整奶白实墙 · 原门进出','客床展开时左椅收至桌下'],
-    polygon:rect(X.studyWest,Z.studyNorth,X.studyEast,Z.studySouth),center:[4.85,7.02],spawn:[5.35,7.17],look:[6.33,6.95],color:'#97a88b' },
+  { id:'study', name:'电竞房', english:'GAMING ROOM', icon:'gamepad-2', subtitle:'游戏、收藏与自己的小世界', dimension:'净尺寸 2.75 × 3.40 m',
+    description:'1.80 × 0.75 m 电竞桌沿主卧共墙摆放，座椅面向墙，原窗侧向采光。上方洞洞板挂耳机与手柄，上侧玻璃移门柜展示玩偶。桌后留 5 cm 理线空隙，桌下双槽分收电源线与信号线，沿墙集中落线；座椅常用位置后方约 1.09 m 通道。',
+    features:['靠主卧共墙 · 面向墙使用','洞洞板挂件 · 玻璃移门展示柜','桌下双理线槽 · 落线不跨过道'],
+    polygon:rect(X.studyWest,Z.studyNorth,X.studyEast,Z.studySouth),center:[4.85,7.02],spawn:[5.55,7.10],look:[3.65,7.10],color:'#97a88b' },
   { id:'master', name:'主卧 / 衣帽区', english:'MASTER BEDROOM', icon:'bed-double', subtitle:'安静而松弛的日常', dimension:'睡眠区 3.25 × 3.35 m · 上方衣帽区',
     description:'主卧睡眠区按 3.25 × 3.35 m 校正，上方原 2.12 × 1.94 m 区域继续用于衣帽收纳。左侧墙改为完整实墙，保留下端外窗。',
     features:['1.80 m 床垫 · 燕麦织物','入口衣帽区 · 0.60 m 深衣柜','暖棕木纹砖 · 奶白墙面'],
@@ -40,7 +40,7 @@ export const rooms: Room[] = [
     features:['原洗衣区改咖啡收纳','保留北窗 · 释放采光','餐厨家务各归其位'],
     polygon:rect(X.diningWest,Z.upperBalconyNorth,X.livingEast,Z.diningNorth),center:[8.6,-.25],spawn:[8.75,-.15],look:[8.5,Z.upperBalconyNorth],color:'#8c9f78' },
   { id:'entry', name:'玄关 / 公共过道', english:'ENTRANCE', icon:'door-open', subtitle:'回家，从这里开始', dimension:'公共过道净宽 1.03 m · 玄关宽 1.65 m',
-    description:'入口保留轻薄收纳，过道连接卧室、书房与公共空间。夜间独立照明，减少行走时对睡眠区的打扰。',
+    description:'入口保留轻薄收纳，过道连接卧室、电竞房与公共空间。夜间独立照明，减少行走时对睡眠区的打扰。',
     features:['薄型玄关柜','连续公共过道','独立灯光 · 清洁设备预留'],
     polygon:[[3.25,Z.upperSouth],[X.diningWest,Z.upperSouth],[X.diningWest,Z.kitchenSouth],[X.entranceEast,Z.kitchenSouth],[X.entranceEast,Z.entranceSouth],[X.livingEast,Z.entranceSouth],[X.livingEast,Z.studyNorth],[3.25,Z.studyNorth]],center:[8,4.2],spawn:[10.8,3.5],look:[7.8,4.4],color:'#b5ae9c' },
 ];
@@ -48,6 +48,15 @@ export const roomById = (id: string) => rooms.find(r => r.id === id);
 export const WALL_HEIGHT = 2.7;
 // Latest user-approved visual layout. These are model coordinates, not a demolition plan.
 export const LAYOUT = {
+  gamingRoom: {
+    sharedWall:'master', facing:'west',
+    desk:{x:3.895,z:7.0,depth:.75,length:1.80,height:.75,wallGap:.05},
+    chair:{x:4.79,z:7.10,width:.68,depth:.68},
+    pegboard:{x:3.50,z:7.0,length:1.80,height:.65,centerY:1.83},
+    display:{x:4.20,z:5.505,width:1.05,depth:.40,height:1.85,front:'south',doors:'sliding'},
+    cables:{powerTrayX:3.62,signalTrayX:3.79,trayY:.64,dropZ:6.18,outletY:.43},
+    chairBackAisle:1.09,
+  },
   studyLivingWall: { kind:'solid', x:X.studyEast, from:Z.studyNorth, to:Z.livingSouth,
     infillFrom:Z.studyNorth+1.30, infillTo:Z.studyNorth+2.77, height:WALL_HEIGHT, curtain:false },
   kitchen: { kind:'open', slidingDoor:false,

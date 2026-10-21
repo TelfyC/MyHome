@@ -383,19 +383,105 @@ export function buildHome() {
   sideTable(8.20,8.23);book(8.20,.505,8.23);
   cylinder(7.68,.28,10.02,.30,.46,fabric);contact(7.68,10.02,.8,.8);obstruction(7.68,10.02,.6,.6,'stool');
   lamp(8.10,9.85,.08,2.4);
-  // Study: original outer window remains clear of tall storage.
-  wardrobe(4.22,6.04,1.3,.55,2.25);
-  table(4.73,9.35,1.70,.58,.75,wood);chair(4.20,9.18,Math.PI);chair(5.18,8.72,Math.PI);
-  const laptop=new THREE.Group();laptop.position.set(4.78,.80,9.36);furniture.add(laptop);
-  box(0,0,0,.34,.016,.24,metal,laptop,.007);const lid=box(0,.12,.115,.34,.23,.012,charcoal,laptop,.007);lid.rotation.x=-.15;
-  box(0,.12,.104,.30,.19,.005,screen,laptop);
-  book(5.22,.81,9.35);lamp(4.03,9.38,.8,.65);
-  // A compact foldable guest bed/daybed on the left. It is not a permanent bedroom.
-  box(3.96,.23,7.75,.82,.25,1.90,cherryEdge,furniture,.04);
-  box(3.96,.42,7.75,.80,.20,1.86,fabric,furniture,.07);
-  box(3.96,.56,7.10,.64,.17,.38,sage,furniture,.07);
-  box(3.96,.54,8.25,.80,.045,.50,oatmeal,furniture,.02);
-  obstruction(3.96,7.75,.82,1.9,'folding bed');contact(3.96,7.75,1.2,2.3);
+  // Gaming room: measured coordinates, desk against the shared MASTER wall.
+  const gaming=fixedGroup('gaming-room');
+  const {desk,chair:seat,pegboard:peg,display:dc,cables}=LAYOUT.gamingRoom;
+  box(desk.x,desk.height,desk.z,desk.depth,.055,desk.length,wood,gaming,.018);
+  for(const x of [desk.x-.28,desk.x+.28])for(const z of [desk.z-.79,desk.z+.79])
+    box(x,.375,z,.045,.72,.045,oak,gaming,.006);
+  obstruction(desk.x,desk.z,desk.depth,desk.length,'gaming desk',false);
+  // One ultrawide monitor faces east, towards the chair; desk-mounted arm avoids
+  // transmitting hardware vibration through the master bedroom wall.
+  box(3.63,.99,7.10,.045,.43,.045,charcoal,gaming);
+  box(3.73,1.14,7.10,.24,.035,.035,charcoal,gaming);
+  box(3.82,1.22,7.10,.045,.43,.88,charcoal,gaming,.014);
+  box(3.846,1.22,7.10,.006,.396,.845,screen,gaming,.004);
+  box(4.045,.783,7.10,.32,.008,.97,mat('#b5b8a8'),gaming,.012);
+  box(4.08,.80,7.17,.145,.022,.44,charcoal,gaming,.006);
+  sphere(4.09,.808,6.83,.046,.018,.03,charcoal,gaming);
+  // Tower stands on the tabletop at its north end, all vents remain open.
+  box(3.91,1.005,6.33,.40,.45,.22,white,gaming,.012);
+  box(4.116,1.005,6.33,.008,.40,.18,glass,gaming);
+  for(const y of [.91,1.08]) {
+    const fan=cylinder(4.125,y,6.33,.067,.006,charcoal,gaming);fan.rotation.z=Math.PI/2;
+  }
+  // Upholstered ergonomic chair faces negative X. Five-point base and armrests.
+  cylinder(seat.x,.25,seat.z,.035,.40,metal,gaming);
+  for(let i=0;i<5;i++) {
+    const a=i*Math.PI*2/5,leg=box(seat.x+Math.sin(a)*.14,.10,seat.z+Math.cos(a)*.14,.035,.025,.31,charcoal,gaming);
+    leg.rotation.y=a;
+    sphere(seat.x+Math.sin(a)*.29,.065,seat.z+Math.cos(a)*.29,.04,.04,.04,charcoal,gaming);
+  }
+  box(seat.x,.47,seat.z,.49,.10,.51,fabric,gaming,.06);
+  box(seat.x+.23,.85,seat.z,.09,.72,.48,sage,gaming,.04);
+  for(const z of [seat.z-.30,seat.z+.30]) {
+    box(seat.x,.64,z,.29,.045,.06,charcoal,gaming,.015);
+    box(seat.x+.12,.55,z,.025,.18,.025,metal,gaming);
+  }
+  obstruction(seat.x,seat.z,seat.depth,seat.width,'gaming chair',false);
+  // Perforated wall board: holes, hooks, controller shelf, and headphones.
+  box(peg.x,peg.centerY,peg.z,.035,peg.height,peg.length,wood,gaming,.012);
+  const holeMat=mat('#796e5d');
+  for(let row=0;row<7;row++)for(let col=0;col<22;col++) {
+    const hole=cylinder(peg.x+.019,peg.centerY-.24+row*.08,peg.z-.84+col*.08,.009,.002,holeMat,gaming);
+    hole.rotation.z=Math.PI/2;
+  }
+  box(3.61,1.65,6.45,.22,.025,.45,oak,gaming,.008);
+  for(const z of [6.33,6.57]) {
+    sphere(3.63,1.72,z,.055,.04,.09,charcoal,gaming);
+    box(3.69,1.72,z,.015,.018,.065,metal,gaming,.006);
+  }
+  const headphoneBand=new THREE.Mesh(new THREE.TorusGeometry(.10,.012,8,24,Math.PI),charcoal);
+  headphoneBand.rotation.y=Math.PI/2;headphoneBand.position.set(3.60,1.85,7.55);gaming.add(headphoneBand);
+  for(const z of [7.45,7.65])box(3.60,1.80,z,.055,.10,.045,charcoal,gaming,.018);
+  box(3.56,1.96,7.55,.10,.015,.018,metal,gaming);
+  // Separate accessible trays and grommets; one contained drop, no floor crossing.
+  for(const [x,m] of [[cables.powerTrayX,charcoal],[cables.signalTrayX,metal]] as const) {
+    box(x,cables.trayY,7.0,.11,.035,1.60,m,gaming,.005);
+    box(x,.69,6.20,.025,.10,.025,m,gaming);
+    cylinder(x,.783,6.20,.026,.007,charcoal,gaming);
+  }
+  box(3.62,.67,6.60,.07,.028,.35,white,gaming,.004);
+  for(const z of [6.49,6.60,6.71])box(3.62,.686,z,.034,.002,.045,charcoal,gaming);
+  box(3.50,.54,cables.dropZ,.025,.22,.055,white,gaming,.005);
+  for(const z of [6.14,6.24])box(3.49,cables.outletY,z,.025,.08,.08,white,gaming,.004);
+  box(3.54,.65,6.18,.09,.025,.035,charcoal,gaming,.004);
+  // A small task lamp and soft bias strip keep the gaming setup warm at night.
+  const gamingGlow=mat('#f5ead7');gamingGlow.emissive=new THREE.Color(HOME_STYLE.lamplight);gamingGlow.emissiveIntensity=.13;luminous.push(gamingGlow);
+  cylinder(3.91,.79,7.68,.08,.02,oak,gaming);
+  cylinder(3.91,.93,7.68,.012,.26,metal,gaming);
+  cylinder(3.91,1.09,7.68,.07,.13,gamingGlow,gaming,.12);
+  box(3.53,1.495,7.0,.035,.012,1.55,gamingGlow,gaming);
+  const gamingLight=new THREE.PointLight(HOME_STYLE.lamplight,0,2.6,2);
+  gamingLight.position.set(3.95,1.13,7.68);root.add(gamingLight);lamps.push({light:gamingLight,nightIntensity:.8});
+  // Sliding glass cabinet against the north wall, clear of the doorway/swing.
+  box(dc.x,.13,dc.z,dc.width,.12,dc.depth,oak,gaming,.01);
+  box(dc.x,dc.height-.025,dc.z,dc.width,.05,dc.depth,wood,gaming,.006);
+  box(dc.x,dc.height/2,dc.z-dc.depth/2+.012,dc.width,dc.height-.12,.024,wood,gaming);
+  for(const x of [dc.x-dc.width/2+.018,dc.x+dc.width/2-.018])
+    box(x,dc.height/2,dc.z,.036,dc.height-.12,dc.depth,oak,gaming);
+  const displayGlow=mat('#f7e4c2');displayGlow.emissive=new THREE.Color('#ffe2ae');displayGlow.emissiveIntensity=.35;luminous.push(displayGlow);
+  for(const y of [.49,.91,1.33,1.75]) {
+    box(dc.x,y,dc.z,dc.width-.07,.018,dc.depth-.04,glass,gaming);
+    box(dc.x,y+.025,dc.z-.14,dc.width-.12,.012,.015,displayGlow,gaming);
+  }
+  for(const [i,x] of [dc.x-.245,dc.x+.245].entries()) {
+    box(x,1.01,dc.z+.19+i*.012,.50,1.57,.012,glass,gaming);
+    box(x+(i?-.18:.18),1.0,dc.z+.209+i*.012,.014,.14,.022,metal,gaming,.004);
+  }
+  // Small original toy animals, kept inside the shelves instead of loose in the aisle.
+  for(let row=0;row<3;row++)for(let col=0;col<3;col++) {
+    const x=dc.x-.31+col*.31,y=.51+row*.42,z=dc.z+.015;
+    const toyMat=[oatmeal,sage,porcelain][(row+col)%3];
+    sphere(x,y+.09,z,.065,.09,.055,toyMat,gaming);
+    sphere(x,y+.20,z,.07,.065,.058,toyMat,gaming);
+    for(const dx of [-.047,.047])sphere(x+dx,y+.26,z,.025,.035,.024,toyMat,gaming);
+    for(const dx of [-.023,.023])sphere(x+dx,y+.21,z+.053,.007,.008,.005,charcoal,gaming);
+  }
+  obstruction(dc.x,dc.z,dc.width,dc.depth,'gaming glass display',false);
+  // Window-side green is kept away from electronics and the chair path.
+  const gamingPlant=plant(5.84,8.25,.72,0,'coffee');gamingPlant.userData.calibrated=true;
+  obstruction(5.84,8.25,.28,.28,'gaming window plant',false);
   // Master bed follows the concept plan, with headboard at the lower end.
   rug(1.57,9.13,2.65,2.80,'#d9cfbd');bed(1.55,9.10,1.80,Math.PI);
   sideTable(.32,9.88);lamp(.32,9.88);sideTable(2.72,9.88);
