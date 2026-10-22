@@ -1,0 +1,475 @@
+{
+  "date": "2026-10-22",
+  "tool": "built-in image_gen",
+  "changedPanoramas": 26,
+  "assets": [
+    {
+      "path": "public/panoramas/living.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 227066,
+      "sha256": "4125c5fa8c669b3ed7c0f31cb5262a83fdc8e4c7b456fcc7032e2c2aaa57f1ca"
+    },
+    {
+      "path": "public/panoramas/living-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 8798,
+      "sha256": "17b217380626aa36789fdf1298335dccbccb05d7628b420a25accbb936366b4f"
+    },
+    {
+      "path": "public/panoramas/dining.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 178721,
+      "sha256": "c4115d053581fda0b143e9520e0854b850d519184d496b59b0a3c90bcca0b4b4"
+    },
+    {
+      "path": "public/panoramas/dining-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 7807,
+      "sha256": "ea7246f54da997a6ef01b789cf263332596e9720ebf297f132d3b5fd41174c90"
+    },
+    {
+      "path": "public/panoramas/master.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 167594,
+      "sha256": "64159964f5e3a158052b2f2a3d17c0eb7dac9be54ac4dd667947d2510b1fcc1d"
+    },
+    {
+      "path": "public/panoramas/master-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 7030,
+      "sha256": "c04875290da031ddcc8930682f9e4154df92e659ab25b296b8e767aa163df9fd"
+    },
+    {
+      "path": "public/panoramas/guest.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 179398,
+      "sha256": "f2bd998a3104affc597c5bda5ad57dbf5c9a63db47a44fbaf343a7d878e18b63"
+    },
+    {
+      "path": "public/panoramas/guest-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 7302,
+      "sha256": "689403b4205d6ae27db957489c5f2276dd798c80a812c785c3dd4f7b68d2caa9"
+    },
+    {
+      "path": "public/panoramas/kitchen.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 178833,
+      "sha256": "49be2becff57a701e4a38db0670f5ff92a056f315c112e35fc9c97d4aea78fe7"
+    },
+    {
+      "path": "public/panoramas/kitchen-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 8063,
+      "sha256": "4814aa32aef417eff13b23e5b3d207c8233d2c7672fb648f75e75b489da5bd71"
+    },
+    {
+      "path": "public/panoramas/forest/living.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 398943,
+      "sha256": "45d91b0533ec443ec6645823a6a58062a3da4aa0f7935038c0126a5606a077e4"
+    },
+    {
+      "path": "public/panoramas/forest/living-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 13924,
+      "sha256": "cf7d2722dd43f3364cd9de801f52ca308749e93dd59fd70642c7c6003867d1d2"
+    },
+    {
+      "path": "public/panoramas/forest/dining.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 282055,
+      "sha256": "7fc42cac55d53df8c18257f1202a0b4a930bf8052782e52f2ce543079583e0a5"
+    },
+    {
+      "path": "public/panoramas/forest/dining-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 11735,
+      "sha256": "48e23d7d9a64c26245a2b903554a373453c0f54f1e715765a9ddaca986f3008d"
+    },
+    {
+      "path": "public/panoramas/forest/master.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 264395,
+      "sha256": "40a3b7a9497e0c4234d43c42764c04fb6bd83d5b7f0f82ceb5e8cb98d1116cc3"
+    },
+    {
+      "path": "public/panoramas/forest/master-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 11678,
+      "sha256": "38b4526798a016d779a5d913c9f668432a0ccd68aab0249cecca7c1a2fe16d54"
+    },
+    {
+      "path": "public/panoramas/forest/guest.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 269972,
+      "sha256": "56270da448390eca91673ace86d230d34958efea65da5f351f3042b8c123f7ed"
+    },
+    {
+      "path": "public/panoramas/forest/guest-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 10789,
+      "sha256": "c857b0486ee75b91fba358895cf35242b1a4fcff6a9873b4523da673093da809"
+    },
+    {
+      "path": "public/panoramas/japanese/living.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 287159,
+      "sha256": "3583442e909ec4ed253dde7b82689ef90c0d6403d204043205f91c675579a41c"
+    },
+    {
+      "path": "public/panoramas/japanese/living-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 10761,
+      "sha256": "95580ff8e541869eeed3faf0cb3e858b3a896d8584c78e88122a26d150049b24"
+    },
+    {
+      "path": "public/panoramas/japanese/dining.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 227027,
+      "sha256": "9ee943fff3d351dfb539388fc850ed32d44c030c0a513e5972f82a930472b65f"
+    },
+    {
+      "path": "public/panoramas/japanese/dining-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 9686,
+      "sha256": "a27ab627a8e289296202369a18def18b163ba5d3625ba7a1a4e14730a33e4db6"
+    },
+    {
+      "path": "public/panoramas/japanese/master.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 213646,
+      "sha256": "668884079aa5619431f59d6a3aa4ba484f258db82ec4b698460501070bca8406"
+    },
+    {
+      "path": "public/panoramas/japanese/master-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 9015,
+      "sha256": "c5ebb7b2c5cade0d50cee35ad63104a4470f3658e1b062dda4d047cfcfdf4826"
+    },
+    {
+      "path": "public/panoramas/japanese/guest.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 216009,
+      "sha256": "1471391fd99c1e76ecba33c493771e1638898ace79bfd71cec863134479f13da"
+    },
+    {
+      "path": "public/panoramas/japanese/guest-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 9072,
+      "sha256": "21b065753b913bd6c4803483720643c6d52f00e6aa878befc138dd90334a383e"
+    },
+    {
+      "path": "public/panoramas/french/living.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 312641,
+      "sha256": "7257198ac1c4ad9e1fa9d794fbf691b2fd7f47e5d6a9f035be79b7958ea2dc8b"
+    },
+    {
+      "path": "public/panoramas/french/living-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 12012,
+      "sha256": "f015642e1d9a3417244103dd8162666eefaa48fb06722ffe9a76db464a3d62c0"
+    },
+    {
+      "path": "public/panoramas/french/dining.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 249825,
+      "sha256": "21d36b6be01345e09f475cf9c6fca24d2c2a781d601cdc811359614463a75aa2"
+    },
+    {
+      "path": "public/panoramas/french/dining-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 10052,
+      "sha256": "13478a8eff4655febd09a12655fabdeb9fc70f9b4c43191d00994652b1cf5aa0"
+    },
+    {
+      "path": "public/panoramas/sunlit/living.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 317392,
+      "sha256": "254b105b8b599fa2a701245b4288856c3825b090c6bc2a6a261449e68ecf3d43"
+    },
+    {
+      "path": "public/panoramas/sunlit/living-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 11802,
+      "sha256": "b63299a9217009ce421bc9ff2ae8d1c14a71dcaee8dea5034e00540ceb049fc5"
+    },
+    {
+      "path": "public/panoramas/sunlit/dining.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 249184,
+      "sha256": "22e36b1d7ed8d0b0c6ad50f3e09ce23748af2d3132f012170a101681539bdfcc"
+    },
+    {
+      "path": "public/panoramas/sunlit/dining-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 10435,
+      "sha256": "4ddd501785ebd51f7b815a656890256162528baffa3788d49c089439d9fee299"
+    },
+    {
+      "path": "public/panoramas/bathroom.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 158741,
+      "sha256": "b2a8584da64c0bdf61ea417ff1837a160f2434cb9e92ff11bee25fbd875f21a3"
+    },
+    {
+      "path": "public/panoramas/bathroom-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 6883,
+      "sha256": "b2493c3cedff912f5806dbf16091f6de8cc9c7d10c4e70f8e0cb0779e5c14da2"
+    },
+    {
+      "path": "public/panoramas/forest/bathroom.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 280331,
+      "sha256": "4dc61f831b85500cb6ea06def42499cfb0f052f455ff4dd0cb3e607990a14000"
+    },
+    {
+      "path": "public/panoramas/forest/bathroom-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 11118,
+      "sha256": "f8fa350fffe92326eb10d039de2a931ea7ad55afe13142920d2a990a9caeb163"
+    },
+    {
+      "path": "public/panoramas/forest/kitchen.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 229645,
+      "sha256": "1e4ae927c9c1c328055a8f04b2b9bca8f0e47948d2118580e109787004018e57"
+    },
+    {
+      "path": "public/panoramas/forest/kitchen-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 10038,
+      "sha256": "d375129cd0d380e04d2451c74be2133ff43bc4dfaa566819fa5dca238d06f6ce"
+    },
+    {
+      "path": "public/panoramas/japanese/kitchen.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 225135,
+      "sha256": "c22a5126a947a02bdbd6e5ff82535f223d29160f392a6617bd13c88f7e13d232"
+    },
+    {
+      "path": "public/panoramas/japanese/kitchen-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 9558,
+      "sha256": "991f8274dacc9e1b1c18a3c293e7558fd4797fffa7c03637f2c50996d781b9f7"
+    },
+    {
+      "path": "public/panoramas/japanese/bathroom.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 220901,
+      "sha256": "931769c1aba21fb72ba9783171c32d204dd3bdf15d3ce7303af4bb11a5051a4c"
+    },
+    {
+      "path": "public/panoramas/japanese/bathroom-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 9072,
+      "sha256": "81ecfb6ec7fda9e2c6951aa475a0766d49b5f2ffa0aba7caa24ba914a7f346b9"
+    },
+    {
+      "path": "public/panoramas/french/bathroom.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 215617,
+      "sha256": "5fc3aa7a9f96749851d551dd9e6f108ff67bdea857f14e49890079e9b873e2bd"
+    },
+    {
+      "path": "public/panoramas/french/bathroom-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 8415,
+      "sha256": "f74c6db0073f36f4d7122f0c7ebfcd4a93d63fb846e21b286a895775400b266f"
+    },
+    {
+      "path": "public/panoramas/sunlit/bathroom.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 238882,
+      "sha256": "03cfd9a5ec2c74cd95789f7d076c9a3a59765fbb720680fdc6077d13d0603f1d"
+    },
+    {
+      "path": "public/panoramas/sunlit/bathroom-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 9561,
+      "sha256": "0f4e0f306864fe15c314030e5aeb640885f9940bffc6b6908639a229fb580107"
+    },
+    {
+      "path": "public/panoramas/french/kitchen.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 215316,
+      "sha256": "192abeba6c3d6b2049473eacbd9f70b1fe80006748ef972ea9e89a002296a3a3"
+    },
+    {
+      "path": "public/panoramas/french/kitchen-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 9240,
+      "sha256": "351b9857d0276c65bf0f7ee11e5ebc244ecf9e8ddb893b69130966c6d024051e"
+    },
+    {
+      "path": "public/panoramas/sunlit/kitchen.jpg",
+      "size": [
+        1774,
+        887
+      ],
+      "bytes": 238037,
+      "sha256": "c5024dd9e4a0a063a72f9164a919ecc473788751fcd522910598a3cce9c85838"
+    },
+    {
+      "path": "public/panoramas/sunlit/kitchen-thumb.jpg",
+      "size": [
+        320,
+        160
+      ],
+      "bytes": 9776,
+      "sha256": "3ed6291b2bf70111b42fcffe124bbcae8056514e1f072919fc1200abb67b1c20"
+    }
+  ]
+}
