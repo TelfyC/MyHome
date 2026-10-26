@@ -1,4 +1,4 @@
-// MUJI-inspired natural oak, warm white and unbleached textiles.
+// Neutral geometry-construction defaults. Runtime materials use the four modelPalettes.
 // These are rendering swatches, not verified paint codes or the creator's products.
 export const HOME_STYLE = {
   wall: '#f6f2e9',

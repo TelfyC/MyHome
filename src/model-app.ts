@@ -3,9 +3,12 @@ import { createIcons, House, PanelsTopLeft, CircleHelp, Box, ArrowUpRight, Ruler
 const icons = {House, PanelsTopLeft, CircleHelp, Box, ArrowUpRight, Ruler, Sun, Moon, RotateCcw, Plus, Minus, Camera, Maximize, ChevronDown, Footprints, Scan, Layers2, MapPin, Blinds, Mouse, PanelLeft, X, MonitorX, ArrowRight, ChevronUp, ChevronLeft, ChevronRight, SunMoon, Sofa, BookOpen, BedDouble, Sprout, Utensils, CookingPot, Bath, Flower2, DoorOpen};
 import { HomeViewer } from './viewer';
 import type { Mode } from './viewer';
-import { rooms, outline, roomById } from './plan';
+import { rooms, outline, roomById, LAYOUT } from './plan';
 import type { RoomId } from './plan';
 import { HOME_STYLE } from './style-palette';
+import { designSchemes, schemeFromSearch } from './design-schemes';
+import type { SchemeId } from './design-schemes';
+let currentScheme=schemeFromSearch(location.search);
 
 const icon=(name:string,cls='')=>`<i data-lucide="${name}" class="${cls}"></i>`;
 const app=document.querySelector<HTMLDivElement>('#app')!;
@@ -13,11 +16,11 @@ app.innerHTML=`
 <header class="topbar">
   <a class="brand" href="${import.meta.env.BASE_URL}" aria-label="栖光首页"><span class="brand-mark">${icon('house')}</span><span>栖光<span class="brand-en">LIGHTWOOD HOME</span></span></a>
   <div class="project-title"><span class="project-separator"></span>采光优化 · 方案 B <span class="version">空间概念版</span></div>
-  <div class="header-actions"><a class="quiet-btn" href="${import.meta.env.BASE_URL}">返回写实全景</a><span class="live-badge"><span></span>实时 3D</span><button id="reference-btn" class="quiet-btn">${icon('panels-top-left')}<span>设计依据</span></button><button id="help-btn" class="icon-btn" aria-label="操作帮助">${icon('circle-help')}</button></div>
+  <div class="header-actions"><a id="return-tour" class="quiet-btn" href="?design=${currentScheme}">返回写实全景</a><span class="live-badge"><span></span>实时 3D</span><button id="reference-btn" class="quiet-btn">${icon('panels-top-left')}<span>设计依据</span></button><button id="help-btn" class="icon-btn" aria-label="操作帮助">${icon('circle-help')}</button></div>
 </header>
 <div class="workspace">
   <aside class="sidebar" id="sidebar">
-    <div class="sidebar-intro"><div class="eyebrow">A HOME, MADE FOR LIVING</div><h1>让光，住进家。</h1><p>MUJI 风 · 自然木 · 棉麻</p></div>
+    <div class="sidebar-intro"><div class="eyebrow">A HOME, MADE FOR LIVING</div><h1>让光，住进家。</h1><p id="model-scheme-name">${designSchemes[currentScheme].name} · 细节修订版</p><label class="model-scheme-label" for="model-scheme">选择风格</label><select id="model-scheme" aria-label="尺寸模型设计风格">${Object.values(designSchemes).map(s=>`<option value="${s.id}" ${s.id===currentScheme?'selected':''}>${s.name}</option>`).join('')}</select></div>
     <div class="section-label">空间导览 <span>09 SPACES</span></div>
     <nav class="room-nav" aria-label="空间导览">
       <button class="room-button active" data-nav="all">${icon('box')}<span>全屋概览<small>看见家的完整模样</small></span>${icon('arrow-up-right','room-arrow')}</button>
@@ -29,10 +32,11 @@ app.innerHTML=`
   <main class="viewport" id="viewport">
     <div class="viewport-heading"><div><span class="eyebrow" id="view-eyebrow">EXPLORE YOUR HOME</span><h2 id="view-title">家的每一面，都值得看看。</h2></div><span class="view-chip" id="view-chip">全屋鸟瞰</span></div>
     <div class="lighting-control" role="group" aria-label="光照氛围"><button id="day-btn" class="active" aria-pressed="true">${icon('sun')}日间</button><button id="night-btn" aria-pressed="false">${icon('moon')}夜间</button></div>
+    <section class="kitchen-control" aria-label="厨房玻璃移门"><div class="kitchen-control-heading"><span>可开合厨房</span><small>约 7.6 ㎡ · 边界外移 50 cm</small></div><div class="kitchen-door-switch" role="group" aria-label="厨房移门开合"><button id="kitchen-open-btn" class="active" aria-pressed="true">平常收起</button><button id="kitchen-close-btn" aria-pressed="false">做饭围合</button></div><p id="kitchen-door-note" aria-live="polite">五扇收窗边，四扇收右端 · 转角无立柱</p></section>
     <div id="loading" class="loading"><span class="loading-logo">${icon('house')}</span><strong>正在构建你的家</strong><span>铺开灰棕木纹，让光照进来…</span><div class="loading-line"></div></div>
     <div class="vertical-tools"><button id="reset-btn" aria-label="重置视角" title="重置视角">${icon('rotate-ccw')}</button><button id="zoom-in" aria-label="放大" title="放大">${icon('plus')}</button><button id="zoom-out" aria-label="缩小" title="缩小">${icon('minus')}</button><span></span><button id="capture-btn" aria-label="保存当前视角图片" title="保存当前视角图片">${icon('camera')}</button><button id="fullscreen-btn" aria-label="全屏显示" title="全屏显示">${icon('maximize')}</button></div>
-    <section class="detail-card" id="detail-card"><div class="detail-kicker"><span id="detail-en">THE DESIGN IDEA</span><span class="small-dot"></span></div><h3 id="detail-title">通透有度，自在有光</h3><p id="detail-description">奶白墙顶与灰棕木纹铺开明亮背景，自然橡木家具、白橡木桌面与米色织物，让日常有温暖的层次。</p><div class="detail-bottom" id="detail-bottom"><span>三间房 · 一处独立卫浴</span><button id="enter-btn">开始漫游 ${icon('arrow-up-right')}</button></div></section>
-    <section class="minimap" aria-label="户型定位"><div class="minimap-heading"><span>户型定位</span><span>图纸上方 ↑</span><button id="map-toggle" aria-label="收起户型图">${icon('chevron-down')}</button></div><div class="map-body"><svg id="map" viewBox="-0.7 -1.5 13.6 13" role="img" aria-label="可点击的户型小地图"><path class="map-base" d="M${outline.map(p=>p.join(',')).join(' L')} Z"/>${rooms.map(r=>`<path tabindex="0" role="button" aria-label="前往${r.name}" data-map="${r.id}" d="M${r.polygon.map(p=>p.join(',')).join(' L')} Z"/><text x="${r.center[0]}" y="${r.center[1]+.1}">${r.name.split(' / ')[0].replace('卫生间','卫浴').replace('玄关','玄关')}</text>`).join('')}<g id="map-person" style="display:none"><circle r=".24"/><path d="M-.17 -.30 L0 -.65 L.17 -.30"/></g></svg><div class="map-caption"><span class="legend-dot"></span>点击房间快速前往</div></div></section>
+    <section class="detail-card" id="detail-card"><div class="detail-kicker"><span id="detail-en">THE DESIGN IDEA</span><span class="small-dot"></span></div><h3 id="detail-title">通透有度，自在有光</h3><p id="detail-description">矿物感墙面、真实木纹和亚麻构成背景，柜体收口、阅读灯与顺手收纳围绕日常使用布置。</p><div class="detail-bottom" id="detail-bottom"><span>三间房 · 一处独立卫浴</span><button id="enter-btn">开始漫游 ${icon('arrow-up-right')}</button></div></section>
+    <section class="minimap" aria-label="户型定位"><div class="minimap-heading"><span>户型定位</span><span>图纸上方 ↑</span><button id="map-toggle" aria-label="收起户型图">${icon('chevron-down')}</button></div><div class="map-body"><svg id="map" viewBox="-0.7 -1.5 13.6 13" role="img" aria-label="可点击的户型小地图"><path class="map-base" d="M${outline.map(p=>p.join(',')).join(' L')} Z"/>${rooms.map(r=>`<path tabindex="0" role="button" aria-label="前往${r.name}" data-map="${r.id}" d="M${r.polygon.map(p=>p.join(',')).join(' L')} Z"/><text x="${r.center[0]}" y="${r.center[1]+.1}">${r.name.split(' / ')[0].replace('卫生间','卫浴').replace('玄关','玄关')}</text>`).join('')}<path id="map-kitchen-doors" d="M${LAYOUT.kitchen.enclosureWest},${LAYOUT.kitchen.doors.west.from} V${LAYOUT.kitchen.entryOpening.z} H${LAYOUT.kitchen.entryOpening.to}"/><g id="map-person" style="display:none"><circle r=".24"/><path d="M-.17 -.30 L0 -.65 L.17 -.30"/></g></svg><div class="map-caption"><span class="legend-dot"></span>点击房间快速前往</div></div></section>
     <div class="walking-hint" id="walking-hint" hidden>${icon('footprints')}<span><b>W A S D</b> 或方向键移动 · 拖动环顾 · <b>Esc</b> 退出</span></div>
     <div class="walk-pad" id="walk-pad" hidden><button data-key="KeyW" aria-label="向前走">${icon('chevron-up')}</button><div><button data-key="KeyA" aria-label="向左走">${icon('chevron-left')}</button><button data-key="KeyS" aria-label="向后走">${icon('chevron-down')}</button><button data-key="KeyD" aria-label="向右走">${icon('chevron-right')}</button></div></div>
     <div class="view-bottom">
@@ -45,8 +49,8 @@ app.innerHTML=`
   </main>
 </div>
 <footer class="statusbar"><div><span class="status-dot"></span><span id="status-text">尺寸取自 newStructure · 沿用现行布局与侧窗修正</span></div><span>概念可视化 · 非施工图 / 非照度模拟</span></footer>
-<dialog id="reference-modal" class="reference-modal"><div class="modal-header"><div><span class="eyebrow">DESIGN REFERENCES</span><h2>每个空间，都有依据。</h2></div><button class="icon-btn close-modal" aria-label="关闭设计依据">${icon('x')}</button></div><div class="reference-tabs" role="tablist"><button data-ref="dimensions" class="active" role="tab" aria-selected="true">最新尺寸图</button><button data-ref="plan" role="tab" aria-selected="false">方案 B 布局</button><button data-ref="lighting" role="tab" aria-selected="false">原借光与灯光方案</button><button data-ref="day" role="tab" aria-selected="false">日间材质参考</button><button data-ref="night" role="tab" aria-selected="false">夜间氛围参考</button><button data-ref="original" role="tab" aria-selected="false">原始户型</button></div><div class="reference-content"><div class="reference-image"><img id="reference-image" src="${import.meta.env.BASE_URL}references/dimensions.jpg" alt="最新房屋尺寸图，仅使用标注尺寸" /></div><aside><h3>尺寸与当前布局</h3><p>主要净尺寸取自 newStructure.jpg，仅读取手写尺寸，图中的旧隔墙、卫浴位置与窗符号不用于重建。餐厅与上方阳台合计进深 3.45 m，已由你确认。房间连接和分区继续以当前方案为基础，主卧与左上客房的侧窗已取消。当前配色按最新 MUJI 风要求统一：奶白墙顶与大柜、灰棕柔光木纹砖、自然橡木活动家具、局部白橡木桌面和米色织物。此前调整的电视柜与大屏电视继续采用；原图保留供对照。图纸上下不代表已确认的地理朝向。</p><ul><li>电竞房与客厅之间补为完整暖白实墙，两端原实体段保留，电竞房由原门进出。</li><li>沙发靠右墙，约 65 英寸电视配 1.80 × 0.42 m 木质矮柜，居中正对沙发；原房门仍可通行。</li><li>中央卫生间保留，左下旧卫浴区域改为衣帽收纳。</li><li>电视摆放在木柜上，背后为完整实墙；原景窗玻璃、黑框和隐私帘已取消。厨房朝餐厅与玄关的内隔墙及移门取消，保留外墙和原窗，整合为上墙洗切炒台面、东北角冰箱高柜与右侧辅助台，原洗衣位改为咖啡餐边柜；洗衣机移至卫生间台盆旁。</li></ul><h3>材质与光的层次</h3><p>公区采用低对比灰棕细木纹通铺，墙面为奶白，大柜体为近色奶白；门为白色细框、两列四行的不透明磨砂玻璃门，窗框统一为黑色。电视柜、餐桌椅、床架和咖啡柜采用低黄低红的细纹自然橡木，卫浴洗衣与台盆共用浅石色台面。灯光采用基础、工作与局部氛围的搭配。</p><p>色卡与木纹砖规格为本模型的视觉方案，不代表博主家的实测漆号、品牌或铺贴参数。</p><h3>电竞与收藏</h3><p>1.80 × 0.75 m 电竞桌沿主卧共墙摆放，面向墙、侧向采光；上方洞洞板挂耳机与手柄，上侧 1.05 × 0.40 m 玻璃移门柜放玩偶。桌后留 5 cm 空隙，桌下双槽分收电源与信号线，靠墙集中落线，常用椅位后约 1.09 m 通行。临时客床取消。插座与网口为建议点位，落地前按现有线路复核。</p><h3>餐厨与洗衣整改</h3><p>冰箱靠东北角整合高柜；北侧实墙放灶和烟罩，水槽靠原北窗，中间留约 0.58 m 备餐段，右侧设 0.85 m 辅助台。餐厅原洗衣位改为 1.50 × 0.48 m 咖啡柜。洗衣机移至卫生间洗手台旁，两者共用 1.48 m 台面，机前净宽约 0.94 m；卫浴门洞移至右侧，宽约 0.87 m。</p><h3>本次尺寸校准</h3><p>主卧睡眠区 3.25 × 3.35 m，原 2.12 × 1.94 m 区域继续用作衣帽区；左上客房净宽 3.05 m，电竞房 2.75 × 3.40 m，中央卫浴 1.65 × 3.70 m，厨房 2.62 × 2.44 m，公共过道净宽 1.03 m。客厅公区主段进深 4.60 m，下端收窄区约 1.95 × 1.80 m。</p><h3>仍采用概念值的部分</h3><p>原图是透视照片，仅使用标注数值。外墙厚度暂取 0.22 m，部分未单独标注的错位和上方阳台分界仍为估算。主卧总进深包含衣帽区和原分隔厚度估算；不恢复图中的旧隔墙。层高暂取 2.70 m；开放厨房的拆改范围、结构和用能条件仍需现场确认，模型只表达布局意向。</p><p>日夜切换用于体验材质与照明氛围，不表示实测照度、真实日照方向或采光改善幅度。</p><p class="source-name">尺寸：docs / newStructure.jpg<br>布局：采光优化方案 B 与后续确认<br>风格：MUJI 自然木与棉麻方案</p></aside></div></dialog>
-<dialog id="help-modal" class="help-modal"><div class="modal-header"><div><span class="eyebrow">MAKE YOURSELF AT HOME</span><h2>慢慢逛，就像在家。</h2></div><button class="icon-btn close-modal" aria-label="关闭操作帮助">${icon('x')}</button></div><div class="help-grid"><div>${icon('mouse')}<h3>从外面看看</h3><p>左键拖动旋转，滚轮缩放，右键平移。触屏可单指旋转、双指缩放与平移。</p></div><div>${icon('footprints')}<h3>走进房间</h3><p>选择「室内漫游」，用 WASD 或方向键行走，拖动画面环顾。Shift 加速，Esc 返回鸟瞰。屏幕方向键同样可用。</p></div><div>${icon('map-pin')}<h3>随处停留</h3><p>点左侧空间、模型标签或户型图快速切换房间。漫游时会直接到达该房间。</p></div><div>${icon('sun-moon')}<h3>感受不同氛围</h3><p>切换日夜，感受 MUJI 暖白、木色与棉麻的层次。用「降低墙体」查看布置，用相机保存当前 3D 画面。</p></div></div><button id="help-start" class="primary-button">开始探索 ${icon('arrow-right')}</button></dialog>
+<dialog id="reference-modal" class="reference-modal"><div class="modal-header"><div><span class="eyebrow">DESIGN REFERENCES</span><h2>每个空间，都有依据。</h2></div><button class="icon-btn close-modal" aria-label="关闭设计依据">${icon('x')}</button></div><div class="reference-tabs" role="tablist"><button data-ref="dimensions" class="active" role="tab" aria-selected="true">最新尺寸图</button><button data-ref="plan" role="tab" aria-selected="false">方案 B 布局</button><button data-ref="lighting" role="tab" aria-selected="false">原借光与灯光方案</button><button data-ref="day" role="tab" aria-selected="false">日间材质参考</button><button data-ref="night" role="tab" aria-selected="false">夜间氛围参考</button><button data-ref="original" role="tab" aria-selected="false">原始户型</button></div><div class="reference-content"><div class="reference-image"><img id="reference-image" src="${import.meta.env.BASE_URL}references/dimensions.jpg" alt="最新房屋尺寸图，仅使用标注尺寸" /></div><aside><h3>尺寸与当前布局</h3><p>主要净尺寸取自 newStructure.jpg，仅读取手写尺寸，图中的旧隔墙、卫浴位置与窗符号不用于重建。餐厅与上方阳台合计进深 3.45 m，已由你确认。房间连接和分区继续以当前方案为基础，主卧与左上客房的侧窗已取消。当前保留林中树屋、现代日式中古、轻法式复古原木、日光花园四套风格，可在侧栏切换；奶白原木方案已移除。次卧按一人使用改为左侧抽屉床、右侧长桌与双侧书架。此前调整的电视柜与大屏电视继续采用；原图保留供对照。图纸上下不代表已确认的地理朝向。</p><ul><li>电竞房与客厅之间补为完整暖白实墙，两端原实体段保留，电竞房由原门进出。</li><li>沙发靠右墙，约 65 英寸电视配 1.80 × 0.42 m 木质矮柜，居中正对沙发；原房门仍可通行。</li><li>中央卫生间保留，左下旧卫浴区域改为衣帽收纳。</li><li>电视摆放在木柜上，背后为完整实墙；原景窗玻璃、黑框和隐私帘已取消。厨房保留外墙和原窗，餐厅侧边界外移 0.50 m，增加两面顶部吊轨透明玻璃叠收门，默认收起；北侧台面加长至 2.30 m，东北角冰箱高柜与右侧辅助台保留，原洗衣位改为咖啡餐边柜；洗衣机移至卫生间台盆旁。</li></ul><h3>材质与光的层次</h3><p>公区采用低反光木纹通铺，墙面、柜体和织物随所选风格切换；门为白色细框、两列四行的不透明磨砂玻璃门，窗框统一为黑色。电视柜、餐桌椅、床架和咖啡柜采用所选风格的细纹木色，卫浴洗衣与台盆共用浅石色台面。灯光采用基础、工作与局部氛围的搭配。</p><p>色卡与木纹砖规格为本模型的视觉方案，不代表博主家的实测漆号、品牌或铺贴参数。</p><h3>电竞与收藏</h3><p>1.80 × 0.75 m 电竞桌沿主卧共墙摆放，面向墙、侧向采光；上方洞洞板挂耳机与手柄，上侧 1.05 × 0.40 m 玻璃移门柜放玩偶。桌后留 5 cm 空隙，桌下双槽分收电源与信号线，靠墙集中落线，常用椅位后约 1.09 m 通行。临时客床取消。插座与网口为建议点位，落地前按现有线路复核。</p><h3>餐厨与洗衣整改</h3><p>冰箱靠东北角整合高柜；北侧实墙放灶和烟罩，水槽靠原北窗，2.30 m 台面中留约 0.68 m 备餐段，右侧设 0.85 m 辅助台。餐桌两把椅子移至两端，东侧桌边至闭合门面约 0.90 m 静态通道。两面玻璃门分别五扇、四扇叠收，收门厚度约 19 / 15 cm；窗边收门带单独预留，不计入主操作区约 7.6 ㎡。餐厅原洗衣位改为 1.50 × 0.48 m 咖啡柜。洗衣机移至卫生间洗手台旁，两者共用 1.48 m 台面，机前净宽约 0.94 m；卫浴门洞移至右侧，宽约 0.87 m。</p><h3>本次尺寸校准</h3><p>主卧睡眠区 3.25 × 3.35 m，原 2.12 × 1.94 m 区域继续用作衣帽区；左上客房净宽 3.05 m，电竞房 2.75 × 3.40 m，中央卫浴 1.65 × 3.70 m，厨房 2.62 × 2.44 m，公共过道净宽 1.03 m。客厅公区主段进深 4.60 m，下端收窄区约 1.95 × 1.80 m。</p><h3>仍采用概念值的部分</h3><p>原图是透视照片，仅使用标注数值。外墙厚度暂取 0.22 m，部分未单独标注的错位和上方阳台分界仍为估算。主卧总进深包含衣帽区和原分隔厚度估算；不恢复图中的旧隔墙。层高暂取 2.70 m；开放厨房的拆改范围、结构和用能条件仍需现场确认，模型只表达布局意向。</p><p>日夜切换用于体验材质与照明氛围，不表示实测照度、真实日照方向或采光改善幅度。</p><p class="source-name">尺寸：docs / newStructure.jpg<br>布局：采光优化方案 B 与后续确认<br>风格：四套方案细节修订 · 参考 Studioilse 公开住宅理念</p></aside></div></dialog>
+<dialog id="help-modal" class="help-modal"><div class="modal-header"><div><span class="eyebrow">MAKE YOURSELF AT HOME</span><h2>慢慢逛，就像在家。</h2></div><button class="icon-btn close-modal" aria-label="关闭操作帮助">${icon('x')}</button></div><div class="help-grid"><div>${icon('mouse')}<h3>从外面看看</h3><p>左键拖动旋转，滚轮缩放，右键平移。触屏可单指旋转、双指缩放与平移。</p></div><div>${icon('footprints')}<h3>走进房间</h3><p>选择「室内漫游」，用 WASD 或方向键行走，拖动画面环顾。Shift 加速，Esc 返回鸟瞰。屏幕方向键同样可用。</p></div><div>${icon('map-pin')}<h3>随处停留</h3><p>点左侧空间、模型标签或户型图快速切换房间。漫游时会直接到达该房间。</p></div><div>${icon('sun-moon')}<h3>感受不同氛围</h3><p>切换日夜，感受木色、矿物墙面与亚麻的层次。用「降低墙体」查看布置，用相机保存当前 3D 画面。</p></div></div><button id="help-start" class="primary-button">开始探索 ${icon('arrow-right')}</button></dialog>
 `;
 createIcons({icons,attrs:{'stroke-width':1.6}});
 const $=<T extends HTMLElement=HTMLElement>(selector:string)=>document.querySelector<T>(selector)!;
@@ -56,13 +60,15 @@ let toastTimer:ReturnType<typeof setTimeout>;
 function toast(message:string) {$('#toast').textContent=message;$('#toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),3200);}
 function onRoom(id:string) {
   selected=id;
+  $('.kitchen-control').hidden=!['all','kitchen','dining','entry'].includes(id);
+  $<HTMLAnchorElement>('#return-tour').href=`?design=${currentScheme}${id==='all'?'':`&room=${id==='balcony'?'dining':id==='entry'?'living':id}`}`;
   document.querySelectorAll<HTMLElement>('[data-nav]').forEach(el=>{el.classList.toggle('active',el.dataset.nav===id);el.setAttribute('aria-current',el.dataset.nav===id?'true':'false');});
   document.querySelectorAll<SVGElement>('[data-map]').forEach(el=>el.classList.toggle('active',el.dataset.map===id));
   const r=roomById(id);
   $('#view-eyebrow').textContent=r?r.english:'EXPLORE YOUR HOME';
   $('#view-title').textContent=r?r.subtitle:'家的每一面，都值得看看。';
   $('#detail-en').textContent=r?r.english:'THE DESIGN IDEA';$('#detail-title').textContent=r?r.name:'通透有度，自在有光';
-  $('#detail-description').textContent=r?r.description:'奶白墙顶与灰棕木纹铺开明亮背景，自然橡木家具、白橡木桌面与米色织物，让日常有温暖的层次。';
+  $('#detail-description').textContent=r?r.description:'矿物感墙面、真实木纹和亚麻构成背景，柜体收口、阅读灯与顺手收纳围绕日常使用布置。';
   $('#detail-bottom > span').textContent=r?r.dimension:'三间房 · 一处独立卫浴';
   $('#enter-btn').innerHTML=`${r?'走进这里':'开始漫游'} ${icon('arrow-up-right')}`;createIcons({icons,attrs:{'stroke-width':1.6}});
   $('#status-text').textContent=r?r.features.join(' · '):'尺寸取自 newStructure · 沿用现行布局与侧窗修正';
@@ -94,6 +100,17 @@ $('#fullscreen-btn').onclick=async()=>{try {if(document.fullscreenElement)await 
 function lighting(night:boolean) {viewer?.setNight(night);document.body.classList.toggle('night',night);$('#day-btn').classList.toggle('active',!night);$('#night-btn').classList.toggle('active',night);$('#day-btn').setAttribute('aria-pressed',String(!night));$('#night-btn').setAttribute('aria-pressed',String(night));}
 $('#day-btn').onclick=()=>lighting(false);$('#night-btn').onclick=()=>lighting(true);
 $('#cutaway-btn').onclick=()=>{if(!viewer)return;viewer.setCutaway(!viewer.cutaway);$('#cutaway-btn').classList.toggle('active',viewer.cutaway);$('#cutaway-btn').setAttribute('aria-pressed',String(viewer.cutaway));toast(viewer.cutaway?'墙体剖切至 1.35 m 便于观察，实际墙体完整保留':'已恢复完整墙高');};
+function kitchenDoors(closed:boolean) {
+  if(!viewer)return;
+  if(!viewer.setKitchenDoors(closed)){toast('请先离开玻璃门的移动范围，再切换开合');return;}
+  for(const [id,active] of [['kitchen-open-btn',!closed],['kitchen-close-btn',closed]] as const) {
+    $('#'+id).classList.toggle('active',active);$('#'+id).setAttribute('aria-pressed',String(active));
+  }
+  $('#kitchen-door-note').textContent=closed?'两侧玻璃围合 · 顶部吊轨 · 地面无连续下轨':'五扇收窗边，四扇收右端 · 转角无立柱';
+  $('#map-kitchen-doors').classList.toggle('closed',closed);
+}
+$('#kitchen-open-btn').onclick=()=>kitchenDoors(false);
+$('#kitchen-close-btn').onclick=()=>kitchenDoors(true);
 $('#labels-btn').onclick=()=>{if(!viewer)return;viewer.labelsVisible=!viewer.labelsVisible;$('#labels-btn').classList.toggle('active',viewer.labelsVisible);$('#labels-btn').setAttribute('aria-pressed',String(viewer.labelsVisible));};
 $('#map-toggle').onclick=()=>{$('.minimap').classList.toggle('collapsed');$('#map-toggle').setAttribute('aria-label',$('.minimap').classList.contains('collapsed')?'展开户型图':'收起户型图');};
 $('#mobile-menu').onclick=()=>$('#sidebar').classList.toggle('mobile-open');
@@ -111,3 +128,16 @@ for(const el of document.querySelectorAll<HTMLElement>('[data-key]')){
   el.addEventListener('pointerdown',e=>{e.preventDefault();el.setPointerCapture(e.pointerId);viewer?.keys.add(el.dataset.key!);});
   for(const name of ['pointerup','pointercancel','lostpointercapture'])el.addEventListener(name,()=>viewer?.keys.delete(el.dataset.key!));
 }
+
+const initialRoom=new URLSearchParams(location.search).get('room');
+if(initialRoom&&roomById(initialRoom))choose(initialRoom);
+
+function applyModelScheme(id:SchemeId) {
+  currentScheme=id;viewer?.setScheme(id);
+  $('#model-scheme-name').textContent=designSchemes[id].name+' · 细节修订版';
+  $('.palette').innerHTML=designSchemes[id].samples.map(sample=>`<div><span class="${sample.wood?'wood-swatch':''}" style="--swatch:${sample.color}"></span><small>${sample.name}</small></div>`).join('');
+  const url=new URL(location.href);url.searchParams.set('design',id);history.replaceState(null,'',url);
+  onRoom(selected);
+}
+$<HTMLSelectElement>('#model-scheme').onchange=e=>applyModelScheme((e.target as HTMLSelectElement).value as SchemeId);
+applyModelScheme(currentScheme);

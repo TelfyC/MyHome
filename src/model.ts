@@ -6,7 +6,10 @@ import type { Point } from './plan';
 import type { Collider } from './navigation.mjs';
 import { createOakFloorMaterial, FLOOR_TILE_WIDTH, FLOOR_TILE_LENGTH } from './floor';
 import { HOME_STYLE } from './style-palette';
+import { modelPalettes } from './design-schemes';
+import type { SchemeId } from './design-schemes';
 import { X, Z, relocateFurniture } from './dimensions';
+import { buildKitchenDoors } from './kitchen-doors';
 
 export function buildHome() {
   const root = new THREE.Group();
@@ -78,13 +81,15 @@ export function buildHome() {
   const porcelain=mat('#fffdf5',.21);
   const glass=new THREE.MeshPhysicalMaterial({color:'#c2dbd5',roughness:.08,metalness:.05,transparent:true,opacity:.20,side:THREE.DoubleSide,depthWrite:false});
   const wallMat=mat(HOME_STYLE.wall,.93);
+  const ceilingMat=mat(HOME_STYLE.ceiling,.94);
+  const guestAccent=mat(HOME_STYLE.sage,.92);
   const capMat=mat('#b8ac99');
   const archWhite=mat(HOME_STYLE.trim),archMetal=metal.clone(),archGlass=glass.clone();
   const windowFrame=mat(HOME_STYLE.windowFrame,.57,.12);windowFrame.name='黑色窗框';
   const doorFrame=mat(HOME_STYLE.doorFrame,.48);doorFrame.name='白色细框玻璃门骨架';
   // Opaque frosting: no transparency or transmission, including at night.
   const doorGlass=mat(HOME_STYLE.doorGlass,.88);doorGlass.name='不透明乳白磨砂门玻璃';
-  architecturalMaterials.push(wallMat,capMat,archWhite,archMetal,archGlass,windowFrame,doorFrame,doorGlass);
+  architecturalMaterials.push(guestAccent,wallMat,capMat,archWhite,archMetal,archGlass,windowFrame,doorFrame,doorGlass);
   function box(x:number,y:number,z:number,w:number,h:number,d:number,m:THREE.Material=white,parent:THREE.Object3D=furniture,round=0) {
     const mesh=new THREE.Mesh(round?new RoundedBoxGeometry(w,h,d,2,Math.min(round,w/3,h/3,d/3)):new THREE.BoxGeometry(w,h,d),m);
     mesh.position.set(x,y,z);mesh.castShadow=true;mesh.receiveShadow=true;parent.add(mesh);return mesh;
@@ -116,7 +121,7 @@ export function buildHome() {
   for(const r of rooms) {
     const fm=r.id==='bathroom'?new THREE.MeshStandardMaterial({map:tileTex,roughness:.83,color:'#d6d2c8'}):floorOak;
     const mesh=shapeMesh(r.polygon,.014,fm);mesh.userData.roomId=r.id;floorMeshes.push(mesh);
-    const roof=shapeMesh(r.polygon,WALL_HEIGHT,mat(HOME_STYLE.ceiling),ceilings);(roof.material as THREE.Material).side=THREE.DoubleSide;
+    const roof=shapeMesh(r.polygon,WALL_HEIGHT,ceilingMat,ceilings);(roof.material as THREE.Material).side=THREE.DoubleSide;
   }
   ceilings.visible=false;
   function wall(x1:number,z1:number,x2:number,z2:number,h=WALL_HEIGHT,base=0,name='wall') {
@@ -488,15 +493,78 @@ export function buildHome() {
   wardrobe(1.22,6.55,1.75,.6,2.38);wardrobe(.25,5.3,1.32,.48,2.38,Math.PI/2);
   const mirror=new THREE.Mesh(new THREE.CircleGeometry(.35,48),mat('#b8c4be',.15,.7));mirror.position.set(1.85,1.5,4.44);furniture.add(mirror);
   box(1.85,.75,4.64,.7,.05,.28,wood,furniture,.025);
-  // Guest room / future children's room.
-  rug(3.59,2.0,2.25,2.8,'#d1d1b9');bed(3.65,1.45,1.50);
-  table(2.38,1.8,.50,1.18,.74,wood);chair(2.38,2.85);book(2.39,.8,1.5);
-  wardrobe(2.98,3.88,1.6,.42,1.02,Math.PI);
-  sideTable(4.7,.60);lamp(4.7,.6);
-  // New integrated assemblies use measured coordinates and true-size appliances.
+  // Measured secondary bedroom: reference-photo arrangement, one permanent occupant.
   function fixedGroup(name:string) {
     const g=new THREE.Group();g.name=name;g.userData.calibrated=true;furniture.add(g);return g;
   }
+  const guest=fixedGroup('secondary-bedroom-study');
+  const gb=LAYOUT.guestRoom.bed,gd=LAYOUT.guestRoom.desk,gc=LAYOUT.guestRoom.chair,gw=LAYOUT.guestRoom.wardrobe;
+  box(X.guestWest+.118,1.35,1.65,.015,2.69,3.05,guestAccent,guest);
+  // Drawer base with recessed plinth and three individually inset fronts facing the aisle.
+  box(gb.x,.08,gb.z,gb.width-.10,.14,gb.length-.10,charcoal,guest,.005);
+  box(gb.x,.29,gb.z,gb.width,.36,gb.length,cherry,guest,.012);
+  for(let i=0;i<3;i++) {
+    const z=gb.z-gb.length/2+(i+.5)*gb.length/3;
+    box(gb.x+gb.width/2+.004,.29,z,.018,.30,gb.length/3-.015,cherryFront,guest,.005);
+    box(gb.x+gb.width/2+.016,.38,z,.006,.018,.17,charcoal,guest,.003);
+  }
+  box(gb.x,.565,gb.z,gb.width-.025,.20,gb.mattressLength,fabric,guest,.065);
+  box(gb.x,.685,gb.z+.10,gb.width-.035,.055,1.67,sage,guest,.025);
+  box(gb.x,.65,gb.z-gb.length/2+.035,gb.width,.62,.05,cherry,guest,.012);
+  for(const [i,z] of [.76,1.18].entries())box(2.31,.85,z,.19,.44,.39,i?sage:oatmeal,guest,.045);
+  box(2.85,.775,.77,.43,.17,.40,fabric,guest,.055);
+  box(gb.x,.735,2.19,gb.width-.06,.04,.39,oatmeal,guest,.016);
+  obstruction(gb.x,gb.z,gb.width,gb.length,'guest drawer bed',false);
+  // Long desk faces the east wall. Drawer unit at its foot leaves a full knee bay.
+  box(gd.x,gd.height,gd.z,gd.depth,.045,gd.length,cherry,guest,.012);
+  for(const z of [.54,2.71])box(gd.x+.23,.37,z,.045,.72,.045,oak,guest,.006);
+  box(gd.x,.36,2.47,.56,.69,.48,cherryFront,guest,.008);
+  for(const y of [.20,.43,.64])box(gd.x-.286,y,2.47,.012,.015,.32,charcoal,guest,.003);
+  box(gd.x,.65,gd.z,.35,.035,1.40,charcoal,guest,.004);
+  box(5.10,.50,1.20,.024,.45,.055,white,guest,.004);
+  box(4.82,.795,1.15,.20,.025,.32,metal,guest,.006);
+  box(4.91,1.02,1.15,.025,.43,.67,charcoal,guest,.012);
+  box(4.893,1.03,1.15,.006,.37,.61,mat('#688178',.7),guest,.002);
+  box(4.61,.789,1.15,.13,.012,.40,white,guest,.004);
+  box(4.62,.79,1.47,.10,.02,.07,charcoal,guest,.012);
+  // One fabric chair, tucked sufficiently to preserve a narrow passage behind its back.
+  box(gc.x,.46,gc.z,.52,.09,.54,oatmeal,guest,.045);
+  box(gc.x-.23,.73,gc.z,.055,.50,.53,fabric,guest,.035);
+  cylinder(gc.x,.24,gc.z,.027,.40,metal,guest);
+  for(const angle of [0,Math.PI/2]) {
+    const foot=box(gc.x,.08,gc.z,.51,.028,.035,metal,guest,.006);foot.rotation.y=angle;
+  }
+  obstruction(gd.x,gd.z,gd.depth,gd.length,'guest long desk',false);
+  obstruction(gc.x,gc.z,gc.width,gc.depth,'guest desk chair',false);
+  box(gw.x,gw.height/2,gw.z,gw.width,gw.height,gw.depth,cherry,guest,.008);
+  for(let i=0;i<3;i++) {
+    const x=gw.x-gw.width/2+(i+.5)*gw.width/3;
+    box(x,1.20,gw.z-gw.depth/2-.009,gw.width/3-.009,2.27,.018,cherryFront,guest,.004);
+    box(x+.18,1.15,gw.z-gw.depth/2-.025,.015,.25,.018,metal,guest,.004);
+  }
+  obstruction(gw.x,gw.z,gw.width,gw.depth,'guest wardrobe',false);
+  // Shallow shelves on both solid side walls; book spines vary without covering every inch.
+  const shelfSpec=LAYOUT.guestRoom.shelves;
+  const bookMats=['#677259','#beae8d','#756653','#d8cbb3'].map(c=>mat(c,.84));
+  for(const x of [shelfSpec.westX,shelfSpec.eastX])for(const y of shelfSpec.heights) {
+    box(x,y,1.60,shelfSpec.depth,.035,2.10,cherry,guest,.005);
+    for(let i=0;i<12;i++) {
+      const z=.69+i*.105,h=.17+(i%4)*.025;
+      box(x,y+.025+h/2,z,.14,h,.052,bookMats[i%4],guest,.002);
+    }
+    for(const z of [.72,2.48])box(x+(x<3?-.07:.07),y-.075,z,.035,.15,.028,metal,guest,.003);
+  }
+  box(5.135,1.35,1.92,.025,.50,.72,oatmeal,guest,.008);
+  for(let i=0;i<4;i++)box(5.117,1.27+(i%2)*.17,1.69+Math.floor(i/2)*.31,.009,.12,.19,bookMats[i],guest);
+  // Actual curtain fabric strips are gathered outside the retained north opening.
+  for(const x of [2.55,4.18])for(let i=0;i<5;i++)box(x+i*.017,1.36,.18,.026,2.33,.05,sage,guest,.012);
+  box(3.36,2.56,.16,1.94,.018,.025,metal,guest,.005);
+  const guestGlow=mat('#f4ecd7');guestGlow.emissive=new THREE.Color(HOME_STYLE.lamplight);guestGlow.emissiveIntensity=.13;luminous.push(guestGlow);
+  box(2.13,1.36,1.04,.04,.09,.13,metal,guest,.008);box(2.24,1.34,1.04,.20,.045,.14,guestGlow,guest,.014);
+  cylinder(4.86,.79,2.15,.065,.018,metal,guest);cylinder(4.86,.97,2.15,.009,.35,metal,guest);
+  box(4.72,1.16,2.15,.30,.025,.11,guestGlow,guest,.009);
+  const guestTaskLight=new THREE.PointLight(HOME_STYLE.lamplight,0,2.1,2);guestTaskLight.position.set(4.65,1.20,2.15);root.add(guestTaskLight);lamps.push({light:guestTaskLight,nightIntensity:.65});
+  // New integrated assemblies use measured coordinates and true-size appliances.
   const dining=fixedGroup('integrated-dining');
   const tableX=8.08,tableZ=1.60;
   box(tableX,.75,tableZ,.70,.055,1.20,wood,dining,.025);
@@ -505,11 +573,11 @@ export function buildHome() {
   for(const z of [1.13,2.07])box(7.43,.23,z,.26,.44,.045,oak,dining,.005);
   obstruction(tableX,tableZ,.70,1.20,'dining table',false);
   obstruction(7.43,tableZ,.36,1.20,'dining bench',false);
-  for(const z of [1.20,2.00]) {
-    box(8.72,.45,z,.43,.075,.44,fabric,dining,.035);
-    box(8.90,.70,z,.055,.44,.43,wood,dining,.025);
-    for(const dx of [-.15,.15])for(const dz of [-.15,.15])box(8.72+dx,.22,z+dz,.035,.44,.035,oak,dining);
-    obstruction(8.72,z,.43,.44,'dining chair',false);
+  for(const {x,z} of LAYOUT.dining.chairs) {
+    box(x,.45,z,.43,.075,.44,fabric,dining,.035);
+    box(x,.70,z+(z<tableZ?-.18:.18),.43,.44,.055,wood,dining,.025);
+    for(const dx of [-.15,.15])for(const dz of [-.15,.15])box(x+dx,.22,z+dz,.035,.44,.035,oak,dining);
+    obstruction(x,z,.43,.44,'dining chair',false);
   }
   const teaGlaze=mat('#eee8de',.31),tea=mat('#8a6749',.4);
   box(tableX,.785,tableZ,.29,.014,.36,oak,dining,.02);
@@ -535,17 +603,19 @@ export function buildHome() {
     obstruction(x,z,rot?d:w,rot?w:d,name,false);return g;
   }
   const kitchen=fixedGroup('integrated-open-kitchen');
-  cabinetActual(kitchen,10.89,.44,1.80,.60,'north kitchen cabinets');
+  const northCounter=LAYOUT.kitchen.northCounter;
+  cabinetActual(kitchen,northCounter.x,northCounter.z,northCounter.width,northCounter.depth,'north kitchen cabinets');
   cabinetActual(kitchen,12.28,2.075,.85,.60,'east kitchen prep cabinets',-Math.PI/2);
   // Hob and hood fit the solid north-wall segment, clear of both original windows.
-  box(10.28,.91,.44,.58,.025,.48,charcoal,kitchen,.012);
-  for(const x of [10.12,10.44]) {
+  const hobX=LAYOUT.kitchen.hob.x;
+  box(hobX,.91,.44,.58,.025,.48,charcoal,kitchen,.012);
+  for(const x of [hobX-.16,hobX+.16]) {
     cylinder(x,.932,.44,.105,.010,steel,kitchen);cylinder(x,.941,.44,.080,.012,charcoal,kitchen);
   }
-  cylinder(10.44,1.025,.44,.105,.16,steel,kitchen);cylinder(10.44,1.112,.44,.112,.012,metal,kitchen);
-  box(10.28,1.92,.35,.60,.13,.45,steel,kitchen,.012);box(10.28,2.28,.24,.24,.61,.22,white,kitchen,.006);
+  cylinder(hobX+.16,1.025,.44,.105,.16,steel,kitchen);cylinder(hobX+.16,1.112,.44,.112,.012,metal,kitchen);
+  box(hobX,1.92,.35,.60,.13,.45,steel,kitchen,.012);box(hobX,2.28,.24,.24,.61,.22,white,kitchen,.006);
   const worklight=mat('#fff9eb',.45);worklight.emissive=new THREE.Color(HOME_STYLE.lamplight);worklight.emissiveIntensity=.13;luminous.push(worklight);
-  box(10.28,1.846,.43,.47,.008,.22,worklight,kitchen);
+  box(hobX,1.846,.43,.47,.008,.22,worklight,kitchen);
   box(11.45,.906,.44,.60,.02,.43,steel,kitchen,.035);box(11.45,.916,.44,.49,.022,.32,charcoal,kitchen,.025);
   cylinder(11.45,1.04,.23,.017,.27,metal,kitchen);box(11.45,1.173,.29,.025,.025,.15,metal,kitchen,.01);
   // The refrigerator is against the northeast perimeter, with its doors facing south.
@@ -641,6 +711,16 @@ export function buildHome() {
       geometries.forEach(g=>g.dispose());
     }
   }
+  function setScheme(id:SchemeId) {
+    const p=modelPalettes[id];
+    wallMat.color.set(p.wall);ceilingMat.color.set(p.ceiling);white.color.set(p.cabinet);capMat.color.set(p.edge);
+    for(const material of [wood,cherry,cherryFront,darkWood])material.color.set(p.wood);
+    for(const material of [oak,cherryEdge])material.color.set(p.edge);
+    guestAccent.color.set(p.accent);sage.color.set(p.accent);fabric.color.set(p.fabric);oatmeal.color.set(p.fabric).multiplyScalar(.87);
+    metal.color.set(p.metal);archMetal.color.set(p.metal);floorOak.color.set(p.floorTint);
+  }
+  setScheme('forest');
   batch(furniture);batch(architecture);
-  return {root,architecture,furniture,ceilings,colliders,floorMeshes,windows,walls,layout:LAYOUT,setCutaway,setNight};
+  const kitchenDoors=buildKitchenDoors(colliders,architecturalMaterials);root.add(kitchenDoors.root);
+  return {root,architecture,furniture,ceilings,colliders,floorMeshes,windows,walls,layout:LAYOUT,kitchenDoors,setCutaway,setNight,setScheme};
 }

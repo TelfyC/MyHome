@@ -1,0 +1,10 @@
+{
+  "style": "sunlit",
+  "room": "bathroom",
+  "path": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17709-bfb0-7370-8630-27b80004a46d/exec-08de3ee4-aed3-47f7-aeab-f57515a434a9.png",
+  "prompt": "Use case: precise-object-edit. Output ONE full 360x180 equirectangular interior panorama, exact 2:1 width/height, seamless longitude wrap, polar floor/ceiling distortion, preferably >=2048x1024. NOT a normal wide-angle photo, NOT collage. Keep source camera/orientation, apartment footprint, all real original exterior windows and black frames, adjacency and doorways. No new windows or rooms. Improve each surface junction, matte wood grain and joinery, cabinet reveals, real curtain fixings, textile weave, accessible storage, neutral daytime light, credible local work/reading lamps and contact shadows. Preserve 65inch TV on low1.80m console against COMPLETE SOLID wall opposite sofa. Interior white-framed frosted-glass doors must be OPAQUE. No people, text, logos, watermarks, plastic CGI, oversharpening, pointless props or plant overload. \nSUNLIT GARDEN WOOD: pale honey-oak wood edges and white work surfaces, oatmeal/green ticking stripe textiles, chalky warm gray-white and pale sage, tiny blush accent, grouped foliage at real windows, slim wood frames. Keep wood-edge white coffee table and striped sofa; airy neutral daylight, no yellow wash.\nBATH: original narrow1.65x3.70m room, upper shower/middle toilet/lower basin and washing machine sequence. Standard60cm washer beside basin shares1.48m countertop, .94m aisle and front access. Counter/wall seal, fine matte tile grout, actual shower drain and screened seals, small shower niche in existing SOLID wall, closed towel cabinet, towel hook near use, opal mirror task light. Privacy roller in existing window, no new window, long curtains or bathtub.",
+  "references": [
+    "/home/juntao.ji@formal-tech.group/Desktop/home3D/public/panoramas/sunlit/bathroom.jpg"
+  ],
+  "tool": "built-in image_gen"
+}

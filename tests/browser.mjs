@@ -46,8 +46,8 @@ try {
  assert.ok(data.windows.some(w=>Math.abs(w.z1)<1e-6 && Math.abs(w.z2)<1e-6 && w.x1>X.guestWest && w.x2<X.bathroomWest),'guest top window remains');
  // Inspect walls created by the model, then exercise its actual collision geometry.
  assert.equal(data.layout.studyLivingWall.kind,'solid');
- assert.equal(data.layout.kitchen.kind,'open');
- assert.equal(data.layout.kitchen.slidingDoor,false);
+ assert.equal(data.layout.kitchen.kind,'retractable');
+ assert.equal(data.layout.kitchen.slidingDoor,true);
  assert.equal('curtain' in data,false,'obsolete curtain diagnostic is removed');
  assert.equal(await page.locator('#curtain-btn').count(),0,'obsolete curtain control is removed');
  const tvWall=data.walls.find(w=>w.name==='solid-tv-backdrop');
@@ -70,8 +70,28 @@ try {
    assert.ok(Math.hypot(arrived.x-to.x,arrived.z-to.z)<1e-6,`${label} passes former partition directly`);
  };
  directWalk({x:9.4,z:1.2},{x:10.8,z:1.2},'dining to open kitchen');
- directWalk({x:11,z:3.3},{x:11,z:1.6},'entry to open kitchen');
+ directWalk({x:10.7,z:3.3},{x:10.7,z:1.6},'entry to open kitchen');
  const appliance=(name)=>{const item=data.colliders.find(c=>c.name===name);assert.ok(item,`${name} exists in actual model`);return item;};
+ // The secondary bedroom follows the supplied left-daybed/right-long-desk reference.
+ const guestLayout=data.layout.guestRoom;
+ const guestBed=appliance('guest drawer bed'),guestDesk=appliance('guest long desk'),guestChair=appliance('guest desk chair'),guestWardrobe=appliance('guest wardrobe');
+ assert.equal(guestLayout.occupants,1);
+ near(guestBed.maxX-guestBed.minX,1.20,'single-occupant storage bed width');
+ near(guestBed.maxZ-guestBed.minZ,2.10,'storage bed length');
+ near(guestBed.minX-(X.guestWest+t/2),0,'daybed fits west solid wall');
+ near(guestDesk.maxX-guestDesk.minX,.65,'long desk working depth');
+ near(guestDesk.maxZ-guestDesk.minZ,2.30,'long desk length');
+ near(guestDesk.minX-guestBed.maxX,1.175,'aisle between bed and desk before chair');
+ near(guestChair.minX-guestBed.maxX,.56,'normal chair back clearance');
+ assert.ok(guestWardrobe.maxX<4.13,'wardrobe stays out of original entrance');
+ directWalk({x:4.6,z:4.4},{x:4.6,z:3.1},'secondary bedroom entrance');
+ directWalk({x:3.67,z:2.88},{x:3.67,z:.55},'secondary bedroom center aisle');
+ assert.equal(data.scheme,'forest');
+ await page.locator('#model-scheme').selectOption('japanese');assert.equal((await diag()).scheme,'japanese');
+ await page.locator('#model-scheme').selectOption('french');assert.equal((await diag()).scheme,'french');
+ await page.locator('#model-scheme').selectOption('sunlit');assert.equal((await diag()).scheme,'sunlit');
+ await page.locator('#model-scheme').selectOption('forest');
+ assert.equal(await page.locator('#model-scheme option').count(),4,'retired cream design not selectable');
  // The gaming desk is along the master wall, with an unobstructed entrance and
  // a real aisle behind the chair. Use actual runtime furniture bounds.
  const gaming=data.layout.gamingRoom;
@@ -104,11 +124,38 @@ try {
  const aux=appliance('east kitchen prep cabinets');
  assert.ok(aux.minZ-data.layout.kitchen.refrigerator.doorSweepSouth>=.10,'refrigerator door sweep clears auxiliary counter');
  assert.ok(data.layout.kitchen.hood.x+data.layout.kitchen.hood.width/2<data.layout.kitchen.hood.northWindowStart,'hood stays fully on solid wall');
- directWalk({x:9.4,z:3.3},{x:9.4,z:-.1},'entry through dining to coffee balcony');
+ directWalk({x:8.9,z:3.3},{x:8.9,z:-.1},'entry through dining to coffee balcony');
  directWalk({x:6.55,z:4.5},{x:6.55,z:2.32},'offset bathroom door to washer aisle');
  const machineFront={x:washer.maxX+.38,z:2.32};
  assert.ok(canOccupy(machineFront.x,machineFront.z,data.outline,data.colliders,.3),'washer front allows a standing adult');
  assert.ok(X.diningWest-.11-washer.maxX>.93,'washer front retains approximately 940 mm aisle');
+
+ // Both banks use actual full-size leaves, with compact stacks and two real collision states.
+ assert.equal(data.kitchenDoors.closed,false);assert.equal(data.kitchenDoors.progress,0);
+ assert.equal(data.kitchenDoors.panels.length,9);
+ assert.ok(data.kitchenDoors.stacks.west.depth<=.20);
+ assert.ok(data.kitchenDoors.stacks.south.depth<=.16);
+ assert.equal(data.layout.kitchen.doors.floorTrack,false);
+ assert.equal(data.layout.kitchen.doors.cornerPost,false);
+ assert.ok(data.layout.kitchen.expandedClearArea/data.layout.kitchen.originalClearArea>1.15);
+ near(data.layout.kitchen.northCounter.width,2.30,'longer working counter');
+ const doorSettled=()=>page.waitForFunction(()=>!window.__homeDiagnostics().kitchenDoors.moving,{timeout:30000});
+ await page.locator('#kitchen-close-btn').click();await doorSettled();
+ const closed=await diag();assert.equal(closed.kitchenDoors.progress,1);
+ assert.equal(await page.locator('#kitchen-close-btn').getAttribute('aria-pressed'),'true');
+ assert.ok(closed.spawnChecks.every(r=>r.valid),'closed doors leave all room arrival points safe');
+ const kitchenBoundary=closed.layout.kitchen.enclosureWest;
+ const crossingWest=moveWithCollision({x:8.9,z:1.6},1.8,0,closed.outline,closed.colliders);
+ assert.ok(crossingWest.x<kitchenBoundary,'closed dining bank blocks walking');
+ const crossingSouth=moveWithCollision({x:10.7,z:3.3},0,-1.7,closed.outline,closed.colliders);
+ assert.ok(crossingSouth.z>Z.kitchenSouth,'closed entry bank blocks walking');
+ assert.ok(canOccupy(8.9,1.6,closed.outline,closed.colliders,.3),'adult fits between table and closed glass');
+ // Opening restores both routes using the same leaves, not a visibility-only toggle.
+ await page.locator('#kitchen-open-btn').click();await doorSettled();
+ const reopened=await diag();assert.equal(reopened.kitchenDoors.progress,0);
+ assert.ok(moveWithCollision({x:8.9,z:1.6},1.8,0,reopened.outline,reopened.colliders).x>10.6);
+ assert.ok(moveWithCollision({x:10.7,z:3.3},0,-1.7,reopened.outline,reopened.colliders).z<1.7);
+ assert.deepEqual(reopened.kitchenDoors.panels,data.kitchenDoors.panels,'full-size leaves return to original stacks');
 
  const blocked=moveWithCollision({x:X.studyEast-.5,z:7.2},1,0,data.outline,data.colliders);
  assert.ok(blocked.x<X.studyEast-.25,'solid TV backdrop blocks walking from study');
@@ -165,10 +212,13 @@ try {
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'mobile has no horizontal overflow');
  await page.screenshot({path:'artifacts/mobile.png'});
  await page.locator('#mobile-menu').click();await page.locator('[data-nav="kitchen"]').click();assert.equal((await diag()).room,'kitchen');assert.equal(await page.locator('#sidebar').evaluate(s=>s.classList.contains('mobile-open')),false);
+ assert.equal(await page.locator('#kitchen-close-btn').isVisible(),true);
+ await page.locator('#kitchen-close-btn').click();await doorSettled();assert.equal((await diag()).kitchenDoors.closed,true);
+ await page.locator('#kitchen-open-btn').click();await doorSettled();
  await page.locator('#enter-btn').click();assert.equal((await diag()).mode,'walk');assert.equal(await page.locator('#walk-pad').isVisible(),true);
  const touchBefore=(await diag()).position;
  const pad=await page.locator('[data-key="KeyS"]').boundingBox();await page.mouse.move(pad.x+pad.width/2,pad.y+pad.height/2);await page.mouse.down();await page.waitForTimeout(450);await page.mouse.up();
  const touchAfter=(await diag()).position;assert.ok(Math.hypot(touchBefore.x-touchAfter.x,touchBefore.z-touchAfter.z)>.01,'on-screen directions move camera');
  assert.deepEqual(errors,[],'no browser runtime errors');
- console.log('PASS: calibrated dimensions, both side windows removed, original end windows retained, product scales preserved, all 9 rooms reachable, collision, keyboard/drag/touch, all views, lighting, solid TV wall, open kitchen paths, references, PNG export and mobile layout; no browser errors.');
+ console.log('PASS: calibrated dimensions, both side windows removed, original end windows retained, product scales preserved, all 9 rooms reachable, collision, keyboard/drag/touch, all views, lighting, solid TV wall, expanded kitchen, real telescopic door collisions and restored open paths, references, PNG export and mobile layout; no browser errors.');
 } catch(error) { const d=await diag().catch(()=>null);console.error('Last browser state:',JSON.stringify(d&&{mode:d.mode,room:d.room,keys:d.keys,frame:d.frame,position:d.position}));throw error; } finally {await browser.close();}

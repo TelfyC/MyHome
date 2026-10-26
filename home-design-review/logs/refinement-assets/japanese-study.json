@@ -1,0 +1,10 @@
+{
+  "style": "japanese",
+  "room": "study",
+  "path": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17709-bfb0-7370-8630-27b80004a46d/exec-ad538ecd-3b92-49c4-91d3-1c5944609b98.png",
+  "prompt": "Use case: precise-object-edit. Output ONE full 360x180 equirectangular interior panorama, exact 2:1 width/height, seamless longitude wrap, polar floor/ceiling distortion, preferably >=2048x1024. NOT a normal wide-angle photo, NOT collage. Keep source camera/orientation, apartment footprint, all real original exterior windows and black frames, adjacency and doorways. No new windows or rooms. Improve each surface junction, matte wood grain and joinery, cabinet reveals, real curtain fixings, textile weave, accessible storage, neutral daytime light, credible local work/reading lamps and contact shadows. Preserve 65inch TV on low1.80m console against COMPLETE SOLID wall opposite sofa. Interior white-framed frosted-glass doors must be OPAQUE. No people, text, logos, watermarks, plastic CGI, oversharpening, pointless props or plant overload. \nJAPANESE MID-CENTURY: warm gray-white plaster, deep walnut low furniture, smoked teak/oak tone floor, olive linen with small rust/caramel accent, paper/opal lamps and bronze. Thin proportions, tactile grain, restrained handcrafted ceramics; no orange varnish, no generic cream showroom.\nGAMING:1.80x.75m desk remains WEST along MASTER shared wall, seat faces WEST/wall not window. Original window and door retained. Original north1.05x.40m GLASS SLIDING collectibles cabinet. Pegboard for headphones/controllers, actual underdesk separate power/signal trays and hidden wall drop, discreet screen, desk task light off screen reflection, small acoustic textile patch and soft display light, few meaningful collectables. Chair-back passage remains clear, NO bed, NO RGB.",
+  "references": [
+    "/home/juntao.ji@formal-tech.group/Desktop/home3D/public/panoramas/japanese/study.jpg"
+  ],
+  "tool": "built-in image_gen"
+}

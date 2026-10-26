@@ -1,0 +1,16 @@
+{
+  "style": "french",
+  "room": "kitchen",
+  "path": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17709-bfb0-7370-8630-27b80004a46d/exec-ebc3c6a0-c085-4037-9bc0-6d54f1f5c4cf.png",
+  "prompt": "Use case: precise-object-edit. Output ONE full 360x180 equirectangular interior panorama, exact 2:1 width/height, seamless longitude wrap, polar floor/ceiling distortion, preferably >=2048x1024. NOT a normal wide-angle photo, NOT collage. Keep source camera/orientation, apartment footprint, all real original exterior windows and black frames, adjacency and doorways. No new windows or rooms. Improve each surface junction, matte wood grain and joinery, cabinet reveals, real curtain fixings, textile weave, accessible storage, neutral daytime light, credible local work/reading lamps and contact shadows. Preserve 65inch TV on low1.80m console against COMPLETE SOLID wall opposite sofa. Interior white-framed frosted-glass doors must be OPAQUE. No people, text, logos, watermarks, plastic CGI, oversharpening, pointless props or plant overload. \nLIGHT FRENCH VINTAGE: putty/ivory plaster, fine restrained moldings, honey oak, dusty blue/soft sage linen, small old rose accent, aged brass, pleated/opal lamps. Reduce repeated botanical pictures and vases, useful vintage details and careful joinery; not ornate palace styling.\nKITCHEN DETAIL: preserve real north/east outside walls/windows and southeast exterior return. Kitchen remains expanded .50m into dining, roughly7.6square metres. North run2.30m, hob/hood on solid north section left of original window, .68m prep then sink under original window, northeast fridge and .85m east auxiliary counter. Two perpendicular FULL-HEIGHT CLEAR GLASS TOP-HUNG telescopic banks: five WEST leaves stack at north window end (.74x.19m), four SOUTH leaves stack at east/right end(.62x.15m). Show BOTH banks FULLY RETRACTED, leaving open view and continuous wood floor, slim overhead tracks, NO floor rail, NO corner post, NO island. Dining1.20x.70m table keeps WEST bench, loose chairs move to NORTH and SOUTH ends so EAST passage stays clear.  Counter end trim, washable restrained backsplash, credible recessed handles, undercabinet work light, discrete outlet strip away from water, compact roller blinds only near hob, one small organized prep tray; no long curtains near cooking and no new dining window.",
+  "references": [
+    "/home/juntao.ji@formal-tech.group/Desktop/home3D/public/panoramas/french/kitchen.jpg"
+  ],
+  "tool": "built-in image_gen",
+  "correction": {
+    "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17709-bfb0-7370-8630-27b80004a46d/exec-406ab749-99d3-4fa7-8bce-effe8dcac272.png",
+    "tool": "built-in image_gen",
+    "brief": "Add the omitted two top-hung clear glass telescopic banks at the west/dining and south/entry kitchen boundaries, both fully retracted: five upright leaves stacked at north/window end and four at right/entry end, .15-.19 m thick, thin top-only rails, no floor rail or corner post. Preserve all cabinets, appliances, windows, dining furniture, color, light, camera and equirectangular projection. Remove the loose rug from the kitchen working aisle.",
+    "review": "visually inspected final image"
+  }
+}

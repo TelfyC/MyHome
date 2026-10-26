@@ -3,9 +3,11 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { buildHome } from './model';
 import { rooms, outline, roomById } from './plan';
-import { moveWithCollision, pointInPolygon, canOccupy } from './navigation.mjs';
+import { moveWithCollision, pointInPolygon, canOccupy, circleHitsBox } from './navigation.mjs';
 import type { RoomId } from './plan';
 import { HOME_STYLE } from './style-palette';
+import { schemeFromSearch } from './design-schemes';
+import type { SchemeId } from './design-schemes';
 import { MEASUREMENTS, WALL_THICKNESS, X, Z } from './dimensions';
 
 export type Mode = 'orbit' | 'walk' | 'plan';
@@ -15,6 +17,7 @@ export class HomeViewer {
   camera = new THREE.PerspectiveCamera(40,1,.06,130);
   controls: OrbitControls;
   model = buildHome();
+  scheme:SchemeId=schemeFromSearch(location.search);
   mode: Mode = 'orbit';
   activeRoom: string = 'all';
   night = false;
@@ -36,7 +39,7 @@ export class HomeViewer {
   private lastCameraMatrix=new THREE.Matrix4();
   private hooks: {onRoom:(id:string)=>void;onMode:(mode:Mode)=>void;onMove:(x:number,z:number,yaw:number)=>void;onReady:()=>void};
   constructor(private container:HTMLElement, hooks:HomeViewer['hooks']) {
-    this.hooks=hooks;
+    this.hooks=hooks;this.model.setScheme(this.scheme);
     this.renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,preserveDrawingBuffer:true,powerPreference:'high-performance'});
     const gl=this.renderer.getContext(), debug=gl.getExtension('WEBGL_debug_renderer_info');
     const software=debug && /swiftshader|llvmpipe|software|softpipe/i.test(String(gl.getParameter(debug.UNMASKED_RENDERER_WEBGL)));
@@ -66,8 +69,8 @@ export class HomeViewer {
     new ResizeObserver(()=>this.resize()).observe(container);this.resize();
     this.reset(false);
     this.renderer.setAnimationLoop(t=>this.animate(t));
-    const diagnostics=()=>({mode:this.mode,room:this.activeRoom,night:this.night,cutaway:this.cutaway,layout:this.model.layout,sizing:{source:'newStructure.jpg',measurements:MEASUREMENTS,wallThickness:WALL_THICKNESS,anchors:{X,Z}},windows:this.model.windows,walls:this.model.walls,transitioning:!!this.transition,frame:this.frameCount,keys:[...this.keys],outline,rooms:rooms.map(r=>({id:r.id,spawn:r.spawn})),position:{x:this.camera.position.x,y:this.camera.position.y,z:this.camera.position.z},yaw:this.yaw,meshes:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,colliders:this.model.colliders,spawnChecks:rooms.map(r=>({id:r.id,valid:canOccupy(...r.spawn,outline,this.model.colliders)}))});
-    Object.assign(window,{__homeDiagnostics:diagnostics});
+    const diagnostics=()=>({scheme:this.scheme,mode:this.mode,room:this.activeRoom,night:this.night,cutaway:this.cutaway,layout:this.model.layout,sizing:{source:'newStructure.jpg',measurements:MEASUREMENTS,wallThickness:WALL_THICKNESS,anchors:{X,Z}},windows:this.model.windows,walls:this.model.walls,transitioning:!!this.transition,frame:this.frameCount,keys:[...this.keys],outline,rooms:rooms.map(r=>({id:r.id,spawn:r.spawn})),position:{x:this.camera.position.x,y:this.camera.position.y,z:this.camera.position.z},yaw:this.yaw,meshes:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,colliders:this.model.colliders,spawnChecks:rooms.map(r=>({id:r.id,valid:canOccupy(...r.spawn,outline,this.model.colliders)}))});
+    Object.assign(window,{__homeDiagnostics:()=>({...diagnostics(),kitchenDoors:this.model.kitchenDoors.diagnostics()})});
   }
   private resize() {const {clientWidth:w,clientHeight:h}=this.container;if(!w||!h)return;this.camera.aspect=w/h;this.camera.updateProjectionMatrix();this.renderer.setSize(w,h);this.dirty=true;}
   private addLabels() {
@@ -115,6 +118,7 @@ export class HomeViewer {
   private orient() {this.camera.rotation.order='YXZ';this.camera.rotation.set(this.pitch,this.yaw,0);}
   private animate(t:number) {
     const elapsed=(t-this.lastFrame)/1000,dt=Math.min(elapsed,.15);this.lastFrame=t;
+    if(this.model.kitchenDoors.update(dt)){this.dirty=true;this.renderer.shadowMap.needsUpdate=true;}
     if(this.transition) {
       const tr=this.transition;tr.time+=elapsed;const p=Math.min(tr.time/.85,1),k=1-Math.pow(1-p,3);
       this.camera.position.lerpVectors(tr.from,tr.to,k);this.controls.target.lerpVectors(tr.fromTarget,tr.toTarget,k);
@@ -127,7 +131,9 @@ export class HomeViewer {
         const speed=(this.keys.has('ShiftLeft')||this.keys.has('ShiftRight')?2.5:1.45)*dt/Math.max(1,Math.hypot(forward,side));
         const dx=(-Math.sin(this.yaw)*forward+Math.cos(this.yaw)*side)*speed;
         const dz=(-Math.cos(this.yaw)*forward-Math.sin(this.yaw)*side)*speed;
-        const p=moveWithCollision(this.camera.position,dx,dz,outline,this.model.colliders);
+        const moving=this.model.kitchenDoors.diagnostics().moving;
+        const blockers=moving?[...this.model.colliders,...this.model.kitchenDoors.sweptColliders]:this.model.colliders;
+        const p=moveWithCollision(this.camera.position,dx,dz,outline,blockers);
         this.camera.position.set(p.x,1.58,p.z);
         const r=rooms.find(r=>pointInPolygon(p.x,p.z,r.polygon));
         if(r&&r.id!==this.activeRoom){this.activeRoom=r.id;this.hooks.onRoom(r.id);}
@@ -195,6 +201,11 @@ export class HomeViewer {
     this.renderer.toneMappingExposure=night?1.20:.98;
   }
   setCutaway(value:boolean) {this.renderer.shadowMap.needsUpdate=true;this.cutaway=value;this.model.setCutaway(this.mode==='walk'?false:this.mode==='plan'||value);}
+  setScheme(id:SchemeId) {this.scheme=id;this.model.setScheme(id);this.dirty=true;this.renderer.shadowMap.needsUpdate=true;}
+  setKitchenDoors(closed:boolean) {
+    if(this.mode==='walk'&&this.model.kitchenDoors.sweptColliders.some(c=>circleHitsBox(this.camera.position.x,this.camera.position.z,.22,c)))return false;
+    this.model.kitchenDoors.setClosed(closed);this.dirty=true;return true;
+  }
   zoom(amount:number) {if(this.mode==='walk')return;this.camera.position.sub(this.controls.target).multiplyScalar(amount).add(this.controls.target);}
   screenshot() {
     this.renderer.render(this.scene,this.camera);

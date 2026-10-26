@@ -1,0 +1,16 @@
+{
+  "style": "french",
+  "room": "master",
+  "path": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17709-bfb0-7370-8630-27b80004a46d/exec-ceb5f6c5-7951-405f-a1af-4757b574a7df.png",
+  "prompt": "Use case: precise-object-edit. Output ONE full 360x180 equirectangular interior panorama, exact 2:1 width/height, seamless longitude wrap, polar floor/ceiling distortion, preferably >=2048x1024. NOT a normal wide-angle photo, NOT collage. Keep source camera/orientation, apartment footprint, all real original exterior windows and black frames, adjacency and doorways. No new windows or rooms. Improve each surface junction, matte wood grain and joinery, cabinet reveals, real curtain fixings, textile weave, accessible storage, neutral daytime light, credible local work/reading lamps and contact shadows. Preserve 65inch TV on low1.80m console against COMPLETE SOLID wall opposite sofa. Interior white-framed frosted-glass doors must be OPAQUE. No people, text, logos, watermarks, plastic CGI, oversharpening, pointless props or plant overload. \nLIGHT FRENCH VINTAGE: putty/ivory plaster, fine restrained moldings, honey oak, dusty blue/soft sage linen, small old rose accent, aged brass, pleated/opal lamps. Reduce repeated botanical pictures and vases, useful vintage details and careful joinery; not ornate palace styling.\nMASTER: preserve1.80m bed, only original end window and entry dressing zone, NO side window. Add individual bedside reading light and charging, restrained ledges, tactile linen, full-height closed wardrobe with precise reveals, mirror on solid cabinet face, laundry drawer, clear dressing access, one small artwork rather than many duplicate pictures/vases.",
+  "references": [
+    "/home/juntao.ji@formal-tech.group/Desktop/home3D/public/panoramas/french/master.jpg"
+  ],
+  "tool": "built-in image_gen",
+  "correction": {
+    "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17709-bfb0-7370-8630-27b80004a46d/exec-1058ef50-357e-456a-aea0-7726c0f7bac1.png",
+    "tool": "built-in image_gen",
+    "brief": "Remove the unrequested television and wide TV console from the bedroom wall. Restore ivory fine molding and one slender honey-oak bench with a muted blue folded throw beneath a small quiet artwork. Preserve the bed, window, wardrobe, dressing zone, doors, light, camera and full 2:1 equirectangular projection.",
+    "review": "visually inspected final image"
+  }
+}
