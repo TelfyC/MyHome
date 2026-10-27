@@ -71,9 +71,10 @@ export function buildHome() {
   const cherry=mat(HOME_STYLE.cherry,.69);cherry.map=woodTex;
   const cherryEdge=mat(HOME_STYLE.cherryEdge,.72);cherryEdge.map=woodTex;
   const cherryFront=mat(HOME_STYLE.cherryFront,.71);cherryFront.map=woodTex;
+  for(const material of [wood,oak,cherry,cherryEdge,cherryFront]){material.bumpMap=woodTex;material.bumpScale=.00045;}
   const darkWood=mat('#8e5c3e');
   const white=mat(HOME_STYLE.cabinet);
-  const fabric=mat(HOME_STYLE.linen);fabric.map=linenTex;fabric.bumpMap=linenTex;fabric.bumpScale=.012;
+  const fabric=mat(HOME_STYLE.linen);fabric.map=linenTex;fabric.bumpMap=linenTex;fabric.bumpScale=.0008;
   const sage=mat(HOME_STYLE.sage);sage.map=linenTex;
   const oatmeal=mat(HOME_STYLE.oatmeal);oatmeal.map=linenTex;
   const charcoal=mat('#303735',.55);

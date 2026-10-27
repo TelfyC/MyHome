@@ -9,7 +9,7 @@ const ready=id=>page.waitForFunction(id=>window.__panoramaDiagnostics?.().loaded
 const base=process.env.BASE_URL||'http://localhost:5173';
 await fs.mkdir('artifacts',{recursive:true});
 try{
- await page.goto(base);await ready('living');
+ await page.goto(new URL('?scene=panorama',base).href);await ready('living');
  // Ship every full panorama AND thumbnail; a working first room must not hide missing rooms.
  for(const id of ['living','dining','master','study','guest','kitchen','bathroom']){
   for(const style of ['forest','japanese','french','sunlit']){
@@ -108,7 +108,7 @@ try{
   await page.screenshot({path:`artifacts/secondary-bedroom-${style}.png`});
   await page.locator('.tour-nav[data-room="bathroom"]').click();await ready('bathroom');
  }
- await page.goto(new URL('?design=cream&room=guest',base).href);await ready('guest');
+ await page.goto(new URL('?scene=panorama&design=cream&room=guest',base).href);await ready('guest');
  assert.equal((await diag()).scheme,'forest','retired style deep links fall back to forest');
  assert.match(page.url(),/design=forest/);
  assert.equal((await page.request.get(new URL('review/summary.md',base.endsWith('/')?base:base+'/').href)).ok(),true,'review summary must be deployed');

@@ -1,0 +1,78 @@
+{
+  "version": "craft-v2",
+  "date": "2026-10-26",
+  "base": "/home/juntao.ji@formal-tech.group/Desktop/home3D",
+  "mode": "rectilinear-room-views-plus-existing-360",
+  "styleGuides": {
+    "forest": {
+      "name": "Axel Vervoordt",
+      "project": "Living with Light / Interiors & Design",
+      "url": "https://www.axel-vervoordt.com/books/living-with-light",
+      "principle": "自然木、矿物墙与柔和日光保持平衡，重点家具的线条与材料比零散装饰更重要。",
+      "palette": "smoked natural oak, restrained dark cherry, warm-gray mineral plaster, muted moss/lichen linen, charcoal/aged bronze accents, neutral daylight",
+      "changes": "Keep the forest mood without all-over rustic orange timber or giant rope texture. Fine wool instead of chunky jute, tailored plain flax cushions instead of embossed floral fabric, slim downlight reading lamps instead of huge arch lamps, one small earth/ink abstract rather than generic botanical gallery. Straight-grain cherry/oak veneer, precise inset plinth and recessed pulls, thin eased timber edges, grouped window plants, subtle mineral variation."
+    },
+    "japanese": {
+      "name": "Norm Architects × 芦泽启治",
+      "project": "Kinuta Terrace",
+      "url": "https://normcph.com/project/kinuta-terrace/",
+      "principle": "借鉴 Kinuta Terrace 对材料、光影与定制家具的整体处理，用细木构件和留白维持小空间的秩序。",
+      "palette": "deep walnut and muted smoked oak, warm-gray white plaster, olive linen and small burnt-sienna accent, paper/opal light, dark bronze, balanced clean daylight",
+      "changes": "Refine into a convincing Japanese mid-century home, not identical generic beige furniture. Walnut joinery with thin profiles and slim exposed timber rails, small recessed pulls, tactile wool rug with a subdued olive/rust geometric border rather than giant circles, simple hand-made ceramic, soft paper/opal lamps, low storage and generous empty working surfaces. Rectilinear aligned cabinet faces, thoughtful end grain and thin back panels, realistic small reveals. No RGB, no fake rice-paper entire walls or decorative beams."
+    },
+    "french": {
+      "name": "Pierre Yovanovitch",
+      "project": "Architecture d’intérieur et Mobilier / craftsmanship and proportions",
+      "url": "https://www.pierreyovanovitch.com/fr/",
+      "principle": "借鉴其对比例、灯光与工艺的重视，控制墙线、家具弧度和织物的尺度，避免满屋重复的复古符号。",
+      "palette": "muted honey oak, putty/ivory mineral wall, dusty blue and soft sage, tiny old-rose accent, aged brass, clean neutral daylight",
+      "changes": "A restrained lived-in French vintage home: one thin correctly proportioned molding rhythm, simple flat cabinet panels with a subtle bead only where useful, slim aged-brass pulls, softly rounded timber edges, beautiful plain linen seating with precise piping, restrained low-contrast rug instead of loud flower carpets, small opaline or pleated lamps, one artwork per focal wall. Remove repeated botanical posters, giant bouquets, over-carved handles/legs and faux palatial detail. Do not add a fireplace, arches, giant marble island or chandeliers. Keep real small apartment scale."
+    },
+    "sunlit": {
+      "name": "Heju Studio",
+      "project": "République / Aumale",
+      "url": "https://www.heju.fr/projets/appartement-republique",
+      "principle": "借鉴其自然色彩与有触感材料的衔接，以浅木、细条纹和小面积柔绿形成节奏，控制陈列数量。",
+      "palette": "pale natural honey oak edge with chalky white surfaces, sage and oatmeal fine ticking stripes, restrained blush/terracotta accent, pale mineral wall, fresh grouped foliage, bright neutral daylight",
+      "changes": "Keep the reference home's wood-edge WHITE coffee table, green/oatmeal TICKING STRIPE sofa/bedding and window plant grouping. Make built-ins precise with thin real wood edge-banding, quiet reveals, aligned shelf brackets, small rounded corners and a recessed timber toe kick. Restrained subtle sage niche or cabinet face, a small handmade ceramic backsplash detail, one paper/opal task lamp. Replace crowded generic plant/flower/poster arrangements with three intentional heights at existing window. White surface stays matte and clean, no fake yellow sunwash, thick jungle plants on every shelf or huge rope patterns."
+    }
+  },
+  "roomGuides": {
+    "living": {
+      "layout": "Living clear width3.30m, original television on1.80m low LEFT console faces RIGHT sofa, complete SOLID TV background, original exterior windows only, main entry/dining circulation clear; no fireplace, new window, extra rooms or relocated TV. Preserve the kitchen's two top-hung clear glass banks retracted at ends.",
+      "change": "Show sofa-base timber junctions, tailored plain/stripe textile seams, aligned TV console drawer reveals, hidden cables, one reachable side table, appropriately small down-directed reading light, fine rug edge and correctly gathered curtains. Avoid duplicate vases and overdecorated coffee table.",
+      "view": "Standing-height1.35m normal rectilinear28-32mm architectural photo from room end, diagonally capturing both TV and sofa and only a little adjoining dining; corrected straight verticals, no inflated room width."
+    },
+    "dining": {
+      "layout": "Original dining bay,1.20x.70m table, WEST bench and two individual chairs at NORTH and SOUTH table ends, EAST passage roughly.90m stays empty.1.50m coffee counter along original wall, original windows/doorways. Visible kitchen:2.30m north counter, northeast fridge, .85m east auxiliary, two TOP-HUNG clear glass banks OPEN and compactly stacked at ends, no floor rail or corner post, no island.",
+      "change": "Refine table edge thickness, believable chair-to-table proportion, wood joinery and bench seat cushion, coffee-machine/grinder tray, four carefully spaced cups, credible small under-shelf work light, actual electrical sockets and concealed wire route. Quiet washable backsplash behind coffee surface, closed bottom storage, a real pendant centered on table not floating randomly.",
+      "view": "Eye1.35m normal rectilinear28-32mm photo across table and coffee counter with kitchen opening readable, straight verticals, no panoramic wrapping."
+    },
+    "master": {
+      "layout": "Original1.80m bed and entrance dressing zone, only original end exterior window, left side wall solid, wardrobes stay at entry, no added television, no fireplace, no bed facing invented window.",
+      "change": "Use an upholstered or timber-backed headboard with one readable material junction, small thin bedside ledge each side, individual downward reading light and discrete switch/charging, real duvet and linen seams, full-height closed wardrobe reveals and a reachable laundry pullout, mirror on actual solid panel, no bulky bench blocking foot route.",
+      "view": "Eye1.30m normal rectilinear28-32mm photo from original bedroom entry towards bed showing one part of dressing cabinetry and original window, natural proportions."
+    },
+    "study": {
+      "layout": "Gaming1.80x.75m desk along WEST master shared SOLID wall, chair faces WEST wall, original side window unchanged, original north1.05x.40m GLASS SLIDING collectibles cabinet, chair-back aisle retained, no bed.",
+      "change": "Show desk real veneer end grain, discreet cable grommet with underdesk separate power/signal trays and single wall drop, one monitor, restrained pegboard headphones/controllers, softly edged task lamp off monitor reflection, a small felt acoustic patch, thin sliding display profiles and restrained warm shelf light. Two or three meaningful collectibles, not a cabinet overfilled with identical toys. No RGB or neon.",
+      "view": "Eye1.30m rectilinear28-32mm photo from original entry capturing wall-facing workstation, side window and display cabinet, natural narrow-room scale."
+    },
+    "guest": {
+      "layout": "User-approved one-person secondary bedroom3.05m clear width:1.20x2.10m drawer DAYBED LEFT along WEST wall with1.20x2m mattress,2.30x.65m long desk RIGHT/EAST, ordinary computer, central aisle1.18m before chair. Bookshelves BOTH side walls22cm deep, wardrobe southwest at foot, ORIGINAL north window only1.35m wide, NO invented side windows, no center double bed. Keep bed/desk facing relation and leafy green linen from reference.",
+      "change": "Drawer base has individually aligned inset fronts and small finger recesses, real bedside reading light and desk task light, thin bookcase end/edge details, shelves kept light with books at sensible scale and a few cards. NO many trailing plants over pillows, deep unsafe low shelves or fake exposed structural beams. Proper gathered green curtains around actual existing window, window sill left mostly free, desk has substantial knee bay and cable tray.",
+      "view": "Eye1.35m rectilinear28mm photo from entrance/center aisle looking toward actual north window, shows LEFT daybed and RIGHT full long desk and some upper bookshelves. Do not enlarge window beyond original width; don't crop so tightly that bed/table relation is lost."
+    },
+    "kitchen": {
+      "layout": "Approved extended7.6sqm enclosure: west/dining boundary shifted .50m, south boundary retained, north worktop2.30m, hob/hood in SOLID north segment LEFT of original sink window, .68m prep then sink, refrigerator NORTHEAST facing south, .85m auxiliary worktop EAST; original outer wall/windows and southeast return retained. TWO separate CLEAR GLASS telescopic banks on perpendicular west and south openings, five leaves stacked at window-end, four at right-end, TOP-only slim tracks, default FULLY OPEN, no floor rail, no corner post or island.",
+      "change": "Straight cabinet fronts with coherent fine reveals, real24mm counter lip, credible end panel and inset toe kick, slim recessed pulls, natural backsplash joints aligned to cabinet modules, small practical outlet strip away from wet area, sink undermount/rim cleanly set, discreet under-cabinet work light. Compact roller blinds only near hob. Clear glass stack must remain visibly transparent and narrow; no prominent floor guide rail. Working floor easy-clean, no loose kitchen rug or cluttered utensil wall.",
+      "view": "Eye1.35m rectilinear28mm architecture photo from dining/entry corner showing north and east counter and BOTH open stacked-glass edges, no panoramic curved cabinet or invented third window."
+    },
+    "bathroom": {
+      "layout": "Original narrow1.65x3.70m bathroom: north shower then middle toilet then basin and standard60cm front-load washer at lower end, washer and basin share1.48m counter, .94m aisle. Original small privacy window and door retained; no bathtub, double sink, new window or extra width.",
+      "change": "Large quiet matte stone/ceramic tile with a coherent thin grout grid instead of noisy beige swirls, counter-to-wall slim neat seal, aligned cabinet and appliance front, shallow closed towel storage, natural wood-look moisture-resistant cabinet faces, clean shower glass edge/seal, credible floor drain and taps, small opal mirror lights that illuminate a face, reachable towel hook. No wooden wet-shower ceiling, LED glow outlining everything or plants beside electrical switches.",
+      "view": "Eye1.35m rectilinear28mm photo from actual door diagonally capturing washer/basin and shower, preserve narrow room; don't invent a giant side view or use ultra-wide fisheye."
+    }
+  },
+  "core": "Use case: photorealistic-natural. Create ONE highly refined NORMAL RECTILINEAR architectural interior photo in landscape3:2, output2048x1360 or largest available. Input1: current apartment360 panorama is GEOMETRY/ADJACENCY evidence ONLY, NOT output projection. Keep the existing floor plan, original doors/windows and all previously approved functional layouts. DO NOT output360/equirectangular/fisheye, a collage, curved walls, a board of samples, an exterior or a close-up that loses the room. Correct straight verticals and a real28-32mm architectural lens, plausible small-apartment proportions. Every visible edge, reveal, textile seam and fixture must look built, not generic CGI: fine open wood grain at realistic scale, tiny eased edge, satin non-plastic metal, actual separate fabric weave, coherent tiled joints, properly supported shelves, meaningful surface contact shadows. Natural soft NEUTRAL daylight plus just a few local warm task pools; readable white balance, no overall yellow/orange haze, HDR halos or artificial blur. No people, text, visible brand logos, watermarks or cloned botanical art everywhere. This is an original home design informed by published general design principles, not a reproduction of a designer's named project."
+}

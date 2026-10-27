@@ -1,10 +1,16 @@
 # 栖光 · 四套风格全景之家
 
-默认进入「林中树屋」。页首还可切换「现代日式中古风」「轻法式复古原木风」「日光花园原木」。奶白原木方案已移除，旧 `?design=cream` 链接回落到林中树屋。
+默认进入「林中树屋」的新空间效果视图，可切到「360° 环顾」。页首还可切换「现代日式中古风」「轻法式复古原木风」「日光花园原木」。奶白原木方案已移除，旧 `?design=cream` 链接回落到林中树屋。
 
-四套方案各有客厅、餐厅与咖啡角、主卧与衣帽区、电竞房、次卧／书房、厨房、卫生间七个独立 360° 观察点。直接访问 `?design=forest&room=guest` 可查看这轮按用户照片改造的次卧；`?view=model&design=forest&room=guest` 可核对实际尺寸模型。
+四套方案各有客厅、餐厅与咖啡角、主卧与衣帽区、电竞房、次卧／书房、厨房、卫生间七张独立正常透视效果图和七个 360° 参考观察点。直接访问 `?design=forest&room=guest` 可查看这轮按用户照片改造的次卧；`?view=model&design=forest&room=guest` 可核对实际尺寸模型。
 
-## 本轮修订
+## 最新：设计师细节与生活陈设
+
+本轮按“物品摆放有逻辑、要有生活化的小装饰”重做四套风格的 28 张空间效果图。分别参考 Axel Vervoordt、Norm Architects × 芦泽启治、Pierre Yovanovitch、Heju Studio 的公开方法，按阅读、咖啡、床边、学习、备餐与洗漱组织物品。新图原生 1536 × 1024，默认直接展示独立视角，支持放大拖动；原有 1774 × 887 全景继续负责空间参考，没有插值放大冒充高清。新默认视图不依赖 WebGL。
+
+逐室改动、设计师来源和提示词见 [四套风格：设计师细节与生活陈设](docs/四套风格_设计师细节与生活陈设.md)。
+
+## 上一轮布局修订
 
 - 左上次卧按一人长期使用重排：1.20 m 抽屉床靠左、2.30 × 0.65 m 长桌靠右、双侧壁挂书架、绿色织物与原北窗；西南床尾为衣柜，电竞房继续保留。
 - 学习 Ilse Crawford／Studioilse 的公开住宅理念，按布局与收纳、材料触感、灯光与窗帘、使用与收口逐间修订四套风格。页面“本空间设计细节”可查看每间房的具体处理。
@@ -24,7 +30,8 @@ npm run dev           # 默认 http://localhost:5173
 npm run build         # TypeScript 检查与生产打包
 npm test              # 导航与碰撞单元测试
 npm run test:e2e      # 先启动 dev；尺寸、家具、开合碰撞、漫游与手机检查
-npm run test:panorama # 四风格素材、切换、逐室细节、失败重试与手机全景检查
+npm run test:panorama # 360 素材、交互、逐室细节和手机检查
+npm run test:rooms    # 28 张新图、设计参考、摆放说明、放大、切换与手机检查
 ```
 
 浏览器检查默认使用 `/usr/bin/google-chrome`，可通过 `CHROME_PATH` 指定浏览器、`BASE_URL` 更改地址。需要支持 WebGL 2 的浏览器。`dist` 可直接部署至静态网站服务器。
@@ -61,11 +68,16 @@ GitHub Pages 使用 `VITE_BASE_PATH=/MyHome/ npm run build`，本地开发使用
 
 ## 文件与素材
 
+本轮素材、校验值与提示词在 `home-design-review/input/craft-refinement-manifest-20261026.json` 和 `home-design-review/logs/craft-refinement-20261026/`，上一轮记录保留。
+
 - `src/plan.ts` / `src/dimensions.ts`：房间关系、尺寸、家具与门组占位。
 - `src/model.ts` / `src/kitchen-doors.ts`：三维家具、材质、吊轨门动画和碰撞。
 - `src/design-schemes.ts`：四套风格、模型材质和逐室设计细节。
 - `src/model-app.ts` / `src/viewer.ts`：尺寸模型界面与漫游。
-- `src/panorama.ts` / `src/panorama-data.ts`：七空间全景与导航。
+- `src/room-tour.ts` / `src/room-tour.css`：默认独立空间效果、放大、细节与导航。
+- `src/craft-guides.ts`：四个设计师参考、逐室生活摆放与新图路径。
+- `src/panorama.ts` / `src/panorama-data.ts`：保留的七空间 360° 参考与导航。
+- `public/room-views/{forest,japanese,french,sunlit}/`：28 张新空间效果与缩略图。
 - `public/panoramas/{forest,japanese,french,sunlit}/`：28 张全景与 28 张缩略图。
 - `home-design-review/logs/detail-refinement-20261026-prompts.json`：生成提示词集合与来源。
 - `home-design-review/logs/refinement-assets/`：逐图生成与定点修正记录。

@@ -1,0 +1,569 @@
+{
+  "date": "2026-10-26",
+  "version": "craft-v2",
+  "projection": "rectilinear",
+  "panoramas": "Existing 360 assets retained as spatial reference; not claimed to be higher resolution.",
+  "generatedBy": "built-in image_gen",
+  "assets": [
+    {
+      "path": "public/room-views/forest/living.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 679944,
+      "sha256": "d1f56458081dfb43b074d392f7ba534132ed15c651ab22abd15036d221fab010",
+      "record": "home-design-review/logs/craft-refinement-20261026/forest-living-styling.json"
+    },
+    {
+      "path": "public/room-views/forest/living-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 21422,
+      "sha256": "d79093fe9ff4d169f962bbc2cbeed900d11aea85ef8a42fa92ea7eef6350d519",
+      "record": "home-design-review/logs/craft-refinement-20261026/forest-living-styling.json"
+    },
+    {
+      "path": "public/room-views/forest/dining.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 595532,
+      "sha256": "e5801066f822d99cd20b3e07d1dde18f26f558c54cb5ef2d0c5df6e911468961",
+      "record": "home-design-review/logs/craft-refinement-20261026/forest-dining-styling.json"
+    },
+    {
+      "path": "public/room-views/forest/dining-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 21903,
+      "sha256": "d43d78fa4e87ac9a099164973ccecc39ff2a989b9e5902388800084fb9a047c7",
+      "record": "home-design-review/logs/craft-refinement-20261026/forest-dining-styling.json"
+    },
+    {
+      "path": "public/room-views/forest/master.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 586890,
+      "sha256": "bfcb43e8c8fac962dda59ff50041d9db4a110a0c99f68ecd6c15a54ae4966fd9",
+      "record": "home-design-review/logs/craft-refinement-20261026/forest-master-styling.json"
+    },
+    {
+      "path": "public/room-views/forest/master-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 20419,
+      "sha256": "f8235c0ac70436e6452a341e47e74271ee4fd7c7f0230d250f840d6cf44a4859",
+      "record": "home-design-review/logs/craft-refinement-20261026/forest-master-styling.json"
+    },
+    {
+      "path": "public/room-views/forest/study.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 705867,
+      "sha256": "05f92a428b73aa89be196170fc14820aea4565a40238886fb3460aa2f110c78a",
+      "record": "home-design-review/logs/craft-refinement-20261026/forest-study-styling.json"
+    },
+    {
+      "path": "public/room-views/forest/study-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 23722,
+      "sha256": "a14b782eff60a75293f454cf778cbcf80037e8dd229584cb0549cfaa9c068aec",
+      "record": "home-design-review/logs/craft-refinement-20261026/forest-study-styling.json"
+    },
+    {
+      "path": "public/room-views/forest/guest.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 710545,
+      "sha256": "e551d6c2613df7d4917540482d2acbd1b061b4662ba340aab8d357c3c835107f",
+      "record": "home-design-review/logs/craft-refinement-20261026/forest-guest-styling.json"
+    },
+    {
+      "path": "public/room-views/forest/guest-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 25996,
+      "sha256": "fe65df85d63b54a858581d2bad1637e0fb4f28f3eae0d51be646eddccd399b17",
+      "record": "home-design-review/logs/craft-refinement-20261026/forest-guest-styling.json"
+    },
+    {
+      "path": "public/room-views/forest/kitchen.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 593949,
+      "sha256": "9ac75c416ab096bf17075e1aec9f6ecef36ff507cea4f618d27015b218427324",
+      "record": "home-design-review/logs/craft-refinement-20261026/forest-kitchen-styling.json"
+    },
+    {
+      "path": "public/room-views/forest/kitchen-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 21282,
+      "sha256": "afc2eeb9ab5dbdb3c2d19117085f14b39909b1204a3c1c511c13f08f946cbd31",
+      "record": "home-design-review/logs/craft-refinement-20261026/forest-kitchen-styling.json"
+    },
+    {
+      "path": "public/room-views/forest/bathroom.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 503501,
+      "sha256": "4bf1657965dfd889dbde53591fcff42d8c6af476c3d740e4bfc4798576a0c8c5",
+      "record": "home-design-review/logs/craft-refinement-20261026/forest-bathroom-styling.json"
+    },
+    {
+      "path": "public/room-views/forest/bathroom-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 18767,
+      "sha256": "afdc36c5a64d5f7fbde64cdcbc4d1b842948c4d6b011e729af8f41d5dc90734f",
+      "record": "home-design-review/logs/craft-refinement-20261026/forest-bathroom-styling.json"
+    },
+    {
+      "path": "public/room-views/japanese/living.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 734966,
+      "sha256": "9cf5c8a675c509069294f0e826d818c678bf1c7f440d276764e2f73aa38bc3b5",
+      "record": "home-design-review/logs/craft-refinement-20261026/japanese-living.json"
+    },
+    {
+      "path": "public/room-views/japanese/living-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 22724,
+      "sha256": "a5a37c9af695b2a3a3fdd540586b28c6f9a14a897659b13acf33d242d8bf8621",
+      "record": "home-design-review/logs/craft-refinement-20261026/japanese-living.json"
+    },
+    {
+      "path": "public/room-views/japanese/dining.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 706446,
+      "sha256": "dfe55d698eac1a41c94107c044a1fa526d2cd62a7b0e2c2c0e83e05573895032",
+      "record": "home-design-review/logs/craft-refinement-20261026/japanese-dining.json"
+    },
+    {
+      "path": "public/room-views/japanese/dining-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 22508,
+      "sha256": "ce78d1ee7a0291ddd9a80a2745d11cc080760d3b5b896c50af09d0eee152b71b",
+      "record": "home-design-review/logs/craft-refinement-20261026/japanese-dining.json"
+    },
+    {
+      "path": "public/room-views/japanese/master.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 601307,
+      "sha256": "23b7d7250e2886622672ef6b21def173145f72a89d7cfd9609aed95eb72f5138",
+      "record": "home-design-review/logs/craft-refinement-20261026/japanese-master.json"
+    },
+    {
+      "path": "public/room-views/japanese/master-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 18339,
+      "sha256": "d2286521166989215475aa23de863291327ec6302c505eaa7ffb4ac19c057ced",
+      "record": "home-design-review/logs/craft-refinement-20261026/japanese-master.json"
+    },
+    {
+      "path": "public/room-views/japanese/study.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 709661,
+      "sha256": "b6925f7fd60aaf97224f09edc276b5553fc79766c515f8cb956d73b25a6b4d69",
+      "record": "home-design-review/logs/craft-refinement-20261026/japanese-study.json"
+    },
+    {
+      "path": "public/room-views/japanese/study-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 23399,
+      "sha256": "f054cd859f4fc21a5a2da8a3cc1b2b65c0a1214746ced97920d1820a03d19110",
+      "record": "home-design-review/logs/craft-refinement-20261026/japanese-study.json"
+    },
+    {
+      "path": "public/room-views/japanese/guest.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 775975,
+      "sha256": "6b5280a37b238128bfc65653aa02b5cf0e1455fafb5abc850db6476163116d0b",
+      "record": "home-design-review/logs/craft-refinement-20261026/japanese-guest.json"
+    },
+    {
+      "path": "public/room-views/japanese/guest-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 25427,
+      "sha256": "5f94f34f9da943126753b1abbc475d3cac3308b688daa66f9821877709e8fea2",
+      "record": "home-design-review/logs/craft-refinement-20261026/japanese-guest.json"
+    },
+    {
+      "path": "public/room-views/japanese/kitchen.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 679857,
+      "sha256": "ba60066aada7c0103cff61cc9123f145deb56d2b3692b5ac79b559d8b32cfa9c",
+      "record": "home-design-review/logs/craft-refinement-20261026/japanese-kitchen.json"
+    },
+    {
+      "path": "public/room-views/japanese/kitchen-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 20520,
+      "sha256": "29fd44c63c598da9ccc918b0367a9ba296ad77dab25788b8c133eea09f290fc1",
+      "record": "home-design-review/logs/craft-refinement-20261026/japanese-kitchen.json"
+    },
+    {
+      "path": "public/room-views/japanese/bathroom.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 532617,
+      "sha256": "4b7257c8bb96c41cd944136814a2c016808fcb0fe21934d075eb66cc23c8d877",
+      "record": "home-design-review/logs/craft-refinement-20261026/japanese-bathroom.json"
+    },
+    {
+      "path": "public/room-views/japanese/bathroom-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 18716,
+      "sha256": "9e8ece4efd52ffa59c50acfc329733db0cb76d0f51a6e3e7dc7ff99fe6b735a5",
+      "record": "home-design-review/logs/craft-refinement-20261026/japanese-bathroom.json"
+    },
+    {
+      "path": "public/room-views/french/living.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 720902,
+      "sha256": "72b512d09fb4938caa4c165037c024355e6e2fa4afb08ec7baefe762c50ee93d",
+      "record": "home-design-review/logs/craft-refinement-20261026/french-living.json"
+    },
+    {
+      "path": "public/room-views/french/living-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 22711,
+      "sha256": "adecc50bfe34aba9832acf015a20d7ea9dd5caacf77decce0345b3dd8a6a149d",
+      "record": "home-design-review/logs/craft-refinement-20261026/french-living.json"
+    },
+    {
+      "path": "public/room-views/french/dining.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 648945,
+      "sha256": "aedebfd97b7d20c2cc3efd4b94b5433d27c01aa865802ec2254a344be8d18f53",
+      "record": "home-design-review/logs/craft-refinement-20261026/french-dining.json"
+    },
+    {
+      "path": "public/room-views/french/dining-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 22384,
+      "sha256": "6ad0b7342d06db70c78dea875f5351ddd3f503956ba4fae2e94b2b11f29816d9",
+      "record": "home-design-review/logs/craft-refinement-20261026/french-dining.json"
+    },
+    {
+      "path": "public/room-views/french/master.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 578087,
+      "sha256": "ade12fe5786cd4485509dc79ac9d479cccd00536fafd39f9b3299319ac219691",
+      "record": "home-design-review/logs/craft-refinement-20261026/french-master.json"
+    },
+    {
+      "path": "public/room-views/french/master-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 19281,
+      "sha256": "9e2b33a7c4cc8d996ffff628f824eb750f364d6e80ecdecec0fc5902c11b4e8d",
+      "record": "home-design-review/logs/craft-refinement-20261026/french-master.json"
+    },
+    {
+      "path": "public/room-views/french/study.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 701853,
+      "sha256": "89762daf8439ded33af3df6b27bd0d0f7ec886af088bbade8650b16596de602d",
+      "record": "home-design-review/logs/craft-refinement-20261026/french-study.json"
+    },
+    {
+      "path": "public/room-views/french/study-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 22530,
+      "sha256": "5fe1cd37a6bc113837ee61bf917fa022ca21ad7618f5f5ed6be264a9f288d9e9",
+      "record": "home-design-review/logs/craft-refinement-20261026/french-study.json"
+    },
+    {
+      "path": "public/room-views/french/guest.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 797084,
+      "sha256": "c3d1bfdea9f1166d0c87f0fd7e2e1d16fee740cdb4d8aa11ee0c1a8246dc1c43",
+      "record": "home-design-review/logs/craft-refinement-20261026/french-guest.json"
+    },
+    {
+      "path": "public/room-views/french/guest-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 27764,
+      "sha256": "aaa57358d6e30ec3ec6bad584b39fc46af5ede6d6de12c0d49c2c93ef812ed92",
+      "record": "home-design-review/logs/craft-refinement-20261026/french-guest.json"
+    },
+    {
+      "path": "public/room-views/french/kitchen.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 630084,
+      "sha256": "b19935f350ed0b9e0d0c5aabf95efc4ba634f8e6df949a359393eefab499dc07",
+      "record": "home-design-review/logs/craft-refinement-20261026/french-kitchen.json"
+    },
+    {
+      "path": "public/room-views/french/kitchen-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 20412,
+      "sha256": "0857105894aeb4f51f31eb3e29559af0550b70f5ebdb786f09e9348803045c3e",
+      "record": "home-design-review/logs/craft-refinement-20261026/french-kitchen.json"
+    },
+    {
+      "path": "public/room-views/french/bathroom.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 548903,
+      "sha256": "428e94299d79df749d9fc96133d83534deb0a32b57bd9559dc4d66c149600fe1",
+      "record": "home-design-review/logs/craft-refinement-20261026/french-bathroom.json"
+    },
+    {
+      "path": "public/room-views/french/bathroom-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 19142,
+      "sha256": "e3fd6965e07a07e32e7791087ad7a5bfa1dd1c79c5b367056ea57fd002573cac",
+      "record": "home-design-review/logs/craft-refinement-20261026/french-bathroom.json"
+    },
+    {
+      "path": "public/room-views/sunlit/living.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 761443,
+      "sha256": "6dbc54aecab4efa090a40ad1635be3529bd03d3557a72235ea5359d1084f68c2",
+      "record": "home-design-review/logs/craft-refinement-20261026/sunlit-living.json"
+    },
+    {
+      "path": "public/room-views/sunlit/living-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 25798,
+      "sha256": "8470d4b42240002cea1b18f8021095cda040e687cc1cfb30c0acbf214ffe4280",
+      "record": "home-design-review/logs/craft-refinement-20261026/sunlit-living.json"
+    },
+    {
+      "path": "public/room-views/sunlit/dining.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 656729,
+      "sha256": "d7bf42560b7915f02546ade6ea6392a28e94ec230f7d0cdb6fb2a34eddb54e55",
+      "record": "home-design-review/logs/craft-refinement-20261026/sunlit-dining.json"
+    },
+    {
+      "path": "public/room-views/sunlit/dining-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 22944,
+      "sha256": "2ff28e30e1cd692b423a11a175a7437707b74d2b2cf9f0e76232ba1b8784ee89",
+      "record": "home-design-review/logs/craft-refinement-20261026/sunlit-dining.json"
+    },
+    {
+      "path": "public/room-views/sunlit/master.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 657007,
+      "sha256": "e327aeadd82ab8e0c623e81847cda62d853ec2521ab00c6072adc9e3eccaa247",
+      "record": "home-design-review/logs/craft-refinement-20261026/sunlit-master.json"
+    },
+    {
+      "path": "public/room-views/sunlit/master-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 20967,
+      "sha256": "b872786673d7933a468485cfd994e1693d3795a57334d0e28847cc1d3de1b506",
+      "record": "home-design-review/logs/craft-refinement-20261026/sunlit-master.json"
+    },
+    {
+      "path": "public/room-views/sunlit/study.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 648867,
+      "sha256": "f955470bea58e49c05e566b369f8f81e4ac2c2ac429923e08fbaa6cb3419ca00",
+      "record": "home-design-review/logs/craft-refinement-20261026/sunlit-study.json"
+    },
+    {
+      "path": "public/room-views/sunlit/study-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 22449,
+      "sha256": "f5b15cecfd44a9a7fd4f53cdeac5b5667dac4e28f2363666989b372ac16db91e",
+      "record": "home-design-review/logs/craft-refinement-20261026/sunlit-study.json"
+    },
+    {
+      "path": "public/room-views/sunlit/guest.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 733438,
+      "sha256": "7f7ea16abd0491f2796e0bca1ace819c313be82faa4a6c3204d1205296314cbe",
+      "record": "home-design-review/logs/craft-refinement-20261026/sunlit-guest.json"
+    },
+    {
+      "path": "public/room-views/sunlit/guest-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 26239,
+      "sha256": "f3e452027e9038a1a25682f7ccbb10c2ccc89f993c18d1b339b117f7add810c2",
+      "record": "home-design-review/logs/craft-refinement-20261026/sunlit-guest.json"
+    },
+    {
+      "path": "public/room-views/sunlit/kitchen.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 613873,
+      "sha256": "008fa45a7388f7b1b8b4da5c00b8aaab66ec278bbf4859c77ba7b6552694dcbc",
+      "record": "home-design-review/logs/craft-refinement-20261026/sunlit-kitchen.json"
+    },
+    {
+      "path": "public/room-views/sunlit/kitchen-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 21458,
+      "sha256": "8120da957f066d4a5711c51933c80066b9e557ac226b1e78d3f23a0cbb2b8c5a",
+      "record": "home-design-review/logs/craft-refinement-20261026/sunlit-kitchen.json"
+    },
+    {
+      "path": "public/room-views/sunlit/bathroom.jpg",
+      "size": [
+        1536,
+        1024
+      ],
+      "bytes": 562286,
+      "sha256": "83db248685e04bda448137d7b0601249eb9994cb3f3695bdd9585ebbe49ecc3b",
+      "record": "home-design-review/logs/craft-refinement-20261026/sunlit-bathroom.json"
+    },
+    {
+      "path": "public/room-views/sunlit/bathroom-thumb.jpg",
+      "size": [
+        320,
+        213
+      ],
+      "bytes": 20419,
+      "sha256": "c7a5780fe8708aa69bda89e090e665a24591584fc4b939b29f5cb8e3e7f42844",
+      "record": "home-design-review/logs/craft-refinement-20261026/sunlit-bathroom.json"
+    }
+  ]
+}
