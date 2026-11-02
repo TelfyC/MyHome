@@ -1,0 +1,25 @@
+{
+  "project_id": "home1_sunlit",
+  "scene_revision": 1,
+  "scene_hash": "faa0addceab80e3f0c4af8299881edc7686572582853b7c92f1cb0c3a512076c",
+  "build_id": "build_bfea00ba37c139d7",
+  "render_job_id": "render_2a0d4271fae0c1e6",
+  "camera_id": "camera_dining_still",
+  "render_profile_id": "preview_fast",
+  "projection": "perspective",
+  "resolution_px": [
+    960,
+    540
+  ],
+  "samples": 24,
+  "render_engine": "CYCLES",
+  "device": "CPU",
+  "blender_version": "4.5.3 LTS",
+  "image_uri": "dining-review.png",
+  "file_sha256": "3217d5d18635eef21d815f36c39f7fd37bf81a170a7097eb054df6e9eb5f489b",
+  "duration_s": 32.31,
+  "quality_status": "preview_only",
+  "created_at_unix": 1793323457.803248,
+  "render_script_sha256": "8e00c38bf9b95aa29cdf540312a2151cd816d84db2976a3f47217e0e9248d0b8",
+  "project_blend_sha256": "2c353348c7ab8344dcf7853d8ae0c09730b8cd98ec725a0f8dc644b92de0bbda"
+}

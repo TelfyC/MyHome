@@ -1,0 +1,42 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-11-02",
+  "useCase": "precise-object-edit",
+  "room": "dining-detail",
+  "inputs": [
+    "public/concepts/optimized/sunlit/dining.png"
+  ],
+  "prompt": "Use case: precise-object-edit.\nAsset type: interior coffee-station detail photograph, matching an approved whole-room concept.\nInput image: Image 1 is the sole authoritative reference showing the actual dining room and coffee station.\nPrimary request: Move the camera closer to the RIGHT-HAND coffee cabinet in the SAME room, making a beautifully composed 1536x1024 landscape detail photograph. This is a new close-up viewpoint of the existing exact station, not a redesign. Show the pale honey oak worktop, white cabinet doors, single pale floating shelf, ivory compact espresso machine with its exact two large round front control knobs and small third control, black conical grinder, their shallow dark chestnut tray, left-end potted plant, right-side bean jar and small folded green/ivory striped cloth. Keep the machine and grinder models, their order, proportions and finishes exactly the same as the input. At left edge include a little glass kitchen enclosure, not a newly invented garden door. Foreground can include a softly defocused corner of the dark chestnut dining tabletop, a fine linen runner and pale woven chair, indicating the same dining arrangement.\nImportant detail: the warm-white portable POWER STRIP on the dry rear wall to the RIGHT of the grinder must be clearly legible. Keep it a short rounded rectangular ordinary portable extension strip with three socket positions and one master rocker switch, held by two small removable clips rather than integrated wall outlets. Show its single warm-ivory supply cord neatly clipped down the right rear corner; two machine cords follow short natural runs from the appliances to two sockets, no large hanging loops. At least one unused socket should have Chinese slanted grounded three-pin geometry, not US socket geometry. Keep the total switch accessible and unobstructed, keep dry coffee-bean jar below/right rather than covering controls. No wet plant or water glass beside the strip. The strip is not a track system.\nShelf: the same four cream/sage cups grouped on the right, single small botanical picture near the middle-left and slim branch vase on left, airy negative space, concealed warm task lighting.\nColor/light: fresh bright natural neutral-warm sunlight, warm-white plaster/doors, pale honey oak, matte deep chestnut tray/table accents, sage green ceramics and fine stripes, restrained brushed silver hardware. Preserve realistic material texture and plausible working space. No person, no added devices, no text, annotation, collage or watermark.",
+  "generatedSource": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f0-794c-7501-98db-638b89c7e324/exec-4d283d34-f65c-446d-a875-a448598b1412.png",
+  "iterations": [
+    {
+      "prompt": "Use case: precise-object-edit.\nAsset type: interior coffee-station detail photograph, matching an approved whole-room concept.\nInput image: Image 1 is the sole authoritative reference showing the actual dining room and coffee station.\nPrimary request: Move the camera closer to the RIGHT-HAND coffee cabinet in the SAME room, making a beautifully composed 1536x1024 landscape detail photograph. This is a new close-up viewpoint of the existing exact station, not a redesign. Show the pale honey oak worktop, white cabinet doors, single pale floating shelf, ivory compact espresso machine with its exact two large round front control knobs and small third control, black conical grinder, their shallow dark chestnut tray, left-end potted plant, right-side bean jar and small folded green/ivory striped cloth. Keep the machine and grinder models, their order, proportions and finishes exactly the same as the input. At left edge include a little glass kitchen enclosure, not a newly invented garden door. Foreground can include a softly defocused corner of the dark chestnut dining tabletop, a fine linen runner and pale woven chair, indicating the same dining arrangement.\nImportant detail: the warm-white portable POWER STRIP on the dry rear wall to the RIGHT of the grinder must be clearly legible. Keep it a short rounded rectangular ordinary portable extension strip with three socket positions and one master rocker switch, held by two small removable clips rather than integrated wall outlets. Show its single warm-ivory supply cord neatly clipped down the right rear corner; two machine cords follow short natural runs from the appliances to two sockets, no large hanging loops. At least one unused socket should have Chinese slanted grounded three-pin geometry, not US socket geometry. Keep the total switch accessible and unobstructed, keep dry coffee-bean jar below/right rather than covering controls. No wet plant or water glass beside the strip. The strip is not a track system.\nShelf: the same four cream/sage cups grouped on the right, single small botanical picture near the middle-left and slim branch vase on left, airy negative space, concealed warm task lighting.\nColor/light: fresh bright natural neutral-warm sunlight, warm-white plaster/doors, pale honey oak, matte deep chestnut tray/table accents, sage green ceramics and fine stripes, restrained brushed silver hardware. Preserve realistic material texture and plausible working space. No person, no added devices, no text, annotation, collage or watermark.",
+      "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f0-794c-7501-98db-638b89c7e324/exec-8f4f5108-1535-4d09-9b0c-de806131ff05.png",
+      "selected": false,
+      "reason": "额外白色支线及空孔形状偏美式，局部修正"
+    },
+    {
+      "prompt": "Use case: precise-object-edit.\nInput image: the EDIT TARGET, an approved bright Sunlit Garden coffee station concept.\nMake ONLY a tiny electrical-detail correction to the warm-ivory portable strip to the RIGHT of the grinder.\nThe bar has THREE socket positions from left to right, then ONE master rocker switch.\nPosition 1: KEEP the existing black appliance plug and its cable to grinder.\nPosition 2: KEEP the existing ivory appliance plug and cable back to espresso machine.\nPosition 3: entirely EMPTY, with just three dark narrow slits in the Chinese Type I geometry: one vertical earth slit above, two diagonal blade slits below left and right (like an inverted Y layout). This position must have NO plug and NO cable emerging from it. REMOVE completely the erroneous extra short white wire currently dropping below the third socket toward the jar lid. Restore clean wall plaster where that extra wire was. No round US sockets, no parallel US blade slots.\nKEEP the single ivory supply cable emerging from the RIGHT END of the whole strip and neatly clipped vertically down the wall.\nKeep exactly TWO appliance cables (one black, one ivory) plus the strip's ONE supply cable.\nEverything else must remain unchanged: composition, machine/grinder design, tray, jar, cloth, plants, cupboards, daylight, palette, camera. Do not redraw, restyle or add other objects. One photograph, no text, labels, logo or watermark.",
+      "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f0-794c-7501-98db-638b89c7e324/exec-4d283d34-f65c-446d-a875-a448598b1412.png",
+      "selected": true
+    }
+  ],
+  "review": {
+    "status": "selected",
+    "observed": [
+      "从优化餐厅主图生成同一柜子的近景，咖啡机/磨豆机/托盘/层板/四杯和插排位置统一",
+      "保留浅木台面白门，前景深木桌角与浅椅维持同一餐厅",
+      "米白插排、总开关、一个空国标三孔、两根设备接线和沿右角供电线清楚可见",
+      "删除空插孔下多余电线，植物与电源分区",
+      "细条纹布、米白与鼠尾草陶器、深木托盘重复整屋配色"
+    ],
+    "limits": [
+      "细节图相较主图换了近景机位，杯具和器物比例有生成差异",
+      "实物插排需按设备插头、说明书和现场位置核对，图像不代表产品规格"
+    ]
+  },
+  "width": 1536,
+  "height": 1024,
+  "sha256": "4fbae2fc78cf3c5372a69ff77b61f3c7d0124cbca2a2f636cf866073dd437924",
+  "file": "dining-detail.png"
+}

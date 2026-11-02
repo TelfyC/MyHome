@@ -1,0 +1,26 @@
+{
+  "room": "study",
+  "date": "2026-11-02",
+  "method": "built-in image_gen",
+  "useCase": "precise-object-edit",
+  "inputImages": [
+    "public/concepts/sunlit/study.png",
+    "public/concepts/variants/sunlit/dining-dark-cherry.png"
+  ],
+  "file": "study.png",
+  "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f3-7bc2-7c33-980d-93c72a16a54d/exec-beddbc8d-7094-4119-ad4d-ef075c37d7b2.png",
+  "prompt": "Use case: precise-object-edit.\nAsset type: optimized gaming and collection room interior photograph in an existing Sunlit Garden home.\nInput images: Image 1 is the EDIT TARGET, preserve this exact gaming room and composition. Image 2 is ONLY a dark wood color reference: use its matte warm chestnut/cherry-brown #6b4435 for tiny accessories, not for the large cabinets.\nPrimary request: Refine the existing room to have quiet material hierarchy, less visual clutter and convincing everyday usability. Keep the long warm-white desktop with its pale honey oak edge, the pale honey oak pegboard, the pale oak framed glass collection cabinet, the sage and ivory striped ergonomic chair and the single original window with muted sage striped Roman blind. The black display and devices already provide depth, so do NOT darken any cabinet, desk, floor or pegboard.\nSpecific accents: a simple dark chestnut wood keyboard wrist rest under the keyboard, one small matching dark wood accessory tray, and only one slim dark chestnut photo frame on the pegboard shelf. All should have matte finish and fine grain.\nSimplify the cabinet display: fewer figurines, arranged in deliberate small groups with generous empty shelf space, subtly lit at low neutral warm brightness. Remove plants from inside the display cabinet. On the pegboard keep the headphones, two controllers and one small figurine or framed image, each clearly hung on realistic hooks; remove the extra controllers and all trailing plants over equipment.\nPlants only near the window: keep one modest floor plant tucked into the window-side corner without narrowing the chair passage, remove the small potted plant and round glowing globe from the working desktop. Use the existing sage and ivory textile palette, no new busy pattern. Keep the task workspace largely clear. A restrained warm-white task lamp can occupy the far left desk corner where the globe was, without touching the monitor.\nShow realistic screen arm and proper desk support, natural keyboard, mouse and desk mat. Consolidate cables discretely along the rear desktop and under the desk; no dangling tangles, no cable through a screen or furniture. Keep glass reflections believable, all cabinet joints straight, cabinet doors functional. Bright natural daylight with clean warm-white balance, soft indirect ambient light, never orange showroom lighting or RGB.\nInvariants: exact original camera angle, 1536x1024 landscape crop, room boundary, window and blind, long desk footprint, cabinet positions, chair location, floor, door opening and clear rear chair circulation. No new windows, no extra monitor, no broad color changes, no people, no text, no logo, no watermark. Deliver one polished photorealistic image.",
+  "review": {
+    "status": "selected",
+    "findings": [
+      "白桌面、浅木包边、浅木洞洞板与玻璃收藏柜保留，大面积木作没有染深。",
+      "腕托、桌面小托盘与单幅窄画框用暖深木色呼应餐桌。",
+      "洞洞板保留耳机和两个手柄，去掉垂藤；收藏陈列分组留空，柜内绿植移除。",
+      "原窗帘、绿米白条纹座椅、屏幕臂与椅后通路保留；桌面换纤细工作灯并减少小摆件。"
+    ],
+    "limitations": [
+      "柜内暖色光仍有装饰氛围，实际照度及走线需以设备确定。",
+      "风格概念图，不用于核定实际尺寸。"
+    ]
+  }
+}

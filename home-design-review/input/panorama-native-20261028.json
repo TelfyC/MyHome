@@ -1,0 +1,5262 @@
+{
+  "schema_version": 1,
+  "collection": "panorama-native-20261028",
+  "status": "complete",
+  "count": 28,
+  "expected_count": 28,
+  "dimensions": {
+    "desktop": [
+      3840,
+      1920
+    ],
+    "mobile": [
+      2560,
+      1280
+    ],
+    "thumbnail": [
+      320,
+      160
+    ]
+  },
+  "method": "API-generated higher-resolution panoramas, masked seam edit, offline minimum-error quilting",
+  "visual_acceptance": "pending manual review; per-room status is authoritative",
+  "resolution_claim": "Returned API file dimensions are verified; provider internal rendering method is not established",
+  "records": [
+    {
+      "style": "forest",
+      "room": "living",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/forest/living-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 13382497,
+        "sha256": "935df12cf86c2df02280d8b37bad1550deae58ae93bc4e8aaacac8a66cc11e10"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/living/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12046536,
+        "sha256": "4a3daa12cb8efd157015993caf7c131131e6ff41772d41b5dc5e9bd2dd6a64c8"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/living/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 14091644,
+        "sha256": "40e6da9a6c2f46c80fdd1f63662e05b68fb267f4770c7d809009a154aac8e5de"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/living/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/living/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12203530,
+        "sha256": "78660b7cd0596fdd3d2bf5b736e6f2f0dc0f23910d31ca4812725e2738248af6"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/forest/living.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2914606,
+          "sha256": "ab954ede7a8d851f6c760383b287c2e9fd4e7e40479b159f7b63b2f4df058c69"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/forest/living-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1396704,
+          "sha256": "3345a7479f5eb4c8d8b311d45fed337c7b94843d844bdd457e180ae5a320eb54"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/forest/living-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 23989,
+          "sha256": "b0167eac3dcc3c1537121b71b8c6dfa61de73eedf1d6852c49ffa84b5d0254e0"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/forest/quilted-living-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 117620,
+          "sha256": "4d3ff2d866c618fed119c069cf981702662757c415bcf428cc1ebea752c60ec6"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/forest/quilted-living-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 184250,
+          "sha256": "f7f1cdb0662c4343c44ff1e7bab5d88a76359fb953a6df51db7b31908cc73878"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/living/quilted-paths.json",
+        "sha256": "d464b0af1fbba8c3f36607bf6aae105a0940473815b29087da6f3fcb017c0879"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 20.240482330322266,
+        "path_min_x": 1548,
+        "path_median_x": 1616.0,
+        "path_max_x": 1726,
+        "mean_source_rgb_difference_255": 12.694097222222222
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 22.7041015625,
+        "path_min_x": 2347,
+        "path_median_x": 2404.0,
+        "path_max_x": 2456,
+        "mean_source_rgb_difference_255": 13.005034722222222
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 69.13650512695312
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 8.209635734558105
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "forest",
+      "room": "dining",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/forest/dining-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12965229,
+        "sha256": "1e0a21734d06705d4a68150c600a961fc6f92fa1a58555df3f36be14efc91105"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/dining/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11995866,
+        "sha256": "1182a19d06817e64452c80ebeb0661125c0bd028ed191b2107b3480071d5dc9c"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/dining/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 13071595,
+        "sha256": "0f57216affb355508f9d91e80883084c93db871073333f954933add032c5931a"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/dining/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/dining/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11908794,
+        "sha256": "2fb26131e980811da868827ea5c073ae30d5aa7bfc0cb37f10d69e304a2b54fe"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/forest/dining.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2734234,
+          "sha256": "18b4951a4bf5ce47a62955bcca20ebbfe322994d4951df010467edbff0e0e836"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/forest/dining-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1260210,
+          "sha256": "4ef270bd28658be9f68671ac880b5cd11a98c7a2e28760c4858811dea721863b"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/forest/dining-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 25251,
+          "sha256": "f5d51e5d5559c2e816bbcde795ffea74c480768c7270046f3c06fac15843f934"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/forest/quilted-dining-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 170686,
+          "sha256": "38fa747ba776f1361267ff8121a4863865a5507f1eb3af433b6299c56e525037"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/forest/quilted-dining-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 170308,
+          "sha256": "1bbd6fadfc62663bb8d8e0650ff8aab4cc7031a50e337084272e66efdcfe94c7"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/dining/quilted-paths.json",
+        "sha256": "78f7fdaf3f69d98164e73f64f06c5c54f4465451c0d9e9cb4b849835be44cdc8"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 10.57459831237793,
+        "path_min_x": 1384,
+        "path_median_x": 1443.0,
+        "path_max_x": 1531,
+        "mean_source_rgb_difference_255": 6.413020833333333
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 15.852034568786621,
+        "path_min_x": 2290,
+        "path_median_x": 2363.0,
+        "path_max_x": 2457,
+        "mean_source_rgb_difference_255": 10.451736111111112
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 44.30794143676758
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 6.642144203186035
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "forest",
+      "room": "master",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/forest/master-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12456632,
+        "sha256": "332bebf27903f5b249d26217af00608a761effc1346840c2fc8339ab75999a3e"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/master/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11469226,
+        "sha256": "8b58e6e54cfc0eeea1f053d05f7cc9337859b629afdc59654af502a647d9fbfc"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/master/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 13562307,
+        "sha256": "b4dc12f6c1019c4046301bce0d6b8cec6bf08ae1c9e45894208b2de43ce8ab5c"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/master/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/master/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11652044,
+        "sha256": "a5d83a4ec452791cbca9771bed22b149dfaacd7bd5bc1a38fc95253437165a62"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/forest/master.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2492499,
+          "sha256": "57a112cfa0c4899a63946a16a32173e1435e1e911e1e13a861904a9cd7b2efdb"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/forest/master-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1122195,
+          "sha256": "ab562a475f21101348ce5031921c6064dced3bda3b14eab2314bf176e00e1e2b"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/forest/master-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 22094,
+          "sha256": "4cf4f0626365368a227588cb2fa3fa3c88a7b2ef1be42e4a5fcba84224a13788"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/forest/quilted-master-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 131462,
+          "sha256": "68ac2c54d0be36f07328f2c9a56e2548ab658bf99233b9916419158cbf652a44"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/forest/quilted-master-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 166053,
+          "sha256": "922c594b96b4f73ac8932fb05f364b019def58a78ff4054c1ec020bab6bdd145"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/master/quilted-paths.json",
+        "sha256": "b064844118988ec17103472b2e6397ffdbd02b2ac4ade777a68573a777ebb3e1"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 6.456144332885742,
+        "path_min_x": 1382,
+        "path_median_x": 1448.0,
+        "path_max_x": 1612,
+        "mean_source_rgb_difference_255": 3.3085069444444444
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 15.57706356048584,
+        "path_min_x": 2278,
+        "path_median_x": 2428.0,
+        "path_max_x": 2457,
+        "mean_source_rgb_difference_255": 9.641145833333333
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 21.46896743774414
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 11.8359375
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "forest",
+      "room": "study",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/forest/study-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 13793229,
+        "sha256": "018a06d3ca8902e2c06dbeef1208d46199bc42d1febaf7a14c74971b8ba6fe63"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/study/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12521877,
+        "sha256": "cac37acdd63a94fb0cb4fb0bb3a409dc6077c6e685bbaa13903a2f7fdf62cd0b"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/study/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 13285986,
+        "sha256": "3bf8919773bb0bbfbcf58fa9e10763b29f51074c597502629ecd2151764b71ea"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/study/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/study/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12394763,
+        "sha256": "3805c3bd4de6691e0271e8cb5d78abf537fa69e941bdfed3cc1e229481bb9a71"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/forest/study.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2931019,
+          "sha256": "3d01d79240a55bc5e336b6f321c5d896e18e03334a9c7f96943bf73cdb632b04"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/forest/study-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1360148,
+          "sha256": "d796e8491e6d41bd73df3cec01e4a6e4a8d06dccd33dd03cf75740bb7bcb856f"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/forest/study-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 26542,
+          "sha256": "f58557424f25d33105220cac7effec59b893861c45c9ccfb3b393311e3173cad"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/forest/quilted-study-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 175226,
+          "sha256": "a339f8364ed1dc3fc04e92c285bd2729d2edb7648df352691bd674985f362ed7"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/forest/quilted-study-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 152971,
+          "sha256": "8ce61c2ac5717dec1cf823555cc8c1d8917e533ee5623c5c3671c2734559c66c"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/study/quilted-paths.json",
+        "sha256": "549c221fa1ef8e4f4eff15b03fb9288e76aef14cbb4dd0fcfd2367346ab76e6e"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 16.940099716186523,
+        "path_min_x": 1394,
+        "path_median_x": 1585.0,
+        "path_max_x": 1641,
+        "mean_source_rgb_difference_255": 10.822743055555556
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 16.068477630615234,
+        "path_min_x": 2321,
+        "path_median_x": 2414.0,
+        "path_max_x": 2455,
+        "mean_source_rgb_difference_255": 9.659201388888889
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 6.4375
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 5.254123210906982
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "forest",
+      "room": "guest",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/forest/guest-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12774825,
+        "sha256": "8d0b631ba3fe60ef430a8208e5530460da9152f81c17b32bcf9fd292945fd429"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/guest/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12313078,
+        "sha256": "6fcf0ecd1bd62adcfdaa7826fc4dedf36e77eb2dbc075296e42f13c230a391f1"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/guest/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12795108,
+        "sha256": "e76556d2bfcf717958f3dcc18d25e643890d441a37cb3af4a036c285592f2234"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/guest/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/guest/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12699403,
+        "sha256": "eeb40c77cbae97dfc012aec20eedb2365f10dc15a27f73796ddfb6f8e81df2d8"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/forest/guest.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 3101267,
+          "sha256": "10c5664041867071e122718506bcd4fd5e09ee47ac9e39b485339b8a3d91a72a"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/forest/guest-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1516737,
+          "sha256": "381ffc46e971d6301fd642f41201e4d5e84bd1fcc38ffec3f18b7e2f42125800"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/forest/guest-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 32315,
+          "sha256": "6221fda82a581e83cee831886b811faede1719f0155b828ea09a45554301c038"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/forest/quilted-guest-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 180154,
+          "sha256": "51c8567de7fff5ef91b2aba7ccba79a2f1afe14334de9c45f36b96a004db2cbd"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/forest/quilted-guest-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 184387,
+          "sha256": "d10f5c7b180beff46f71bf99c8ec5017e9a850aaa0e8d9167c5dcabbd07f3633"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/guest/quilted-paths.json",
+        "sha256": "dc497bad5d4ecdaf5d74fa4b5d241c744c71d9831bf581eb6b286da2634af1d1"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 10.843277931213379,
+        "path_min_x": 1382,
+        "path_median_x": 1427.0,
+        "path_max_x": 1493,
+        "mean_source_rgb_difference_255": 7.78125
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 15.20978832244873,
+        "path_min_x": 2313,
+        "path_median_x": 2403.0,
+        "path_max_x": 2457,
+        "mean_source_rgb_difference_255": 11.1765625
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 41.11479949951172
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 8.550347328186035
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "forest",
+      "room": "kitchen",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/forest/kitchen-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12689729,
+        "sha256": "a8e2fc175fe0cb78383d697dca82e14f200a666def27a7fb9c575e72e32956c7"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/kitchen/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11574226,
+        "sha256": "d20d419fa10998327610de7cad0b14b53b372ddae6e3b6ada89865753b4f8e00"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/kitchen/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12129082,
+        "sha256": "e6eb3fde365c98feb7ca813eecfff2014a0c2ed59de7e9b96f308403a91edeaf"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/kitchen/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/kitchen/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11437303,
+        "sha256": "c11c45623c243600b5263f971b35b6359c1e11f926958bb2986fe153cdc57308"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/forest/kitchen.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2591513,
+          "sha256": "a7cf91c26587282b37aff965a4d7a834816bf297d7c8582217363e3049cc0980"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/forest/kitchen-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1184358,
+          "sha256": "9e441eb6ccec618d54b3f7355a67e0f9eb16d6140fb0b46a1b54ddfc98d7ad46"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/forest/kitchen-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 24193,
+          "sha256": "717a00d2aa28a3599bbb39584c77ea366ebd7e54c82cc83e127cec48c875d107"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/forest/quilted-kitchen-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 158645,
+          "sha256": "867edc4aa645ddb381fb5b229d03a7abde58056fbcce4af8acdac0941e876288"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/forest/quilted-kitchen-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 154473,
+          "sha256": "4fb7d737e182832b322586f16016bc3116ffb4a4f61e9a0cf21dfacd528f7ac8"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/kitchen/quilted-paths.json",
+        "sha256": "e5012e538b8f6e30b1f6a8ef2e34ada7bea16f3578b7b85a2d2e4366b32241a1"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 11.857808113098145,
+        "path_min_x": 1382,
+        "path_median_x": 1485.0,
+        "path_max_x": 1539,
+        "mean_source_rgb_difference_255": 8.175173611111111
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 15.855748176574707,
+        "path_min_x": 2336,
+        "path_median_x": 2355.0,
+        "path_max_x": 2452,
+        "mean_source_rgb_difference_255": 9.379166666666666
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 10.98654556274414
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 4.810980796813965
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "forest",
+      "room": "bathroom",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/forest/bathroom-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12182752,
+        "sha256": "319bdb969e596b38fd3a9eeb40f0b31ebed7fb97ec52b85c9ccff193edb1d4ca"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/bathroom/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11312647,
+        "sha256": "40dd3a57c1b6127a734672820683dbe0ebddef2f22d99f50f0f080f81173738e"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/bathroom/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12123868,
+        "sha256": "e77f583861e96daf110b506ca78067b57119ab0a31d38551260dd9c5cbaf3635"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/bathroom/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/bathroom/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11402276,
+        "sha256": "50a907d993950f295dbd74c036a546972bb05ec8878425fb36e49c456198ff69"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/forest/bathroom.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2376742,
+          "sha256": "2cb958aa4f94badd6c115daca07357b0b9a830878e830fff67396b5f0f19efa8"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/forest/bathroom-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1079598,
+          "sha256": "485df02fee88ee086459d969aa50c0a12fdac0f6e39c0d0d2a93664f6ce89f44"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/forest/bathroom-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 20958,
+          "sha256": "5dbfb7554bc703df406baad2742b9cae42789443993f3699e1921b13ce95ff24"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/forest/quilted-bathroom-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 135964,
+          "sha256": "987e5ff33b7963e0ffa95dd921bf884fa0d99f3424c118b0f9b542e92a6bb717"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/forest/quilted-bathroom-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 122191,
+          "sha256": "c529c302994eb735b59e217535cffe9fcf7874894dabc99f38716de9cfaae962"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/forest/bathroom/quilted-paths.json",
+        "sha256": "bf44ff89fac2daddd36b2846e920b5e97cd85933b938b474687a539e00b53572"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 15.838375091552734,
+        "path_min_x": 1411,
+        "path_median_x": 1551.0,
+        "path_max_x": 1574,
+        "mean_source_rgb_difference_255": 11.902951388888889
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 13.784317970275879,
+        "path_min_x": 2234,
+        "path_median_x": 2406.5,
+        "path_max_x": 2457,
+        "mean_source_rgb_difference_255": 10.084895833333333
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 22.62196159362793
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 2.630859375
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "japanese",
+      "room": "living",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/japanese/living-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 14649358,
+        "sha256": "4c6b1551523243cf814f8d504131c86df3fa7784fe0c333ed069068acd4c1d19"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/living/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 13002208,
+        "sha256": "c16bcab85e07da7fdaf05abe4fea2a7a269f28b21fd4b9888a44514834549dd1"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/living/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 14265386,
+        "sha256": "3b9c44e9fed52ac11a2b5bfd0f551b8d26b3c5da26a047d5603acccefe7c291d"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/living/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/living/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12988830,
+        "sha256": "1cd0ef29eb1f8556a1dccb7d5072b56ffac08a3c0f847efd6c149aeaee42a493"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/japanese/living.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 3101420,
+          "sha256": "f5279b3f77bdb270d37ba7c164a4f4bff3c231f392e5298096f5de8c6eec85a4"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/japanese/living-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1416798,
+          "sha256": "c7bf6b57ad4974836541ddb50189edbcd70b2a732c29e01015d4f1d4ce71b588"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/japanese/living-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 23481,
+          "sha256": "a44f3df12850bf965f4b399e68853903c853e2b364534832b250ce0d0f3395b6"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/japanese/quilted-living-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 138299,
+          "sha256": "b83e14ef5312d938b77aa4f45df0752f2d47c27a099814f56a04ea991ca5f215"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/japanese/quilted-living-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 173403,
+          "sha256": "6867f4441ef02886cae6985a78906a92a16dd32d2b4a42102afae234d451e3c1"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/living/quilted-paths.json",
+        "sha256": "c2b05e9d84299690e8da2e7621d1f4da36ad1bc5339cd90532a8dddaf09c3f0d"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 16.52241325378418,
+        "path_min_x": 1382,
+        "path_median_x": 1402.0,
+        "path_max_x": 1442,
+        "mean_source_rgb_difference_255": 9.199479166666666
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 21.633216857910156,
+        "path_min_x": 2388,
+        "path_median_x": 2437.0,
+        "path_max_x": 2457,
+        "mean_source_rgb_difference_255": 12.41423611111111
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 48.13454818725586
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 5.96788215637207
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "japanese",
+      "room": "dining",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/japanese/dining-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12524409,
+        "sha256": "9235ea4e1e52506549ef573358c560e7874e7ac0f4d1a1c46f8012eba9480893"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/dining/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11526456,
+        "sha256": "c911a477218adaf1913d323072ffe921bf1abf6db07742ee04e3d0137a845eff"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/dining/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 13530783,
+        "sha256": "1f6f05485421c9cda36040d59aa275c6f0c8712c938859bd1c843e74bb19e88d"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/dining/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/dining/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11627453,
+        "sha256": "745e0a546f349f0888fd3e465b85ca312f261a4c389c6705edb12dfbec3f9353"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/japanese/dining.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2612959,
+          "sha256": "d73b3c7435be596043875f920e9a16d660a9372cc0053d5d3c448188504f9a82"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/japanese/dining-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1201444,
+          "sha256": "e35e466a962635ba13efa8da9a53ef4b8dbad6699ad1a6c250aa8d6b889cf633"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/japanese/dining-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 22979,
+          "sha256": "561e833cee670f5736836c9f4e525e4d798a60c99fe9515ca7fb14ad69b47c95"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/japanese/quilted-dining-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 130815,
+          "sha256": "c347e95b95ead3c2fdae6bcb6c96fdbd113d5d210e47c92b7fe730df14229a5a"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/japanese/quilted-dining-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 140492,
+          "sha256": "fe2b921ba633549fd78dc2fb312e0764b7c93be9917b36258dd2a5d5afb3b738"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/dining/quilted-paths.json",
+        "sha256": "41c556aa1c49d204f1e0cd58f485224d46d3b0223e99851dded3015c0c383103"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 12.545985221862793,
+        "path_min_x": 1529,
+        "path_median_x": 1647.0,
+        "path_max_x": 1685,
+        "mean_source_rgb_difference_255": 7.929513888888889
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 14.831645011901855,
+        "path_min_x": 2308,
+        "path_median_x": 2435.0,
+        "path_max_x": 2457,
+        "mean_source_rgb_difference_255": 9.213194444444444
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 20.17122459411621
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 4.493923664093018
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "japanese",
+      "room": "master",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/japanese/master-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12552117,
+        "sha256": "2f54ef2aa069c7d2390517631332311999ff2e19372379387ff1a0188132c67a"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/master/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11487073,
+        "sha256": "4207c302ce0e94b344dbbdc2ddcf5019ef5af625637e7f9f12cc00e1666bff5d"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/master/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12103095,
+        "sha256": "6cc060ba31d54102aacf987e82ca35b4e73c0380b37314357846f6462a848f67"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/master/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/master/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11537958,
+        "sha256": "8bf8544f59e9fca5b0e55ad8b18fc8437f5127e675f1274adfab1f79e939b8e3"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/japanese/master.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2429204,
+          "sha256": "155b9cf6917e93a13bb2947a9ed62da7e1502e8ed9e73c07af9dfd23aa9fb013"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/japanese/master-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1094672,
+          "sha256": "db6af01c9f37dcdf6bfa9d78e5bd6cbbc74f2986e691733d18ee50b9e5c418c5"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/japanese/master-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 21043,
+          "sha256": "fdc6c8f7f2d334dbb0c8a376e4d6c0d9b582e50cf40c71f1407945aca1c73408"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/japanese/quilted-master-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 115456,
+          "sha256": "8eb9b5ff0d8cec9c7711a26856a630838cd2db95242922f4002ca6b03f30d568"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/japanese/quilted-master-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 161433,
+          "sha256": "fbd07aab95af6ef87ef94cee65b1a4b8b8899d0077721504aec4f395bc894547"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/master/quilted-paths.json",
+        "sha256": "004f1025f7704d810842aef5f7a28e094c417dd40ca356d6d73af39edaf5136e"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 6.815812110900879,
+        "path_min_x": 1382,
+        "path_median_x": 1412.0,
+        "path_max_x": 1486,
+        "mean_source_rgb_difference_255": 3.8196180555555554
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 21.35822296142578,
+        "path_min_x": 2235,
+        "path_median_x": 2392.0,
+        "path_max_x": 2457,
+        "mean_source_rgb_difference_255": 14.508506944444445
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 26.82139778137207
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 14.06857681274414
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "japanese",
+      "room": "study",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/japanese/study-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 13447247,
+        "sha256": "da2d32a252d93272a906e7e844e9b19ed3789a0da75f90f4395dc7ce01723a24"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/study/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12296141,
+        "sha256": "9d50bd70e74d6345ea49e1bae1ce2162e0c40943cf4fa0f08c46ed6ec64fb4ee"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/study/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 13633939,
+        "sha256": "f217062f544a171f45047812c55156f891ed58b054a0668983181ee4cda7e4d0"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/study/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/study/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12500715,
+        "sha256": "f1f4ea25f45de0d5ae1471dc500bdc6b6fb5f9962baed9447546f5b857fd12d6"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/japanese/study.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2916894,
+          "sha256": "488a05b09b4d45e1e4ab380d8e3372b833a04699467c3ff0a07d65060661f1f2"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/japanese/study-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1318653,
+          "sha256": "9f910e4a09166b3ac6640e3dde69aeccec952b29c1cab9d1fdfc0f50fb7acd88"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/japanese/study-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 24602,
+          "sha256": "bf8c5876bd999105ed7ca0fc1efbba360fe2dc1fea1552ae03ae2a6997497f42"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/japanese/quilted-study-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 174038,
+          "sha256": "17501a404fbce9b239c100c461e698a8d9b3b9e933bd8f81c9a4e37253c1079f"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/japanese/quilted-study-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 173308,
+          "sha256": "b366526f23f1d9d4df0dc2cf6e2807563715a5a38c8ee27ae397b692cd525b02"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/study/quilted-paths.json",
+        "sha256": "1e12d5663b00330f7b16576c257ba1b781083f42af5673e5a4da2c2c29706602"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 18.05364418029785,
+        "path_min_x": 1382,
+        "path_median_x": 1393.0,
+        "path_max_x": 1443,
+        "mean_source_rgb_difference_255": 13.588888888888889
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 14.741327285766602,
+        "path_min_x": 2377,
+        "path_median_x": 2440.0,
+        "path_max_x": 2457,
+        "mean_source_rgb_difference_255": 8.5140625
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 8.546223640441895
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 3.30859375
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "japanese",
+      "room": "guest",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/japanese/guest-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12562275,
+        "sha256": "991defbfe5a5c311fcdc3c473bf39fa4719ba42ffbf8f0e71cea15ada2f45dbc"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/guest/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12083475,
+        "sha256": "d23347f0bec6785f48aafc85ca23989ef0efae4f730a1d60a123f7d8264c1a0a"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/guest/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12455977,
+        "sha256": "193207388e14d86213250af35b5188fe8e0d785d70f8c19a5262baf7e18c7f75"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/guest/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/guest/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12547570,
+        "sha256": "e4ada5bfd8a2f480acbc8d6eb4d78b4d8d4e95ed331f101d85f2460d19818027"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/japanese/guest.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 3003260,
+          "sha256": "049ad3c95db364d84bb39c69ffe2c48588b5bf7673d25111f5120983ee4fc223"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/japanese/guest-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1454792,
+          "sha256": "b268d346cb203abb78c5b8ddc428a9be5da269271494331193fe9b1cfc964335"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/japanese/guest-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 31537,
+          "sha256": "6893752463e0b1eafb88d06c7371686cfcf90333e9519f55ce0e549c5733b805"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/japanese/quilted-guest-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 169265,
+          "sha256": "c45b437cf49c4573387056078e8c9616b97a9ef36331f5646574b5eb00988da8"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/japanese/quilted-guest-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 173345,
+          "sha256": "3f9dd2cf2ce3f95b90ad6a85d9d9328031899beae6de136ebe83aea5e6d4d8fd"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/guest/quilted-paths.json",
+        "sha256": "c083024940ab2245b1d7652d843046f5a64310e64da06005b2ed1441e0ec797a"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 30.656129837036133,
+        "path_min_x": 1382,
+        "path_median_x": 1432.0,
+        "path_max_x": 1566,
+        "mean_source_rgb_difference_255": 25.539236111111112
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 25.602771759033203,
+        "path_min_x": 2368,
+        "path_median_x": 2423.0,
+        "path_max_x": 2457,
+        "mean_source_rgb_difference_255": 20.496354166666666
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 42.46050262451172
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 4.955295085906982
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "japanese",
+      "room": "kitchen",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/japanese/kitchen-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11910989,
+        "sha256": "ce84fecaedf9ab1068c0edb9434d06d4f1339533cdf999ec9b278f1744336a73"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/kitchen/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11048792,
+        "sha256": "a851ac7fc0c4f66b4e6a33c9036cfc243e4605a7283a5e46db475fd2a272f689"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/kitchen/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11757971,
+        "sha256": "d63fc4d15fac68866bfc966c81e2a3a12d1c163edeb7046126afac2ffc3228fc"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/kitchen/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/kitchen/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 10773992,
+        "sha256": "3366c11bd029324d20fdb44b04e1649f2680a810b370a07c4f9556911fdc8af9"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/japanese/kitchen.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2434778,
+          "sha256": "1acc2f32aab73b43f2bf1bdb98fccf10739a5cc78abce506c932146403247b85"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/japanese/kitchen-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1115915,
+          "sha256": "40178918a21ef675cd304ad39851380eedde9681d96952e687235ea9cecc1cd1"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/japanese/kitchen-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 22686,
+          "sha256": "69a4c698f1a1638a4a02a53e33a824716777ced60ca03bc84a31deae2cb9b7b8"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/japanese/quilted-kitchen-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 133312,
+          "sha256": "2929a9865e9a8ba7b55c2eba6e1258b2fdf883437b802b6a6d915dd94d663140"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/japanese/quilted-kitchen-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 120281,
+          "sha256": "ea7e839dd828ed1702f9c6cd35162ba0f932d3a58c9851080b81c98d2a9a444b"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/kitchen/quilted-paths.json",
+        "sha256": "428866bfb5eef0c3b6d989cbe04186514d41c2fcabd3b476a90789f443233f82"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 10.373879432678223,
+        "path_min_x": 1384,
+        "path_median_x": 1470.0,
+        "path_max_x": 1511,
+        "mean_source_rgb_difference_255": 6.7034722222222225
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 13.034464836120605,
+        "path_min_x": 2266,
+        "path_median_x": 2395.0,
+        "path_max_x": 2450,
+        "mean_source_rgb_difference_255": 8.737152777777778
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 12.505425453186035
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 2.033637046813965
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "japanese",
+      "room": "bathroom",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/japanese/bathroom-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12740702,
+        "sha256": "0e5bc597045a97cc04245d937dc61a81a6ffd8b2828a394344c7a49690377024"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/bathroom/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11600564,
+        "sha256": "28002ea7435570a7eacfa7dc318fb378f722ada0ea3401296dd1292e42e7aef9"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/bathroom/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 13373811,
+        "sha256": "24c6b675bcff23d139ca1d9da28f4e952efc52d14b9001df8aa0a628009e81bd"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/bathroom/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/bathroom/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11693489,
+        "sha256": "e14ac76a58a86dd9d992e42e9f8c7469dc6fe9b47d1f78206703cd97a801a7c3"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/japanese/bathroom.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2554492,
+          "sha256": "375aa8a81ec694ddbd360f8a1d9a4a66b394f3a3c7be443cff9243d51dcaf4a0"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/japanese/bathroom-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1136280,
+          "sha256": "2d76b9c3f5a058ea7716239aa759cd003937c340e4bdf032f1ae56865f12f824"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/japanese/bathroom-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 20188,
+          "sha256": "9050de8f9c57582414c2e2945dc32eb0d0fad5abce45224acd279b7a5580a440"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/japanese/quilted-bathroom-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 129398,
+          "sha256": "426e0e87bd2abdd6c73f7089f7b0731648efbec61d3194a9630bf45c463789e7"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/japanese/quilted-bathroom-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 114942,
+          "sha256": "7a9807ac8b86c2b41f49383ce6934affe69d87e3219d11f4cc3168a591cadc7d"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/japanese/bathroom/quilted-paths.json",
+        "sha256": "892a9acdb90626adcf508aa739c4825c853099ed15a0e3573ebdf9531986a187"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 16.40869903564453,
+        "path_min_x": 1382,
+        "path_median_x": 1539.0,
+        "path_max_x": 1600,
+        "mean_source_rgb_difference_255": 12.488541666666666
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 11.46377182006836,
+        "path_min_x": 2259,
+        "path_median_x": 2369.5,
+        "path_max_x": 2457,
+        "mean_source_rgb_difference_255": 7.145659722222222
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 13.68185806274414
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 15.08029556274414
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "french",
+      "room": "living",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/french/living-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 13172232,
+        "sha256": "0804986015f40fe04e622b5bbb757d7bd6c1761ae9072524bf9014bd16a36ff9"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/living/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12057149,
+        "sha256": "39eb905b4fcdb8eb9b80d52e095bc33e43a50092ef717d5cbbc4349e506ef4fa"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/living/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 13135873,
+        "sha256": "b94e723de76ba09d62f77182a43d40daa69622e58363c98752d320f600d22205"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/living/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/living/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12037417,
+        "sha256": "5e17633c046ffd551a365fd97eeb0137a8e7fbd0b7d9b50554b1879bd0bdc6c1"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/french/living.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2819384,
+          "sha256": "ef2116aec06c44a22277f87abe49a167f7b697fad3cc19216c8fedd3ebf3c905"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/french/living-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1330365,
+          "sha256": "7220f9ed9f27dda3d75b03072b4cc7cf12c589b583fd631fb950848f09f620d6"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/french/living-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 24913,
+          "sha256": "18bad8377a986dec395c40880f12a8653252e4f128f621f0cae9721b7bf68a67"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/french/quilted-living-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 135748,
+          "sha256": "536faa07083bd2656315852017f1b83625725152e776f513adbe5e0842d249db"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/french/quilted-living-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 146659,
+          "sha256": "7410c43f33cfc41a895670fb8b7abec551a608031a13a4ef487b5db5f300d226"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/living/quilted-paths.json",
+        "sha256": "578c7100a1d6b34ad7313949a42b0ae5cf61683a3b6a407f644f954986f6fb47"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 13.241477012634277,
+        "path_min_x": 1382,
+        "path_median_x": 1408.0,
+        "path_max_x": 1459,
+        "mean_source_rgb_difference_255": 7.595486111111111
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 18.31707191467285,
+        "path_min_x": 2133,
+        "path_median_x": 2193.0,
+        "path_max_x": 2321,
+        "mean_source_rgb_difference_255": 11.620486111111111
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 26.81163215637207
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 4.424479007720947
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "french",
+      "room": "dining",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/french/dining-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12199690,
+        "sha256": "bda06f57ca4e7aab430b520c6442b3f9ebec734aca2fa85fa524e83f1e671cd0"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/dining/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11198239,
+        "sha256": "45aaa3dd0ad4acd5c5972dc9583dd7d2ba823855ce0dabc71148c8fe10644d8e"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/dining/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12260665,
+        "sha256": "72b23f4c7a517153b2f877960e3796b525bc077c252d83ba05ce58ecf8e090c2"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/dining/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/dining/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11134518,
+        "sha256": "cdf8614733131cd4c734a790a9b88abbd521eb11c6f8f5a295a947a3e40def28"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/french/dining.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2403395,
+          "sha256": "0286fc76ade19a5f63769ab1b232a8ab65e0a70ae67f1d6c16aff8d39338c2c3"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/french/dining-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1110884,
+          "sha256": "d3267089b2aade69d1bad26d95ce719411d290483c57394ca8f92bf6c7046e00"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/french/dining-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 23659,
+          "sha256": "239dc17d9ab2c8585eb8a930c9311ed8c6bcfdec79d14a633c221cf440036336"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/french/quilted-dining-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 142543,
+          "sha256": "5967a649df9692a846587d98af0430a4c52fb6cd7958898a15b7e152e07c6d5e"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/french/quilted-dining-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 142524,
+          "sha256": "e826f4cb79f1c5a9ec4e876df62425b1b9d949d47b53b6597f85c561cd437a66"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/dining/quilted-paths.json",
+        "sha256": "3fe934ae6545317032536f0b4322aeea57817e08aead56f35a2cec3579b077ed"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 11.236551284790039,
+        "path_min_x": 1382,
+        "path_median_x": 1423.0,
+        "path_max_x": 1506,
+        "mean_source_rgb_difference_255": 7.1015625
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 11.392467498779297,
+        "path_min_x": 2334,
+        "path_median_x": 2423.0,
+        "path_max_x": 2447,
+        "mean_source_rgb_difference_255": 7.8125
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 24.04557228088379
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 3.6310763359069824
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "french",
+      "room": "master",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/french/master-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 13148321,
+        "sha256": "318f04f5e08dbbc7f6d85ce39071fd92a51f77add6e4abfa37dcfbb582510bd4"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/master/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11820087,
+        "sha256": "33fcb1c0392e55e954b83e8321a9de89d8e5ebde88983eeb88591fbe0f632abb"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/master/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 13914530,
+        "sha256": "a2c3e0c5ef839dabf98b0fae0f050e0b5e680187c3bcc324866a048203d50fee"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/master/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/master/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12076383,
+        "sha256": "378137eb50c2845730af8c525d8d0a180886771458722c1be036162aa850079f"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/french/master.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2661395,
+          "sha256": "bb27e2f37c9d10fc7239e7015da95d6a5bfb79fe59c15068966ca44ffef51bb2"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/french/master-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1210436,
+          "sha256": "ba8887878e68ae8346a33ed643a01377646b59ecfdec70c23f72a8967cd0b77b"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/french/master-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 21590,
+          "sha256": "facbea7e2891bc40de8d70d1dd164abb0884ae38b5616d84bbbf80ddd5ba804a"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/french/quilted-master-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 135910,
+          "sha256": "9e7cc7207d6cf20313bbdf561690601d8b0fda346792a64581cdefecc3609fcb"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/french/quilted-master-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 181152,
+          "sha256": "2130c9c24d0d336894b0399b175b2f8f26527e7acbe6da9f57c9733402bc2b2d"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/master/quilted-paths.json",
+        "sha256": "fc6e645e8a562f92923d900d860a2f8880e393a462d7585555f3b2b0527b7d0e"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 13.912827491760254,
+        "path_min_x": 1382,
+        "path_median_x": 1402.0,
+        "path_max_x": 1446,
+        "mean_source_rgb_difference_255": 9.066840277777779
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 14.657185554504395,
+        "path_min_x": 2277,
+        "path_median_x": 2442.0,
+        "path_max_x": 2457,
+        "mean_source_rgb_difference_255": 8.504513888888889
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 15.00303840637207
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 7.649739742279053
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "french",
+      "room": "study",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/french/study-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 13145000,
+        "sha256": "12d8251a407b7bb1a5d4ae0496894fe27385a08670503efe7cdb4d18888866d0"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/study/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11965360,
+        "sha256": "0cf4b39035c54f984fbec21ce6bcac90e9f988b6cd29652ca7f87ddad08dae8c"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/study/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 13046029,
+        "sha256": "61fb0d7579b7720c5dd4f031605a9ecf84800126faf7f2949587826b52f059df"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/study/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/study/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12257183,
+        "sha256": "2d62e9a8cd53761ea1db7bdf3c6bea32b60fcbff0614e2a617c6632f7431b8be"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/french/study.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2805265,
+          "sha256": "8b9a5e4138cf69adb088eed12139e052ad48bd639e3044dd174b8719a24e959b"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/french/study-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1306868,
+          "sha256": "91e27e05e81606923603218a143eda0d4c2dca1d131f88e3dd08eebe58601e6e"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/french/study-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 25116,
+          "sha256": "7eb80426b2e7e3c23a2e03fd3e85fe2bfc9a4e0ad0ff39d563d5647d56802077"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/french/quilted-study-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 153937,
+          "sha256": "372a4533f3edc5bc94f868ee67b63fa8ae7ec412b5ef48752c4847384af4dcc1"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/french/quilted-study-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 164265,
+          "sha256": "b65a9acc8bc5ae5fc817eb1dba1af515830dce32f40e3156e63d31ba827708ca"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/study/quilted-paths.json",
+        "sha256": "623eaec3c7fdd45d6157f023d109598c4b12c7dc69cfff51c7a4203de63194ad"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 13.548161506652832,
+        "path_min_x": 1382,
+        "path_median_x": 1443.0,
+        "path_max_x": 1499,
+        "mean_source_rgb_difference_255": 9.034201388888889
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 16.217369079589844,
+        "path_min_x": 2313,
+        "path_median_x": 2358.0,
+        "path_max_x": 2452,
+        "mean_source_rgb_difference_255": 10.999131944444445
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 4.28016471862793
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 4.353732585906982
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "french",
+      "room": "guest",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/french/guest-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 13300518,
+        "sha256": "616a0b8e70552dcb0eb76bb441f95128d63f4a8352a7c8717a37ff54a1e2d84b"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/guest/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12484243,
+        "sha256": "5935a26de62ac4e49e9361374ba33909340524b5c90534ca3d6ff713e09c8131"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/guest/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 13795631,
+        "sha256": "7c74221261a79115d4234ae4df7853d3133f454f97fae453bdb68d2688abab45"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/guest/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/guest/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 13000887,
+        "sha256": "5f84d84960f809dda23cff0ba21358316c7960e72fea308d97c12148c5d08471"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/french/guest.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 3173057,
+          "sha256": "584b774c87158c85e73f2df9d82cb277a0f161dcf8850da37516438ecd4cbc44"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/french/guest-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1525117,
+          "sha256": "38d467ffbe14f00cbb935850145ac5c1e2f0bf5b183c49ed5516a30aed6a16a7"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/french/guest-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 29375,
+          "sha256": "e4e8eb37da262dec6187b7a99cbbaae566d6f21d3e9f5fcb037cacf583f5b523"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/french/quilted-guest-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 166128,
+          "sha256": "034b35184dff29da241ca62485a026aca4221b59554d64f1f887e26770d88931"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/french/quilted-guest-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 157456,
+          "sha256": "5edd87f7865b0a4735d181f143d0207af834ef26819252550689fa04a86e2bb7"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/guest/quilted-paths.json",
+        "sha256": "05f39a80674782784993ac93df3d3969e6cd21c127f1da8f93848a8b6e953235"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 15.36688232421875,
+        "path_min_x": 1392,
+        "path_median_x": 1449.0,
+        "path_max_x": 1505,
+        "mean_source_rgb_difference_255": 10.333680555555556
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 25.888538360595703,
+        "path_min_x": 2225,
+        "path_median_x": 2278.0,
+        "path_max_x": 2447,
+        "mean_source_rgb_difference_255": 19.749131944444443
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 14.32899284362793
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 8.12977409362793
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "french",
+      "room": "kitchen",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/french/kitchen-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11963495,
+        "sha256": "2c622e9e05dc793c5274e06937ed58bf9d3a53911c69b3100ce45c0b0c43c72b"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/kitchen/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11077109,
+        "sha256": "b135a9c14f41e6f35d74f97d2aad07ba49abd58556934bd7fdb172472dbac2ce"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/kitchen/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12453102,
+        "sha256": "8b7c18e2b4c45bf73051b665f1e12c2d39d1e3306d7faae6b556bdf457d0c7d6"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/kitchen/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/kitchen/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 10991273,
+        "sha256": "fd532b9e359d935eddfa61dc73798579699c1ea7931acd68c0955964598212a0"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/french/kitchen.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2427758,
+          "sha256": "182b43bddf65fc2210b4c9810c4cbfe732331193f2cbb8daef6f9592ca3030b9"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/french/kitchen-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1129988,
+          "sha256": "6bb5244c71698e940150fd5ada13f368de4fba2c221af6ac4cd7db2f1c679757"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/french/kitchen-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 24060,
+          "sha256": "088cbd5344e2a628c00d2f68f68a0d64d1ac895dc107075ea29d12b457604ca5"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/french/quilted-kitchen-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 152816,
+          "sha256": "e4ff3ed4dd3e4034a6b01aba84f80285a6d01ed87ac17d6c264f40fa0a235aad"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/french/quilted-kitchen-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 150310,
+          "sha256": "5d9e56e28240636dd89589b4617e2f00600e41788acb1dcb0e3ada0f32cf407e"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/kitchen/quilted-paths.json",
+        "sha256": "46b1841b91153bc73f53726b03c93a5e0cb52633a66b982d8dacc74bb40d1304"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 11.48747730255127,
+        "path_min_x": 1494,
+        "path_median_x": 1584.0,
+        "path_max_x": 1705,
+        "mean_source_rgb_difference_255": 7.166145833333333
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 12.296427726745605,
+        "path_min_x": 2109,
+        "path_median_x": 2335.0,
+        "path_max_x": 2457,
+        "mean_source_rgb_difference_255": 7.9899305555555555
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 14.28211784362793
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 4.69032096862793
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "french",
+      "room": "bathroom",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/french/bathroom-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 10855381,
+        "sha256": "38fc8e189ec72c665e5896f049620b5e26e688d607a79baa4c26d50741a907bc"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/bathroom/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 10335741,
+        "sha256": "e1f9b7ea29a3d55f67a90ce55b6d9f91469853db333588ff18d5842d4e26e129"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/bathroom/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12458480,
+        "sha256": "cd9330f76b52bcf31d93ecfb01528a204e70881b3a38073619ed412ea57e97d1"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/bathroom/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/bathroom/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 10809450,
+        "sha256": "f95a7c0c67891578f63fff2198aeec889b9d9f28ea89de1ba2598b7a2cbe9137"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/french/bathroom.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2232023,
+          "sha256": "da8d39c1b26da72d10315fbbb331b91869cbf6f347c6701912a02d132fb789da"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/french/bathroom-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1030776,
+          "sha256": "e7fb12a15a5a531dacd1a7a2cee0f7dd1488899c73f2f5fb0a19bdaf48edb3ad"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/french/bathroom-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 20469,
+          "sha256": "a48d9a950cdd1b4088034501dd9f5e257aa67a9b364baf981848ff87e94a773b"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/french/quilted-bathroom-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 142006,
+          "sha256": "bf48d8f0369874abd815faada814eefec0b767e5d253c16375ce44a165c35dde"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/french/quilted-bathroom-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 143350,
+          "sha256": "2ce87685d452141e157f071c2bd6b142966c2ee680ac876d2bf9ecbffda74b73"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/french/bathroom/quilted-paths.json",
+        "sha256": "eada22db22c92bd6b490a761d0aea1315b4e2fa2b39d92b84c4d9cfc6e582fe4"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 11.40928840637207,
+        "path_min_x": 1399,
+        "path_median_x": 1515.0,
+        "path_max_x": 1589,
+        "mean_source_rgb_difference_255": 8.291493055555556
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 14.015575408935547,
+        "path_min_x": 2378,
+        "path_median_x": 2441.0,
+        "path_max_x": 2457,
+        "mean_source_rgb_difference_255": 9.4125
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 16.89192771911621
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 5.3046875
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "sunlit",
+      "room": "living",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/sunlit/living-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12446974,
+        "sha256": "5e976ff01cd0342a4b090f8d2f74cb33b82f1e521dab415644d36aa2e74abfae"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/living/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11564505,
+        "sha256": "87b689a5d24ff738dee39ec1434ff85ac8f2dcb4d60afdfacb1148d53cb40cae"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/living/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12455392,
+        "sha256": "f18f4ca215d54dc8bf46be58df4b1234b50ec1669c223eec68b24c8146937077"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/living/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/living/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11388973,
+        "sha256": "37f9c87e607ca557e05737011dc1ab119e2b96d35bc021c9423c03d99e94eac4"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/sunlit/living.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2590947,
+          "sha256": "8bae29bdeed144046c2c49741b790178299e2a1dd0a661a08226541040d201f5"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/sunlit/living-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1286993,
+          "sha256": "bb3e749f5154d77d1eae2dff3b79eea5a9c294f0e2a8a8eb606225d1d5b2739f"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/sunlit/living-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 24766,
+          "sha256": "67a486fe043cbd4c3a64899b30f0c55002ee4728c9f05d895beeb02fbd2953ac"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/sunlit/quilted-living-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 126988,
+          "sha256": "feafd18707c5370ebd8998ef71efc27e3cbfab90e6f5b65b01d4fe1c453beb9a"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/sunlit/quilted-living-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 166434,
+          "sha256": "6321bd3ad27efbb108c1b0bd6d828874068d0f8eaf3c953086f33901822fc708"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/living/quilted-paths.json",
+        "sha256": "f56cd737034c2d37a6e5a6eceabc40566561b063f7ae6982a73a00aaf3efcd86"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 13.50606918334961,
+        "path_min_x": 1382,
+        "path_median_x": 1402.0,
+        "path_max_x": 1436,
+        "mean_source_rgb_difference_255": 8.0890625
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 20.080516815185547,
+        "path_min_x": 2339,
+        "path_median_x": 2398.0,
+        "path_max_x": 2457,
+        "mean_source_rgb_difference_255": 10.769965277777779
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 39.22265625
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 7.896267414093018
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "sunlit",
+      "room": "dining",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/sunlit/dining-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11847746,
+        "sha256": "179a0b91db55dfc7db79c87ed949ca19f88ff90ae6eff175bada6f49c590f9bf"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/dining/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 10915950,
+        "sha256": "48451c0f50536d7e8a22b1eda2903b03bc43b8dcf2298b000ef25c53be97ed7c"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/dining/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11157938,
+        "sha256": "a36a718e067cc9f4222e2f913a3476adb79920196c6f0407ce12bf6f149cf7f2"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/dining/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/dining/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 10937237,
+        "sha256": "48bc77d5c55ceea78b25facb5c3907655e6cfdb1ef2078b02c6e69928a795b5f"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/sunlit/dining.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2324867,
+          "sha256": "9a94d167fcc615ab4c83e047f2b3141c5d617b0231f8ec42d9b8aaaba33941d4"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/sunlit/dining-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1101688,
+          "sha256": "c8d3e9fc1b2fea4bc167f86d52e2c55dcda629a66b133ff1b40e412adcfb60cf"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/sunlit/dining-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 23845,
+          "sha256": "06a4ab5e8540d8601b6fc6765c30013aa5a693687462e9a3df6be0f3d67e1dd4"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/sunlit/quilted-dining-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 163310,
+          "sha256": "6d7a6a8392334dd2f47c85bf8230a02f09d9b3222425f7d53d9dd79a14c612cb"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/sunlit/quilted-dining-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 179032,
+          "sha256": "c196d23ad9523663fee5c3fc4164e9038fcca62af0270bd89805f81598190685"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/dining/quilted-paths.json",
+        "sha256": "57273d59ba2cb9e84da7bb3317ef87eb4b5f0b7d8e52e0f84fd33081423e2079"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 8.271390914916992,
+        "path_min_x": 1382,
+        "path_median_x": 1398.0,
+        "path_max_x": 1450,
+        "mean_source_rgb_difference_255": 5.0078125
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 13.0584716796875,
+        "path_min_x": 2265,
+        "path_median_x": 2416.0,
+        "path_max_x": 2457,
+        "mean_source_rgb_difference_255": 8.787673611111112
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 37.517578125
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 4.877387046813965
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "sunlit",
+      "room": "master",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/sunlit/master-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12345516,
+        "sha256": "edd3881cbad1ec3ef8a4dfdc9137406797491b560bdf053a39fd285ed1027e42"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/master/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11292671,
+        "sha256": "9270c5137217cc06d8ea86363b142c729d377a1d3808d01c3efd106b6fb8c561"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/master/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12647751,
+        "sha256": "f541cc246863e4a7aca364fa3f79e12ed1524ce84060562d48500c81292b59ad"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/master/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/master/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11467002,
+        "sha256": "c7db66510a976d05c925f3606fca4b1e61dc0068919f770f095700e56883f0ff"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/sunlit/master.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2329131,
+          "sha256": "bfe2ed6b985cf24d3c992c915d2c59068255a9137a3178c8624d339f1865e6b1"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/sunlit/master-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1059640,
+          "sha256": "39ba3234a0543898f1ba98b65eb4e8afa8daa7622b5169ce50c33ce222bb286c"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/sunlit/master-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 20900,
+          "sha256": "b52f6547b9ab878d56341169a70876542e0b60dcee6080b0a00eeb2a902b517a"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/sunlit/quilted-master-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 128518,
+          "sha256": "269846f0f0404aeb9ce1d81aaffb98b975c113c516f4068f22dae8c650271b4b"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/sunlit/quilted-master-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 134581,
+          "sha256": "54974150685c40416a268764344338bb5d438ce474babc9b0d932189501cedfc"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/master/quilted-paths.json",
+        "sha256": "91b47ccfcce7cfe83abab3a667bed2420dc47fdeee50ad72421f90e13987b24f"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 5.558096408843994,
+        "path_min_x": 1382,
+        "path_median_x": 1403.0,
+        "path_max_x": 1469,
+        "mean_source_rgb_difference_255": 3.022222222222222
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 17.184619903564453,
+        "path_min_x": 2329,
+        "path_median_x": 2414.0,
+        "path_max_x": 2457,
+        "mean_source_rgb_difference_255": 11.914756944444445
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 31.90407943725586
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 5.347873210906982
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "sunlit",
+      "room": "study",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/sunlit/study-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12202262,
+        "sha256": "c6ad6ac73dc27e4682ffec52635165fd6604e9acdb2f744968cb44a3835ce8cd"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/study/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11223450,
+        "sha256": "b252d0b486d9c0163e7f40ed8280f8251dcd7fd96978255bf3ad18480034efc7"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/study/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12132285,
+        "sha256": "874bb77f3577c79ac68d6d590a8d7f751a0df9d4e362bee33e3d3fdc29b9db23"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/study/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/study/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11561254,
+        "sha256": "92c714fe1a045e1994263b87a4f949bfaf4f147241dbe92d4b269a98cf872ee3"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/sunlit/study.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2550848,
+          "sha256": "aee0f8578a2f2d1de35a7dcd17958e950a7f118f999fa571032a61984e66691b"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/sunlit/study-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1200567,
+          "sha256": "497ccd9e1236f24b50129a90193b33451261813106b839f12ac1b5051bc0f811"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/sunlit/study-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 26081,
+          "sha256": "aef9b22128d422ab7d990df6df416e5c02de2a028070b91031953ab97c571893"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/sunlit/quilted-study-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 170535,
+          "sha256": "95c970cd2915d65514132ec8824dca3bb6e11f45d27c20bc22d510b55298b3c0"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/sunlit/quilted-study-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 177516,
+          "sha256": "ae78af48a4dc9d2a93dc366b628c285b3effca52fbeec0f6a38353e88f06566c"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/study/quilted-paths.json",
+        "sha256": "a08db583bfa0342b455aa4e3e580b7cdc8feb1adaa6d19a37d0264d9119f60e8"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 11.290403366088867,
+        "path_min_x": 1382,
+        "path_median_x": 1399.0,
+        "path_max_x": 1459,
+        "mean_source_rgb_difference_255": 7.527604166666666
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 19.829166412353516,
+        "path_min_x": 2160,
+        "path_median_x": 2413.0,
+        "path_max_x": 2457,
+        "mean_source_rgb_difference_255": 14.811631944444445
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 5.935112953186035
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 4.822699546813965
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "sunlit",
+      "room": "guest",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/sunlit/guest-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12897277,
+        "sha256": "9d32dc0e2a7f3bb3ddab3d07e54e47c6c3fd486b2e5e7a76dd2a489980b7c269"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/guest/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12200859,
+        "sha256": "4dafebd0b9c05591b7b54e7080ea922964f9454aad9a1f5f7753c334427d3769"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/guest/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12911078,
+        "sha256": "fec33f46001b6ed41ea18ecc34207226a27c2d28385dc985df78136f335f81c0"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/guest/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/guest/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12501702,
+        "sha256": "67f38c8b98e52e01d9a36bc7bdc8f7a9acb0ff7c53b2e7da4c2b1c16eee4d3b0"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/sunlit/guest.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2954828,
+          "sha256": "951faf26563ef2ebcbc547ac443368b08c43b17d6d3c42ff74ae5bade3562c08"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/sunlit/guest-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1431009,
+          "sha256": "be71e76e703eca998e056a69e05dd4e3e3374bc9a7b1fc9b2ee1f4010be7d7af"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/sunlit/guest-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 31740,
+          "sha256": "c4841e7712390777b4c5fb6f2c57d95f0c7d520a7b7fbc13bb1f3b47b0e750a4"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/sunlit/quilted-guest-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 162551,
+          "sha256": "9e02f2fb0dccafa170d18d90c8e189725581638c549c4e17110d27db31740236"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/sunlit/quilted-guest-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 160379,
+          "sha256": "963705fecba307edb788020d1e4819f462000022a3c8c35facd1f495b660aefc"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/guest/quilted-paths.json",
+        "sha256": "733aa3ff511b6ad5d9772c08fd1753ce85d3b44e13fe1298c9084f94224878b6"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 8.585025787353516,
+        "path_min_x": 1382,
+        "path_median_x": 1423.0,
+        "path_max_x": 1493,
+        "mean_source_rgb_difference_255": 5.648958333333334
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 15.763914108276367,
+        "path_min_x": 2289,
+        "path_median_x": 2400.0,
+        "path_max_x": 2453,
+        "mean_source_rgb_difference_255": 12.693229166666667
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 52.39822006225586
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 6.960720539093018
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "sunlit",
+      "room": "kitchen",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/sunlit/kitchen-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11822820,
+        "sha256": "fa7237a01306e94c2534283fe81f5de41185263da658932fdb5daa2dfe62e63f"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/kitchen/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 10914567,
+        "sha256": "2f7658ca02caa67729e2fd208876bbd6ab32058fcae2e2f9d5fc28c8cbb9b737"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/kitchen/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11701188,
+        "sha256": "70c1c97bd602ae06b5a249fc45c086e222b069f3771cc0427073de4ed2b51f35"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/kitchen/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/kitchen/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 10757924,
+        "sha256": "ad3c232e7cfb2af982a2e451ab64d780c3e23c1ff42d5381006d34db9b778412"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/sunlit/kitchen.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2232594,
+          "sha256": "05d7e07e0bcbebf841eacab672f238b675e058592d51548ebd2dc44dcb514c28"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/sunlit/kitchen-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1038781,
+          "sha256": "3d4ab58db660cc79fcfd42bf71402dab94cc643ad58807e84e023096de5ca529"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/sunlit/kitchen-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 23545,
+          "sha256": "248e748a92e2d9435da1f5b8f1ede291daef90b15dabb0d93e538a4410890224"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/sunlit/quilted-kitchen-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 143788,
+          "sha256": "9cef63d6ee57a67c62f3968bba63dbd8558a863ce1e4a00e8fe7ecdbf40bdc6b"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/sunlit/quilted-kitchen-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 133496,
+          "sha256": "03383fba28401cd1aa56737f6f2968ddb2e2ba2d2d40c212319a5637ca486f24"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/kitchen/quilted-paths.json",
+        "sha256": "73cc552235abdf1242228ed3bf30c4447aed7a6f80fb10aadeef639d06326219"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 7.268964767456055,
+        "path_min_x": 1386,
+        "path_median_x": 1432.0,
+        "path_max_x": 1475,
+        "mean_source_rgb_difference_255": 4.696527777777778
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 14.982306480407715,
+        "path_min_x": 2118,
+        "path_median_x": 2277.0,
+        "path_max_x": 2387,
+        "mean_source_rgb_difference_255": 9.852083333333333
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 19.46527862548828
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 2.792534828186035
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    },
+    {
+      "style": "sunlit",
+      "room": "bathroom",
+      "status": "complete",
+      "source": {
+        "path": "output/imagegen/panoramas-native-20261028/sunlit/bathroom-native.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11839878,
+        "sha256": "11d5ac58695ba2ee42b19ca1d59369fb276051a478124d3422b7aec1b5552be9"
+      },
+      "rolled_input": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/bathroom/rolled-input.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11062647,
+        "sha256": "d827b4211ba14c8cbcd5ffa356791712666ff74e1f0822489997c23a2b3917b7"
+      },
+      "repair_api_raw": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/bathroom/repair-raw.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 12484602,
+        "sha256": "0d2c9db552448cc0a001761e660ccb3cc1e40a7c5788f9d82cafe454424d87aa"
+      },
+      "api": {
+        "provider_base_url": "https://api.oaipro.com/v1",
+        "model": "gpt-image-2",
+        "endpoint": "/v1/images/edits",
+        "size": [
+          3840,
+          1920
+        ],
+        "quality": "high",
+        "n": 1,
+        "logical_seam_calls": 1,
+        "outer_automatic_retries": 0,
+        "sdk_retry_policy": "Installed CLI uses OpenAI() default SDK retries (currently 2); no constructor modification"
+      },
+      "prompt": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/bathroom/prompt.txt",
+      "finished_master": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/bathroom/quilted-composite.png",
+        "dimensions": [
+          3840,
+          1920
+        ],
+        "format": "PNG",
+        "bytes": 11236900,
+        "sha256": "2308ff25ca29a0cec9958abbcad8c05a8a5b18dbffdaa48dafc73696b342a402"
+      },
+      "assets": [
+        {
+          "kind": "desktop",
+          "path": "public/panoramas-native/sunlit/bathroom.jpg",
+          "dimensions": [
+            3840,
+            1920
+          ],
+          "format": "JPEG",
+          "bytes": 2345429,
+          "sha256": "86b129f4c8523a24b719c3099a344ef0f937fe2df732aca2bac0c23a0eaa0ef4"
+        },
+        {
+          "kind": "mobile",
+          "path": "public/panoramas-native/sunlit/bathroom-mobile.jpg",
+          "dimensions": [
+            2560,
+            1280
+          ],
+          "format": "JPEG",
+          "bytes": 1089933,
+          "sha256": "5326977a61c40ac11c1967e55c0244240418a9c7db217d83f812a19706963efa"
+        },
+        {
+          "kind": "thumbnail",
+          "path": "public/panoramas-native/sunlit/bathroom-thumb.jpg",
+          "dimensions": [
+            320,
+            160
+          ],
+          "format": "JPEG",
+          "bytes": 21777,
+          "sha256": "a147e0c9dbb7fb4c6a13c5ff4e020847b87d3097a1ea6874a285854fa081911c"
+        }
+      ],
+      "previews": [
+        {
+          "view": "default",
+          "path": "artifacts/panorama-native-20261028/sunlit/quilted-bathroom-default.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 138934,
+          "sha256": "ae45390d7dcd988d90c1d80d6c1b46757e2ad560b7d81494e7a41ae7d96c0d59"
+        },
+        {
+          "view": "wrap",
+          "path": "artifacts/panorama-native-20261028/sunlit/quilted-bathroom-wrap.jpg",
+          "dimensions": [
+            800,
+            520
+          ],
+          "format": "JPEG",
+          "bytes": 137637,
+          "sha256": "c24f3f1ea2e69ba57bba8d9a3048d1627a3e137e1c042064615aa6b6e9f12992"
+        }
+      ],
+      "paths": {
+        "path": "output/imagegen/panoramas-native-20261028/seam-repair-wide/sunlit/bathroom/quilted-paths.json",
+        "sha256": "845ead00789de8fd3ce86d1c67cfcf4a4424a5649acf3a673759a1bcc4414f76"
+      },
+      "postprocessing": {
+        "kind": "masked AI seam repair plus two minimum-error dynamic-programming cuts; postprocessed master",
+        "horizontal_roll_pixels": 1920,
+        "algorithm": "Two independent monotone vertical cuts, moves -1/0/+1 per row; not general graph cut",
+        "corridors": {
+          "left": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          },
+          "right": {
+            "outer_fraction": 0.14,
+            "inner_fraction": 0.04
+          }
+        },
+        "cut_cost": {
+          "color_mae": 1,
+          "gradient_difference": 0.7,
+          "shared_edge_strength": 0.1,
+          "horizontal_step": 0.2
+        },
+        "feather_total_width_pixels": 3,
+        "mixed_pixel_fraction": 0.0010416666666666667,
+        "outside_search_corridors": "bit-exact original native pixels in lossless master",
+        "final_wrap_boundary": "adjacent pixels from repaired center",
+        "jpeg": {
+          "quality": 94,
+          "subsampling": 0,
+          "progressive": true
+        },
+        "limitation": "Cuts minimize local pixel error; visual review is still required for objects and geometry"
+      },
+      "left_cut": {
+        "search_x": [
+          1382,
+          1766
+        ],
+        "selected_mean_color_gradient_cost": 8.880169868469238,
+        "path_min_x": 1382,
+        "path_median_x": 1509.0,
+        "path_max_x": 1536,
+        "mean_source_rgb_difference_255": 5.8180555555555555
+      },
+      "right_cut": {
+        "search_x": [
+          2074,
+          2458
+        ],
+        "selected_mean_color_gradient_cost": 11.443428993225098,
+        "path_min_x": 2283,
+        "path_median_x": 2386.0,
+        "path_max_x": 2457,
+        "mean_source_rgb_difference_255": 7.389756944444445
+      },
+      "seam_before": {
+        "wrap_adjacent_rgb_mae_255": 41.53255081176758
+      },
+      "seam_after_master": {
+        "wrap_adjacent_rgb_mae_255": 2.665147542953491
+      },
+      "metrics_are_descriptive_only": true,
+      "visual_acceptance": "pending manual review of wrap, transitions, objects and geometry",
+      "source_unchanged": true,
+      "api_raw_unchanged": true,
+      "additional_api_calls": 0
+    }
+  ]
+}

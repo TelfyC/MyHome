@@ -5,6 +5,11 @@
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.tour-spinner{animation:none}}
 
 .tour-review-link{font-size:10px;color:#7d846e;padding-top:15px}
+.tour-plan-c-entry{display:block;border:1px solid #bcc8aa;background:#e8eddd;padding:13px 12px;margin-top:18px;color:#586d43}.tour-plan-c-entry>span{display:block;font:7px Arial,sans-serif;letter-spacing:1.6px;color:#889a70}.tour-plan-c-entry>strong{display:block;font-size:10px;font-weight:500;margin-top:9px;line-height:1.7}.tour-plan-c-entry>small{display:block;font-size:8px;color:#8b977b;margin-top:4px;line-height:1.8}.tour-plan-c-entry:hover{background:#dfe8ce}.tour-plan-c-mobile{display:none}
+@media(max-width:720px){.panorama-page .tour-shell{grid-template-rows:202px minmax(0,1fr) 111px}.panorama-page .tour-header{grid-template-rows:58px 98px 38px}.tour-plan-c-mobile{grid-column:1/-1;grid-row:3;display:flex;align-items:center;justify-content:center;gap:10px;font-size:9px;border-top:1px solid #d9decb;align-self:stretch;color:#667e4f}.tour-plan-c-mobile>span{font:7px Arial,sans-serif;letter-spacing:.7px;background:#e0e8d3;padding:4px 6px}.tour-plan-c-mobile>strong{font-size:14px;font-weight:400}.tour-header .tour-plan-c-mobile{display:flex}}
+.tour-tools button:disabled{opacity:.35;cursor:default}
+.tour-zone-focus{position:absolute;left:34px;top:132px;z-index:3;border:1px solid #ffffff70;border-radius:5px;padding:10px 14px;background:#263a2de6;color:#f7f5ec;font-size:11px;line-height:1.5;box-shadow:0 3px 16px #00000014}.tour-zone-focus:hover{background:#40573bef}
+@media(max-width:720px){.tour-zone-focus{left:19px;top:148px;max-width:calc(100% - 90px);font-size:10px;padding:9px 12px}}
 .tour-project #tour-project-name{display:inline;font-size:12px;letter-spacing:1px;color:inherit;margin:0}
 .tour-scheme-switch{display:flex;align-items:center;gap:2px;border:1px solid #c9c9bb;background:#ebe9df;padding:3px;margin-left:auto;flex-shrink:0}
 .tour-scheme-switch button{border:0;background:transparent;padding:9px 13px;color:#74796b;font-size:11px;white-space:nowrap}
@@ -46,3 +51,15 @@
 
 .tour-details-modal section{padding:16px 0;border-top:1px solid #d9ddcd}.tour-details-modal h3{font-size:13px;font-weight:500;color:#52664a;margin:0 0 8px}.tour-details-modal section p{font-size:12px;line-height:1.9;margin:0;color:#72796b}.tour-details-modal small a{font-size:10px;display:inline}.tour-details-modal>small{display:block;margin-top:20px}.tour-detail-chip{position:absolute;z-index:3;left:26px;bottom:72px;border:1px solid #ffffff40;padding:9px 13px;background:#263a2dd9;color:#f4f4e9;border-radius:7px;font-size:11px}.tour-details-modal{max-height:85dvh;overflow:auto}
 @media(max-width:760px){.tour-detail-chip{left:16px;bottom:154px;font-size:10px;padding:7px 10px}.tour-details-modal section p{font-size:11px}}
+
+.tour-header-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.tour-concepts-entry{display:flex;align-items:center;justify-content:center;gap:8px;background:#526b43;color:#fffdf4;border:1px solid #526b43;padding:11px 15px;font-size:12px;white-space:nowrap}
+.tour-concepts-entry:hover{background:#3f5632;border-color:#3f5632}
+.tour-concepts-entry svg{width:15px;height:15px}
+.tour-concepts-scene{position:absolute;z-index:3;left:140px;bottom:72px;display:flex;align-items:center;gap:7px;padding:9px 13px;border:1px solid #ffffff80;border-radius:7px;background:#faf7edea;color:#37482e;font-size:11px;line-height:1.5;backdrop-filter:blur(12px)}
+.tour-concepts-scene:hover{background:#fffdf5}
+.tour-concepts-scene svg{width:14px;height:14px}
+@media(min-width:1381px){.panorama-page .tour-header{gap:24px}}
+@media(max-width:1380px){.tour-header-actions{grid-column:2;grid-row:1}}
+@media(max-width:720px){.tour-header-actions{gap:6px}.tour-concepts-entry{font-size:10px;padding:9px 8px;gap:5px}.tour-concepts-entry svg{width:12px;height:12px}.tour-header-actions .tour-model{font-size:9px;padding:9px 6px;gap:4px}.tour-concepts-scene{left:110px;bottom:154px;font-size:10px;padding:7px 10px}}
+@media(max-width:380px){.tour-header-actions .tour-model svg{display:none}}

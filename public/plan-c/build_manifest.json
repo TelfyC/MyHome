@@ -1,0 +1,26 @@
+{
+  "project_id": "home1_sunlit",
+  "scene_revision": 1,
+  "build_id": "build_bfea00ba37c139d7",
+  "scene_hash": "faa0addceab80e3f0c4af8299881edc7686572582853b7c92f1cb0c3a512076c",
+  "asset_manifest_hash": "643cdc6a0a272021b49d9b37a76a089462e28b1a3dbf812791fcf7bc08063d6b",
+  "builder_version": "0.1.0",
+  "builder_sha256": "f48697c134d3b84d4a893152f83bed9b70107899178e1d958eee277c37513409",
+  "builder_script_sha256": "1d100821129986972965d0eaa059f352287a0551ed6dade74da300a7a61a1fcb",
+  "asset_importer_sha256": "c2f1d891b605c640154bb8ddabea91d3c8e09cec894530b1e6d19a2c1590aad6",
+  "input_scene_path": "/home/juntao.ji@formal-tech.group/Desktop/home3D/planC/data/sunlit/scene.json",
+  "blender_version": "4.5.3 LTS",
+  "project_blend": "project.blend",
+  "project_blend_sha256": "2c353348c7ab8344dcf7853d8ae0c09730b8cd98ec725a0f8dc644b92de0bbda",
+  "created_at_unix": 1793323234.150558,
+  "build_duration_s": 64.18,
+  "quality_status": "preview_only",
+  "artifacts": [
+    "project.blend",
+    "inspection.json",
+    "scene_resolved.json",
+    "asset_manifest.json",
+    "scene.glb"
+  ],
+  "scene_glb_sha256": "4d203f023e04473728d13d04586fe58f08715f6867632591bb18c26cc6e5c82f"
+}

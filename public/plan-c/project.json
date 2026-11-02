@@ -1,0 +1,247 @@
+{
+  "project_id": "home1_sunlit",
+  "title": "日光花园 · Blender 真实三维首版",
+  "style": "日光花园原木",
+  "revision": 1,
+  "status": "preview",
+  "stage": "LOOKDEV_PREVIEWED",
+  "engine": "Blender 4.5.3 LTS · Cycles CPU",
+  "source_plan": "home1.png",
+  "build_id": "build_bfea00ba37c139d7",
+  "scene_hash": "faa0addceab80e3f0c4af8299881edc7686572582853b7c92f1cb0c3a512076c",
+  "rendered_at": "2026-10-30T01:58:58.009120+00:00",
+  "notices": [
+    "本版用于看布局与风格，完整保留原图黑白墙。图示尺寸、层高和洞口形式仍有待复测项。",
+    "所有效果图与360°来自本页可下载的同一版 Blender 场景，未使用 AI 图片替代场景渲染。",
+    "家具为自建细化预览模型，专业资产审核尚未完成；正式交付状态保持未通过。",
+    "日光是视觉情境；未确认地理北向、经纬度和日期，不作为日照分析。"
+  ],
+  "rooms": [
+    {
+      "id": "living",
+      "name": "起居室",
+      "english": "LIVING",
+      "note": "棉麻沙发、低矮木柜与窗边绿植，让日光有落脚的地方。",
+      "dimensions": "约 3.30 m 主段净宽",
+      "camera_id": "camera_living_still",
+      "still": "renders/living-still-4k.png",
+      "panorama": "renders/living-360-8k.png",
+      "panorama_width": 8192,
+      "panorama_mobile": "renders/living-360.png",
+      "panorama_mobile_width": 2048
+    },
+    {
+      "id": "dining",
+      "name": "餐厅与阳台",
+      "english": "DINING",
+      "note": "白色桌面、细木餐椅，北端阳台安放咖啡与植物。",
+      "dimensions": "约 2.50 m 餐厅净宽",
+      "camera_id": "camera_dining_still",
+      "still": "renders/dining-review.png",
+      "panorama": "renders/dining-360.png",
+      "panorama_width": 2048,
+      "panorama_mobile": "renders/dining-360.png",
+      "panorama_mobile_width": 2048
+    },
+    {
+      "id": "master",
+      "name": "主卧",
+      "english": "MASTER BEDROOM",
+      "note": "浅木床架、暖白柜体与亚麻床品，安静地休息。",
+      "dimensions": "约 3.25 m 参考净宽",
+      "camera_id": "camera_master_still",
+      "still": "renders/master-review.png",
+      "panorama": "renders/master-360.png",
+      "panorama_width": 2048,
+      "panorama_mobile": "renders/master-360.png",
+      "panorama_mobile_width": 2048
+    },
+    {
+      "id": "guest",
+      "name": "次卧 / 书房",
+      "english": "BEDROOM & STUDY",
+      "note": "一张床、一张书桌，让读书和休息自然相邻。",
+      "dimensions": "图示约 3.20 × 3.95 m",
+      "camera_id": "camera_guest_still",
+      "still": "renders/guest-review.png",
+      "panorama": "renders/guest-360.png",
+      "panorama_width": 2048,
+      "panorama_mobile": "renders/guest-360.png",
+      "panorama_mobile_width": 2048
+    },
+    {
+      "id": "study",
+      "name": "多功能卧室",
+      "english": "FLEXIBLE ROOM",
+      "note": "保留原图卧室的完整边界，布置休息与工作。",
+      "dimensions": "图示约 2.75 × 3.90 m",
+      "camera_id": "camera_study_still",
+      "still": "renders/study-review.png",
+      "panorama": "renders/study-360.png",
+      "panorama_width": 2048,
+      "panorama_mobile": "renders/study-360.png",
+      "panorama_mobile_width": 2048
+    },
+    {
+      "id": "kitchen",
+      "name": "厨房",
+      "english": "KITCHEN",
+      "note": "保留原厨房位置，浅木与暖白组织备餐、清洗与储物。",
+      "dimensions": "图示约 2.15 × 2.90 m",
+      "camera_id": "camera_kitchen_still",
+      "still": "renders/kitchen-review.png",
+      "panorama": "renders/kitchen-360.png",
+      "panorama_width": 2048,
+      "panorama_mobile": "renders/kitchen-360.png",
+      "panorama_mobile_width": 2048
+    },
+    {
+      "id": "bathroom",
+      "name": "原图卫浴区",
+      "english": "BATHROOM",
+      "note": "卫浴沿原图上侧位置布置，隐私隔断与排水仍待确认。",
+      "dimensions": "原图分区推断",
+      "camera_id": "camera_bathroom_still",
+      "still": "renders/bathroom-review.png",
+      "panorama": "renders/bathroom-360.png",
+      "panorama_width": 2048,
+      "panorama_mobile": "renders/bathroom-360.png",
+      "panorama_mobile_width": 2048
+    }
+  ],
+  "artifacts": [
+    {
+      "label": "Scene JSON · 场景事实源",
+      "path": "scene.json",
+      "size": 63201
+    },
+    {
+      "label": "结构快照 · 墙体、洞口与来源",
+      "path": "scene_structure.json"
+    },
+    {
+      "label": "设计快照 · 布局、材质、灯光与相机",
+      "path": "scene_design.json"
+    },
+    {
+      "label": "资产目录 · 自建预览资产与来源",
+      "path": "asset_manifest.json",
+      "size": 11150
+    },
+    {
+      "label": "原始户型图 · home1.png",
+      "path": "home1.png",
+      "size": 2004795
+    },
+    {
+      "label": "待确认项 · 尺寸、墙体、光照与资产",
+      "path": "reports/uncertainties.json"
+    },
+    {
+      "label": "几何检查报告",
+      "path": "reports/geometry_qa.json"
+    },
+    {
+      "label": "正式交付门禁报告",
+      "path": "reports/production_gate.json"
+    },
+    {
+      "label": "Blender 工程 · 可编辑真实三维",
+      "path": "project.blend",
+      "size": 9654810
+    },
+    {
+      "label": "构建记录 · 版本与哈希",
+      "path": "build_manifest.json",
+      "size": 1180
+    },
+    {
+      "label": "对象映射 · JSON → Blender",
+      "path": "inspection.json",
+      "size": 70138
+    },
+    {
+      "label": "三维结构 · GLB 模型",
+      "path": "scene.glb",
+      "size": 9877936
+    },
+    {
+      "label": "构建使用的 Scene 快照",
+      "path": "scene_resolved.json",
+      "size": 63201
+    },
+    {
+      "label": "工程重开检查 · 实体、饰面与相机",
+      "path": "reports/blender_reopen_qa.json",
+      "size": 2015
+    },
+    {
+      "label": "渲染校验与逐图记录",
+      "path": "reports/render_qa.json"
+    }
+  ],
+  "pipeline": [
+    {
+      "id": "source",
+      "label": "图纸与尺寸",
+      "status": "needs_confirmation",
+      "detail": "按 home1.png 分段转录；原图注明比例估算。"
+    },
+    {
+      "id": "scene",
+      "label": "版本化场景",
+      "status": "success",
+      "detail": "r1 · 28 段墙 · 18 个洞口 · 39 件设计对象"
+    },
+    {
+      "id": "geometry",
+      "label": "几何与布局检查",
+      "status": "warning",
+      "detail": "0 个硬错误；估算尺寸、地理北向保留待确认项。"
+    },
+    {
+      "id": "build",
+      "label": "Blender 真实构建",
+      "status": "success",
+      "detail": "build_bfea00ba37c139d7 · 可编辑工程与对象映射已保存"
+    },
+    {
+      "id": "renders",
+      "label": "场景渲染",
+      "status": "preview",
+      "detail": "7/7 个空间效果 · 7/7 个360°；实际分辨率详见逐图记录。"
+    },
+    {
+      "id": "final",
+      "label": "正式交付验收",
+      "status": "blocked",
+      "detail": "需要尺寸校准、洞口确认、专业 Hero 资产审核及最终视觉验收。"
+    }
+  ],
+  "metrics": {
+    "walls": 28,
+    "openings": 18,
+    "objects": 39,
+    "cameras": 14,
+    "still_renders": 7,
+    "panoramas": 7
+  },
+  "palette": [
+    {
+      "color": "#bb9b72",
+      "name": "细纹浅橡木"
+    },
+    {
+      "color": "#eee9db",
+      "name": "暖白"
+    },
+    {
+      "color": "#a6ae8b",
+      "name": "鼠尾草绿"
+    },
+    {
+      "color": "#dbd2bb",
+      "name": "天然棉麻"
+    }
+  ]
+}

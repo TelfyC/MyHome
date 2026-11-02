@@ -12,4 +12,4 @@ export const panoramaRooms: PanoramaRoom[] = [
   { id:'bathroom', name:'卫生间', english:'BATH', note:'干净、克制，回到日常的舒适。', material:'洗衣与台盆共台 · 奶白柜体 · 灰米砖', links:['master','dining'] },
 ];
 export const panoramaAsset = (id: PanoramaId, design:SchemeId='forest') => `${import.meta.env.BASE_URL}panoramas/${design}/${id}.jpg`;
-export const panoramaThumbnail = (id:PanoramaId, design:SchemeId='forest') => `${import.meta.env.BASE_URL}panoramas/${design}/${id}-thumb.jpg`;
+export const panoramaThumbnail = (id:PanoramaId, design:SchemeId='forest') => `${import.meta.env.BASE_URL}panoramas-native/${design}/${id}-thumb.jpg`;

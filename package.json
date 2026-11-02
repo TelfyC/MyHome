@@ -10,7 +10,16 @@
     "test": "node --test tests/*.test.mjs",
     "test:e2e": "node tests/browser.mjs",
     "test:panorama": "node tests/panorama.mjs",
-    "test:rooms": "node tests/room-views.mjs"
+    "test:rooms": "node tests/room-views.mjs",
+    "test:quality": "node tests/panorama-quality.mjs",
+    "planc:setup": "python3 planC/scripts/bootstrap.py",
+    "planc:api": "planC/.venv/bin/python -m archviz.cli serve",
+    "planc:validate": "planC/.venv/bin/python -m archviz.cli validate",
+    "planc:render": "planC/.venv/bin/python planC/scripts/render_demo.py --rooms living dining master guest study kitchen bathroom --panorama --still-profile preview_fast",
+    "planc:render:hd": "planC/.venv/bin/python planC/scripts/render_demo.py --rooms living --panorama --high-resolution",
+    "planc:export": "planC/.venv/bin/python planC/scripts/export_site.py",
+    "test:planc": "planC/.venv/bin/python -m pytest planC/tests -q",
+    "test:planc:browser": "node tests/plan-c.mjs"
   },
   "dependencies": {
     "lucide": "^1.57.0",

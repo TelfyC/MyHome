@@ -1,0 +1,23 @@
+{
+  "room": "living-detail",
+  "date": "2026-11-02",
+  "tool": "built-in image_gen",
+  "use_case": "precise-object-edit",
+  "input": [
+    "public/concepts/optimized/sunlit/living.png"
+  ],
+  "prompt": "Use case: precise-object-edit.\nAsset type: close-up interior concept photograph, landscape 1536x1024.\nInput image: Image 1 is the AUTHORITATIVE APPROVED ROOM AND FURNITURE reference: refined Sunlit Garden living room.\nPrimary request: Photograph the exact reading corner of Image 1 from a closer eye-level camera, so the room-wide and detail image unmistakably show the same chair, side table, footstool, lamp, curtains and planter. Move closer to the window-side armchair; don't redesign anything.\nComposition: frame the pale oak OPEN WOOD FRAME armchair, the small dark warm-brown round side table at its left, pale oak storage footstool forward/right, warm-white articulated directional floor lamp to left, original window with sheer and sage drapes behind, and the original slim tree to chair's right. A sliver of black television and pale oak TV cabinet with very thin warm-white top can appear at far right; sofa may just crop at extreme left. Ordinary rectilinear photographic perspective, no fisheye.\nExact furniture continuity: the armchair has exposed pale oak straight slim posts and open horizontal wooden arms, a separate thick cream narrow vertical-stripe back cushion and seat cushion, and exactly one dusty-pink cushion. Do NOT replace it with a skirted/fully upholstered armchair. The footstool is the same small rectangular pale wood storage box on four short legs, with matching cream fine-stripe pad on top. The side table is a round slim-edged matte chestnut/cherry-brown wood table, roughly #6b4435 in neutral light, holding the same cream/sage ceramic cup and open book. Fine natural wood grain, low sheen. Same tall narrow planter and graceful small tree between the chair and cabinet. Maintain usable space around chair, lamp and curtains. Don't add extra plants, rugs or furniture.\nMood: bright fresh Sunlit Garden daylight, warm-white walls, light honey floor and natural sisal-texture rug from Image 1, soft sage curtains, ivory sheer, soft realistic shadows. Neutral warm white balance with white highlights, not orange/yellow. Photorealistic linen texture and careful plausible joinery. No people, annotation, text, logos, watermark, collage or exaggerated decor.",
+  "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f1-bbaf-7021-afc8-a5688aa9e8f6/exec-e3167d92-5f53-48e8-8f0e-bb8e259ff5e9.png",
+  "iteration": {
+    "initial_source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f1-bbaf-7021-afc8-a5688aa9e8f6/exec-e4aa258d-b02f-48a3-bc63-de8e3fc5f3fc.png",
+    "issue": "Generated mug had a handle on each side.",
+    "correction_prompt": "Use case: precise-object-edit. Edit this photograph with ONE tiny correction only: the ceramic mug on the small dark round table currently has an incorrect handle on each side. Make it an ordinary realistic ceramic mug with exactly ONE handle on the LEFT side of the cup. Remove only the right-side handle and restore the small view of dark tabletop/book background there. Preserve the cup body, the existing left handle, coaster, book, table, and absolutely every other pixel-level appearance, composition, furniture, lighting, framing, materials and color in the room. No extra changes. One landscape 1536x1024 photograph, no text.",
+    "result": "Removed right handle; ordinary single-handle mug confirmed."
+  },
+  "review": {
+    "status": "selected",
+    "continuity": "Matches main view pale wood open-arm chair with cream narrow stripes and pink cushion, pale wood storage footstool, dark round side table, warm-white lamp, sage curtains and slim planter.",
+    "details": "Mug handle corrected, book/table surfaces and chair/footstool joints coherent; no new room architecture.",
+    "caveat": "Camera moved closer; photographic concept, not measured construction."
+  }
+}

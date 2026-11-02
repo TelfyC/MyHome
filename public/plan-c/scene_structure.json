@@ -1,0 +1,1342 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "home1_sunlit",
+  "revision": 1,
+  "units": "m",
+  "source_scene_sha256": "faa0addceab80e3f0c4af8299881edc7686572582853b7c92f1cb0c3a512076c",
+  "coordinate_system": {
+    "handedness": "right",
+    "up": "+Z",
+    "north": "+Y",
+    "angles": "radians",
+    "note": "+Y 对应图纸上方；地理北向未确认"
+  },
+  "site": {
+    "latitude": null,
+    "longitude": null,
+    "timezone": "Asia/Shanghai",
+    "true_north_offset_rad": null
+  },
+  "source_plan": {
+    "path": "docs/方案B/home1.png",
+    "sha256": "37ffe816257f6efd53770170ac7ed784246a828a14d45120816a49dd263f96b5",
+    "calibration": "independent annotated dimension chains; schematic drawing is not uniformly scaled",
+    "status": "needs_confirmation"
+  },
+  "levels": [
+    {
+      "id": "level_1",
+      "elevation_m": 0,
+      "ceiling_height_m": 2.7,
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    }
+  ],
+  "walls": [
+    {
+      "id": "wall_master_west",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          -0.1,
+          0
+        ],
+        [
+          -0.1,
+          6.25
+        ]
+      ],
+      "thickness_m": 0.2,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "black_wall"
+    },
+    {
+      "id": "wall_master_south",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          -0.1,
+          0
+        ],
+        [
+          3.35,
+          0
+        ]
+      ],
+      "thickness_m": 0.2,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "black_wall"
+    },
+    {
+      "id": "wall_master_east",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          3.35,
+          0
+        ],
+        [
+          3.35,
+          4.7
+        ]
+      ],
+      "thickness_m": 0.2,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "black_wall"
+    },
+    {
+      "id": "wall_bath_north",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          -0.1,
+          6.35
+        ],
+        [
+          1.55,
+          6.35
+        ]
+      ],
+      "thickness_m": 0.2,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "black_wall"
+    },
+    {
+      "id": "wall_bath_east",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          3.35,
+          4.9
+        ],
+        [
+          3.35,
+          6.35
+        ]
+      ],
+      "thickness_m": 0.12,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "white_partition"
+    },
+    {
+      "id": "wall_guest_west",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          1.55,
+          6.35
+        ],
+        [
+          1.55,
+          10.5
+        ]
+      ],
+      "thickness_m": 0.2,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "black_wall"
+    },
+    {
+      "id": "wall_guest_north",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          1.55,
+          10.5
+        ],
+        [
+          4.95,
+          10.5
+        ]
+      ],
+      "thickness_m": 0.2,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "black_wall"
+    },
+    {
+      "id": "wall_guest_east",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          4.95,
+          6.35
+        ],
+        [
+          4.95,
+          10.5
+        ]
+      ],
+      "thickness_m": 0.12,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "white_partition"
+    },
+    {
+      "id": "wall_guest_south",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          1.55,
+          6.35
+        ],
+        [
+          4.95,
+          6.35
+        ]
+      ],
+      "thickness_m": 0.12,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "white_partition"
+    },
+    {
+      "id": "wall_corridor_north",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          4.95,
+          10.5
+        ],
+        [
+          7.1,
+          10.5
+        ]
+      ],
+      "thickness_m": 0.2,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "black_wall"
+    },
+    {
+      "id": "wall_dining_west",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          7.1,
+          6.35
+        ],
+        [
+          7.1,
+          10.5
+        ]
+      ],
+      "thickness_m": 0.2,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "black_wall"
+    },
+    {
+      "id": "wall_balcony_west",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          7.1,
+          10.5
+        ],
+        [
+          7.1,
+          11.3
+        ]
+      ],
+      "thickness_m": 0.12,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "white_partition"
+    },
+    {
+      "id": "wall_balcony_north",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          7.1,
+          11.3
+        ],
+        [
+          9.8,
+          11.3
+        ]
+      ],
+      "thickness_m": 0.12,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "white_partition"
+    },
+    {
+      "id": "wall_dining_east",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          9.8,
+          7.3
+        ],
+        [
+          9.8,
+          11.3
+        ]
+      ],
+      "thickness_m": 0.12,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "white_partition"
+    },
+    {
+      "id": "wall_kitchen_north",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          9.8,
+          10.5
+        ],
+        [
+          12.15,
+          10.5
+        ]
+      ],
+      "thickness_m": 0.2,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "black_wall"
+    },
+    {
+      "id": "wall_kitchen_east",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          12.15,
+          7.3
+        ],
+        [
+          12.15,
+          10.5
+        ]
+      ],
+      "thickness_m": 0.2,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "black_wall"
+    },
+    {
+      "id": "wall_kitchen_south",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          9.8,
+          7.3
+        ],
+        [
+          12.15,
+          7.3
+        ]
+      ],
+      "thickness_m": 0.12,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "white_partition"
+    },
+    {
+      "id": "wall_entry_east",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          11.3,
+          4.3
+        ],
+        [
+          11.3,
+          7.3
+        ]
+      ],
+      "thickness_m": 0.2,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "black_wall"
+    },
+    {
+      "id": "wall_entry_south",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          9.8,
+          4.3
+        ],
+        [
+          11.3,
+          4.3
+        ]
+      ],
+      "thickness_m": 0.2,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "black_wall"
+    },
+    {
+      "id": "wall_living_east",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          9.8,
+          1.7
+        ],
+        [
+          9.8,
+          4.3
+        ]
+      ],
+      "thickness_m": 0.12,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "white_partition"
+    },
+    {
+      "id": "wall_living_step",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          8.3,
+          1.7
+        ],
+        [
+          9.8,
+          1.7
+        ]
+      ],
+      "thickness_m": 0.2,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "black_wall"
+    },
+    {
+      "id": "wall_living_lower_east",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          8.3,
+          0
+        ],
+        [
+          8.3,
+          1.7
+        ]
+      ],
+      "thickness_m": 0.2,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "black_wall"
+    },
+    {
+      "id": "wall_living_south",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          6.3,
+          0
+        ],
+        [
+          8.3,
+          0
+        ]
+      ],
+      "thickness_m": 0.12,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "white_partition"
+    },
+    {
+      "id": "wall_study_east",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          6.3,
+          0.65
+        ],
+        [
+          6.3,
+          4.75
+        ]
+      ],
+      "thickness_m": 0.2,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "black_wall"
+    },
+    {
+      "id": "wall_study_north",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          3.35,
+          4.75
+        ],
+        [
+          6.3,
+          4.75
+        ]
+      ],
+      "thickness_m": 0.2,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "black_wall"
+    },
+    {
+      "id": "wall_study_south",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          3.35,
+          0.65
+        ],
+        [
+          6.3,
+          0.65
+        ]
+      ],
+      "thickness_m": 0.2,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "black_wall"
+    },
+    {
+      "id": "wall_study_balcony_south",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          3.35,
+          0
+        ],
+        [
+          6.3,
+          0
+        ]
+      ],
+      "thickness_m": 0.12,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "white_partition"
+    },
+    {
+      "id": "wall_study_balcony_east",
+      "level_id": "level_1",
+      "path_xy_m": [
+        [
+          6.3,
+          0
+        ],
+        [
+          6.3,
+          0.65
+        ]
+      ],
+      "thickness_m": 0.12,
+      "height_m": 2.7,
+      "structural_state": "unknown",
+      "demolition_status": "existing",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      },
+      "material_id": "mat_ivory",
+      "drawing_class": "white_partition"
+    }
+  ],
+  "openings": [
+    {
+      "id": "opening_master_south_window",
+      "type": "window",
+      "host_wall_id": "wall_master_south",
+      "offset_from_start_m": 0.68,
+      "width_m": 1.5,
+      "height_m": 1.4,
+      "sill_height_m": 0.85,
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "opening_master_west_window",
+      "type": "window",
+      "host_wall_id": "wall_master_west",
+      "offset_from_start_m": 2.05,
+      "width_m": 1.8,
+      "height_m": 1.45,
+      "sill_height_m": 0.85,
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "opening_bath_window",
+      "type": "window",
+      "host_wall_id": "wall_master_west",
+      "offset_from_start_m": 4.95,
+      "width_m": 0.9,
+      "height_m": 0.75,
+      "sill_height_m": 1.4,
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "opening_master_door",
+      "type": "door",
+      "host_wall_id": "wall_master_east",
+      "offset_from_start_m": 3.7,
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "sill_height_m": 0,
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "opening_bath_door",
+      "type": "door",
+      "host_wall_id": "wall_bath_east",
+      "offset_from_start_m": 0.3,
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "sill_height_m": 0,
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "opening_guest_north_window",
+      "type": "window",
+      "host_wall_id": "wall_guest_north",
+      "offset_from_start_m": 0.9,
+      "width_m": 1.2,
+      "height_m": 1.4,
+      "sill_height_m": 0.85,
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "opening_guest_west_window",
+      "type": "window",
+      "host_wall_id": "wall_guest_west",
+      "offset_from_start_m": 0.8,
+      "width_m": 1.5,
+      "height_m": 1.4,
+      "sill_height_m": 0.85,
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "opening_guest_door",
+      "type": "door",
+      "host_wall_id": "wall_guest_south",
+      "offset_from_start_m": 2.2,
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "sill_height_m": 0,
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "opening_corridor_window",
+      "type": "window",
+      "host_wall_id": "wall_corridor_north",
+      "offset_from_start_m": 0.4,
+      "width_m": 0.9,
+      "height_m": 1.4,
+      "sill_height_m": 0.85,
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "opening_dining_to_corridor",
+      "type": "passage",
+      "host_wall_id": "wall_dining_west",
+      "offset_from_start_m": 1.2,
+      "width_m": 0.85,
+      "height_m": 2.1,
+      "sill_height_m": 0,
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "opening_balcony_glazing",
+      "type": "window",
+      "host_wall_id": "wall_balcony_north",
+      "offset_from_start_m": 0.15,
+      "width_m": 2.4,
+      "height_m": 2.4,
+      "sill_height_m": 0.1,
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "opening_kitchen_window",
+      "type": "window",
+      "host_wall_id": "wall_kitchen_north",
+      "offset_from_start_m": 0.5,
+      "width_m": 1.2,
+      "height_m": 1.3,
+      "sill_height_m": 1.1,
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "opening_kitchen_door",
+      "type": "door",
+      "host_wall_id": "wall_dining_east",
+      "offset_from_start_m": 0.9,
+      "width_m": 1.2,
+      "height_m": 2.1,
+      "sill_height_m": 0,
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "opening_entry_door",
+      "type": "door",
+      "host_wall_id": "wall_entry_east",
+      "offset_from_start_m": 1.55,
+      "width_m": 0.95,
+      "height_m": 2.1,
+      "sill_height_m": 0,
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "opening_study_door",
+      "type": "door",
+      "host_wall_id": "wall_study_north",
+      "offset_from_start_m": 1.65,
+      "width_m": 0.9,
+      "height_m": 2.1,
+      "sill_height_m": 0,
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "opening_study_balcony_door",
+      "type": "window",
+      "host_wall_id": "wall_study_south",
+      "offset_from_start_m": 1.5,
+      "width_m": 1.1,
+      "height_m": 2.25,
+      "sill_height_m": 0,
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.45
+      }
+    },
+    {
+      "id": "opening_study_balcony_glazing",
+      "type": "window",
+      "host_wall_id": "wall_study_balcony_south",
+      "offset_from_start_m": 0.15,
+      "width_m": 2.6,
+      "height_m": 2.4,
+      "sill_height_m": 0.1,
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.45
+      }
+    },
+    {
+      "id": "opening_living_glazing",
+      "type": "window",
+      "host_wall_id": "wall_living_south",
+      "offset_from_start_m": 0.15,
+      "width_m": 1.7,
+      "height_m": 2.4,
+      "sill_height_m": 0.1,
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.45
+      }
+    }
+  ],
+  "rooms": [
+    {
+      "id": "master",
+      "name": "主卧",
+      "level_id": "level_1",
+      "boundary_xy_m": [
+        [
+          0,
+          0.1
+        ],
+        [
+          3.25,
+          0.1
+        ],
+        [
+          3.25,
+          4.8
+        ],
+        [
+          0,
+          4.8
+        ]
+      ],
+      "floor_material_id": "mat_oak",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "bathroom",
+      "name": "原图卫浴区",
+      "level_id": "level_1",
+      "boundary_xy_m": [
+        [
+          0,
+          4.8
+        ],
+        [
+          3.25,
+          4.8
+        ],
+        [
+          3.25,
+          6.25
+        ],
+        [
+          0,
+          6.25
+        ]
+      ],
+      "floor_material_id": "mat_tile",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "guest",
+      "name": "次卧 / 书房",
+      "level_id": "level_1",
+      "boundary_xy_m": [
+        [
+          1.65,
+          6.45
+        ],
+        [
+          4.85,
+          6.45
+        ],
+        [
+          4.85,
+          10.4
+        ],
+        [
+          1.65,
+          10.4
+        ]
+      ],
+      "floor_material_id": "mat_oak",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "study",
+      "name": "多功能卧室",
+      "level_id": "level_1",
+      "boundary_xy_m": [
+        [
+          3.45,
+          0.75
+        ],
+        [
+          6.2,
+          0.75
+        ],
+        [
+          6.2,
+          4.65
+        ],
+        [
+          3.45,
+          4.65
+        ]
+      ],
+      "floor_material_id": "mat_oak",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "study_balcony",
+      "name": "卧室阳台",
+      "level_id": "level_1",
+      "boundary_xy_m": [
+        [
+          3.45,
+          0.1
+        ],
+        [
+          6.2,
+          0.1
+        ],
+        [
+          6.2,
+          0.55
+        ],
+        [
+          3.45,
+          0.55
+        ]
+      ],
+      "floor_material_id": "mat_tile",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "living",
+      "name": "起居室",
+      "level_id": "level_1",
+      "boundary_xy_m": [
+        [
+          6.4,
+          0.1
+        ],
+        [
+          8.2,
+          0.1
+        ],
+        [
+          8.2,
+          1.8
+        ],
+        [
+          9.7,
+          1.8
+        ],
+        [
+          9.7,
+          4.4
+        ],
+        [
+          11.2,
+          4.4
+        ],
+        [
+          11.2,
+          5.5
+        ],
+        [
+          9.7,
+          5.5
+        ],
+        [
+          9.7,
+          6.25
+        ],
+        [
+          6.4,
+          6.25
+        ]
+      ],
+      "floor_material_id": "mat_oak",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "dining",
+      "name": "餐厅与阳台",
+      "level_id": "level_1",
+      "boundary_xy_m": [
+        [
+          7.2,
+          6.25
+        ],
+        [
+          9.7,
+          6.25
+        ],
+        [
+          9.7,
+          11.2
+        ],
+        [
+          7.2,
+          11.2
+        ]
+      ],
+      "floor_material_id": "mat_oak",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "kitchen",
+      "name": "厨房",
+      "level_id": "level_1",
+      "boundary_xy_m": [
+        [
+          9.9,
+          7.4
+        ],
+        [
+          12.05,
+          7.4
+        ],
+        [
+          12.05,
+          10.4
+        ],
+        [
+          9.9,
+          10.4
+        ]
+      ],
+      "floor_material_id": "mat_tile",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "hall",
+      "name": "公共过道",
+      "level_id": "level_1",
+      "boundary_xy_m": [
+        [
+          3.45,
+          4.85
+        ],
+        [
+          6.2,
+          4.85
+        ],
+        [
+          6.4,
+          4.85
+        ],
+        [
+          6.4,
+          6.25
+        ],
+        [
+          7.0,
+          6.25
+        ],
+        [
+          7.0,
+          10.4
+        ],
+        [
+          5.05,
+          10.4
+        ],
+        [
+          5.05,
+          6.25
+        ],
+        [
+          3.45,
+          6.25
+        ]
+      ],
+      "floor_material_id": "mat_oak",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    },
+    {
+      "id": "entry",
+      "name": "玄关",
+      "level_id": "level_1",
+      "boundary_xy_m": [
+        [
+          9.9,
+          5.5
+        ],
+        [
+          11.2,
+          5.5
+        ],
+        [
+          11.2,
+          7.2
+        ],
+        [
+          9.9,
+          7.2
+        ]
+      ],
+      "floor_material_id": "mat_tile",
+      "source": {
+        "kind": "image_inferred",
+        "reference": "docs/方案B/home1.png",
+        "confidence": 0.65
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "id": "preserve_source_walls",
+      "type": "structural_integrity",
+      "severity": "blocker"
+    },
+    {
+      "id": "no_unregistered_assets",
+      "type": "asset_license",
+      "severity": "blocker"
+    }
+  ]
+}

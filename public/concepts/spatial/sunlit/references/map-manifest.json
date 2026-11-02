@@ -1,0 +1,94 @@
+{
+  "structureHash": "55109a3278522c23193668b0d8593d2269158842dc652de130f1a6677d40d4f8",
+  "method": "deterministic numeric SVG plan drawn directly from frozen scene.json, rasterized by Chromium",
+  "files": [
+    {
+      "id": "plan-map",
+      "png": "plan-map.png",
+      "svg": "plan-map.svg",
+      "resolution": [
+        1600,
+        1400
+      ],
+      "pngSha256": "c5c91cb6cde42bf99d2a3bec8b7d4512a0738ce483338d0dc40b2918da92d48f",
+      "svgSha256": "cc396c1ba6f36cc046d03c21afcebb364bfe36cedf5e33241fc5d2887f1d7df4"
+    },
+    {
+      "id": "living-map",
+      "png": "living-map.png",
+      "svg": "living-map.svg",
+      "resolution": [
+        1600,
+        1400
+      ],
+      "pngSha256": "c62ebe3444bb8b7cb5ac08dbc3ea4383c81984b1849ef2d7c0e03059339eb3e7",
+      "svgSha256": "40b544abe94b433580d065667dbb8165deec0de67a7afd77a49c25fb9d3826f1"
+    },
+    {
+      "id": "dining-map",
+      "png": "dining-map.png",
+      "svg": "dining-map.svg",
+      "resolution": [
+        1600,
+        1400
+      ],
+      "pngSha256": "70a272a4a2f15350ee260ee48c82ac9c21f0dd5e4297dcb1cb4a7c1af66a375a",
+      "svgSha256": "6acc9492776c4128dd572dea27c0627c14d2e3fbc5221dbbe98a1be9b53011d2"
+    },
+    {
+      "id": "kitchen-map",
+      "png": "kitchen-map.png",
+      "svg": "kitchen-map.svg",
+      "resolution": [
+        1600,
+        1400
+      ],
+      "pngSha256": "f021ea703b24b07fe6901461fd124e24254cf3a819c5ae555d9e1125a1225195",
+      "svgSha256": "f85ecca2c4620fe1e4b80559b7b38b14a8ef833b1fcc6024c30c11a1d44aa844"
+    },
+    {
+      "id": "master-map",
+      "png": "master-map.png",
+      "svg": "master-map.svg",
+      "resolution": [
+        1600,
+        1400
+      ],
+      "pngSha256": "dff3445da82fbe0dea8efd378a72dd44281efbc47d1016ab7355ff2bcf0f6e28",
+      "svgSha256": "08379327d8420ee2b9c7862dbba0383c6bdfe9e07239da21286d77d9b6a483bb"
+    },
+    {
+      "id": "study-map",
+      "png": "study-map.png",
+      "svg": "study-map.svg",
+      "resolution": [
+        1600,
+        1400
+      ],
+      "pngSha256": "db879e2f4f1bcb85743c5f7de444a667306f01de812fb9bd0c1df245d0bb64aa",
+      "svgSha256": "7d05b8efcfde2da1ebf3cc4e0bbe7a2971a519dca9eb6f4e8ead5ac67634567a"
+    },
+    {
+      "id": "guest-map",
+      "png": "guest-map.png",
+      "svg": "guest-map.svg",
+      "resolution": [
+        1600,
+        1400
+      ],
+      "pngSha256": "1db8c31f2a7f18f17ce252adab031c84f124ce220d5a144ced9b0411c4a7c807",
+      "svgSha256": "f1f2ce5d4654f5d5bd193a6db9d885a917d8b5f40ac42567e1edb65c7e5a1499"
+    },
+    {
+      "id": "bathroom-map",
+      "png": "bathroom-map.png",
+      "svg": "bathroom-map.svg",
+      "resolution": [
+        1600,
+        1400
+      ],
+      "pngSha256": "04990cd7584b03918ed856b8bd63903ab605ebfc811d48dcd005834a26448b35",
+      "svgSha256": "56c3a2cc2d9bde0c833affbdf828c884b1296cb32e8708ecbe8bd4da04b0ed16"
+    }
+  ]
+}

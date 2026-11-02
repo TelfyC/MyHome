@@ -1,0 +1,472 @@
+{
+  "geometry": {
+    "project_id": "home1_sunlit",
+    "scene_revision": 1,
+    "status": "warning",
+    "issues": [
+      {
+        "rule_id": "SOURCE_001",
+        "severity": "warning",
+        "object_ids": [
+          "level_1",
+          "wall_master_west",
+          "wall_master_south",
+          "wall_master_east",
+          "wall_bath_north",
+          "wall_bath_east",
+          "wall_guest_west",
+          "wall_guest_north",
+          "wall_guest_east",
+          "wall_guest_south",
+          "wall_corridor_north",
+          "wall_dining_west",
+          "wall_balcony_west",
+          "wall_balcony_north",
+          "wall_dining_east",
+          "wall_kitchen_north",
+          "wall_kitchen_east",
+          "wall_kitchen_south",
+          "wall_entry_east",
+          "wall_entry_south",
+          "wall_living_east",
+          "wall_living_step",
+          "wall_living_lower_east",
+          "wall_living_south",
+          "wall_study_east",
+          "wall_study_north",
+          "wall_study_south",
+          "wall_study_balcony_south",
+          "wall_study_balcony_east",
+          "opening_master_south_window",
+          "opening_master_west_window",
+          "opening_bath_window",
+          "opening_master_door",
+          "opening_bath_door",
+          "opening_guest_north_window",
+          "opening_guest_west_window",
+          "opening_guest_door",
+          "opening_corridor_window",
+          "opening_dining_to_corridor",
+          "opening_balcony_glazing",
+          "opening_kitchen_window",
+          "opening_kitchen_door",
+          "opening_entry_door",
+          "opening_study_door",
+          "opening_study_balcony_door",
+          "opening_study_balcony_glazing",
+          "opening_living_glazing"
+        ],
+        "description": "Structure includes inferred or unmeasured values; draft preview only",
+        "measured_value": null,
+        "expected_condition": "Calibrated structural inputs before final delivery"
+      },
+      {
+        "rule_id": "LIGHT_001",
+        "severity": "warning",
+        "object_ids": [],
+        "description": "True north is unknown; lighting is a visual scenario, not site sun analysis",
+        "measured_value": null,
+        "expected_condition": null
+      }
+    ],
+    "evidence": []
+  },
+  "assets": {
+    "project_id": "home1_sunlit",
+    "scene_revision": 1,
+    "status": "warning",
+    "issues": [
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "living_rug"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "living_sofa"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "living_table"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "living_tv_console"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "living_tv"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "living_armchair"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "living_ficus"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "living_books"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "living_pendant"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "living_side_table"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "dining_table"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "dining_chair_0"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "dining_chair_1"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "dining_chair_2"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "dining_chair_3"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "coffee_cabinet"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "dining_tree"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "dining_pendant"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "master_bed"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "master_side_left"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "master_side_right"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "master_wardrobe"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "master_plant"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "guest_bed"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "guest_desk"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "guest_chair"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "guest_bookcase"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "guest_plant"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "study_bed"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "study_desk"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "study_chair"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "study_cabinet"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "kitchen_north_run"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "kitchen_east_run"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "kitchen_fridge"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "bath_vanity"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "bath_toilet"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "bath_shower"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      },
+      {
+        "rule_id": "ASSET_FIXTURE",
+        "severity": "warning",
+        "object_ids": [
+          "entry_cabinet"
+        ],
+        "description": "Project-authored development fixture; preview quality only",
+        "measured_value": null,
+        "expected_condition": null
+      }
+    ],
+    "evidence": []
+  }
+}

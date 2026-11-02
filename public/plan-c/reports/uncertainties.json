@@ -1,0 +1,37 @@
+[
+  {
+    "id": "dimensions",
+    "status": "needs_confirmation",
+    "description": "图纸自述为估算示意；尺寸链分别转录，不能按整张图片统一标定。"
+  },
+  {
+    "id": "ceiling",
+    "status": "needs_confirmation",
+    "description": "层高暂按 2.70 m 设计假设，非实测。"
+  },
+  {
+    "id": "structure",
+    "status": "needs_confirmation",
+    "description": "黑白墙均保留；颜色不等同承重性质，全部标记 unknown。"
+  },
+  {
+    "id": "lower_glazing",
+    "status": "needs_confirmation",
+    "description": "起居室及下侧卧室阳台边界的玻璃与洞口形式由图线推断，需现场确认。"
+  },
+  {
+    "id": "bathroom",
+    "status": "needs_confirmation",
+    "description": "原图卫浴位于主卧上侧，南侧隔断不清晰；本版未新增建筑隔墙，隐私及排水待确认。"
+  },
+  {
+    "id": "north",
+    "status": "needs_confirmation",
+    "description": "图纸上方定义 +Y；未确认地理北向、经纬度与日期，采光仅为视觉情境。"
+  },
+  {
+    "id": "assets",
+    "status": "warning",
+    "description": "家具为本项目自建参数化预览模型，尚未通过专业 hero 资产审核；正式交付门禁不放行。"
+  }
+]

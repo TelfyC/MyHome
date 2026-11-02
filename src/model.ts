@@ -11,7 +11,7 @@ import type { SchemeId } from './design-schemes';
 import { X, Z, relocateFurniture } from './dimensions';
 import { buildKitchenDoors } from './kitchen-doors';
 
-export function buildHome() {
+export function buildHome(options: {batchStatic?: boolean} = {}) {
   const root = new THREE.Group();
   const architecture = new THREE.Group();
   const furniture = new THREE.Group();
@@ -721,7 +721,7 @@ export function buildHome() {
     metal.color.set(p.metal);archMetal.color.set(p.metal);floorOak.color.set(p.floorTint);
   }
   setScheme('forest');
-  batch(furniture);batch(architecture);
+  if(options.batchStatic!==false){batch(furniture);batch(architecture);}
   const kitchenDoors=buildKitchenDoors(colliders,architecturalMaterials);root.add(kitchenDoors.root);
   return {root,architecture,furniture,ceilings,colliders,floorMeshes,windows,walls,layout:LAYOUT,kitchenDoors,setCutaway,setNight,setScheme};
 }

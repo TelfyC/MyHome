@@ -1,0 +1,37 @@
+{
+  "status": "pass",
+  "blender_version": "4.5.3 LTS",
+  "test": "scene_material_primary_slots_persist_after_reopen",
+  "builder_script_sha256": "1d100821129986972965d0eaa059f352287a0551ed6dade74da300a7a61a1fcb",
+  "blend_sha256": "8c4bbb1c8a7821293374a26cf9aad0834d8bbd7da476e30452963d9881c84207",
+  "evidence": {
+    "architecture": {
+      "wall_material_id": "test_red",
+      "floor_material_id": "test_blue"
+    },
+    "sofa_before": {
+      "primary_material_id": "test_red",
+      "primary_part_count": 18,
+      "preserved_oak_feet": 4,
+      "actual_linear_base_color": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "actual_roughness": 0.20999999344348907,
+      "actual_metallic": 0.07000000029802322
+    },
+    "sofa_after": {
+      "primary_material_id": "test_blue",
+      "primary_part_count": 18,
+      "preserved_oak_feet": 4,
+      "actual_linear_base_color": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "actual_roughness": 0.8199999928474426,
+      "actual_metallic": 0.12999999523162842
+    }
+  }
+}

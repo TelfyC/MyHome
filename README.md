@@ -1,12 +1,32 @@
 # 栖光 · 四套风格全景之家
 
-默认进入「林中树屋」的新空间效果视图，可切到「360° 环顾」。页首还可切换「现代日式中古风」「轻法式复古原木风」「日光花园原木」。奶白原木方案已移除，旧 `?design=cream` 链接回落到林中树屋。
+Plan C 新路线已独立接入：页面“Plan C · Blender 实景”或 `?view=plan-c` 可查看按 `home1.png` 构建的日光花园真实三维首版。源工程位于 `planC/`，使用方法、范围及验收记录见 [Plan C 文档](docs/planC/README.md)。
 
-四套方案各有客厅、餐厅与咖啡角、主卧与衣帽区、电竞房、次卧／书房、厨房、卫生间七张独立正常透视效果图和七个 360° 参考观察点。直接访问 `?design=forest&room=guest` 可查看这轮按用户照片改造的次卧；`?view=model&design=forest&room=guest` 可核对实际尺寸模型。
+默认进入「林中树屋」的 360° 全景。页首还可切换「现代日式中古风」「轻法式复古原木风」「日光花园原木」。奶白原木方案已移除，旧 `?design=cream` 链接回落到林中树屋。
 
-## 最新：设计师细节与生活陈设
+四套方案各有客厅、餐厅与咖啡角、主卧与衣帽区、电竞房、次卧／书房、厨房、卫生间七个 360° 观察点。直接访问 `?design=forest&room=guest` 可查看次卧；`?view=model&design=forest&room=guest` 可核对实际尺寸模型。旧 `?scene=room` 链接也进入对应房间的 360°，页面不再提供独立空间效果入口。
 
-本轮按“物品摆放有逻辑、要有生活化的小装饰”重做四套风格的 28 张空间效果图。分别参考 Axel Vervoordt、Norm Architects × 芦泽启治、Pierre Yovanovitch、Heju Studio 的公开方法，按阅读、咖啡、床边、学习、备餐与洗漱组织物品。新图原生 1536 × 1024，默认直接展示独立视角，支持放大拖动；原有 1774 × 887 全景继续负责空间参考，没有插值放大冒充高清。新默认视图不依赖 WebGL。
+## 最新：28 个高清全景重建（接缝验收进行中）
+
+四套风格的七个房间已完成 28 张高清母版生成：向用户配置的 OpenAI 兼容图片接口明确指定 `3840x1920`，直接保存 API 返回的 PNG，没有在本地放大。随后把全景经度首尾移到图像中央，用蒙版限定区域修复接缝，再局部合成并导出桌面 3840 × 1920、手机 2560 × 1280 和 320 × 160 缩略图。当前接缝修复、逐图目视复核与浏览器验收仍在进行，不能仅以生成完成或接缝数值下降认定 28 张全部通过。
+
+页面先显示保留的 1774 × 887 原图，再后台加载高清版本，保持正在看的朝向、缩放与自动环顾状态。手机优先使用 2560 × 1280；桌面优先使用 3840 × 1920，并按资源尺寸和设备纹理上限选择。高清文件失败、尺寸不符或设备不足时保留可交互原图。添加 `&quality=original` 可在相同视角设置下对比正文原图。
+
+AI 生成会推断材质细节，局部织物、植物和纹样可能变化；更大文件尺寸也不能证明提供商内部的具体渲染方式。网页图经过接缝修复和合成，不称为未处理的原生 API 输出。方法、断点命令和文件边界见 [360 高清全景重建](docs/360高清全景重建.md)。本轮最终汇总记录位置为 `home-design-review/input/panorama-native-20261028.json`，验收截图保存在 `artifacts/panorama-native-20261028/`，以最终记录的状态为准。
+
+## 此前：AI 超分增强
+
+此前用本机 Real-ESRGAN 把原图生成 7096 × 3548 的 4 倍增强和 3548 × 1774 手机版本。旧文件 `public/panoramas-hd/` 与 [360 高清增强](docs/360高清增强.md) 保留为历史方案；来源和校验值见 `home-design-review/input/panorama-superresolution-20261027.json`。当前高清资源入口已改为 `public/panoramas-native/`。
+
+## 360° 视角与渲染
+
+视角改为按画面长边控制：默认 86°，缩放范围 60°–90°，桌面、超宽屏和竖屏手机都不会因宽高比变化而变成极端广角。俯仰范围随垂直视角调整，避开天顶与地板极区。工具条增加“恢复自然视角”，同时复位朝向、缩放并暂停自动环顾。
+
+画布支持最高 2 倍设备像素比，并限制在约 800 万绘制像素以内。全景采用 mipmap、最高 8 倍各向异性过滤、横向接缝重复采样、放大时的双三次插值及温和的局部对比锐化。显示采样不能补出素材没有的细节；本轮清晰度改善主要来自新的高清素材，保留的 1774 × 887 原图仍用于首次加载、回退和对照。
+
+## 此前：设计师细节与生活陈设
+
+此前按“物品摆放有逻辑、要有生活化的小装饰”制作了四套风格的 28 张空间效果图。分别参考 Axel Vervoordt、Norm Architects × 芦泽启治、Pierre Yovanovitch、Heju Studio 的公开方法，按阅读、咖啡、床边、学习、备餐与洗漱组织物品。这些原生 1536 × 1024 的独立图片保留作历史素材，当前入口统一使用 360°，没有把独立效果图硬贴进全景。
 
 逐室改动、设计师来源和提示词见 [四套风格：设计师细节与生活陈设](docs/四套风格_设计师细节与生活陈设.md)。
 
@@ -30,8 +50,9 @@ npm run dev           # 默认 http://localhost:5173
 npm run build         # TypeScript 检查与生产打包
 npm test              # 导航与碰撞单元测试
 npm run test:e2e      # 先启动 dev；尺寸、家具、开合碰撞、漫游与手机检查
-npm run test:panorama # 360 素材、交互、逐室细节和手机检查
-npm run test:rooms    # 28 张新图、设计参考、摆放说明、放大、切换与手机检查
+npm run test:panorama # 360 素材、视角上限、缩放、超宽屏、手机与高像素比检查
+npm run test:rooms    # 默认和旧空间效果链接统一进入 360 的兼容检查
+npm run test:quality  # 渐进加载、3840/2560 纹理、原图对照、设备上限、失败回退与切换竞态
 ```
 
 浏览器检查默认使用 `/usr/bin/google-chrome`，可通过 `CHROME_PATH` 指定浏览器、`BASE_URL` 更改地址。需要支持 WebGL 2 的浏览器。`dist` 可直接部署至静态网站服务器。
@@ -68,16 +89,22 @@ GitHub Pages 使用 `VITE_BASE_PATH=/MyHome/ npm run build`，本地开发使用
 
 ## 文件与素材
 
-本轮素材、校验值与提示词在 `home-design-review/input/craft-refinement-manifest-20261026.json` 和 `home-design-review/logs/craft-refinement-20261026/`，上一轮记录保留。
+本轮高清生成的逐图请求、提示词、原始输出和处理记录保存在本机 `output/imagegen/panoramas-native-20261028/`；最终网页素材汇总记录位置为 `home-design-review/input/panorama-native-20261028.json`。原始输出不随网页打包，网站仅使用 `public/` 中的导出文件。此前设计陈设记录在 `home-design-review/input/craft-refinement-manifest-20261026.json` 和 `home-design-review/logs/craft-refinement-20261026/`，继续保留。
 
 - `src/plan.ts` / `src/dimensions.ts`：房间关系、尺寸、家具与门组占位。
 - `src/model.ts` / `src/kitchen-doors.ts`：三维家具、材质、吊轨门动画和碰撞。
 - `src/design-schemes.ts`：四套风格、模型材质和逐室设计细节。
 - `src/model-app.ts` / `src/viewer.ts`：尺寸模型界面与漫游。
-- `src/room-tour.ts` / `src/room-tour.css`：默认独立空间效果、放大、细节与导航。
+- `src/room-tour.ts` / `src/room-tour.css`：历史独立空间效果实现，当前入口不加载。
 - `src/craft-guides.ts`：四个设计师参考、逐室生活摆放与新图路径。
-- `src/panorama.ts` / `src/panorama-data.ts`：保留的七空间 360° 参考与导航。
-- `public/room-views/{forest,japanese,french,sunlit}/`：28 张新空间效果与缩略图。
+- `src/panorama.ts` / `src/panorama-data.ts`：七空间 360° 全景与导航。
+- `src/panorama-rendering.ts`：视角与画布像素预算、纹理局部对比处理。
+- `src/panorama-hd-data.ts`：高清全景的桌面、手机路径与实际尺寸；播放器据此选择和验证纹理。
+- `public/panoramas-native/{forest,japanese,french,sunlit}/`：当前高清资源目录，桌面 3840 × 1920、手机 2560 × 1280、缩略图 320 × 160。
+- `scripts/build-native-panoramas.py` / `scripts/finish-native-panoramas.py`：批量生成、蒙版接缝修复、局部合成与网页导出，支持核验已有输出后继续处理。
+- `public/panoramas-hd/{forest,japanese,french,sunlit}/`：历史 4 倍超分与手机版本，当前入口不使用。
+- `scripts/upscale-panoramas.py` / `scripts/build-panorama-hd.py`：此前本机分块超分及网页导出脚本，原图不覆写。
+- `public/room-views/{forest,japanese,french,sunlit}/`：此前 28 张独立空间效果与缩略图，当前入口不加载。
 - `public/panoramas/{forest,japanese,french,sunlit}/`：28 张全景与 28 张缩略图。
 - `home-design-review/logs/detail-refinement-20261026-prompts.json`：生成提示词集合与来源。
 - `home-design-review/logs/refinement-assets/`：逐图生成与定点修正记录。

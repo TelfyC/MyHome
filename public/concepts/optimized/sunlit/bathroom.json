@@ -1,0 +1,20 @@
+{
+  "room": "bathroom",
+  "date": "2026-11-02",
+  "tool": "built-in image_gen",
+  "use_case": "precise-object-edit",
+  "input": [
+    "public/concepts/sunlit/bathroom.png"
+  ],
+  "prompt": "Use case: precise-object-edit.\nAsset type: refined photorealistic apartment bathroom concept image, landscape 1536x1024.\nInput image: Image 1 is the EDIT TARGET, current Sunlit Garden bathroom.\nPrimary request: Carefully refine only styling, surface finish and practical small details while keeping this exact bathroom camera and layout. Make it feel fresh warm-white and light pale-oak with subtle sage stripes and a very small deep-brown accent, consistent with a bright Sunlit Garden home.\nSpecific edits: Keep the pale oak-look moisture-resistant cabinet fronts and tall storage cabinet, the pale stone continuous countertop, washing machine and basin arrangement, ivory square tiles, brushed metal faucets/hardware, toilet, clear glass shower and original window unchanged. Replace the little woven tray holding soap and toothbrush ceramics with a simple matte deep warm-brown waterproof ceramic tray, oval/rounded rectangle, approximately chestnut #6b4435, with just the existing two speckled ivory ceramic vessels (soap pump and toothbrush pot). Keep one small leafy plant toward the back of counter, not obstructing mirror or tap. Remove the far-right lidded wicker counter box and extra decorative textiles, leaving that part of countertop clear; keep just one neatly folded ivory hand towel away from faucet. Keep only the single sage-and-ivory narrow-striped towel on the left wall, not multiple competing patterns.\nPractical refinements: replace the long thick woven central rug with a smaller thin pale stone/beige cotton bathmat on the dry floor beside vanity, leaving clear walking space and washing-machine door swing. Keep a compact closed laundry basket tucked against the near left wall only if it does not project into the main route; remove the towel draped over it. Glass shower edges, door handle, hinges and tile grout align plausibly; fittings do not float or penetrate objects, countertop and basin are clean and geometrically sound.\nLighting: soft fresh natural daylight from the existing small window, neutral-warm white balance, white tiles remain ivory-white rather than amber; subtle mirror task light without an intense orange band. Realistic soft grain, stone texture and linen. Preserve the original architecture and all fixture locations and dimensions. No new window, no new dark cabinet, no decorative wooden furniture in the wet area. No text, people, logos, collage or watermark.",
+  "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f1-bbaf-7021-afc8-a5688aa9e8f6/exec-02dd964d-073a-4dc5-85c9-91ffc1b8fbc7.png",
+  "review": {
+    "status": "selected",
+    "layout": "Original washer/basin continuous countertop, pale oak fronts, tall storage, toilet, glass shower, window and camera preserved.",
+    "wood_hierarchy": "Main surfaces remain light; one deep-brown waterproof ceramic toiletries tray supplies a small accent.",
+    "declutter": "Right wicker countertop box and basket-draped towel removed; short pale cotton mat replaces long woven runner. Main dry circulation floor is visibly clearer.",
+    "textiles": "Single green-white wall towel retained; second visible stripe is its mirror reflection.",
+    "geometry": "Tap, basin, counter edge, washer, cabinet seams and glass fittings appear coherent; no obvious intersections.",
+    "caveat": "Concept styling view; washing-machine door clearance and all fixture dimensions must be verified on site."
+  }
+}

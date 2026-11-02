@@ -1,0 +1,722 @@
+{
+  "project_id": "home1_sunlit",
+  "scene_revision": 1,
+  "status": "fail",
+  "issues": [
+    {
+      "rule_id": "SOURCE_001",
+      "severity": "blocker",
+      "object_ids": [
+        "level_1",
+        "wall_master_west",
+        "wall_master_south",
+        "wall_master_east",
+        "wall_bath_north",
+        "wall_bath_east",
+        "wall_guest_west",
+        "wall_guest_north",
+        "wall_guest_east",
+        "wall_guest_south",
+        "wall_corridor_north",
+        "wall_dining_west",
+        "wall_balcony_west",
+        "wall_balcony_north",
+        "wall_dining_east",
+        "wall_kitchen_north",
+        "wall_kitchen_east",
+        "wall_kitchen_south",
+        "wall_entry_east",
+        "wall_entry_south",
+        "wall_living_east",
+        "wall_living_step",
+        "wall_living_lower_east",
+        "wall_living_south",
+        "wall_study_east",
+        "wall_study_north",
+        "wall_study_south",
+        "wall_study_balcony_south",
+        "wall_study_balcony_east",
+        "opening_master_south_window",
+        "opening_master_west_window",
+        "opening_bath_window",
+        "opening_master_door",
+        "opening_bath_door",
+        "opening_guest_north_window",
+        "opening_guest_west_window",
+        "opening_guest_door",
+        "opening_corridor_window",
+        "opening_dining_to_corridor",
+        "opening_balcony_glazing",
+        "opening_kitchen_window",
+        "opening_kitchen_door",
+        "opening_entry_door",
+        "opening_study_door",
+        "opening_study_balcony_door",
+        "opening_study_balcony_glazing",
+        "opening_living_glazing"
+      ],
+      "description": "Structure includes inferred or unmeasured values; draft preview only",
+      "measured_value": null,
+      "expected_condition": "Calibrated structural inputs before final delivery"
+    },
+    {
+      "rule_id": "LIGHT_001",
+      "severity": "warning",
+      "object_ids": [],
+      "description": "True north is unknown; lighting is a visual scenario, not site sun analysis",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "living_rug"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "living_sofa"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "living_sofa"
+      ],
+      "description": "Hero asset requires approved audited production model",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_002",
+      "severity": "error",
+      "object_ids": [
+        "living_sofa"
+      ],
+      "description": "Hero asset import/UV/material/normal validation is incomplete",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "living_table"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "living_tv_console"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "living_tv"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "living_armchair"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "living_armchair"
+      ],
+      "description": "Hero asset requires approved audited production model",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_002",
+      "severity": "error",
+      "object_ids": [
+        "living_armchair"
+      ],
+      "description": "Hero asset import/UV/material/normal validation is incomplete",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "living_ficus"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "living_ficus"
+      ],
+      "description": "Hero asset requires approved audited production model",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_002",
+      "severity": "error",
+      "object_ids": [
+        "living_ficus"
+      ],
+      "description": "Hero asset import/UV/material/normal validation is incomplete",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "living_books"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "living_pendant"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "living_side_table"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "dining_table"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "dining_chair_0"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "dining_chair_0"
+      ],
+      "description": "Hero asset requires approved audited production model",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_002",
+      "severity": "error",
+      "object_ids": [
+        "dining_chair_0"
+      ],
+      "description": "Hero asset import/UV/material/normal validation is incomplete",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "dining_chair_1"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "dining_chair_1"
+      ],
+      "description": "Hero asset requires approved audited production model",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_002",
+      "severity": "error",
+      "object_ids": [
+        "dining_chair_1"
+      ],
+      "description": "Hero asset import/UV/material/normal validation is incomplete",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "dining_chair_2"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "dining_chair_2"
+      ],
+      "description": "Hero asset requires approved audited production model",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_002",
+      "severity": "error",
+      "object_ids": [
+        "dining_chair_2"
+      ],
+      "description": "Hero asset import/UV/material/normal validation is incomplete",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "dining_chair_3"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "dining_chair_3"
+      ],
+      "description": "Hero asset requires approved audited production model",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_002",
+      "severity": "error",
+      "object_ids": [
+        "dining_chair_3"
+      ],
+      "description": "Hero asset import/UV/material/normal validation is incomplete",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "coffee_cabinet"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "dining_tree"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "dining_tree"
+      ],
+      "description": "Hero asset requires approved audited production model",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_002",
+      "severity": "error",
+      "object_ids": [
+        "dining_tree"
+      ],
+      "description": "Hero asset import/UV/material/normal validation is incomplete",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "dining_pendant"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "master_bed"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "master_bed"
+      ],
+      "description": "Hero asset requires approved audited production model",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_002",
+      "severity": "error",
+      "object_ids": [
+        "master_bed"
+      ],
+      "description": "Hero asset import/UV/material/normal validation is incomplete",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "master_side_left"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "master_side_right"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "master_wardrobe"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "master_plant"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "master_plant"
+      ],
+      "description": "Hero asset requires approved audited production model",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_002",
+      "severity": "error",
+      "object_ids": [
+        "master_plant"
+      ],
+      "description": "Hero asset import/UV/material/normal validation is incomplete",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "guest_bed"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "guest_bed"
+      ],
+      "description": "Hero asset requires approved audited production model",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_002",
+      "severity": "error",
+      "object_ids": [
+        "guest_bed"
+      ],
+      "description": "Hero asset import/UV/material/normal validation is incomplete",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "guest_desk"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "guest_chair"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "guest_bookcase"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "guest_plant"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "guest_plant"
+      ],
+      "description": "Hero asset requires approved audited production model",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_002",
+      "severity": "error",
+      "object_ids": [
+        "guest_plant"
+      ],
+      "description": "Hero asset import/UV/material/normal validation is incomplete",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "study_bed"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "study_bed"
+      ],
+      "description": "Hero asset requires approved audited production model",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_002",
+      "severity": "error",
+      "object_ids": [
+        "study_bed"
+      ],
+      "description": "Hero asset import/UV/material/normal validation is incomplete",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "study_desk"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "study_chair"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "study_cabinet"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "kitchen_north_run"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "kitchen_east_run"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "kitchen_fridge"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "bath_vanity"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "bath_toilet"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "bath_shower"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    },
+    {
+      "rule_id": "ASSET_001",
+      "severity": "blocker",
+      "object_ids": [
+        "entry_cabinet"
+      ],
+      "description": "Development generator has not been reviewed as a production asset",
+      "measured_value": null,
+      "expected_condition": null
+    }
+  ],
+  "evidence": []
+}

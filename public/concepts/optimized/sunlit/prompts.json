@@ -1,0 +1,296 @@
+{
+  "date": "2026-11-02",
+  "method": "built-in image_gen",
+  "records": [
+    {
+      "room": "living",
+      "name": "客厅",
+      "record": {
+        "room": "living",
+        "date": "2026-11-02",
+        "tool": "built-in image_gen",
+        "use_case": "precise-object-edit",
+        "input": [
+          "public/concepts/sunlit/living.png",
+          "public/concepts/variants/sunlit/dining-dark-cherry.png"
+        ],
+        "prompt": "Use case: precise-object-edit.\nAsset type: refined photorealistic interior concept image for an existing apartment, landscape 1536x1024.\nInput images: Image 1 is the EDIT TARGET: current Sunlit Garden living room. Image 2 is WOOD COLOR REFERENCE ONLY: use its matte deep chestnut/cherry brown dining-table color (roughly #6b4435), not its composition.\nPrimary request: Refine Image 1 into a cohesive bright Sunlit Garden room with warm-white, pale honey oak, sage green, very restrained dusty pink, and a little deep warm wood. Preserve the target room and exact view.\nEdits: Change ONLY the small round reading-side table beside the window armchair to the same warm dark chestnut wood as reference Image 2, keep its slim form and position. Change the round tray on the white coffee table to the same deep matte wood. Give the long pale oak TV cabinet a very thin warm-white stone-look top, retaining all pale oak fronts, base, feet, scale and position. Reduce decorative objects on that cabinet: at its left end keep a small sage ceramic vase with a few airy stems and two books; at its right keep just one small leafy plant and one simple photograph, leaving most of the top clear. Keep the cream fine-stripe sofa, pale wood-framed cream striped reading armchair, pale wood storage footstool and white-top coffee table. Keep a single dusty-pink cushion on the reading chair and one muted sage plus one dusty-pink cushion on sofa, no extra pillows. A single green throw can rest neatly on sofa.\nDetails: The slim warm-white directional reading floor lamp stands clear of the chair arms, its shade aimed toward reading pages. The dark side table holds just a ceramic cup and open book. Keep one slim tall plant near the window to right of the armchair, with space for curtain operation; do not create a forest in the chair's foot space. Existing ivory sheers and sage curtains remain. No TV wires, no objects floating, straight plausible furniture legs and grain, cabinet gaps consistent.\nInvariants: exact original camera, framing, windows, walls, black TV, sofa/table/armchair/footstool locations, all room dimensions and pale oak floor. Keep bright fresh neutral daylight and exposure, gentle believable shadows, warm whites that remain white. Retain lightweight lines and a relaxed lived-in room, no dramatic yellow/orange tint, no dark or rustic overhaul, no additional windows, no text, labels, people, watermark or collage.",
+        "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f1-bbaf-7021-afc8-a5688aa9e8f6/exec-0263288d-2068-4141-ba54-e9e4c8c56567.png",
+        "review": {
+          "status": "selected",
+          "camera_and_layout": "Preserved original camera and major room/furniture geometry.",
+          "wood_hierarchy": "Only side table and coffee tray become deep warm brown; pale cabinet fronts/feet, armchair frame and storage footstool remain light.",
+          "surfaces": "Thin warm-white TV cabinet top echoes existing white coffee-table surface.",
+          "decor": "Cabinet objects reduced to left vase/books and right plant/photo; cream stripes, sage curtains and restrained pink retained.",
+          "caveat": "Concept image; furniture and installation dimensions require site verification."
+        }
+      }
+    },
+    {
+      "room": "dining",
+      "name": "餐厅与咖啡角",
+      "record": {
+        "tool": "built-in image_gen",
+        "date": "2026-11-02",
+        "useCase": "precise-object-edit",
+        "room": "dining",
+        "inputs": [
+          "public/concepts/variants/sunlit/dining-dark-cherry.png"
+        ],
+        "prompt": "Use case: precise-object-edit.\nAsset type: coordinated interior concept refinement, Sunlit Garden dining room, one full view.\nInput image: Image 1 is the edit target, the already approved dark chestnut/cherry dining table trial.\nPrimary request: Refine the styling while preserving this exact bright room, camera, architecture, window, glass kitchen enclosure, furniture placements, table geometry and matte dark chestnut table finish. Retain the pale wood woven dining chairs and slim pale bench, fine ivory striped bench cushion, warm white coffee-cabinet doors, pale honey oak countertop and floating shelf, pale floor and white kitchen. The intended mood is bright warm-white daylight, fresh sage green, fine ivory stripes, pale honey wood with a few matte warm dark brown accents, never a heavy dark room.\nSpecific changes:\n1. The coffee machine/grinder tray becomes matte dark warm chestnut wood matching the table, fine proportions. On the shelf reduce the cups to a considered cluster of four cream/sage ceramic cups, one small picture and one slim branch vase; remove the loose cutting board from the shelf. Keep generous empty shelf space, no visual clutter.\n2. Add a clearly visible portable POWER STRIP at the coffee station, to the RIGHT of the black grinder, on the dry rear wall slightly above the countertop. It is an ordinary short horizontal rounded rectangular warm ivory/cream plastic extension power strip, about 28 cm long, with three Chinese grounded socket positions and a small master switch, held in two discreet removable wall clips, visibly a detachable portable item with one warm-white power cord emerging from its end and clipped neatly down the rear corner. It is NOT a long metal track and NOT hardwired sockets integrated into the plaster. Its switch is accessible. Two short appliance cords connect naturally to sockets and tuck behind the tray; no dangling cable loops or cables crossing the clear working surface. Make the strip visible in this full view rather than hidden behind appliances. Move the coffee-bean jar a little right as needed to leave clear access under the strip; fold one green-and-ivory stripe cloth at the far right front. Keep the leafy plant on the LEFT end of the cabinet, separated from power strip and hot steam.\n3. Retain simple ivory runner and cream cups on dining table, with one low simple sage bowl of pears. No additional decorative objects.\nInvariants: exact same 1536x1024 landscape composition, sunny exposure and camera perspective, existing door/window positions, table and chair dimensions and clear kitchen passage. The espresso machine stays the compact ivory rectangular machine with front round controls from this target; black grinder stays its current model. Preserve physically plausible cabinet joinery and leg connections.\nStyle: photoreal interior photograph, believable grain, fine woven textiles, brushed silver coffee fittings, subtle warm task light under shelf and natural neutral-warm daylight. No humans, labels, overlay, panels, text or watermark.",
+        "generatedSource": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f0-794c-7501-98db-638b89c7e324/exec-c28eecaf-8ff0-4a2c-8936-b2a1479b18e1.png",
+        "iterations": [
+          {
+            "prompt": "Use case: precise-object-edit.\nAsset type: coordinated interior concept refinement, Sunlit Garden dining room, one full view.\nInput image: Image 1 is the edit target, the already approved dark chestnut/cherry dining table trial.\nPrimary request: Refine the styling while preserving this exact bright room, camera, architecture, window, glass kitchen enclosure, furniture placements, table geometry and matte dark chestnut table finish. Retain the pale wood woven dining chairs and slim pale bench, fine ivory striped bench cushion, warm white coffee-cabinet doors, pale honey oak countertop and floating shelf, pale floor and white kitchen. The intended mood is bright warm-white daylight, fresh sage green, fine ivory stripes, pale honey wood with a few matte warm dark brown accents, never a heavy dark room.\nSpecific changes:\n1. The coffee machine/grinder tray becomes matte dark warm chestnut wood matching the table, fine proportions. On the shelf reduce the cups to a considered cluster of four cream/sage ceramic cups, one small picture and one slim branch vase; remove the loose cutting board from the shelf. Keep generous empty shelf space, no visual clutter.\n2. Add a clearly visible portable POWER STRIP at the coffee station, to the RIGHT of the black grinder, on the dry rear wall slightly above the countertop. It is an ordinary short horizontal rounded rectangular warm ivory/cream plastic extension power strip, about 28 cm long, with three Chinese grounded socket positions and a small master switch, held in two discreet removable wall clips, visibly a detachable portable item with one warm-white power cord emerging from its end and clipped neatly down the rear corner. It is NOT a long metal track and NOT hardwired sockets integrated into the plaster. Its switch is accessible. Two short appliance cords connect naturally to sockets and tuck behind the tray; no dangling cable loops or cables crossing the clear working surface. Make the strip visible in this full view rather than hidden behind appliances. Move the coffee-bean jar a little right as needed to leave clear access under the strip; fold one green-and-ivory stripe cloth at the far right front. Keep the leafy plant on the LEFT end of the cabinet, separated from power strip and hot steam.\n3. Retain simple ivory runner and cream cups on dining table, with one low simple sage bowl of pears. No additional decorative objects.\nInvariants: exact same 1536x1024 landscape composition, sunny exposure and camera perspective, existing door/window positions, table and chair dimensions and clear kitchen passage. The espresso machine stays the compact ivory rectangular machine with front round controls from this target; black grinder stays its current model. Preserve physically plausible cabinet joinery and leg connections.\nStyle: photoreal interior photograph, believable grain, fine woven textiles, brushed silver coffee fittings, subtle warm task light under shelf and natural neutral-warm daylight. No humans, labels, overlay, panels, text or watermark.",
+            "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f0-794c-7501-98db-638b89c7e324/exec-ed043081-59c4-44c0-a080-a0a60e66d549.png",
+            "selected": false,
+            "reason": "空插孔下误画额外线，局部修正"
+          },
+          {
+            "prompt": "Use case: precise-object-edit.\nInput image: the EDIT TARGET, an approved bright Sunlit Garden coffee station concept.\nMake ONLY a tiny electrical-detail correction to the warm-ivory portable strip to the RIGHT of the grinder.\nThe bar has THREE socket positions from left to right, then ONE master rocker switch.\nPosition 1: KEEP the existing black appliance plug and its cable to grinder.\nPosition 2: KEEP the existing ivory appliance plug and cable back to espresso machine.\nPosition 3: entirely EMPTY, with just three dark narrow slits in the Chinese Type I geometry: one vertical earth slit above, two diagonal blade slits below left and right (like an inverted Y layout). This position must have NO plug and NO cable emerging from it. REMOVE completely the erroneous extra short white wire currently dropping below the third socket toward the jar lid. Restore clean wall plaster where that extra wire was. No round US sockets, no parallel US blade slots.\nKEEP the single ivory supply cable emerging from the RIGHT END of the whole strip and neatly clipped vertically down the wall.\nKeep exactly TWO appliance cables (one black, one ivory) plus the strip's ONE supply cable.\nEverything else must remain unchanged: composition, machine/grinder design, tray, jar, cloth, plants, cupboards, daylight, palette, camera. Do not redraw, restyle or add other objects. One photograph, no text, labels, logo or watermark.",
+            "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f0-794c-7501-98db-638b89c7e324/exec-c28eecaf-8ff0-4a2c-8936-b2a1479b18e1.png",
+            "selected": true
+          }
+        ],
+        "review": {
+          "status": "selected",
+          "observed": [
+            "深栗樱桃木餐桌，浅木椅凳、白柜、浅台面与层板保留",
+            "深木咖啡托盘与餐桌呼应，四杯陶器精简陈列",
+            "暖白横向插排位于磨豆机右侧干区后墙，有可及总开关，植物在左端",
+            "只保留黑/白两条设备接线及插排右端一条供电线，删除无来源支线",
+            "国标三孔形状在空孔中可见，未画成硬装轨道",
+            "保留原机位与玻璃厨房门组"
+          ],
+          "limits": [
+            "可拆卸支架是设计意图；渲染未演示拆卸动作",
+            "图像中的插孔及设备接电仅作概念示意，施工及实购应按实选产品说明核对"
+          ]
+        },
+        "width": 1536,
+        "height": 1024,
+        "sha256": "46389d0b814e19fe424daef023c313f4ff7f5e14e5e646246e357cf9cd450e58",
+        "file": "dining.png"
+      }
+    },
+    {
+      "room": "master",
+      "name": "主卧与衣帽区",
+      "record": {
+        "room": "master",
+        "date": "2026-11-02",
+        "method": "built-in image_gen",
+        "useCase": "precise-object-edit",
+        "inputImages": [
+          "public/concepts/sunlit/master.png",
+          "public/concepts/variants/sunlit/dining-dark-cherry.png"
+        ],
+        "file": "master.png",
+        "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f3-7bc2-7c33-980d-93c72a16a54d/exec-1ddcdbd8-c75e-47a5-870b-74d730bfc1f1.png",
+        "prompt": "Use case: precise-object-edit.\nAsset type: updated bedroom concept photograph for the Sunlit Garden home.\nInput images: Image 1 is the EDIT TARGET, the existing master bedroom. Image 2 is only a WOOD FINISH REFERENCE, its dining table's warm dark chestnut cherry-brown; do not copy that room or lighting.\nPrimary request: Carefully refine the bedroom's material hierarchy and everyday details while keeping the SAME bedroom, same landscape composition and same camera. Unify the bed wood frame, slim legs, and both bedside tables to matte warm chestnut/cherry brown, about #6b4435 in neutral diffuse light, warm brown with subtle red undertone and fine real wood grain, never black or red lacquer. This slightly deeper coordinated bed ensemble should contrast with the original light oak floor and warm-white closed wardrobe. Keep the bedside furniture's existing size, shapes and locations.\nKeep the fitted wardrobe fronts warm ivory-white, fine pale wood handles, and the original dressing niche. The dressing niche has only one small coordinated ceramic vessel and a small dark wood catchall tray; remove reed diffuser clutter. Keep enough empty dressing counter for daily use. Dressing stool stays ivory linen. Blind slats remain medium-light warm wood, not stained as dark as the bed.\nTextiles: ivory fine stripe linen bedcover and two pillows, one muted sage green small cushion, one thin dusty pale pink throw folded across the foot. Remove extra pillow layers if any. Bed looks inviting and crisp with credible folds. Keep one restrained botanical picture. Both existing bedside reading lamps remain independent, with warm-white shades and soft neutral warm light, not orange; light from window remains bright natural daylight and the room has a fresh warm white balance instead of heavy amber tint.\nDetail quality: intact pillow seams, straight wardrobe panel gaps, lamp bases grounded, glass of water safely centered on bedside table, discreetly arranged charging cords, no loose wire loops. Preserve all window dimensions and position, blind geometry, door frame, 1.8m bed footprint, wardrobe and dressing niche placement, pale floor, walking space, perspective and crop.\nDeliver a single photorealistic landscape 1536x1024 image. No added window, no new furniture, no persons, no text, no logo, no watermark, no collage.",
+        "review": {
+          "status": "selected",
+          "findings": [
+            "床框与床头柜为协调的哑光深栗木色，与浅地板及暖白衣柜形成深浅层次。",
+            "原窗口、木百叶、床与衣柜梳妆区的位置及机位保持。",
+            "细条纹米白床品、灰粉薄毯、鼠尾草绿靠枕保留，梳妆台去除扩香器并减少陈设。",
+            "床边双灯、独立储物与水杯位置自然；没有新增可见杂线。"
+          ],
+          "limitations": [
+            "风格概念图，不用于核定实际尺寸或电位。"
+          ]
+        }
+      }
+    },
+    {
+      "room": "study",
+      "name": "电竞房",
+      "record": {
+        "room": "study",
+        "date": "2026-11-02",
+        "method": "built-in image_gen",
+        "useCase": "precise-object-edit",
+        "inputImages": [
+          "public/concepts/sunlit/study.png",
+          "public/concepts/variants/sunlit/dining-dark-cherry.png"
+        ],
+        "file": "study.png",
+        "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f3-7bc2-7c33-980d-93c72a16a54d/exec-beddbc8d-7094-4119-ad4d-ef075c37d7b2.png",
+        "prompt": "Use case: precise-object-edit.\nAsset type: optimized gaming and collection room interior photograph in an existing Sunlit Garden home.\nInput images: Image 1 is the EDIT TARGET, preserve this exact gaming room and composition. Image 2 is ONLY a dark wood color reference: use its matte warm chestnut/cherry-brown #6b4435 for tiny accessories, not for the large cabinets.\nPrimary request: Refine the existing room to have quiet material hierarchy, less visual clutter and convincing everyday usability. Keep the long warm-white desktop with its pale honey oak edge, the pale honey oak pegboard, the pale oak framed glass collection cabinet, the sage and ivory striped ergonomic chair and the single original window with muted sage striped Roman blind. The black display and devices already provide depth, so do NOT darken any cabinet, desk, floor or pegboard.\nSpecific accents: a simple dark chestnut wood keyboard wrist rest under the keyboard, one small matching dark wood accessory tray, and only one slim dark chestnut photo frame on the pegboard shelf. All should have matte finish and fine grain.\nSimplify the cabinet display: fewer figurines, arranged in deliberate small groups with generous empty shelf space, subtly lit at low neutral warm brightness. Remove plants from inside the display cabinet. On the pegboard keep the headphones, two controllers and one small figurine or framed image, each clearly hung on realistic hooks; remove the extra controllers and all trailing plants over equipment.\nPlants only near the window: keep one modest floor plant tucked into the window-side corner without narrowing the chair passage, remove the small potted plant and round glowing globe from the working desktop. Use the existing sage and ivory textile palette, no new busy pattern. Keep the task workspace largely clear. A restrained warm-white task lamp can occupy the far left desk corner where the globe was, without touching the monitor.\nShow realistic screen arm and proper desk support, natural keyboard, mouse and desk mat. Consolidate cables discretely along the rear desktop and under the desk; no dangling tangles, no cable through a screen or furniture. Keep glass reflections believable, all cabinet joints straight, cabinet doors functional. Bright natural daylight with clean warm-white balance, soft indirect ambient light, never orange showroom lighting or RGB.\nInvariants: exact original camera angle, 1536x1024 landscape crop, room boundary, window and blind, long desk footprint, cabinet positions, chair location, floor, door opening and clear rear chair circulation. No new windows, no extra monitor, no broad color changes, no people, no text, no logo, no watermark. Deliver one polished photorealistic image.",
+        "review": {
+          "status": "selected",
+          "findings": [
+            "白桌面、浅木包边、浅木洞洞板与玻璃收藏柜保留，大面积木作没有染深。",
+            "腕托、桌面小托盘与单幅窄画框用暖深木色呼应餐桌。",
+            "洞洞板保留耳机和两个手柄，去掉垂藤；收藏陈列分组留空，柜内绿植移除。",
+            "原窗帘、绿米白条纹座椅、屏幕臂与椅后通路保留；桌面换纤细工作灯并减少小摆件。"
+          ],
+          "limitations": [
+            "柜内暖色光仍有装饰氛围，实际照度及走线需以设备确定。",
+            "风格概念图，不用于核定实际尺寸。"
+          ]
+        }
+      }
+    },
+    {
+      "room": "guest",
+      "name": "次卧 / 书房",
+      "record": {
+        "room": "guest",
+        "date": "2026-11-02",
+        "method": "built-in image_gen",
+        "useCase": "precise-object-edit",
+        "inputImages": [
+          "public/concepts/sunlit/guest.png",
+          "public/concepts/variants/sunlit/dining-dark-cherry.png"
+        ],
+        "file": "guest.png",
+        "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f3-7bc2-7c33-980d-93c72a16a54d/exec-88844d38-c571-4690-bb02-8506b747e9d8.png",
+        "prompt": "Use case: precise-object-edit.\nAsset type: refined Sunlit Garden secondary bedroom and study concept photograph.\nInput images: Image 1 is the EDIT TARGET, preserve the original small bedroom. Image 2 is ONLY a wood-finish reference, use its matte warm dark chestnut/cherry-brown dining table color on the bedside cabinet and one tiny desk accessory.\nPrimary request: Polish this existing bedroom's style and details to reduce all-over same-tone honey wood. Make ONLY the compact bedside drawer cabinet beside the bed dark warm chestnut cherry-brown around #6b4435, including legs, subtle fine real wood grain and low matte sheen. Keep its existing shape, handles, position and size. Repeat that deeper brown in one small simple catchall tray on the desk and a slim desk-side botanical picture frame only. Keep the left drawer bed, long right desk body/edge, left wardrobe and all shallow wall bookshelves in the original pale honey oak. Preserve the desk's warm-white tabletop.\nTextiles: muted sage green and ivory fine stripe bedcover, simple ivory linen pillow and one sage pillow, small ivory throw. Keep plain sage green curtains at the one far end window, avoid further pattern and pillow clutter. Maintain the chair's original pale wood and muted green upholstered seat.\nImportant detail refinement: remove plants and trailing leaves from shelves directly over the bed so nothing dangles over the pillows. Remove loose small objects from those left shelves and group fewer books with generous empty lengths of shelf. Keep high shelf positions and plausible substantial shelf supports. On desk-side shelves use a few tidy book groups and one simple cream ceramic vessel; no many dangling plants. At window retain only one compact plant off to a side, leave window handle clear and let curtains open naturally. Keep the bedside top clear enough for a book and cup; no plant dominating it.\nEveryday function: long desktop remains mostly open around computer, keyboard and task lamp, only two pencil tools and one small tray. Consolidate visible computer cable neatly into one rear desktop route with no impossible floating wire. Keep realistic furniture seams and drawers, no overlap of chair with desk, uncluttered central walking aisle, drawers can open. Neutral warm natural daylight, clean warm-white walls and gentle shadows, no exaggerated yellow/orange filter.\nInvariants: SAME camera, landscape 1536x1024 crop, room boundary, original single end wall window only, curtains, left approximately 1.2m drawer bed, right approximately 2.3m long desk, both shallow shelf rows, wardrobe and original floor. No new side window, no additional furniture, no people, no text, no logo, no watermark. Deliver a single beautiful realistic interior photograph.",
+        "review": {
+          "status": "selected",
+          "findings": [
+            "仅小床头柜改为暖栗深棕，右侧小托盘和细画框形成少量呼应；床、长桌与书架仍浅木。",
+            "左床右白台长桌、原正面单窗及绿色帘布保留，没有新增侧窗。",
+            "移除床上方绿植及垂藤，书本分组留白；桌面小植物移除，窗口植物缩为单组。",
+            "绿白细条纹、米白织物、绿色座垫和工作灯保持统一；中央通路和桌面更清楚。"
+          ],
+          "limitations": [
+            "层板固定、实际开窗与椅后净距仍需现场核对。",
+            "风格概念图，不用于核定实际尺寸。"
+          ]
+        }
+      }
+    },
+    {
+      "room": "kitchen",
+      "name": "可开合厨房",
+      "record": {
+        "tool": "built-in image_gen",
+        "date": "2026-11-02",
+        "useCase": "precise-object-edit",
+        "room": "kitchen",
+        "inputs": [
+          "public/concepts/sunlit/kitchen.png"
+        ],
+        "prompt": "Use case: precise-object-edit.\nAsset type: coordinated Sunlit Garden kitchen concept refinement.\nInput image: Image 1 is the EDIT TARGET, the existing small enclosed kitchen concept.\nPrimary request: Refine materials, practical styling and joinery while preserving the exact same camera, room dimensions, architecture, windows, clear glass kitchen enclosure, gas hob/hood, sink, floor-standing refrigerator, all existing cabinet footprint and usable aisle. Change ONLY the tall wall cabinets above the extractor from full pale honey oak doors to matte WARM IVORY/WHITE flat doors, with exact current division lines, dimensions and extractor underside. This reduces uniform pale wood and connects this kitchen to the dining room's white coffee cabinet. Keep every lower cupboard in natural pale honey oak, fine grain and aligned edge gaps. Keep all worktops pale warm-white stone and all backsplash square tiles warm white with light warm grey grout.\nSmall styling refinements: make the small existing condiment tray between sink and hob matte deep warm chestnut brown, matching a dark cherry dining table finish around #6b4435, as one tiny repeat. Use restrained cream/sage ceramic utensils jar. Keep utensil handles contained and a clear stretch of prep counter. Keep the existing off-white pot and black pan on the gas hob, plausible burner/hood alignment. On the right side keep rice cooker and a small wooden cutting board with sparse herbs but move any foliage so it does not crowd rice cooker lid/steam path; the plant can be omitted rather than filling that spot. Keep the sink surroundings uncluttered, fine ivory/sage striped tea towel draped over cabinet edge clear of cooking flame. No more appliances or ornaments.\nCritical physical details: refrigerator remains standing directly on FLOOR in its exact current space, never on top of or intersecting a worktop; preserve its usable front opening space. Keep already continuous short side preparation cabinet/counter where it exists, and do not invent a counter passing through the refrigerator. Preserve exact original window positions and no added windows. Wall/stone joints clean, lower drawers align, proper hob controls and credible sink/faucet geometry.\nLight/material: same fresh bright natural daylight with warm-neutral whites, not yellow tint, gentle local extractor task light. Photoreal natural oak, matte paint, stone and brushed silver appliance surfaces. This room remains airy and practical; deep wood is a small tray only, never widespread dark cabinetry.\nDeliver one 1536x1024 landscape photograph, no person, labels, watermark, collage or text.",
+        "generatedSource": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f0-794c-7501-98db-638b89c7e324/exec-6a5310b3-56d9-4337-984f-4bfb56641214.png",
+        "review": {
+          "status": "selected",
+          "observed": [
+            "烟机上方大面积吊柜改暖白，浅木下柜、白砖和白台面保留",
+            "小型调味托盘深木色，与餐厅重点呼应",
+            "茶巾调整为细绿条纹，右侧电饭煲旁移除植物，保留清楚备餐台",
+            "冰箱落地且无台面穿模，窗下水槽和实墙燃气灶/烟机位置保留",
+            "原玻璃围合、窗和台面格局保持，柜门分缝基本连续"
+          ],
+          "limits": [
+            "原概念图窗景和机位沿用，不能替代实测平面",
+            "实际柜体尺寸、冰箱开门净空与设备热源条件仍需现场核对"
+          ]
+        },
+        "width": 1536,
+        "height": 1024,
+        "sha256": "4657d7594c7d2c0798bb6aad7cf1d50b6be8e5c009e658bc054e8d162e92a8ea",
+        "file": "kitchen.png"
+      }
+    },
+    {
+      "room": "bathroom",
+      "name": "卫生间",
+      "record": {
+        "room": "bathroom",
+        "date": "2026-11-02",
+        "tool": "built-in image_gen",
+        "use_case": "precise-object-edit",
+        "input": [
+          "public/concepts/sunlit/bathroom.png"
+        ],
+        "prompt": "Use case: precise-object-edit.\nAsset type: refined photorealistic apartment bathroom concept image, landscape 1536x1024.\nInput image: Image 1 is the EDIT TARGET, current Sunlit Garden bathroom.\nPrimary request: Carefully refine only styling, surface finish and practical small details while keeping this exact bathroom camera and layout. Make it feel fresh warm-white and light pale-oak with subtle sage stripes and a very small deep-brown accent, consistent with a bright Sunlit Garden home.\nSpecific edits: Keep the pale oak-look moisture-resistant cabinet fronts and tall storage cabinet, the pale stone continuous countertop, washing machine and basin arrangement, ivory square tiles, brushed metal faucets/hardware, toilet, clear glass shower and original window unchanged. Replace the little woven tray holding soap and toothbrush ceramics with a simple matte deep warm-brown waterproof ceramic tray, oval/rounded rectangle, approximately chestnut #6b4435, with just the existing two speckled ivory ceramic vessels (soap pump and toothbrush pot). Keep one small leafy plant toward the back of counter, not obstructing mirror or tap. Remove the far-right lidded wicker counter box and extra decorative textiles, leaving that part of countertop clear; keep just one neatly folded ivory hand towel away from faucet. Keep only the single sage-and-ivory narrow-striped towel on the left wall, not multiple competing patterns.\nPractical refinements: replace the long thick woven central rug with a smaller thin pale stone/beige cotton bathmat on the dry floor beside vanity, leaving clear walking space and washing-machine door swing. Keep a compact closed laundry basket tucked against the near left wall only if it does not project into the main route; remove the towel draped over it. Glass shower edges, door handle, hinges and tile grout align plausibly; fittings do not float or penetrate objects, countertop and basin are clean and geometrically sound.\nLighting: soft fresh natural daylight from the existing small window, neutral-warm white balance, white tiles remain ivory-white rather than amber; subtle mirror task light without an intense orange band. Realistic soft grain, stone texture and linen. Preserve the original architecture and all fixture locations and dimensions. No new window, no new dark cabinet, no decorative wooden furniture in the wet area. No text, people, logos, collage or watermark.",
+        "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f1-bbaf-7021-afc8-a5688aa9e8f6/exec-02dd964d-073a-4dc5-85c9-91ffc1b8fbc7.png",
+        "review": {
+          "status": "selected",
+          "layout": "Original washer/basin continuous countertop, pale oak fronts, tall storage, toilet, glass shower, window and camera preserved.",
+          "wood_hierarchy": "Main surfaces remain light; one deep-brown waterproof ceramic toiletries tray supplies a small accent.",
+          "declutter": "Right wicker countertop box and basket-draped towel removed; short pale cotton mat replaces long woven runner. Main dry circulation floor is visibly clearer.",
+          "textiles": "Single green-white wall towel retained; second visible stripe is its mirror reflection.",
+          "geometry": "Tap, basin, counter edge, washer, cabinet seams and glass fittings appear coherent; no obvious intersections.",
+          "caveat": "Concept styling view; washing-machine door clearance and all fixture dimensions must be verified on site."
+        }
+      }
+    },
+    {
+      "room": "living-detail",
+      "name": "窗边阅读位 · 细节",
+      "record": {
+        "room": "living-detail",
+        "date": "2026-11-02",
+        "tool": "built-in image_gen",
+        "use_case": "precise-object-edit",
+        "input": [
+          "public/concepts/optimized/sunlit/living.png"
+        ],
+        "prompt": "Use case: precise-object-edit.\nAsset type: close-up interior concept photograph, landscape 1536x1024.\nInput image: Image 1 is the AUTHORITATIVE APPROVED ROOM AND FURNITURE reference: refined Sunlit Garden living room.\nPrimary request: Photograph the exact reading corner of Image 1 from a closer eye-level camera, so the room-wide and detail image unmistakably show the same chair, side table, footstool, lamp, curtains and planter. Move closer to the window-side armchair; don't redesign anything.\nComposition: frame the pale oak OPEN WOOD FRAME armchair, the small dark warm-brown round side table at its left, pale oak storage footstool forward/right, warm-white articulated directional floor lamp to left, original window with sheer and sage drapes behind, and the original slim tree to chair's right. A sliver of black television and pale oak TV cabinet with very thin warm-white top can appear at far right; sofa may just crop at extreme left. Ordinary rectilinear photographic perspective, no fisheye.\nExact furniture continuity: the armchair has exposed pale oak straight slim posts and open horizontal wooden arms, a separate thick cream narrow vertical-stripe back cushion and seat cushion, and exactly one dusty-pink cushion. Do NOT replace it with a skirted/fully upholstered armchair. The footstool is the same small rectangular pale wood storage box on four short legs, with matching cream fine-stripe pad on top. The side table is a round slim-edged matte chestnut/cherry-brown wood table, roughly #6b4435 in neutral light, holding the same cream/sage ceramic cup and open book. Fine natural wood grain, low sheen. Same tall narrow planter and graceful small tree between the chair and cabinet. Maintain usable space around chair, lamp and curtains. Don't add extra plants, rugs or furniture.\nMood: bright fresh Sunlit Garden daylight, warm-white walls, light honey floor and natural sisal-texture rug from Image 1, soft sage curtains, ivory sheer, soft realistic shadows. Neutral warm white balance with white highlights, not orange/yellow. Photorealistic linen texture and careful plausible joinery. No people, annotation, text, logos, watermark, collage or exaggerated decor.",
+        "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f1-bbaf-7021-afc8-a5688aa9e8f6/exec-e3167d92-5f53-48e8-8f0e-bb8e259ff5e9.png",
+        "iteration": {
+          "initial_source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f1-bbaf-7021-afc8-a5688aa9e8f6/exec-e4aa258d-b02f-48a3-bc63-de8e3fc5f3fc.png",
+          "issue": "Generated mug had a handle on each side.",
+          "correction_prompt": "Use case: precise-object-edit. Edit this photograph with ONE tiny correction only: the ceramic mug on the small dark round table currently has an incorrect handle on each side. Make it an ordinary realistic ceramic mug with exactly ONE handle on the LEFT side of the cup. Remove only the right-side handle and restore the small view of dark tabletop/book background there. Preserve the cup body, the existing left handle, coaster, book, table, and absolutely every other pixel-level appearance, composition, furniture, lighting, framing, materials and color in the room. No extra changes. One landscape 1536x1024 photograph, no text.",
+          "result": "Removed right handle; ordinary single-handle mug confirmed."
+        },
+        "review": {
+          "status": "selected",
+          "continuity": "Matches main view pale wood open-arm chair with cream narrow stripes and pink cushion, pale wood storage footstool, dark round side table, warm-white lamp, sage curtains and slim planter.",
+          "details": "Mug handle corrected, book/table surfaces and chair/footstool joints coherent; no new room architecture.",
+          "caveat": "Camera moved closer; photographic concept, not measured construction."
+        }
+      }
+    },
+    {
+      "room": "dining-detail",
+      "name": "咖啡角 · 插排细节",
+      "record": {
+        "tool": "built-in image_gen",
+        "date": "2026-11-02",
+        "useCase": "precise-object-edit",
+        "room": "dining-detail",
+        "inputs": [
+          "public/concepts/optimized/sunlit/dining.png"
+        ],
+        "prompt": "Use case: precise-object-edit.\nAsset type: interior coffee-station detail photograph, matching an approved whole-room concept.\nInput image: Image 1 is the sole authoritative reference showing the actual dining room and coffee station.\nPrimary request: Move the camera closer to the RIGHT-HAND coffee cabinet in the SAME room, making a beautifully composed 1536x1024 landscape detail photograph. This is a new close-up viewpoint of the existing exact station, not a redesign. Show the pale honey oak worktop, white cabinet doors, single pale floating shelf, ivory compact espresso machine with its exact two large round front control knobs and small third control, black conical grinder, their shallow dark chestnut tray, left-end potted plant, right-side bean jar and small folded green/ivory striped cloth. Keep the machine and grinder models, their order, proportions and finishes exactly the same as the input. At left edge include a little glass kitchen enclosure, not a newly invented garden door. Foreground can include a softly defocused corner of the dark chestnut dining tabletop, a fine linen runner and pale woven chair, indicating the same dining arrangement.\nImportant detail: the warm-white portable POWER STRIP on the dry rear wall to the RIGHT of the grinder must be clearly legible. Keep it a short rounded rectangular ordinary portable extension strip with three socket positions and one master rocker switch, held by two small removable clips rather than integrated wall outlets. Show its single warm-ivory supply cord neatly clipped down the right rear corner; two machine cords follow short natural runs from the appliances to two sockets, no large hanging loops. At least one unused socket should have Chinese slanted grounded three-pin geometry, not US socket geometry. Keep the total switch accessible and unobstructed, keep dry coffee-bean jar below/right rather than covering controls. No wet plant or water glass beside the strip. The strip is not a track system.\nShelf: the same four cream/sage cups grouped on the right, single small botanical picture near the middle-left and slim branch vase on left, airy negative space, concealed warm task lighting.\nColor/light: fresh bright natural neutral-warm sunlight, warm-white plaster/doors, pale honey oak, matte deep chestnut tray/table accents, sage green ceramics and fine stripes, restrained brushed silver hardware. Preserve realistic material texture and plausible working space. No person, no added devices, no text, annotation, collage or watermark.",
+        "generatedSource": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f0-794c-7501-98db-638b89c7e324/exec-4d283d34-f65c-446d-a875-a448598b1412.png",
+        "iterations": [
+          {
+            "prompt": "Use case: precise-object-edit.\nAsset type: interior coffee-station detail photograph, matching an approved whole-room concept.\nInput image: Image 1 is the sole authoritative reference showing the actual dining room and coffee station.\nPrimary request: Move the camera closer to the RIGHT-HAND coffee cabinet in the SAME room, making a beautifully composed 1536x1024 landscape detail photograph. This is a new close-up viewpoint of the existing exact station, not a redesign. Show the pale honey oak worktop, white cabinet doors, single pale floating shelf, ivory compact espresso machine with its exact two large round front control knobs and small third control, black conical grinder, their shallow dark chestnut tray, left-end potted plant, right-side bean jar and small folded green/ivory striped cloth. Keep the machine and grinder models, their order, proportions and finishes exactly the same as the input. At left edge include a little glass kitchen enclosure, not a newly invented garden door. Foreground can include a softly defocused corner of the dark chestnut dining tabletop, a fine linen runner and pale woven chair, indicating the same dining arrangement.\nImportant detail: the warm-white portable POWER STRIP on the dry rear wall to the RIGHT of the grinder must be clearly legible. Keep it a short rounded rectangular ordinary portable extension strip with three socket positions and one master rocker switch, held by two small removable clips rather than integrated wall outlets. Show its single warm-ivory supply cord neatly clipped down the right rear corner; two machine cords follow short natural runs from the appliances to two sockets, no large hanging loops. At least one unused socket should have Chinese slanted grounded three-pin geometry, not US socket geometry. Keep the total switch accessible and unobstructed, keep dry coffee-bean jar below/right rather than covering controls. No wet plant or water glass beside the strip. The strip is not a track system.\nShelf: the same four cream/sage cups grouped on the right, single small botanical picture near the middle-left and slim branch vase on left, airy negative space, concealed warm task lighting.\nColor/light: fresh bright natural neutral-warm sunlight, warm-white plaster/doors, pale honey oak, matte deep chestnut tray/table accents, sage green ceramics and fine stripes, restrained brushed silver hardware. Preserve realistic material texture and plausible working space. No person, no added devices, no text, annotation, collage or watermark.",
+            "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f0-794c-7501-98db-638b89c7e324/exec-8f4f5108-1535-4d09-9b0c-de806131ff05.png",
+            "selected": false,
+            "reason": "额外白色支线及空孔形状偏美式，局部修正"
+          },
+          {
+            "prompt": "Use case: precise-object-edit.\nInput image: the EDIT TARGET, an approved bright Sunlit Garden coffee station concept.\nMake ONLY a tiny electrical-detail correction to the warm-ivory portable strip to the RIGHT of the grinder.\nThe bar has THREE socket positions from left to right, then ONE master rocker switch.\nPosition 1: KEEP the existing black appliance plug and its cable to grinder.\nPosition 2: KEEP the existing ivory appliance plug and cable back to espresso machine.\nPosition 3: entirely EMPTY, with just three dark narrow slits in the Chinese Type I geometry: one vertical earth slit above, two diagonal blade slits below left and right (like an inverted Y layout). This position must have NO plug and NO cable emerging from it. REMOVE completely the erroneous extra short white wire currently dropping below the third socket toward the jar lid. Restore clean wall plaster where that extra wire was. No round US sockets, no parallel US blade slots.\nKEEP the single ivory supply cable emerging from the RIGHT END of the whole strip and neatly clipped vertically down the wall.\nKeep exactly TWO appliance cables (one black, one ivory) plus the strip's ONE supply cable.\nEverything else must remain unchanged: composition, machine/grinder design, tray, jar, cloth, plants, cupboards, daylight, palette, camera. Do not redraw, restyle or add other objects. One photograph, no text, labels, logo or watermark.",
+            "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f0-794c-7501-98db-638b89c7e324/exec-4d283d34-f65c-446d-a875-a448598b1412.png",
+            "selected": true
+          }
+        ],
+        "review": {
+          "status": "selected",
+          "observed": [
+            "从优化餐厅主图生成同一柜子的近景，咖啡机/磨豆机/托盘/层板/四杯和插排位置统一",
+            "保留浅木台面白门，前景深木桌角与浅椅维持同一餐厅",
+            "米白插排、总开关、一个空国标三孔、两根设备接线和沿右角供电线清楚可见",
+            "删除空插孔下多余电线，植物与电源分区",
+            "细条纹布、米白与鼠尾草陶器、深木托盘重复整屋配色"
+          ],
+          "limits": [
+            "细节图相较主图换了近景机位，杯具和器物比例有生成差异",
+            "实物插排需按设备插头、说明书和现场位置核对，图像不代表产品规格"
+          ]
+        },
+        "width": 1536,
+        "height": 1024,
+        "sha256": "4fbae2fc78cf3c5372a69ff77b61f3c7d0124cbca2a2f636cf866073dd437924",
+        "file": "dining-detail.png"
+      }
+    }
+  ]
+}

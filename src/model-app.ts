@@ -16,7 +16,7 @@ app.innerHTML=`
 <header class="topbar">
   <a class="brand" href="${import.meta.env.BASE_URL}" aria-label="栖光首页"><span class="brand-mark">${icon('house')}</span><span>栖光<span class="brand-en">LIGHTWOOD HOME</span></span></a>
   <div class="project-title"><span class="project-separator"></span>采光优化 · 方案 B <span class="version">空间概念版</span></div>
-  <div class="header-actions"><a id="return-tour" class="quiet-btn" href="?design=${currentScheme}">返回写实全景</a><span class="live-badge"><span></span>实时 3D</span><button id="reference-btn" class="quiet-btn">${icon('panels-top-left')}<span>设计依据</span></button><button id="help-btn" class="icon-btn" aria-label="操作帮助">${icon('circle-help')}</button></div>
+  <div class="header-actions"><a id="model-concepts" class="model-concepts-entry" href="${import.meta.env.BASE_URL}concepts/index.html?design=${currentScheme}&room=all">概念设计图 ${icon('arrow-up-right')}</a><a id="return-tour" class="quiet-btn" href="?design=${currentScheme}">返回写实全景</a><span class="live-badge"><span></span>实时 3D</span><button id="reference-btn" class="quiet-btn">${icon('panels-top-left')}<span>设计依据</span></button><button id="help-btn" class="icon-btn" aria-label="操作帮助">${icon('circle-help')}</button></div>
 </header>
 <div class="workspace">
   <aside class="sidebar" id="sidebar">
@@ -60,6 +60,10 @@ let toastTimer:ReturnType<typeof setTimeout>;
 function toast(message:string) {$('#toast').textContent=message;$('#toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),3200);}
 function onRoom(id:string) {
   selected=id;
+  const conceptRoom=id==='entry'?'living':id==='balcony'?'dining':id;
+  const conceptLink=$<HTMLAnchorElement>('#model-concepts');
+  conceptLink.href=currentScheme==='sunlit'?`${import.meta.env.BASE_URL}concepts/sunlit-refined.html?room=${conceptRoom}`:`${import.meta.env.BASE_URL}concepts/index.html?design=${currentScheme}&room=${conceptRoom}`;
+  conceptLink.firstChild!.textContent=currentScheme==='sunlit'?'日光花园优化图 ':'概念设计图 ';
   $('.kitchen-control').hidden=!['all','kitchen','dining','entry'].includes(id);
   $<HTMLAnchorElement>('#return-tour').href=`?design=${currentScheme}${id==='all'?'':`&room=${id==='balcony'?'dining':id==='entry'?'living':id}`}`;
   document.querySelectorAll<HTMLElement>('[data-nav]').forEach(el=>{el.classList.toggle('active',el.dataset.nav===id);el.setAttribute('aria-current',el.dataset.nav===id?'true':'false');});

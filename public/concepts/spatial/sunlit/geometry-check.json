@@ -1,0 +1,1885 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-02T07:18:06.313819+00:00",
+  "status": "passed",
+  "scope": "Deterministic scene geometry, openings and declared object footprints only. AI-image visual review is independent.",
+  "scene": "public/concepts/spatial/sunlit/references/scene.json",
+  "sceneSha256": "27e53db0fb56c1c2e85d5eafb2b6c488471645000d3ebfd3bb0c682c915ea6a6",
+  "constraintsSha256": "6b08272e92dd225461f562fc5f0a1fccd1a5f57ca88ebf18971d56327fc5d08a",
+  "checkCount": 213,
+  "passedCount": 213,
+  "errorCount": 0,
+  "errors": [],
+  "checks": [
+    {
+      "name": "source_hash:handwritten-dimensions",
+      "passed": true,
+      "details": "docs/newStructure.jpg"
+    },
+    {
+      "name": "source_hash:original-outline",
+      "passed": true,
+      "details": "public/references/original.png"
+    },
+    {
+      "name": "source_hash:accepted-calibration",
+      "passed": true,
+      "details": "docs/尺寸校准说明.md"
+    },
+    {
+      "name": "source_hash:gaming-layout",
+      "passed": true,
+      "details": "docs/电竞房布局与走线.md"
+    },
+    {
+      "name": "source_hash:guest-layout",
+      "passed": true,
+      "details": "docs/次卧与四套风格细节修订.md"
+    },
+    {
+      "name": "source_hash:latest-kitchen-reading",
+      "passed": true,
+      "details": "docs/窗边放松区与中式厨房_20261028.md"
+    },
+    {
+      "name": "source_hash:latest-style",
+      "passed": true,
+      "details": "docs/日光花园_风格整体优化_20261102.md"
+    },
+    {
+      "name": "source_hash:current-model-walls",
+      "passed": true,
+      "details": "src/model.ts"
+    },
+    {
+      "name": "source_hash:dimension-chain",
+      "passed": true,
+      "details": "src/dimensions.ts"
+    },
+    {
+      "name": "units_metres",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "scene_contains:rooms",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "scene_contains:walls",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "scene_contains:openings",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "scene_contains:furniture",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "scene_contains:cameras",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "scene_contains:outline",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "twenty_outer_vertices",
+      "passed": true,
+      "details": {
+        "actual": 20,
+        "expected": 20
+      }
+    },
+    {
+      "name": "outer_contour_coordinates",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "orthogonal_outer_contour",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "room_present:living",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "room_present:dining",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "room_present:master",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "room_present:study",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "room_present:guest",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "room_present:kitchen",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "room_present:bathroom",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "room_present:balcony",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "room_present:entry",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "master_six_vertex_physical_boundary",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "shared_solid_wall:study-living-solid",
+      "passed": true,
+      "details": {
+        "matchingWallIds": [
+          "wall-053",
+          "wall-054",
+          "wall-055"
+        ]
+      }
+    },
+    {
+      "name": "shared_solid_wall:master-study",
+      "passed": true,
+      "details": {
+        "matchingWallIds": [
+          "wall-047"
+        ]
+      }
+    },
+    {
+      "name": "exactly_nine_windows",
+      "passed": true,
+      "details": {
+        "actual": 9,
+        "expected": 9
+      }
+    },
+    {
+      "name": "window_position:guest-north",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_sill:guest-north",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_height:guest-north",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_position:bathroom-north-high",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_sill:bathroom-north-high",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_height:bathroom-north-high",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_position:dining-balcony-north",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_sill:dining-balcony-north",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_height:dining-balcony-north",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_position:kitchen-north",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_sill:kitchen-north",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_height:kitchen-north",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_position:kitchen-east",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_sill:kitchen-east",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_height:kitchen-east",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_position:living-step-east",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_sill:living-step-east",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_height:living-step-east",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_position:living-south",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_sill:living-south",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_height:living-south",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_position:master-south",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_sill:master-south",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_height:master-south",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_position:study-south",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_sill:study-south",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "window_height:study-south",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "door_position:guest-door",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "door_position:bathroom-door",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "door_position:master-door",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "door_position:study-door",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "door_position:entry-door",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "no_master_or_guest_side_windows",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "master_entrance_return:north-dressing-wall",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "master_entrance_return:east-short-return",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "kitchen_door_panel_count:west",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "kitchen_door_stacking:west",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "kitchen_door_default_open:west",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "kitchen_door_panel_count:south",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "kitchen_door_stacking:south",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "kitchen_door_default_open:south",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "kitchen_south_fixed_low_enclosure",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "kitchen_original_southeast_return_retained",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "furniture_inside_room:reading-chair",
+      "passed": true,
+      "details": {
+        "roomId": "living",
+        "footprint": [
+          [
+            7.409999999999999,
+            8.83
+          ],
+          [
+            6.63,
+            8.83
+          ],
+          [
+            6.63,
+            7.95
+          ],
+          [
+            7.409999999999999,
+            7.95
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:reading-chair",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:reading-chair",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:reading-ottoman",
+      "passed": true,
+      "details": {
+        "roomId": "living",
+        "footprint": [
+          [
+            6.795,
+            8.83
+          ],
+          [
+            7.244999999999999,
+            8.83
+          ],
+          [
+            7.244999999999999,
+            9.229999999999999
+          ],
+          [
+            6.795,
+            9.229999999999999
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:reading-ottoman",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:reading-ottoman",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:side-table",
+      "passed": true,
+      "details": {
+        "roomId": "living",
+        "footprint": [
+          [
+            6.47,
+            8.87
+          ],
+          [
+            6.79,
+            8.87
+          ],
+          [
+            6.79,
+            9.19
+          ],
+          [
+            6.47,
+            9.19
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:side-table",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:side-table",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:reading-lamp",
+      "passed": true,
+      "details": {
+        "roomId": "living",
+        "footprint": [
+          [
+            6.45,
+            8.6
+          ],
+          [
+            6.61,
+            8.6
+          ],
+          [
+            6.61,
+            8.76
+          ],
+          [
+            6.45,
+            8.76
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:reading-lamp",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:reading-lamp",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:living-coffee-table",
+      "passed": true,
+      "details": {
+        "roomId": "living",
+        "footprint": [
+          [
+            7.6000000000000005,
+            5.725
+          ],
+          [
+            8.3,
+            5.725
+          ],
+          [
+            8.3,
+            6.775
+          ],
+          [
+            7.6000000000000005,
+            6.775
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:living-coffee-table",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:living-coffee-table",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:coffee-mobile-power-strip",
+      "passed": true,
+      "details": {
+        "roomId": "dining",
+        "footprint": [
+          [
+            7.2525,
+            0.345
+          ],
+          [
+            7.2975,
+            0.345
+          ],
+          [
+            7.2975,
+            0.635
+          ],
+          [
+            7.2525,
+            0.635
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:coffee-mobile-power-strip",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:coffee-mobile-power-strip",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:south-prep-counter",
+      "passed": true,
+      "details": {
+        "roomId": "kitchen",
+        "footprint": [
+          [
+            11.23,
+            2.0
+          ],
+          [
+            12.580000000000002,
+            2.0
+          ],
+          [
+            12.580000000000002,
+            2.55
+          ],
+          [
+            11.23,
+            2.55
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:south-prep-counter",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:south-prep-counter",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:east-counter",
+      "passed": true,
+      "details": {
+        "roomId": "kitchen",
+        "footprint": [
+          [
+            11.979999999999999,
+            1.7000000000000002
+          ],
+          [
+            12.58,
+            1.7000000000000002
+          ],
+          [
+            12.58,
+            2.0
+          ],
+          [
+            11.979999999999999,
+            2.0
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:east-counter",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:east-counter",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:living-sofa",
+      "passed": true,
+      "details": {
+        "roomId": "living",
+        "footprint": [
+          [
+            8.69,
+            5.225
+          ],
+          [
+            9.610000000000001,
+            5.225
+          ],
+          [
+            9.610000000000001,
+            7.275
+          ],
+          [
+            8.69,
+            7.275
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:living-sofa",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:living-sofa",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:tv-console",
+      "passed": true,
+      "details": {
+        "roomId": "living",
+        "footprint": [
+          [
+            6.51,
+            5.35
+          ],
+          [
+            6.93,
+            5.35
+          ],
+          [
+            6.93,
+            7.15
+          ],
+          [
+            6.51,
+            7.15
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:tv-console",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:tv-console",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:dining-table",
+      "passed": true,
+      "details": {
+        "roomId": "dining",
+        "footprint": [
+          [
+            7.73,
+            1.0
+          ],
+          [
+            8.43,
+            1.0
+          ],
+          [
+            8.43,
+            2.2
+          ],
+          [
+            7.73,
+            2.2
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:dining-table",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:dining-table",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:dining-bench",
+      "passed": true,
+      "details": {
+        "roomId": "dining",
+        "footprint": [
+          [
+            7.25,
+            1.0
+          ],
+          [
+            7.609999999999999,
+            1.0
+          ],
+          [
+            7.609999999999999,
+            2.2
+          ],
+          [
+            7.25,
+            2.2
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:dining-bench",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:dining-bench",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:dining-chair-north",
+      "passed": true,
+      "details": {
+        "roomId": "dining",
+        "footprint": [
+          [
+            7.865,
+            0.44000000000000006
+          ],
+          [
+            8.295,
+            0.44000000000000006
+          ],
+          [
+            8.295,
+            0.88
+          ],
+          [
+            7.865,
+            0.88
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:dining-chair-north",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:dining-chair-north",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:dining-chair-south",
+      "passed": true,
+      "details": {
+        "roomId": "dining",
+        "footprint": [
+          [
+            7.865,
+            2.32
+          ],
+          [
+            8.295,
+            2.32
+          ],
+          [
+            8.295,
+            2.7600000000000002
+          ],
+          [
+            7.865,
+            2.7600000000000002
+          ]
+        ],
+        "allowedOpenZoneCrossings": [
+          "entry"
+        ]
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:dining-chair-south",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:dining-chair-south",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:coffee-sideboard",
+      "passed": true,
+      "details": {
+        "roomId": "dining",
+        "footprint": [
+          [
+            7.25,
+            -0.85
+          ],
+          [
+            7.75,
+            -0.85
+          ],
+          [
+            7.75,
+            0.65
+          ],
+          [
+            7.25,
+            0.65
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:coffee-sideboard",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:coffee-sideboard",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:master-bed",
+      "passed": true,
+      "details": {
+        "roomId": "master",
+        "footprint": [
+          [
+            0.5700000000000001,
+            6.775
+          ],
+          [
+            2.5300000000000002,
+            6.775
+          ],
+          [
+            2.5300000000000002,
+            9.005
+          ],
+          [
+            0.5700000000000001,
+            9.005
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:master-bed",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:master-bed",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:master-wardrobe",
+      "passed": true,
+      "details": {
+        "roomId": "master",
+        "footprint": [
+          [
+            0.345,
+            5.55
+          ],
+          [
+            2.0949999999999998,
+            5.55
+          ],
+          [
+            2.0949999999999998,
+            6.1499999999999995
+          ],
+          [
+            0.345,
+            6.1499999999999995
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:master-wardrobe",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:master-wardrobe",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:master-dressing-cabinet",
+      "passed": true,
+      "details": {
+        "roomId": "master",
+        "footprint": [
+          [
+            0.010000000000000009,
+            4.21
+          ],
+          [
+            0.49,
+            4.21
+          ],
+          [
+            0.49,
+            5.53
+          ],
+          [
+            0.010000000000000009,
+            5.53
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:master-dressing-cabinet",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:master-dressing-cabinet",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:guest-chair",
+      "passed": true,
+      "details": {
+        "roomId": "guest",
+        "footprint": [
+          [
+            3.8599999999999994,
+            1.4
+          ],
+          [
+            4.42,
+            1.4
+          ],
+          [
+            4.42,
+            1.96
+          ],
+          [
+            3.8599999999999994,
+            1.96
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:guest-chair",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:guest-chair",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:gaming-chair",
+      "passed": true,
+      "details": {
+        "roomId": "study",
+        "footprint": [
+          [
+            4.45,
+            6.76
+          ],
+          [
+            5.13,
+            6.76
+          ],
+          [
+            5.13,
+            7.4399999999999995
+          ],
+          [
+            4.45,
+            7.4399999999999995
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:gaming-chair",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:gaming-chair",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:master-nightstand-left",
+      "passed": true,
+      "details": {
+        "roomId": "master",
+        "footprint": [
+          [
+            0.07,
+            8.420000000000002
+          ],
+          [
+            0.5700000000000001,
+            8.420000000000002
+          ],
+          [
+            0.5700000000000001,
+            8.920000000000002
+          ],
+          [
+            0.07,
+            8.920000000000002
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:master-nightstand-left",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:master-nightstand-left",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:master-nightstand-right",
+      "passed": true,
+      "details": {
+        "roomId": "master",
+        "footprint": [
+          [
+            2.5700000000000003,
+            8.420000000000002
+          ],
+          [
+            3.0700000000000003,
+            8.420000000000002
+          ],
+          [
+            3.0700000000000003,
+            8.920000000000002
+          ],
+          [
+            2.5700000000000003,
+            8.920000000000002
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:master-nightstand-right",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:master-nightstand-right",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:guest-bed",
+      "passed": true,
+      "details": {
+        "roomId": "guest",
+        "footprint": [
+          [
+            2.1,
+            0.5
+          ],
+          [
+            3.3000000000000003,
+            0.5
+          ],
+          [
+            3.3000000000000003,
+            2.6
+          ],
+          [
+            2.1,
+            2.6
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:guest-bed",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:guest-bed",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:guest-desk",
+      "passed": true,
+      "details": {
+        "roomId": "guest",
+        "footprint": [
+          [
+            4.475,
+            0.4700000000000002
+          ],
+          [
+            5.125,
+            0.4700000000000002
+          ],
+          [
+            5.125,
+            2.77
+          ],
+          [
+            4.475,
+            2.77
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:guest-desk",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:guest-desk",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:guest-wardrobe",
+      "passed": true,
+      "details": {
+        "roomId": "guest",
+        "footprint": [
+          [
+            2.1,
+            3.1500000000000004
+          ],
+          [
+            3.8000000000000003,
+            3.1500000000000004
+          ],
+          [
+            3.8000000000000003,
+            3.75
+          ],
+          [
+            2.1,
+            3.75
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:guest-wardrobe",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:guest-wardrobe",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:gaming-desk",
+      "passed": true,
+      "details": {
+        "roomId": "study",
+        "footprint": [
+          [
+            3.52,
+            6.1
+          ],
+          [
+            4.27,
+            6.1
+          ],
+          [
+            4.27,
+            7.9
+          ],
+          [
+            3.52,
+            7.9
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:gaming-desk",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:gaming-desk",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:display-cabinet",
+      "passed": true,
+      "details": {
+        "roomId": "study",
+        "footprint": [
+          [
+            3.6750000000000003,
+            5.305
+          ],
+          [
+            4.7250000000000005,
+            5.305
+          ],
+          [
+            4.7250000000000005,
+            5.705
+          ],
+          [
+            3.6750000000000003,
+            5.705
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:display-cabinet",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:display-cabinet",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:north-counter",
+      "passed": true,
+      "details": {
+        "roomId": "kitchen",
+        "footprint": [
+          [
+            9.49,
+            0.14
+          ],
+          [
+            11.790000000000001,
+            0.14
+          ],
+          [
+            11.790000000000001,
+            0.74
+          ],
+          [
+            9.49,
+            0.74
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:north-counter",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:north-counter",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:refrigerator",
+      "passed": true,
+      "details": {
+        "roomId": "kitchen",
+        "footprint": [
+          [
+            11.83,
+            0.14
+          ],
+          [
+            12.53,
+            0.14
+          ],
+          [
+            12.53,
+            0.84
+          ],
+          [
+            11.83,
+            0.84
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:refrigerator",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:refrigerator",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:washer",
+      "passed": true,
+      "details": {
+        "roomId": "bathroom",
+        "footprint": [
+          [
+            5.365,
+            2.02
+          ],
+          [
+            6.055,
+            2.02
+          ],
+          [
+            6.055,
+            2.6199999999999997
+          ],
+          [
+            5.365,
+            2.6199999999999997
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:washer",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:washer",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:basin",
+      "passed": true,
+      "details": {
+        "roomId": "bathroom",
+        "footprint": [
+          [
+            5.38,
+            2.75
+          ],
+          [
+            6.04,
+            2.75
+          ],
+          [
+            6.04,
+            3.45
+          ],
+          [
+            5.38,
+            3.45
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:basin",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:basin",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:toilet",
+      "passed": true,
+      "details": {
+        "roomId": "bathroom",
+        "footprint": [
+          [
+            5.4,
+            1.32
+          ],
+          [
+            6.1,
+            1.32
+          ],
+          [
+            6.1,
+            1.82
+          ],
+          [
+            5.4,
+            1.82
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:toilet",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:toilet",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_inside_room:shower",
+      "passed": true,
+      "details": {
+        "roomId": "bathroom",
+        "footprint": [
+          [
+            5.4,
+            0.13
+          ],
+          [
+            6.98,
+            0.13
+          ],
+          [
+            6.98,
+            1.1099999999999999
+          ],
+          [
+            5.4,
+            1.1099999999999999
+          ]
+        ],
+        "allowedOpenZoneCrossings": []
+      }
+    },
+    {
+      "name": "furniture_clear_of_walls:shower",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "furniture_clear_of_door_thresholds:shower",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "placement_rule:guest-bed-west-of-desk",
+      "passed": true,
+      "details": [
+        2.7,
+        4.8
+      ]
+    },
+    {
+      "name": "placement_rule:gaming-desk-near-master-wall",
+      "passed": true,
+      "details": {
+        "actual": 3.895,
+        "range": [
+          3.7,
+          4.05
+        ]
+      }
+    },
+    {
+      "name": "placement_rule:dining-bench-west-of-table",
+      "passed": true,
+      "details": [
+        7.43,
+        8.08
+      ]
+    },
+    {
+      "name": "placement_rule:coffee-west-side",
+      "passed": true,
+      "details": {
+        "actual": 7.5,
+        "range": [
+          7.35,
+          7.55
+        ]
+      }
+    },
+    {
+      "name": "placement_rule:coffee-north-end",
+      "passed": true,
+      "details": {
+        "actual": -0.1,
+        "range": [
+          -0.2,
+          0.2
+        ]
+      }
+    },
+    {
+      "name": "placement_rule:sofa-east-of-tv",
+      "passed": true,
+      "details": [
+        6.72,
+        9.15
+      ]
+    },
+    {
+      "name": "placement_rule:sofa-tv-opposite",
+      "passed": true,
+      "details": [
+        6.25,
+        6.25
+      ]
+    },
+    {
+      "name": "placement_rule:reading-at-living-south",
+      "passed": true,
+      "details": {
+        "actual": 8.39,
+        "range": [
+          8.0,
+          9.1
+        ]
+      }
+    },
+    {
+      "name": "placement_rule:kitchen-ne-fridge-x",
+      "passed": true,
+      "details": {
+        "actual": 12.18,
+        "range": [
+          12.05,
+          12.3
+        ]
+      }
+    },
+    {
+      "name": "placement_rule:kitchen-ne-fridge-z",
+      "passed": true,
+      "details": {
+        "actual": 0.49,
+        "range": [
+          0.42,
+          0.6
+        ]
+      }
+    },
+    {
+      "name": "placement_rule:bathroom-north-to-south",
+      "passed": true,
+      "details": [
+        0.62,
+        1.57,
+        2.32,
+        3.1
+      ]
+    },
+    {
+      "name": "kitchen_south_door_abuts_prep_counter",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "kitchen_south_counter_135_by_55",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "kitchen_north_counter_230_by_60",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "kitchen_L_joint_continuous",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "kitchen_counter_static_clearance",
+      "passed": true,
+      "details": {
+        "actualM": 1.26,
+        "nominalDocumentM": 1.29,
+        "basis": "actual exported anchors; nominal is approximate and not surveyed"
+      }
+    },
+    {
+      "name": "kitchen_south_door_static_opening",
+      "passed": true,
+      "details": {
+        "actualM": 1.39,
+        "documentTargetRangeM": [
+          1.25,
+          1.3
+        ],
+        "dynamicUseNotIncluded": true
+      }
+    },
+    {
+      "name": "reading_static_east_access_clearance",
+      "passed": true,
+      "details": {
+        "actualM": 0.98,
+        "targetMinimumM": 0.85,
+        "scope": "declared floor footprints; no person or chair movement included"
+      }
+    },
+    {
+      "name": "guest_static_bed_desk_aisle",
+      "passed": true,
+      "details": {
+        "actualM": 1.175,
+        "chairExcluded": true
+      }
+    },
+    {
+      "name": "guest_static_chair_back_gap",
+      "passed": true,
+      "details": {
+        "actualM": 0.56,
+        "onePersonUse": true,
+        "chairMustTuckForPassing": true
+      }
+    },
+    {
+      "name": "gaming_static_chair_back_gap",
+      "passed": true,
+      "details": {
+        "actualM": 1.09,
+        "scope": "current chair placement, no pullback included"
+      }
+    },
+    {
+      "name": "camera_inside_room:living",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "camera_eye_height:living",
+      "passed": true,
+      "details": 1.58
+    },
+    {
+      "name": "camera_inside_room:dining",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "camera_eye_height:dining",
+      "passed": true,
+      "details": 1.58
+    },
+    {
+      "name": "camera_inside_room:kitchen",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "camera_eye_height:kitchen",
+      "passed": true,
+      "details": 1.58
+    },
+    {
+      "name": "camera_inside_room:master",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "camera_eye_height:master",
+      "passed": true,
+      "details": 1.58
+    },
+    {
+      "name": "camera_inside_room:study",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "camera_eye_height:study",
+      "passed": true,
+      "details": 1.58
+    },
+    {
+      "name": "camera_inside_room:guest",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "camera_eye_height:guest",
+      "passed": true,
+      "details": 1.58
+    },
+    {
+      "name": "camera_inside_room:bathroom",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "camera_eye_height:bathroom",
+      "passed": true,
+      "details": 1.58
+    },
+    {
+      "name": "camera_inside_room:living-detail",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "camera_eye_height:living-detail",
+      "passed": true,
+      "details": 1.42
+    },
+    {
+      "name": "camera_inside_room:dining-detail",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "camera_eye_height:dining-detail",
+      "passed": true,
+      "details": 1.48
+    }
+  ],
+  "warnings": [
+    "当前坐标实际对向台面静态净距1.26m；10月28日文档约数为1.29m，二者未冒充相同实测值。",
+    "当前南门组按锚点得到静态开口1.39m；旧拟定目标约1.25–1.30m，差异来自边界/叠收约数，不是现场复测。",
+    "原始尺寸照片有透视且缺尺寸，不能按单一像素比例补齐。",
+    "墙厚、层高、门窗宽高、窗台及部分偏移为当前模型假设。",
+    "地理北向、日照、承重属性未确认；图纸上方不是已确认地理北。",
+    "自动核验仅覆盖导出确定性几何、声明家具footprint及开口，不覆盖AI像素。",
+    "家具产品未选定，活动门扇、抽屉和人体动态净距仍需现场深化。",
+    "风格效果图可目视筛选结构偏差，不能替代施工图与现场复核。"
+  ],
+  "visualReview": {
+    "status": "pending",
+    "file": "visual-review.json",
+    "notCoveredByGeometryChecks": true
+  },
+  "artifactAuditIncluded": false
+}

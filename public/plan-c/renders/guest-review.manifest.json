@@ -1,0 +1,25 @@
+{
+  "project_id": "home1_sunlit",
+  "scene_revision": 1,
+  "scene_hash": "faa0addceab80e3f0c4af8299881edc7686572582853b7c92f1cb0c3a512076c",
+  "build_id": "build_bfea00ba37c139d7",
+  "render_job_id": "render_5d00fe5556db562a",
+  "camera_id": "camera_guest_still",
+  "render_profile_id": "preview_fast",
+  "projection": "perspective",
+  "resolution_px": [
+    960,
+    540
+  ],
+  "samples": 24,
+  "render_engine": "CYCLES",
+  "device": "CPU",
+  "blender_version": "4.5.3 LTS",
+  "image_uri": "guest-review.png",
+  "file_sha256": "9705dc0809f5685fe64146ea0cad692c58c169a3d03da1b7fbd30c57427f1331",
+  "duration_s": 27.51,
+  "quality_status": "preview_only",
+  "created_at_unix": 1793323747.5072005,
+  "render_script_sha256": "8e00c38bf9b95aa29cdf540312a2151cd816d84db2976a3f47217e0e9248d0b8",
+  "project_blend_sha256": "2c353348c7ab8344dcf7853d8ae0c09730b8cd98ec725a0f8dc644b92de0bbda"
+}

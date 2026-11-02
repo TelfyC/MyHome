@@ -1,0 +1,1045 @@
+{
+  "date": "2026-10-27",
+  "method": "AI super-resolution; inferred, not native render detail",
+  "model": "Real-ESRGAN general-wdn-x4v3",
+  "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+  "source_repository": "https://github.com/xinntao/Real-ESRGAN",
+  "records": [
+    {
+      "style": "forest",
+      "room": "living",
+      "source": "public/panoramas/forest/living.jpg",
+      "source_sha256": "57b157d7112ecc417589fc5396e8dbc1f73fecc7bed01ad5c5f426603812478c",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 1.0563,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/forest/living.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 6251963,
+          "sha256": "2a356e9045559a40518883a011793c6b8864d3e78805383029cc3047cca63412"
+        },
+        {
+          "path": "public/panoramas-hd/forest/living-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1930814,
+          "sha256": "e5d70990592420a7db1f4dbdc8709f96efee6fe3fbdfee3ecbc661f1167e09b6"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/forest/living-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "forest",
+      "room": "dining",
+      "source": "public/panoramas/forest/dining.jpg",
+      "source_sha256": "56ce678f4adb960dd2327c9123cd4d6954ff7b7d0a6da3ff5b27b2786c2b4392",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.6669,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/forest/dining.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 4806371,
+          "sha256": "2598f671f435dca89553d3d97c7dfa20ffa6397f96ea69571bd1dc6e73bd2062"
+        },
+        {
+          "path": "public/panoramas-hd/forest/dining-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1449594,
+          "sha256": "7e15d74947d3763996a58486b4aff3366a8ee59dfca8e67d097bcaa8574bab9b"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/forest/dining-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "forest",
+      "room": "master",
+      "source": "public/panoramas/forest/master.jpg",
+      "source_sha256": "acebe705c42b4187255f6ac82d2e1dad4558609260d6f788524482371e0591f6",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.5639,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/forest/master.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 4299204,
+          "sha256": "339e5a3523f2f9c0de3400cad84a6064434d69ed347997d15c93f74b31c0e15b"
+        },
+        {
+          "path": "public/panoramas-hd/forest/master-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1252871,
+          "sha256": "fc3e55d6b4875d4f8624c8f55324bce2d433bb60a0ad74a4a7991f8f50265e08"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/forest/master-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "forest",
+      "room": "study",
+      "source": "public/panoramas/forest/study.jpg",
+      "source_sha256": "15bffdae41d6ba57ffa795bcce75ebb70718eb3fa3cf6d08aafc59f4d110aa36",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.7516,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/forest/study.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 5555032,
+          "sha256": "d1b502bd0ce902b182f912eff72ea4aadb13cefd5dfeb6cea35da4b5b553ba5a"
+        },
+        {
+          "path": "public/panoramas-hd/forest/study-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1613887,
+          "sha256": "bbaa3579ded569bf21eecbdef2167f9c623f549452c3b72c8d96cedab415c5ef"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/forest/study-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "forest",
+      "room": "guest",
+      "source": "public/panoramas/forest/guest.jpg",
+      "source_sha256": "71d4688e9f328f87769a77444466a414e7f4ea24e75e1163ecb197556c8f3b16",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 1.1575,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/forest/guest.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 5934458,
+          "sha256": "6bab317cf0e6d6658355f99593d7639fa8a44d74bfe369b434d6cbfd93e2c737"
+        },
+        {
+          "path": "public/panoramas-hd/forest/guest-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1873514,
+          "sha256": "f6eb4d840f4a5fe92b0dc913b76c370db25b0b8c9fdf146e0dbc46322acc91d0"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/forest/guest-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "forest",
+      "room": "kitchen",
+      "source": "public/panoramas/forest/kitchen.jpg",
+      "source_sha256": "3ccb39aa58f8ee1b5cb3cde82ca1fed8f2cafa80333c27545255e95e2409a6a5",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.6594,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/forest/kitchen.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 4871664,
+          "sha256": "42ecf203b481ce76bde55300bc593d97843fd466f1fcb23c13d8610d1ad8097d"
+        },
+        {
+          "path": "public/panoramas-hd/forest/kitchen-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1452711,
+          "sha256": "c70d793bc250e6635d0fdaf16a787724ea21c0daa02417e92a2a1f0112d4d2b3"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/forest/kitchen-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "forest",
+      "room": "bathroom",
+      "source": "public/panoramas/forest/bathroom.jpg",
+      "source_sha256": "342450fd6737a0aa47f8b0852363a107d4da670c538c297759db487ea93cc216",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.5286,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/forest/bathroom.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 4388995,
+          "sha256": "50b3486b782e2d532e67cb35ebe3baeeda0bddab846a0161d64a11a2bc4793b2"
+        },
+        {
+          "path": "public/panoramas-hd/forest/bathroom-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1268948,
+          "sha256": "de25c1e08cf09a0700fed74996be935ba952f1525397a163a31d5052f8cd012e"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/forest/bathroom-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "japanese",
+      "room": "living",
+      "source": "public/panoramas/japanese/living.jpg",
+      "source_sha256": "57a7737a53e96536f0a914a719fd5e5c6ba88f6c4ac23e86916224dbea0e3543",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.7707,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/japanese/living.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 5173549,
+          "sha256": "1de0239c8bb63744b5be63abc0bf1b98e47e14ec82f8f0a645fe6826b5bb39a0"
+        },
+        {
+          "path": "public/panoramas-hd/japanese/living-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1533724,
+          "sha256": "181d260ccbcdf59825f82732ff6d93d46ce9902ab4c484a32ff2b11ba2ffcbd9"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/japanese/living-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "japanese",
+      "room": "dining",
+      "source": "public/panoramas/japanese/dining.jpg",
+      "source_sha256": "25b3a5868c9d1535f32084a18a1b101ae6b7fb3e47b1ee9725568d0ebaa01668",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.7505,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/japanese/dining.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 5059521,
+          "sha256": "6ab759e5f0b2eb58d19c12d3ef53d8adf8d845847a36eb52233d5005d1a028f9"
+        },
+        {
+          "path": "public/panoramas-hd/japanese/dining-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1474955,
+          "sha256": "02f56b8ccef76edc54ec19c6528b393b121a7d1902c3193bcf529e8bc9d0dc24"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/japanese/dining-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "japanese",
+      "room": "master",
+      "source": "public/panoramas/japanese/master.jpg",
+      "source_sha256": "18d72e178a82405eb8d6439135a62ac4b60b7d6cb8fc0f08d7670fc2ed24d740",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.5647,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/japanese/master.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 4499244,
+          "sha256": "56261f47ccf99fdc9fcbe214159c0866d16c4badf4c67b8bbb86920fe539a492"
+        },
+        {
+          "path": "public/panoramas-hd/japanese/master-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1235186,
+          "sha256": "911f803ead5b56c76afc6fa93aa6d310e2548aaa473561bd00c1e031cb2619af"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/japanese/master-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "japanese",
+      "room": "study",
+      "source": "public/panoramas/japanese/study.jpg",
+      "source_sha256": "30f71004926eb4a83dc6537cdd64e9521562efb4c2ff5fb5af8bb61fd2f71d78",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.6365,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/japanese/study.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 4944932,
+          "sha256": "8fc5c93f17e18d2a1d0118427bbaf3d3813cb33d6b7b167ffcc4b96b2d2d44c6"
+        },
+        {
+          "path": "public/panoramas-hd/japanese/study-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1408918,
+          "sha256": "bc6fb775906cdab8043b2abff6999d79d16b86170a4768b7b15473f96efb5d5d"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/japanese/study-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "japanese",
+      "room": "guest",
+      "source": "public/panoramas/japanese/guest.jpg",
+      "source_sha256": "26f8d75f42beaed7823d90a48d84216dbb9594da8a0ed9c8ebd20a0503fd173c",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 1.0907,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/japanese/guest.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 5750780,
+          "sha256": "4d16fa687c24d9cd83617c89d5ce015b7355a79d7d015b46fafdd7b205f1c8d1"
+        },
+        {
+          "path": "public/panoramas-hd/japanese/guest-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1830393,
+          "sha256": "f12639df0aad324094f4747400db00248f63abcda7fa29fafc8fc9e172588ea7"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/japanese/guest-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "japanese",
+      "room": "kitchen",
+      "source": "public/panoramas/japanese/kitchen.jpg",
+      "source_sha256": "ee1596b18cfe382eb18af7e442c3ce568f100e819de50d03ece6ed6995ca8001",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.7529,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/japanese/kitchen.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 4791623,
+          "sha256": "f9fa00fa1c9d53859b17fb6514296aaa7701463566df091ded46de215e8c778f"
+        },
+        {
+          "path": "public/panoramas-hd/japanese/kitchen-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1455330,
+          "sha256": "7d2e95dd93931e5bc942a22a1d30a687700412701829f42f1c6fea6bf5c88875"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/japanese/kitchen-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "japanese",
+      "room": "bathroom",
+      "source": "public/panoramas/japanese/bathroom.jpg",
+      "source_sha256": "89eac3d318472f82fe40f1e7ab8f47dfc38541b45d6c81f40dbbad10a16670e4",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.5731,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/japanese/bathroom.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 4363740,
+          "sha256": "8a33a29858caf98ca5ee41a0c4e2c6d6a3b1aa116c48e959810ab8ba9104a6ef"
+        },
+        {
+          "path": "public/panoramas-hd/japanese/bathroom-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1231251,
+          "sha256": "a5be7a803b7af976c0a55529891a9e3551f642333938025f4cdeafd9bf3ebd56"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/japanese/bathroom-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "french",
+      "room": "living",
+      "source": "public/panoramas/french/living.jpg",
+      "source_sha256": "73b0eedf30e521814eb5599225eb362fa420a0ef637c205ed851a124ad11b0e4",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.7927,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/french/living.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 5919269,
+          "sha256": "d5fed840ec0154e7718cea45f936038bff73aeb8f8c82640e1e4f5f9a88fc277"
+        },
+        {
+          "path": "public/panoramas-hd/french/living-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1812882,
+          "sha256": "1d2ca79f69db1121bbb346f36e3912204bb563046a94568bc2062e6cae4c2813"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/french/living-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "french",
+      "room": "dining",
+      "source": "public/panoramas/french/dining.jpg",
+      "source_sha256": "729bce8d2e00d40fa47fbe7854780f65b8df62ed6645f4c1bad0830cecc3b149",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.5344,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/french/dining.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 4294850,
+          "sha256": "a7c4e2fb83e0d1e1339c12f558defca36f91f29a898626eded6d8f46a6012e53"
+        },
+        {
+          "path": "public/panoramas-hd/french/dining-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1316562,
+          "sha256": "f611af4fc5839e88863b3a81f8b4858e6a7c52bf21a7131c8730c8421282375b"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/french/dining-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "french",
+      "room": "master",
+      "source": "public/panoramas/french/master.jpg",
+      "source_sha256": "95538aa51d8b5bf5cbf49bfcacaa842c8e644cced26b6f391b06cc9f5f7040a6",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.4771,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/french/master.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 4264712,
+          "sha256": "1c2743f4ed04991bdff8e5549d4cb262e7be3936b248829713b75908ef64be0f"
+        },
+        {
+          "path": "public/panoramas-hd/french/master-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1244097,
+          "sha256": "b91ba40c0cd1976779c47ea473825851a75988b935b3f9851d7ac5bdbe60bdcd"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/french/master-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "french",
+      "room": "study",
+      "source": "public/panoramas/french/study.jpg",
+      "source_sha256": "90b7909fc204d9e0a88c07c8c637059843b64233677ded06440a88d89bfec8fb",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.553,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/french/study.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 4754597,
+          "sha256": "a98f714cb652fdfd8a1f240ec47238b04e63478a99e60c71c3ea4ffbafadd402"
+        },
+        {
+          "path": "public/panoramas-hd/french/study-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1379132,
+          "sha256": "c95bcb83bcd0f3546135e519f832fbf9672b0bf187ec36f4433e7793909f3ef2"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/french/study-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "french",
+      "room": "guest",
+      "source": "public/panoramas/french/guest.jpg",
+      "source_sha256": "857ba8471731f02918d9d2a7914de7db33ca551a344e0b04ccebeff0d2041a14",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.9004,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/french/guest.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 5854260,
+          "sha256": "0a3b04b485fa68231e40fd303a0ea593cd9db46cdab963190f2c2ce4c0d80b1c"
+        },
+        {
+          "path": "public/panoramas-hd/french/guest-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1836875,
+          "sha256": "8f7f816dc14fe2610e4e2393e6397c5ae782609fd7d39cd3e4c94d281b5a5efb"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/french/guest-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "french",
+      "room": "kitchen",
+      "source": "public/panoramas/french/kitchen.jpg",
+      "source_sha256": "7ac628847de8fcbdacb3f8dbe4cfac9a1a0636c360ec97fd1b07127a70c7bb8f",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.518,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/french/kitchen.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 4215606,
+          "sha256": "3cb3be1fad076ab474b7b2731605e7df9acdd70a834e39c1e0a977987b81394d"
+        },
+        {
+          "path": "public/panoramas-hd/french/kitchen-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1264358,
+          "sha256": "6088ff848bef1e77dfedc07c8a4010735309d8456fd0f9282bd4aa9915ff86ba"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/french/kitchen-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "french",
+      "room": "bathroom",
+      "source": "public/panoramas/french/bathroom.jpg",
+      "source_sha256": "36e48cf7868d3b5653385e1af89a9530924b403c12bf78ed72138a0a74ba5810",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.4601,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/french/bathroom.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 4309948,
+          "sha256": "e91909351ce70037762d3c21e86bf8e23ffd5d6b6c3ac76bf48592ec5a67afc9"
+        },
+        {
+          "path": "public/panoramas-hd/french/bathroom-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1277511,
+          "sha256": "b518201536a0de27ef4bfc7163e46c2a2f17b9583db8e72bc701a120afef3b88"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/french/bathroom-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "sunlit",
+      "room": "living",
+      "source": "public/panoramas/sunlit/living.jpg",
+      "source_sha256": "d13e39507db09025368448ebb9dbb039fe9d2665620622e8cd9f400c58cd5f28",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.6397,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/sunlit/living.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 5450974,
+          "sha256": "533b7842a907c8ea33ec9d6b860f17c8514eddb3ceadc9cdfba0d28556edbe0e"
+        },
+        {
+          "path": "public/panoramas-hd/sunlit/living-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1725660,
+          "sha256": "7ef9dd1be24cf6702902ca87dde3089441b2ca8e883f8694ab3fe4a2ab5b865f"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/sunlit/living-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "sunlit",
+      "room": "dining",
+      "source": "public/panoramas/sunlit/dining.jpg",
+      "source_sha256": "027df9325b58c6fc0452c7bcfdcb74453af53fd4de069b4808600c1feb4ad481",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.532,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/sunlit/dining.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 4470037,
+          "sha256": "ab9172071ae06cd592ac7bfd1fb44ce2b0c6c55eae8a3d470749f4cc51083f83"
+        },
+        {
+          "path": "public/panoramas-hd/sunlit/dining-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1339245,
+          "sha256": "2374b004517b969794f6c3ff9e9bf4f79100f7b3569b04296eb05bbd8a31cb41"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/sunlit/dining-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "sunlit",
+      "room": "master",
+      "source": "public/panoramas/sunlit/master.jpg",
+      "source_sha256": "c8580fea1fc43ac79c61047544235309e66253381c43b4642a9f505f2439d691",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.4743,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/sunlit/master.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 4286658,
+          "sha256": "a8a956826d2fef9742c3dd500d1092c270d994378d6b5f024cf50dfa69489809"
+        },
+        {
+          "path": "public/panoramas-hd/sunlit/master-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1241041,
+          "sha256": "dab16a9d304d3bd919bd654f9479d3fc183003852c5eeff94af900b23f220171"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/sunlit/master-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "sunlit",
+      "room": "study",
+      "source": "public/panoramas/sunlit/study.jpg",
+      "source_sha256": "a1165d25b9af2433c31d46683bc6e60eb94e8f725d9d21c9da29736ad08768a0",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.468,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/sunlit/study.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 4224305,
+          "sha256": "19d90ec86120bc18ad7596c26716cca7d6a4c4229bc12216084d5cf0f99b2883"
+        },
+        {
+          "path": "public/panoramas-hd/sunlit/study-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1264229,
+          "sha256": "f73e44305015dbca9ad5cfa37a3a2dd78cf523e125b3fce34c520e4f80628118"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/sunlit/study-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "sunlit",
+      "room": "guest",
+      "source": "public/panoramas/sunlit/guest.jpg",
+      "source_sha256": "540baf6aa617aeac0e126e64843e2debcf9b5c202ed192d292b6e5bc0cd67d89",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.7378,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/sunlit/guest.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 5347580,
+          "sha256": "c03b823da12fa60a6670ee532e284331454130bd7254a418ff13e0a9274461d4"
+        },
+        {
+          "path": "public/panoramas-hd/sunlit/guest-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1677076,
+          "sha256": "141ae3b4040607a621d58b027eb5b4fa6868832507931f31e4b6616598f7d53a"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/sunlit/guest-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "sunlit",
+      "room": "kitchen",
+      "source": "public/panoramas/sunlit/kitchen.jpg",
+      "source_sha256": "5e973fc3bc889ffedc59256caf6b517eba26464d1ddcc1daed385113d2ffb562",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.5185,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/sunlit/kitchen.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 4542111,
+          "sha256": "fb973f7588545b83acb28ff693976b9dd3004c7210a6f97cc0e52a41d671cb3c"
+        },
+        {
+          "path": "public/panoramas-hd/sunlit/kitchen-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1384488,
+          "sha256": "2520b119f8d6b19eb7ca274a499075747028e94f920a5491e0e697a6e07eee78"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/sunlit/kitchen-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    },
+    {
+      "style": "sunlit",
+      "room": "bathroom",
+      "source": "public/panoramas/sunlit/bathroom.jpg",
+      "source_sha256": "f4c135ae62c977921ec7108733578aa15ee6838072296d8220dd72cb0a54fca7",
+      "source_dimensions": [
+        1774,
+        887
+      ],
+      "model_sha256": "5073c57599850fe59320473ab5e07a91ac7de3af916ef44d5eef2218c7d0b33a",
+      "strength": 0.85,
+      "low_frequency_color_mae_255": 0.5243,
+      "assets": [
+        {
+          "path": "public/panoramas-hd/sunlit/bathroom.jpg",
+          "dimensions": [
+            7096,
+            3548
+          ],
+          "bytes": 4495804,
+          "sha256": "a0ee26d03054d4f9f8066fd3d483a97e3975afd4359de366d466219ae0648550"
+        },
+        {
+          "path": "public/panoramas-hd/sunlit/bathroom-2x.jpg",
+          "dimensions": [
+            3548,
+            1774
+          ],
+          "bytes": 1311580,
+          "sha256": "2347115f2d492817e41b590e60a8c3870cc88b4a1f976466fa79631873b63aa9"
+        }
+      ],
+      "master": "artifacts/panorama-superres-20261027/sunlit/bathroom-wdn-4x-master.png",
+      "tile": 256,
+      "halo": 40,
+      "longitude_padding": "periodic"
+    }
+  ]
+}

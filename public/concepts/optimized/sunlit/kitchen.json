@@ -1,0 +1,29 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-11-02",
+  "useCase": "precise-object-edit",
+  "room": "kitchen",
+  "inputs": [
+    "public/concepts/sunlit/kitchen.png"
+  ],
+  "prompt": "Use case: precise-object-edit.\nAsset type: coordinated Sunlit Garden kitchen concept refinement.\nInput image: Image 1 is the EDIT TARGET, the existing small enclosed kitchen concept.\nPrimary request: Refine materials, practical styling and joinery while preserving the exact same camera, room dimensions, architecture, windows, clear glass kitchen enclosure, gas hob/hood, sink, floor-standing refrigerator, all existing cabinet footprint and usable aisle. Change ONLY the tall wall cabinets above the extractor from full pale honey oak doors to matte WARM IVORY/WHITE flat doors, with exact current division lines, dimensions and extractor underside. This reduces uniform pale wood and connects this kitchen to the dining room's white coffee cabinet. Keep every lower cupboard in natural pale honey oak, fine grain and aligned edge gaps. Keep all worktops pale warm-white stone and all backsplash square tiles warm white with light warm grey grout.\nSmall styling refinements: make the small existing condiment tray between sink and hob matte deep warm chestnut brown, matching a dark cherry dining table finish around #6b4435, as one tiny repeat. Use restrained cream/sage ceramic utensils jar. Keep utensil handles contained and a clear stretch of prep counter. Keep the existing off-white pot and black pan on the gas hob, plausible burner/hood alignment. On the right side keep rice cooker and a small wooden cutting board with sparse herbs but move any foliage so it does not crowd rice cooker lid/steam path; the plant can be omitted rather than filling that spot. Keep the sink surroundings uncluttered, fine ivory/sage striped tea towel draped over cabinet edge clear of cooking flame. No more appliances or ornaments.\nCritical physical details: refrigerator remains standing directly on FLOOR in its exact current space, never on top of or intersecting a worktop; preserve its usable front opening space. Keep already continuous short side preparation cabinet/counter where it exists, and do not invent a counter passing through the refrigerator. Preserve exact original window positions and no added windows. Wall/stone joints clean, lower drawers align, proper hob controls and credible sink/faucet geometry.\nLight/material: same fresh bright natural daylight with warm-neutral whites, not yellow tint, gentle local extractor task light. Photoreal natural oak, matte paint, stone and brushed silver appliance surfaces. This room remains airy and practical; deep wood is a small tray only, never widespread dark cabinetry.\nDeliver one 1536x1024 landscape photograph, no person, labels, watermark, collage or text.",
+  "generatedSource": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f0-794c-7501-98db-638b89c7e324/exec-6a5310b3-56d9-4337-984f-4bfb56641214.png",
+  "review": {
+    "status": "selected",
+    "observed": [
+      "烟机上方大面积吊柜改暖白，浅木下柜、白砖和白台面保留",
+      "小型调味托盘深木色，与餐厅重点呼应",
+      "茶巾调整为细绿条纹，右侧电饭煲旁移除植物，保留清楚备餐台",
+      "冰箱落地且无台面穿模，窗下水槽和实墙燃气灶/烟机位置保留",
+      "原玻璃围合、窗和台面格局保持，柜门分缝基本连续"
+    ],
+    "limits": [
+      "原概念图窗景和机位沿用，不能替代实测平面",
+      "实际柜体尺寸、冰箱开门净空与设备热源条件仍需现场核对"
+    ]
+  },
+  "width": 1536,
+  "height": 1024,
+  "sha256": "4657d7594c7d2c0798bb6aad7cf1d50b6be8e5c009e658bc054e8d162e92a8ea",
+  "file": "kitchen.png"
+}

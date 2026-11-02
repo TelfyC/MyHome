@@ -1,0 +1,103 @@
+{
+  "title": "日光花园 · 整体优化",
+  "date": "2026-11-02",
+  "method": "built-in image_gen",
+  "style": "sunlit",
+  "imageCount": 9,
+  "mainViews": 7,
+  "detailViews": 2,
+  "page": "../../sunlit-refined.html",
+  "images": [
+    {
+      "room": "living",
+      "name": "客厅",
+      "file": "living.png",
+      "original": "../../sunlit/living.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2416369,
+      "sha256": "ca8ccb488ce9f6a1bc75635adb12d2c0cc937c9ab998e3f9f78092e00c71fe96"
+    },
+    {
+      "room": "dining",
+      "name": "餐厅与咖啡角",
+      "file": "dining.png",
+      "original": "../../sunlit/dining.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2037716,
+      "sha256": "46389d0b814e19fe424daef023c313f4ff7f5e14e5e646246e357cf9cd450e58"
+    },
+    {
+      "room": "master",
+      "name": "主卧与衣帽区",
+      "file": "master.png",
+      "original": "../../sunlit/master.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2317058,
+      "sha256": "a7e999389e468775f202e339bbc887ab5abe7c17453201eb34ee2c3f2dcb6a91"
+    },
+    {
+      "room": "study",
+      "name": "电竞房",
+      "file": "study.png",
+      "original": "../../sunlit/study.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2368366,
+      "sha256": "9b80ba4bd59a8e09d56c032008a09e87e2592cef9710407be4bfdc7befd04a04"
+    },
+    {
+      "room": "guest",
+      "name": "次卧 / 书房",
+      "file": "guest.png",
+      "original": "../../sunlit/guest.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2406675,
+      "sha256": "e6d0ff37c533cb78009520989e69ac13ea6a7d8c7c4b72c3d639458c3dad84a3"
+    },
+    {
+      "room": "kitchen",
+      "name": "可开合厨房",
+      "file": "kitchen.png",
+      "original": "../../sunlit/kitchen.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2103177,
+      "sha256": "4657d7594c7d2c0798bb6aad7cf1d50b6be8e5c009e658bc054e8d162e92a8ea"
+    },
+    {
+      "room": "bathroom",
+      "name": "卫生间",
+      "file": "bathroom.png",
+      "original": "../../sunlit/bathroom.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2022584,
+      "sha256": "4dbae8d84b942c703e99e4bcde7571c01c3dc53e3e0664d621efc34f77e629af"
+    },
+    {
+      "room": "living-detail",
+      "name": "窗边阅读位 · 细节",
+      "file": "living-detail.png",
+      "original": "../../sunlit/living-detail.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2149788,
+      "sha256": "627e38180a64956e94c92b8a3fd80c13f13b6544298442095cdbe0fe16241a4c"
+    },
+    {
+      "room": "dining-detail",
+      "name": "咖啡角 · 插排细节",
+      "file": "dining-detail.png",
+      "original": "../../sunlit/dining-detail.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1830468,
+      "sha256": "4fbae2fc78cf3c5372a69ff77b61f3c7d0124cbca2a2f636cf866073dd437924"
+    }
+  ],
+  "original36ImagesVerifiedUnchanged": true
+}

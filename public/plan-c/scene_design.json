@@ -1,0 +1,1842 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "home1_sunlit",
+  "revision": 1,
+  "units": "m",
+  "source_scene_sha256": "faa0addceab80e3f0c4af8299881edc7686572582853b7c92f1cb0c3a512076c",
+  "objects": [
+    {
+      "id": "living_rug",
+      "category": "rug",
+      "room_id": "living",
+      "asset_id": "custom_rug",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          8.03,
+          3.55,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        2.8,
+        2.6,
+        0.018
+      ],
+      "material_id": "mat_linen",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      },
+      "contact_exceptions": [
+        "living_sofa",
+        "living_tv_console",
+        "living_books",
+        "living_side_table",
+        "living_table"
+      ]
+    },
+    {
+      "id": "living_sofa",
+      "category": "sofa",
+      "room_id": "living",
+      "asset_id": "custom_sofa",
+      "quality_tier": "hero",
+      "transform": {
+        "position_m": [
+          6.99,
+          3.6,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          1.5707963267948966
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        2.2,
+        0.88,
+        0.84
+      ],
+      "material_id": "mat_linen",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "living_table",
+      "category": "coffee_table",
+      "room_id": "living",
+      "asset_id": "custom_coffee_table",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          8.1,
+          3.5,
+          0.02
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.8,
+        0.58,
+        0.38
+      ],
+      "material_id": "mat_ivory",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "living_tv_console",
+      "category": "cabinet",
+      "room_id": "living",
+      "asset_id": "custom_cabinet",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          9.43,
+          3.18,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          -1.5707963267948966
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        1.65,
+        0.36,
+        0.45
+      ],
+      "material_id": "mat_oak",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "living_tv",
+      "category": "tv",
+      "room_id": "living",
+      "asset_id": "custom_tv",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          9.43,
+          3.18,
+          0.45
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          -1.5707963267948966
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        1.45,
+        0.16,
+        0.84
+      ],
+      "material_id": "mat_charcoal",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      },
+      "support_object_id": "living_tv_console"
+    },
+    {
+      "id": "living_armchair",
+      "category": "armchair",
+      "room_id": "living",
+      "asset_id": "custom_armchair",
+      "quality_tier": "hero",
+      "transform": {
+        "position_m": [
+          7.05,
+          1.32,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          2.65
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.76,
+        0.78,
+        0.8
+      ],
+      "material_id": "mat_sage",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "living_ficus",
+      "category": "plant",
+      "room_id": "living",
+      "asset_id": "custom_plant",
+      "quality_tier": "hero",
+      "transform": {
+        "position_m": [
+          7.82,
+          0.64,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.5,
+        0.5,
+        1.68
+      ],
+      "material_id": "mat_ceramic",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "living_books",
+      "category": "bookcase",
+      "room_id": "living",
+      "asset_id": "custom_bookcase",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          6.69,
+          5.4,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          1.5707963267948966
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        1.2,
+        0.32,
+        1.55
+      ],
+      "material_id": "mat_oak",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "living_pendant",
+      "category": "pendant",
+      "room_id": "living",
+      "asset_id": "custom_pendant",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          8.03,
+          3.55,
+          2.2
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.6,
+        0.6,
+        0.3
+      ],
+      "material_id": "mat_ivory",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      },
+      "ceiling_mounted": true
+    },
+    {
+      "id": "living_side_table",
+      "category": "bedside_table",
+      "room_id": "living",
+      "asset_id": "custom_bedside_table",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          7.1,
+          5.02,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.4,
+        0.4,
+        0.48
+      ],
+      "material_id": "mat_oak",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "dining_table",
+      "category": "dining_table",
+      "room_id": "dining",
+      "asset_id": "custom_dining_table",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          8.48,
+          8.12,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          1.5707963267948966
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        1.35,
+        0.76,
+        0.74
+      ],
+      "material_id": "mat_ivory",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "dining_chair_0",
+      "category": "dining_chair",
+      "room_id": "dining",
+      "asset_id": "custom_dining_chair",
+      "quality_tier": "hero",
+      "transform": {
+        "position_m": [
+          7.79,
+          7.82,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          -1.5707963267948966
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.42,
+        0.44,
+        0.78
+      ],
+      "material_id": "mat_sage",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "dining_chair_1",
+      "category": "dining_chair",
+      "room_id": "dining",
+      "asset_id": "custom_dining_chair",
+      "quality_tier": "hero",
+      "transform": {
+        "position_m": [
+          7.79,
+          8.43,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          -1.5707963267948966
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.42,
+        0.44,
+        0.78
+      ],
+      "material_id": "mat_sage",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "dining_chair_2",
+      "category": "dining_chair",
+      "room_id": "dining",
+      "asset_id": "custom_dining_chair",
+      "quality_tier": "hero",
+      "transform": {
+        "position_m": [
+          9.16,
+          7.82,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          1.5707963267948966
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.42,
+        0.44,
+        0.78
+      ],
+      "material_id": "mat_sage",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "dining_chair_3",
+      "category": "dining_chair",
+      "room_id": "dining",
+      "asset_id": "custom_dining_chair",
+      "quality_tier": "hero",
+      "transform": {
+        "position_m": [
+          9.16,
+          8.43,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          1.5707963267948966
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.42,
+        0.44,
+        0.78
+      ],
+      "material_id": "mat_sage",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "coffee_cabinet",
+      "category": "cabinet",
+      "room_id": "dining",
+      "asset_id": "custom_cabinet",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          8.45,
+          10.75,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        1.65,
+        0.45,
+        0.86
+      ],
+      "material_id": "mat_ivory",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "dining_tree",
+      "category": "plant",
+      "room_id": "dining",
+      "asset_id": "custom_plant",
+      "quality_tier": "hero",
+      "transform": {
+        "position_m": [
+          9.35,
+          9.97,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.45,
+        0.45,
+        1.7
+      ],
+      "material_id": "mat_ceramic",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "dining_pendant",
+      "category": "pendant",
+      "room_id": "dining",
+      "asset_id": "custom_pendant",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          8.48,
+          8.12,
+          1.95
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.6,
+        0.6,
+        0.34
+      ],
+      "material_id": "mat_ivory",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      },
+      "ceiling_mounted": true
+    },
+    {
+      "id": "master_bed",
+      "category": "bed",
+      "room_id": "master",
+      "asset_id": "custom_bed",
+      "quality_tier": "hero",
+      "transform": {
+        "position_m": [
+          1.58,
+          2.94,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        1.8,
+        2.12,
+        1.05
+      ],
+      "material_id": "mat_linen",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "master_side_left",
+      "category": "bedside_table",
+      "room_id": "master",
+      "asset_id": "custom_bedside_table",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          0.4,
+          3.56,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.44,
+        0.44,
+        0.46
+      ],
+      "material_id": "mat_oak",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "master_side_right",
+      "category": "bedside_table",
+      "room_id": "master",
+      "asset_id": "custom_bedside_table",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          2.75,
+          3.56,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.44,
+        0.44,
+        0.46
+      ],
+      "material_id": "mat_oak",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "master_wardrobe",
+      "category": "cabinet",
+      "room_id": "master",
+      "asset_id": "custom_cabinet",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          1.65,
+          4.43,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        2.35,
+        0.55,
+        2.45
+      ],
+      "material_id": "mat_ivory",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "master_plant",
+      "category": "plant",
+      "room_id": "master",
+      "asset_id": "custom_plant",
+      "quality_tier": "hero",
+      "transform": {
+        "position_m": [
+          0.45,
+          0.55,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.42,
+        0.42,
+        1.45
+      ],
+      "material_id": "mat_ceramic",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "guest_bed",
+      "category": "bed",
+      "room_id": "guest",
+      "asset_id": "custom_bed",
+      "quality_tier": "hero",
+      "transform": {
+        "position_m": [
+          2.45,
+          8.2,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        1.2,
+        2.1,
+        0.94
+      ],
+      "material_id": "mat_linen",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "guest_desk",
+      "category": "desk",
+      "room_id": "guest",
+      "asset_id": "custom_desk",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          4.35,
+          8.55,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          1.5707963267948966
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        1.75,
+        0.6,
+        0.74
+      ],
+      "material_id": "mat_oak",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "guest_chair",
+      "category": "office_chair",
+      "room_id": "guest",
+      "asset_id": "custom_office_chair",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          3.65,
+          8.55,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          -1.5707963267948966
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.5,
+        0.5,
+        0.82
+      ],
+      "material_id": "mat_sage",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "guest_bookcase",
+      "category": "bookcase",
+      "room_id": "guest",
+      "asset_id": "custom_bookcase",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          2.4,
+          9.95,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        1.25,
+        0.32,
+        1.8
+      ],
+      "material_id": "mat_oak",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "guest_plant",
+      "category": "plant",
+      "room_id": "guest",
+      "asset_id": "custom_plant",
+      "quality_tier": "hero",
+      "transform": {
+        "position_m": [
+          4.45,
+          10.0,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.4,
+        0.4,
+        1.15
+      ],
+      "material_id": "mat_ceramic",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "study_bed",
+      "category": "bed",
+      "room_id": "study",
+      "asset_id": "custom_bed",
+      "quality_tier": "hero",
+      "transform": {
+        "position_m": [
+          5.4,
+          2.05,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        1.2,
+        2.1,
+        0.94
+      ],
+      "material_id": "mat_linen",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "study_desk",
+      "category": "desk",
+      "room_id": "study",
+      "asset_id": "custom_desk",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          3.9,
+          2.75,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          -1.5707963267948966
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        1.65,
+        0.6,
+        0.74
+      ],
+      "material_id": "mat_oak",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "study_chair",
+      "category": "office_chair",
+      "room_id": "study",
+      "asset_id": "custom_office_chair",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          4.51,
+          2.75,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          1.5707963267948966
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.45,
+        0.45,
+        0.82
+      ],
+      "material_id": "mat_sage",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "study_cabinet",
+      "category": "cabinet",
+      "room_id": "study",
+      "asset_id": "custom_cabinet",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          4.1,
+          4.3,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        1.0,
+        0.45,
+        1.5
+      ],
+      "material_id": "mat_ivory",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "kitchen_north_run",
+      "category": "kitchen_run",
+      "room_id": "kitchen",
+      "asset_id": "custom_kitchen_run",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          10.94,
+          10.02,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        1.9,
+        0.6,
+        2.4
+      ],
+      "material_id": "mat_oak",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "kitchen_east_run",
+      "category": "kitchen_run",
+      "room_id": "kitchen",
+      "asset_id": "custom_kitchen_run",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          11.7,
+          8.58,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          -1.5707963267948966
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        2.15,
+        0.58,
+        2.4
+      ],
+      "material_id": "mat_oak",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "kitchen_fridge",
+      "category": "fridge",
+      "room_id": "kitchen",
+      "asset_id": "custom_fridge",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          10.29,
+          7.8,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.64,
+        0.65,
+        1.9
+      ],
+      "material_id": "mat_ivory",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "bath_vanity",
+      "category": "vanity",
+      "room_id": "bathroom",
+      "asset_id": "custom_vanity",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          1.73,
+          5.85,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        1.1,
+        0.5,
+        0.86
+      ],
+      "material_id": "mat_ivory",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "bath_toilet",
+      "category": "toilet",
+      "room_id": "bathroom",
+      "asset_id": "custom_toilet",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          2.52,
+          5.89,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.42,
+        0.62,
+        0.78
+      ],
+      "material_id": "mat_ivory",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "bath_shower",
+      "category": "shower",
+      "room_id": "bathroom",
+      "asset_id": "custom_shower",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          0.6,
+          5.32,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        0.88,
+        0.88,
+        2.2
+      ],
+      "material_id": "mat_tile",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    },
+    {
+      "id": "entry_cabinet",
+      "category": "cabinet",
+      "room_id": "entry",
+      "asset_id": "custom_cabinet",
+      "quality_tier": "procedural",
+      "transform": {
+        "position_m": [
+          10.9,
+          6.15,
+          0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          1.5707963267948966
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "dimensions_m": [
+        1.0,
+        0.45,
+        2.4
+      ],
+      "material_id": "mat_ivory",
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      }
+    }
+  ],
+  "materials": [
+    {
+      "id": "mat_oak",
+      "type": "pbr",
+      "base_color": "#bb9b72",
+      "roughness": 0.56,
+      "texture_repeat_m": [
+        1.2,
+        0.15
+      ]
+    },
+    {
+      "id": "mat_ivory",
+      "type": "pbr",
+      "base_color": "#eee9db",
+      "roughness": 0.78
+    },
+    {
+      "id": "mat_sage",
+      "type": "pbr",
+      "base_color": "#a6ae8b",
+      "roughness": 0.84
+    },
+    {
+      "id": "mat_linen",
+      "type": "pbr",
+      "base_color": "#dbd2bb",
+      "roughness": 0.9
+    },
+    {
+      "id": "mat_tile",
+      "type": "pbr",
+      "base_color": "#c5bfad",
+      "roughness": 0.42
+    },
+    {
+      "id": "mat_ceramic",
+      "type": "pbr",
+      "base_color": "#b6a28b",
+      "roughness": 0.4
+    },
+    {
+      "id": "mat_charcoal",
+      "type": "pbr",
+      "base_color": "#343c36",
+      "roughness": 0.3,
+      "metallic": 0.6
+    }
+  ],
+  "lights": [
+    {
+      "id": "light_living_pendant",
+      "type": "area",
+      "position_m": [
+        8.03,
+        3.55,
+        2.235
+      ],
+      "rotation_euler_rad": [
+        0,
+        0,
+        0
+      ],
+      "power_w": 24,
+      "size_m": 0.35,
+      "color_rgb": [
+        1.0,
+        0.84,
+        0.65
+      ],
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      },
+      "fixture_object_id": "living_pendant"
+    },
+    {
+      "id": "light_dining_pendant",
+      "type": "area",
+      "position_m": [
+        8.48,
+        8.12,
+        1.99
+      ],
+      "rotation_euler_rad": [
+        0,
+        0,
+        0
+      ],
+      "power_w": 24,
+      "size_m": 0.35,
+      "color_rgb": [
+        1.0,
+        0.84,
+        0.65
+      ],
+      "source": {
+        "kind": "designer_proposed",
+        "reference": "日光花园 · Plan C 首版",
+        "confidence": null
+      },
+      "fixture_object_id": "dining_pendant"
+    }
+  ],
+  "cameras": [
+    {
+      "id": "camera_living_still",
+      "room_id": "living",
+      "type": "perspective",
+      "position_m": [
+        8.65,
+        5.65,
+        1.55
+      ],
+      "look_at_m": [
+        7.63,
+        2.8,
+        1.05
+      ],
+      "rotation_euler_rad": [
+        0,
+        0,
+        0
+      ],
+      "focal_length_mm": 22,
+      "resolution_px": [
+        3840,
+        2160
+      ]
+    },
+    {
+      "id": "camera_living_360",
+      "room_id": "living",
+      "type": "equirectangular",
+      "position_m": [
+        8.12,
+        4.48,
+        1.55
+      ],
+      "look_at_m": [
+        7.63,
+        2.8,
+        1.05
+      ],
+      "rotation_euler_rad": [
+        1.5707963267948966,
+        0,
+        0
+      ],
+      "resolution_px": [
+        8192,
+        4096
+      ]
+    },
+    {
+      "id": "camera_dining_still",
+      "room_id": "dining",
+      "type": "perspective",
+      "position_m": [
+        7.55,
+        6.85,
+        1.55
+      ],
+      "look_at_m": [
+        8.55,
+        9.4,
+        1.12
+      ],
+      "rotation_euler_rad": [
+        0,
+        0,
+        0
+      ],
+      "focal_length_mm": 22,
+      "resolution_px": [
+        3840,
+        2160
+      ]
+    },
+    {
+      "id": "camera_dining_360",
+      "room_id": "dining",
+      "type": "equirectangular",
+      "position_m": [
+        8.45,
+        9.45,
+        1.55
+      ],
+      "look_at_m": [
+        8.55,
+        9.4,
+        1.12
+      ],
+      "rotation_euler_rad": [
+        1.5707963267948966,
+        0,
+        0
+      ],
+      "resolution_px": [
+        8192,
+        4096
+      ]
+    },
+    {
+      "id": "camera_master_still",
+      "room_id": "master",
+      "type": "perspective",
+      "position_m": [
+        2.8,
+        1.0,
+        1.55
+      ],
+      "look_at_m": [
+        1.4,
+        3.3,
+        1.0
+      ],
+      "rotation_euler_rad": [
+        0,
+        0,
+        0
+      ],
+      "focal_length_mm": 22,
+      "resolution_px": [
+        3840,
+        2160
+      ]
+    },
+    {
+      "id": "camera_master_360",
+      "room_id": "master",
+      "type": "equirectangular",
+      "position_m": [
+        2.64,
+        1.62,
+        1.55
+      ],
+      "look_at_m": [
+        1.4,
+        3.3,
+        1.0
+      ],
+      "rotation_euler_rad": [
+        1.5707963267948966,
+        0,
+        0
+      ],
+      "resolution_px": [
+        8192,
+        4096
+      ]
+    },
+    {
+      "id": "camera_guest_still",
+      "room_id": "guest",
+      "type": "perspective",
+      "position_m": [
+        4.4,
+        6.95,
+        1.55
+      ],
+      "look_at_m": [
+        2.7,
+        8.9,
+        1.0
+      ],
+      "rotation_euler_rad": [
+        0,
+        0,
+        0
+      ],
+      "focal_length_mm": 22,
+      "resolution_px": [
+        3840,
+        2160
+      ]
+    },
+    {
+      "id": "camera_guest_360",
+      "room_id": "guest",
+      "type": "equirectangular",
+      "position_m": [
+        3.43,
+        7.1,
+        1.55
+      ],
+      "look_at_m": [
+        2.7,
+        8.9,
+        1.0
+      ],
+      "rotation_euler_rad": [
+        1.5707963267948966,
+        0,
+        0
+      ],
+      "resolution_px": [
+        8192,
+        4096
+      ]
+    },
+    {
+      "id": "camera_study_still",
+      "room_id": "study",
+      "type": "perspective",
+      "position_m": [
+        5.85,
+        4.22,
+        1.55
+      ],
+      "look_at_m": [
+        4.65,
+        2.0,
+        0.9
+      ],
+      "rotation_euler_rad": [
+        0,
+        0,
+        0
+      ],
+      "focal_length_mm": 22,
+      "resolution_px": [
+        3840,
+        2160
+      ]
+    },
+    {
+      "id": "camera_study_360",
+      "room_id": "study",
+      "type": "equirectangular",
+      "position_m": [
+        5.0,
+        3.7,
+        1.55
+      ],
+      "look_at_m": [
+        4.65,
+        2.0,
+        0.9
+      ],
+      "rotation_euler_rad": [
+        1.5707963267948966,
+        0,
+        0
+      ],
+      "resolution_px": [
+        8192,
+        4096
+      ]
+    },
+    {
+      "id": "camera_kitchen_still",
+      "room_id": "kitchen",
+      "type": "perspective",
+      "position_m": [
+        10.3,
+        8.65,
+        1.55
+      ],
+      "look_at_m": [
+        11.5,
+        9.8,
+        1.0
+      ],
+      "rotation_euler_rad": [
+        0,
+        0,
+        0
+      ],
+      "focal_length_mm": 22,
+      "resolution_px": [
+        3840,
+        2160
+      ]
+    },
+    {
+      "id": "camera_kitchen_360",
+      "room_id": "kitchen",
+      "type": "equirectangular",
+      "position_m": [
+        10.88,
+        8.95,
+        1.55
+      ],
+      "look_at_m": [
+        11.5,
+        9.8,
+        1.0
+      ],
+      "rotation_euler_rad": [
+        1.5707963267948966,
+        0,
+        0
+      ],
+      "resolution_px": [
+        8192,
+        4096
+      ]
+    },
+    {
+      "id": "camera_bathroom_still",
+      "room_id": "bathroom",
+      "type": "perspective",
+      "position_m": [
+        3.0,
+        5.03,
+        1.55
+      ],
+      "look_at_m": [
+        1.1,
+        5.77,
+        1.05
+      ],
+      "rotation_euler_rad": [
+        0,
+        0,
+        0
+      ],
+      "focal_length_mm": 22,
+      "resolution_px": [
+        3840,
+        2160
+      ]
+    },
+    {
+      "id": "camera_bathroom_360",
+      "room_id": "bathroom",
+      "type": "equirectangular",
+      "position_m": [
+        2.08,
+        5.1,
+        1.55
+      ],
+      "look_at_m": [
+        1.1,
+        5.77,
+        1.05
+      ],
+      "rotation_euler_rad": [
+        1.5707963267948966,
+        0,
+        0
+      ],
+      "resolution_px": [
+        8192,
+        4096
+      ]
+    }
+  ],
+  "metadata": {
+    "purpose": "design_preview",
+    "style": "sunlit_garden",
+    "white_walls": "preserved",
+    "lighting": "visual daylight scenario; location, date and true north unconfirmed",
+    "height_status": "designer_proposed",
+    "render_delivery": "preview_only"
+  }
+}

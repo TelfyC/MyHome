@@ -1,0 +1,898 @@
+{
+  "$defs": {
+    "Camera": {
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "perspective",
+            "equirectangular",
+            "orthographic"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "position_m": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Position M",
+          "type": "array"
+        },
+        "rotation_euler_rad": {
+          "default": [
+            0,
+            0,
+            0
+          ],
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Rotation Euler Rad",
+          "type": "array"
+        },
+        "resolution_px": {
+          "default": [
+            1920,
+            1080
+          ],
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "exclusiveMinimum": 0,
+              "maximum": 32768,
+              "type": "integer"
+            },
+            {
+              "exclusiveMinimum": 0,
+              "maximum": 32768,
+              "type": "integer"
+            }
+          ],
+          "title": "Resolution Px",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "position_m"
+      ],
+      "title": "Camera",
+      "type": "object"
+    },
+    "Constraint": {
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "type": {
+          "title": "Type",
+          "type": "string"
+        },
+        "severity": {
+          "default": "blocker",
+          "enum": [
+            "blocker",
+            "error",
+            "warning",
+            "info"
+          ],
+          "title": "Severity",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type"
+      ],
+      "title": "Constraint",
+      "type": "object"
+    },
+    "CoordinateSystem": {
+      "additionalProperties": true,
+      "properties": {
+        "handedness": {
+          "const": "right",
+          "default": "right",
+          "title": "Handedness",
+          "type": "string"
+        },
+        "up": {
+          "const": "+Z",
+          "default": "+Z",
+          "title": "Up",
+          "type": "string"
+        },
+        "north": {
+          "const": "+Y",
+          "default": "+Y",
+          "title": "North",
+          "type": "string"
+        },
+        "angles": {
+          "const": "radians",
+          "default": "radians",
+          "title": "Angles",
+          "type": "string"
+        }
+      },
+      "title": "CoordinateSystem",
+      "type": "object"
+    },
+    "Level": {
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "elevation_m": {
+          "default": 0,
+          "title": "Elevation M",
+          "type": "number"
+        },
+        "ceiling_height_m": {
+          "exclusiveMinimum": 0,
+          "title": "Ceiling Height M",
+          "type": "number"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceEvidence"
+        }
+      },
+      "required": [
+        "id",
+        "ceiling_height_m"
+      ],
+      "title": "Level",
+      "type": "object"
+    },
+    "Light": {
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "type": {
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type"
+      ],
+      "title": "Light",
+      "type": "object"
+    },
+    "Material": {
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "type": {
+          "default": "pbr",
+          "title": "Type",
+          "type": "string"
+        },
+        "asset_id": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Asset Id"
+        },
+        "base_color": {
+          "anyOf": [
+            {
+              "pattern": "^#[0-9a-fA-F]{6}$",
+              "type": "string"
+            },
+            {
+              "maxItems": 3,
+              "minItems": 3,
+              "prefixItems": [
+                {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            }
+          ],
+          "default": "#cccccc",
+          "title": "Base Color"
+        },
+        "roughness": {
+          "default": 0.5,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Roughness",
+          "type": "number"
+        },
+        "metallic": {
+          "default": 0.0,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Metallic",
+          "type": "number"
+        },
+        "texture_repeat_m": {
+          "default": [
+            1.0,
+            1.0
+          ],
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            }
+          ],
+          "title": "Texture Repeat M",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Material",
+      "type": "object"
+    },
+    "Opening": {
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "door",
+            "window",
+            "passage"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "host_wall_id": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+          "title": "Host Wall Id",
+          "type": "string"
+        },
+        "offset_from_start_m": {
+          "minimum": 0,
+          "title": "Offset From Start M",
+          "type": "number"
+        },
+        "width_m": {
+          "exclusiveMinimum": 0,
+          "title": "Width M",
+          "type": "number"
+        },
+        "height_m": {
+          "exclusiveMinimum": 0,
+          "title": "Height M",
+          "type": "number"
+        },
+        "sill_height_m": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Sill Height M",
+          "type": "number"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceEvidence"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "host_wall_id",
+        "offset_from_start_m",
+        "width_m",
+        "height_m"
+      ],
+      "title": "Opening",
+      "type": "object"
+    },
+    "Room": {
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "level_id": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+          "title": "Level Id",
+          "type": "string"
+        },
+        "boundary_xy_m": {
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "minItems": 3,
+          "title": "Boundary Xy M",
+          "type": "array"
+        },
+        "floor_material_id": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Floor Material Id"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceEvidence"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "level_id",
+        "boundary_xy_m"
+      ],
+      "title": "Room",
+      "type": "object"
+    },
+    "SceneObject": {
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "category": {
+          "title": "Category",
+          "type": "string"
+        },
+        "room_id": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+          "title": "Room Id",
+          "type": "string"
+        },
+        "asset_id": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Asset Id"
+        },
+        "quality_tier": {
+          "default": "standard",
+          "enum": [
+            "hero",
+            "standard",
+            "procedural",
+            "background",
+            "custom_fixture"
+          ],
+          "title": "Quality Tier",
+          "type": "string"
+        },
+        "transform": {
+          "$ref": "#/$defs/Transform"
+        },
+        "dimensions_m": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            }
+          ],
+          "title": "Dimensions M",
+          "type": "array"
+        },
+        "material_id": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Material Id"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceEvidence"
+        },
+        "support_object_id": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Support Object Id"
+        },
+        "contact_exceptions": {
+          "items": {
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+            "type": "string"
+          },
+          "title": "Contact Exceptions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "category",
+        "room_id",
+        "transform",
+        "dimensions_m"
+      ],
+      "title": "SceneObject",
+      "type": "object"
+    },
+    "Site": {
+      "additionalProperties": true,
+      "properties": {
+        "latitude": {
+          "anyOf": [
+            {
+              "maximum": 90,
+              "minimum": -90,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Latitude"
+        },
+        "longitude": {
+          "anyOf": [
+            {
+              "maximum": 180,
+              "minimum": -180,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Longitude"
+        },
+        "timezone": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Timezone"
+        },
+        "true_north_offset_rad": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "True North Offset Rad"
+        }
+      },
+      "title": "Site",
+      "type": "object"
+    },
+    "SourceEvidence": {
+      "additionalProperties": true,
+      "properties": {
+        "kind": {
+          "default": "unknown",
+          "enum": [
+            "measured",
+            "user_confirmed",
+            "cad",
+            "image_inferred",
+            "designer_proposed",
+            "unknown"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "reference": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        }
+      },
+      "title": "SourceEvidence",
+      "type": "object"
+    },
+    "Transform": {
+      "additionalProperties": true,
+      "properties": {
+        "position_m": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Position M",
+          "type": "array"
+        },
+        "rotation_euler_rad": {
+          "default": [
+            0,
+            0,
+            0
+          ],
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Rotation Euler Rad",
+          "type": "array"
+        },
+        "scale": {
+          "default": [
+            1,
+            1,
+            1
+          ],
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            }
+          ],
+          "title": "Scale",
+          "type": "array"
+        }
+      },
+      "required": [
+        "position_m"
+      ],
+      "title": "Transform",
+      "type": "object"
+    },
+    "Wall": {
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "level_id": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+          "title": "Level Id",
+          "type": "string"
+        },
+        "path_xy_m": {
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "title": "Path Xy M",
+          "type": "array"
+        },
+        "thickness_m": {
+          "exclusiveMinimum": 0,
+          "title": "Thickness M",
+          "type": "number"
+        },
+        "height_m": {
+          "exclusiveMinimum": 0,
+          "title": "Height M",
+          "type": "number"
+        },
+        "structural_state": {
+          "default": "unknown",
+          "enum": [
+            "load_bearing",
+            "non_load_bearing",
+            "unknown"
+          ],
+          "title": "Structural State",
+          "type": "string"
+        },
+        "demolition_status": {
+          "default": "existing",
+          "enum": [
+            "existing",
+            "proposed",
+            "remove"
+          ],
+          "title": "Demolition Status",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceEvidence"
+        }
+      },
+      "required": [
+        "id",
+        "level_id",
+        "path_xy_m",
+        "thickness_m",
+        "height_m"
+      ],
+      "title": "Wall",
+      "type": "object"
+    }
+  },
+  "additionalProperties": true,
+  "properties": {
+    "schema_version": {
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "project_id": {
+      "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+      "title": "Project Id",
+      "type": "string"
+    },
+    "revision": {
+      "minimum": 1,
+      "title": "Revision",
+      "type": "integer"
+    },
+    "units": {
+      "const": "m",
+      "default": "m",
+      "title": "Units",
+      "type": "string"
+    },
+    "coordinate_system": {
+      "$ref": "#/$defs/CoordinateSystem"
+    },
+    "site": {
+      "$ref": "#/$defs/Site"
+    },
+    "levels": {
+      "items": {
+        "$ref": "#/$defs/Level"
+      },
+      "minItems": 1,
+      "title": "Levels",
+      "type": "array"
+    },
+    "walls": {
+      "items": {
+        "$ref": "#/$defs/Wall"
+      },
+      "minItems": 1,
+      "title": "Walls",
+      "type": "array"
+    },
+    "openings": {
+      "items": {
+        "$ref": "#/$defs/Opening"
+      },
+      "title": "Openings",
+      "type": "array"
+    },
+    "rooms": {
+      "items": {
+        "$ref": "#/$defs/Room"
+      },
+      "minItems": 1,
+      "title": "Rooms",
+      "type": "array"
+    },
+    "objects": {
+      "items": {
+        "$ref": "#/$defs/SceneObject"
+      },
+      "title": "Objects",
+      "type": "array"
+    },
+    "materials": {
+      "items": {
+        "$ref": "#/$defs/Material"
+      },
+      "title": "Materials",
+      "type": "array"
+    },
+    "lights": {
+      "items": {
+        "$ref": "#/$defs/Light"
+      },
+      "title": "Lights",
+      "type": "array"
+    },
+    "cameras": {
+      "items": {
+        "$ref": "#/$defs/Camera"
+      },
+      "title": "Cameras",
+      "type": "array"
+    },
+    "constraints": {
+      "items": {
+        "$ref": "#/$defs/Constraint"
+      },
+      "title": "Constraints",
+      "type": "array"
+    },
+    "metadata": {
+      "additionalProperties": true,
+      "title": "Metadata",
+      "type": "object"
+    }
+  },
+  "required": [
+    "project_id",
+    "revision",
+    "levels",
+    "walls",
+    "rooms"
+  ],
+  "title": "SceneSnapshot",
+  "type": "object"
+}

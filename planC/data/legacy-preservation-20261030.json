@@ -1,0 +1,565 @@
+{
+  "snapshot_date": "2026-10-30",
+  "assets": [
+    {
+      "path": "public/panoramas/forest/bathroom-thumb.jpg",
+      "sha256": "23f6c06370fecef3ba9efca35437032f63fd31132f018d8d8b2e0df2ada4b850"
+    },
+    {
+      "path": "public/panoramas/forest/bathroom.jpg",
+      "sha256": "342450fd6737a0aa47f8b0852363a107d4da670c538c297759db487ea93cc216"
+    },
+    {
+      "path": "public/panoramas/forest/dining-thumb.jpg",
+      "sha256": "9d526e4f2fd6369151669b32cbecabae4359865959f2d1ba96a0cef155619ffc"
+    },
+    {
+      "path": "public/panoramas/forest/dining.jpg",
+      "sha256": "56ce678f4adb960dd2327c9123cd4d6954ff7b7d0a6da3ff5b27b2786c2b4392"
+    },
+    {
+      "path": "public/panoramas/forest/guest-thumb.jpg",
+      "sha256": "309082f9d1680c86f1b3591c26ccbe969c0b77f7fae7d338a9593a9751b3b77b"
+    },
+    {
+      "path": "public/panoramas/forest/guest.jpg",
+      "sha256": "71d4688e9f328f87769a77444466a414e7f4ea24e75e1163ecb197556c8f3b16"
+    },
+    {
+      "path": "public/panoramas/forest/kitchen-thumb.jpg",
+      "sha256": "ed0d58acf01f76c00778e3fcf222a0e261e1fe6fddfff16ac2e7c0999d511937"
+    },
+    {
+      "path": "public/panoramas/forest/kitchen.jpg",
+      "sha256": "3ccb39aa58f8ee1b5cb3cde82ca1fed8f2cafa80333c27545255e95e2409a6a5"
+    },
+    {
+      "path": "public/panoramas/forest/living-thumb.jpg",
+      "sha256": "39de84669c4dca116cd08a25318e111e72c717a0c4a9967c8f2b14c94351c495"
+    },
+    {
+      "path": "public/panoramas/forest/living.jpg",
+      "sha256": "57b157d7112ecc417589fc5396e8dbc1f73fecc7bed01ad5c5f426603812478c"
+    },
+    {
+      "path": "public/panoramas/forest/master-thumb.jpg",
+      "sha256": "394d3c01091eedc59f5efcece6704dc879eb4c3459956af883a41f90323ea4c8"
+    },
+    {
+      "path": "public/panoramas/forest/master.jpg",
+      "sha256": "acebe705c42b4187255f6ac82d2e1dad4558609260d6f788524482371e0591f6"
+    },
+    {
+      "path": "public/panoramas/forest/study-thumb.jpg",
+      "sha256": "743d0562b57578f33d6fe8a7067ede6ba427c48774b3a20cf1699a692c33e70a"
+    },
+    {
+      "path": "public/panoramas/forest/study.jpg",
+      "sha256": "15bffdae41d6ba57ffa795bcce75ebb70718eb3fa3cf6d08aafc59f4d110aa36"
+    },
+    {
+      "path": "public/panoramas/french/bathroom-thumb.jpg",
+      "sha256": "f79d344af7512a6797f2fcec53fa3f9b6ade43fce213e1f1ae0d887585302d9c"
+    },
+    {
+      "path": "public/panoramas/french/bathroom.jpg",
+      "sha256": "36e48cf7868d3b5653385e1af89a9530924b403c12bf78ed72138a0a74ba5810"
+    },
+    {
+      "path": "public/panoramas/french/dining-thumb.jpg",
+      "sha256": "51d5d2bbb67c45f5c79620eefdb03c8c47e75b07daf8fc9a86c3098fc1be78da"
+    },
+    {
+      "path": "public/panoramas/french/dining.jpg",
+      "sha256": "729bce8d2e00d40fa47fbe7854780f65b8df62ed6645f4c1bad0830cecc3b149"
+    },
+    {
+      "path": "public/panoramas/french/guest-thumb.jpg",
+      "sha256": "604b15ffbf8538b07a13726240383a3c95a4c18f42dbe9fb3d0b023af1102f7d"
+    },
+    {
+      "path": "public/panoramas/french/guest.jpg",
+      "sha256": "857ba8471731f02918d9d2a7914de7db33ca551a344e0b04ccebeff0d2041a14"
+    },
+    {
+      "path": "public/panoramas/french/kitchen-thumb.jpg",
+      "sha256": "9dba22adcd8f60d60749205d8da2363b2eb04dd972bef94e3c84a11fda22de4f"
+    },
+    {
+      "path": "public/panoramas/french/kitchen.jpg",
+      "sha256": "7ac628847de8fcbdacb3f8dbe4cfac9a1a0636c360ec97fd1b07127a70c7bb8f"
+    },
+    {
+      "path": "public/panoramas/french/living-thumb.jpg",
+      "sha256": "0322f523527e81b1793f07caa139655cc3275cda727ab6f709342d184913996b"
+    },
+    {
+      "path": "public/panoramas/french/living.jpg",
+      "sha256": "73b0eedf30e521814eb5599225eb362fa420a0ef637c205ed851a124ad11b0e4"
+    },
+    {
+      "path": "public/panoramas/french/master-thumb.jpg",
+      "sha256": "734762e63089cb3dc0472274be91afb7237a782dbb4a063d85d6d82f781796b3"
+    },
+    {
+      "path": "public/panoramas/french/master.jpg",
+      "sha256": "95538aa51d8b5bf5cbf49bfcacaa842c8e644cced26b6f391b06cc9f5f7040a6"
+    },
+    {
+      "path": "public/panoramas/french/study-thumb.jpg",
+      "sha256": "b4daf23c739ad810081a30ada63d985b40bc7ebd44e6f13eff76bf1ddd2ed3f1"
+    },
+    {
+      "path": "public/panoramas/french/study.jpg",
+      "sha256": "90b7909fc204d9e0a88c07c8c637059843b64233677ded06440a88d89bfec8fb"
+    },
+    {
+      "path": "public/panoramas/japanese/bathroom-thumb.jpg",
+      "sha256": "653eacd573e9745322b0a1cd7d1b1a1411be4beedd8c22741872d7a6704d1c1c"
+    },
+    {
+      "path": "public/panoramas/japanese/bathroom.jpg",
+      "sha256": "89eac3d318472f82fe40f1e7ab8f47dfc38541b45d6c81f40dbbad10a16670e4"
+    },
+    {
+      "path": "public/panoramas/japanese/dining-thumb.jpg",
+      "sha256": "c9f5254c56e2c1981f5cbb459d888beffe52faa0e441363a6cadd88f68ee8c5d"
+    },
+    {
+      "path": "public/panoramas/japanese/dining.jpg",
+      "sha256": "25b3a5868c9d1535f32084a18a1b101ae6b7fb3e47b1ee9725568d0ebaa01668"
+    },
+    {
+      "path": "public/panoramas/japanese/guest-thumb.jpg",
+      "sha256": "bc8b4c731e0c826f641fedbcacef0e3f2be826178e677b553c50a6ff1107e42f"
+    },
+    {
+      "path": "public/panoramas/japanese/guest.jpg",
+      "sha256": "26f8d75f42beaed7823d90a48d84216dbb9594da8a0ed9c8ebd20a0503fd173c"
+    },
+    {
+      "path": "public/panoramas/japanese/kitchen-thumb.jpg",
+      "sha256": "296919a9322d65675e7f95540a58bd82f9ebda2d9f19c7805a7eee3bf9adc271"
+    },
+    {
+      "path": "public/panoramas/japanese/kitchen.jpg",
+      "sha256": "ee1596b18cfe382eb18af7e442c3ce568f100e819de50d03ece6ed6995ca8001"
+    },
+    {
+      "path": "public/panoramas/japanese/living-thumb.jpg",
+      "sha256": "ec1609fece8b6227cc19aa3788bb3fa9700e48c65a0c80cad9b1acbe1cf1aeea"
+    },
+    {
+      "path": "public/panoramas/japanese/living.jpg",
+      "sha256": "57a7737a53e96536f0a914a719fd5e5c6ba88f6c4ac23e86916224dbea0e3543"
+    },
+    {
+      "path": "public/panoramas/japanese/master-thumb.jpg",
+      "sha256": "0ccf58564fb8a524d4ba69c87a46f535c2526bf613e7f2f9c26d8050943d7748"
+    },
+    {
+      "path": "public/panoramas/japanese/master.jpg",
+      "sha256": "18d72e178a82405eb8d6439135a62ac4b60b7d6cb8fc0f08d7670fc2ed24d740"
+    },
+    {
+      "path": "public/panoramas/japanese/study-thumb.jpg",
+      "sha256": "9f7db872b47144310d53bbbb1c21c9aca9f36ef2f215820db43a3a8f87dae14a"
+    },
+    {
+      "path": "public/panoramas/japanese/study.jpg",
+      "sha256": "30f71004926eb4a83dc6537cdd64e9521562efb4c2ff5fb5af8bb61fd2f71d78"
+    },
+    {
+      "path": "public/panoramas/sunlit/bathroom-thumb.jpg",
+      "sha256": "e0abb6397101b604b9ce040be2e1fd5dab5d421ab273614f2b1a46da832678ba"
+    },
+    {
+      "path": "public/panoramas/sunlit/bathroom.jpg",
+      "sha256": "f4c135ae62c977921ec7108733578aa15ee6838072296d8220dd72cb0a54fca7"
+    },
+    {
+      "path": "public/panoramas/sunlit/dining-thumb.jpg",
+      "sha256": "beebf7e0ad921b36afca774f83b2d1298bf49929a14d7ef1297885ed5591e1d8"
+    },
+    {
+      "path": "public/panoramas/sunlit/dining.jpg",
+      "sha256": "027df9325b58c6fc0452c7bcfdcb74453af53fd4de069b4808600c1feb4ad481"
+    },
+    {
+      "path": "public/panoramas/sunlit/guest-thumb.jpg",
+      "sha256": "6f3b61628694526ab440e3bef5cf3171cb998c2dbb51637a6801bc7044ca17dd"
+    },
+    {
+      "path": "public/panoramas/sunlit/guest.jpg",
+      "sha256": "540baf6aa617aeac0e126e64843e2debcf9b5c202ed192d292b6e5bc0cd67d89"
+    },
+    {
+      "path": "public/panoramas/sunlit/kitchen-thumb.jpg",
+      "sha256": "b343af10f060f977084229a53edc624adf6195d3fdaacd8619233e6ed2c71be5"
+    },
+    {
+      "path": "public/panoramas/sunlit/kitchen.jpg",
+      "sha256": "5e973fc3bc889ffedc59256caf6b517eba26464d1ddcc1daed385113d2ffb562"
+    },
+    {
+      "path": "public/panoramas/sunlit/living-thumb.jpg",
+      "sha256": "ed5f1d65b753cd6cccc1bbeff5f5ae84422d8a891843b184e7c9773b2a1e923f"
+    },
+    {
+      "path": "public/panoramas/sunlit/living.jpg",
+      "sha256": "d13e39507db09025368448ebb9dbb039fe9d2665620622e8cd9f400c58cd5f28"
+    },
+    {
+      "path": "public/panoramas/sunlit/master-thumb.jpg",
+      "sha256": "bb7167d67de28110b84280c5f73c406cd994c21acd151a5d3c901bedbe92bc3e"
+    },
+    {
+      "path": "public/panoramas/sunlit/master.jpg",
+      "sha256": "c8580fea1fc43ac79c61047544235309e66253381c43b4642a9f505f2439d691"
+    },
+    {
+      "path": "public/panoramas/sunlit/study-thumb.jpg",
+      "sha256": "cce0a45e1e7c1a282c5b3c59029ca39d604419fa1f76ba6f2904233089e52b14"
+    },
+    {
+      "path": "public/panoramas/sunlit/study.jpg",
+      "sha256": "a1165d25b9af2433c31d46683bc6e60eb94e8f725d9d21c9da29736ad08768a0"
+    },
+    {
+      "path": "public/panoramas-native/forest/bathroom-mobile.jpg",
+      "sha256": "485df02fee88ee086459d969aa50c0a12fdac0f6e39c0d0d2a93664f6ce89f44"
+    },
+    {
+      "path": "public/panoramas-native/forest/bathroom-thumb.jpg",
+      "sha256": "5dbfb7554bc703df406baad2742b9cae42789443993f3699e1921b13ce95ff24"
+    },
+    {
+      "path": "public/panoramas-native/forest/bathroom.jpg",
+      "sha256": "2cb958aa4f94badd6c115daca07357b0b9a830878e830fff67396b5f0f19efa8"
+    },
+    {
+      "path": "public/panoramas-native/forest/dining-mobile.jpg",
+      "sha256": "4ef270bd28658be9f68671ac880b5cd11a98c7a2e28760c4858811dea721863b"
+    },
+    {
+      "path": "public/panoramas-native/forest/dining-thumb.jpg",
+      "sha256": "f5d51e5d5559c2e816bbcde795ffea74c480768c7270046f3c06fac15843f934"
+    },
+    {
+      "path": "public/panoramas-native/forest/dining.jpg",
+      "sha256": "18b4951a4bf5ce47a62955bcca20ebbfe322994d4951df010467edbff0e0e836"
+    },
+    {
+      "path": "public/panoramas-native/forest/guest-mobile.jpg",
+      "sha256": "381ffc46e971d6301fd642f41201e4d5e84bd1fcc38ffec3f18b7e2f42125800"
+    },
+    {
+      "path": "public/panoramas-native/forest/guest-thumb.jpg",
+      "sha256": "6221fda82a581e83cee831886b811faede1719f0155b828ea09a45554301c038"
+    },
+    {
+      "path": "public/panoramas-native/forest/guest.jpg",
+      "sha256": "10c5664041867071e122718506bcd4fd5e09ee47ac9e39b485339b8a3d91a72a"
+    },
+    {
+      "path": "public/panoramas-native/forest/kitchen-mobile.jpg",
+      "sha256": "9e441eb6ccec618d54b3f7355a67e0f9eb16d6140fb0b46a1b54ddfc98d7ad46"
+    },
+    {
+      "path": "public/panoramas-native/forest/kitchen-thumb.jpg",
+      "sha256": "717a00d2aa28a3599bbb39584c77ea366ebd7e54c82cc83e127cec48c875d107"
+    },
+    {
+      "path": "public/panoramas-native/forest/kitchen.jpg",
+      "sha256": "a7cf91c26587282b37aff965a4d7a834816bf297d7c8582217363e3049cc0980"
+    },
+    {
+      "path": "public/panoramas-native/forest/living-mobile.jpg",
+      "sha256": "3345a7479f5eb4c8d8b311d45fed337c7b94843d844bdd457e180ae5a320eb54"
+    },
+    {
+      "path": "public/panoramas-native/forest/living-thumb.jpg",
+      "sha256": "b0167eac3dcc3c1537121b71b8c6dfa61de73eedf1d6852c49ffa84b5d0254e0"
+    },
+    {
+      "path": "public/panoramas-native/forest/living.jpg",
+      "sha256": "ab954ede7a8d851f6c760383b287c2e9fd4e7e40479b159f7b63b2f4df058c69"
+    },
+    {
+      "path": "public/panoramas-native/forest/master-mobile.jpg",
+      "sha256": "ab562a475f21101348ce5031921c6064dced3bda3b14eab2314bf176e00e1e2b"
+    },
+    {
+      "path": "public/panoramas-native/forest/master-thumb.jpg",
+      "sha256": "4cf4f0626365368a227588cb2fa3fa3c88a7b2ef1be42e4a5fcba84224a13788"
+    },
+    {
+      "path": "public/panoramas-native/forest/master.jpg",
+      "sha256": "57a112cfa0c4899a63946a16a32173e1435e1e911e1e13a861904a9cd7b2efdb"
+    },
+    {
+      "path": "public/panoramas-native/forest/study-mobile.jpg",
+      "sha256": "d796e8491e6d41bd73df3cec01e4a6e4a8d06dccd33dd03cf75740bb7bcb856f"
+    },
+    {
+      "path": "public/panoramas-native/forest/study-thumb.jpg",
+      "sha256": "f58557424f25d33105220cac7effec59b893861c45c9ccfb3b393311e3173cad"
+    },
+    {
+      "path": "public/panoramas-native/forest/study.jpg",
+      "sha256": "3d01d79240a55bc5e336b6f321c5d896e18e03334a9c7f96943bf73cdb632b04"
+    },
+    {
+      "path": "public/panoramas-native/french/bathroom-mobile.jpg",
+      "sha256": "e7fb12a15a5a531dacd1a7a2cee0f7dd1488899c73f2f5fb0a19bdaf48edb3ad"
+    },
+    {
+      "path": "public/panoramas-native/french/bathroom-thumb.jpg",
+      "sha256": "a48d9a950cdd1b4088034501dd9f5e257aa67a9b364baf981848ff87e94a773b"
+    },
+    {
+      "path": "public/panoramas-native/french/bathroom.jpg",
+      "sha256": "da8d39c1b26da72d10315fbbb331b91869cbf6f347c6701912a02d132fb789da"
+    },
+    {
+      "path": "public/panoramas-native/french/dining-mobile.jpg",
+      "sha256": "d3267089b2aade69d1bad26d95ce719411d290483c57394ca8f92bf6c7046e00"
+    },
+    {
+      "path": "public/panoramas-native/french/dining-thumb.jpg",
+      "sha256": "239dc17d9ab2c8585eb8a930c9311ed8c6bcfdec79d14a633c221cf440036336"
+    },
+    {
+      "path": "public/panoramas-native/french/dining.jpg",
+      "sha256": "0286fc76ade19a5f63769ab1b232a8ab65e0a70ae67f1d6c16aff8d39338c2c3"
+    },
+    {
+      "path": "public/panoramas-native/french/guest-mobile.jpg",
+      "sha256": "38d467ffbe14f00cbb935850145ac5c1e2f0bf5b183c49ed5516a30aed6a16a7"
+    },
+    {
+      "path": "public/panoramas-native/french/guest-thumb.jpg",
+      "sha256": "e4e8eb37da262dec6187b7a99cbbaae566d6f21d3e9f5fcb037cacf583f5b523"
+    },
+    {
+      "path": "public/panoramas-native/french/guest.jpg",
+      "sha256": "584b774c87158c85e73f2df9d82cb277a0f161dcf8850da37516438ecd4cbc44"
+    },
+    {
+      "path": "public/panoramas-native/french/kitchen-mobile.jpg",
+      "sha256": "6bb5244c71698e940150fd5ada13f368de4fba2c221af6ac4cd7db2f1c679757"
+    },
+    {
+      "path": "public/panoramas-native/french/kitchen-thumb.jpg",
+      "sha256": "088cbd5344e2a628c00d2f68f68a0d64d1ac895dc107075ea29d12b457604ca5"
+    },
+    {
+      "path": "public/panoramas-native/french/kitchen.jpg",
+      "sha256": "182b43bddf65fc2210b4c9810c4cbfe732331193f2cbb8daef6f9592ca3030b9"
+    },
+    {
+      "path": "public/panoramas-native/french/living-mobile.jpg",
+      "sha256": "7220f9ed9f27dda3d75b03072b4cc7cf12c589b583fd631fb950848f09f620d6"
+    },
+    {
+      "path": "public/panoramas-native/french/living-thumb.jpg",
+      "sha256": "18bad8377a986dec395c40880f12a8653252e4f128f621f0cae9721b7bf68a67"
+    },
+    {
+      "path": "public/panoramas-native/french/living.jpg",
+      "sha256": "ef2116aec06c44a22277f87abe49a167f7b697fad3cc19216c8fedd3ebf3c905"
+    },
+    {
+      "path": "public/panoramas-native/french/master-mobile.jpg",
+      "sha256": "ba8887878e68ae8346a33ed643a01377646b59ecfdec70c23f72a8967cd0b77b"
+    },
+    {
+      "path": "public/panoramas-native/french/master-thumb.jpg",
+      "sha256": "facbea7e2891bc40de8d70d1dd164abb0884ae38b5616d84bbbf80ddd5ba804a"
+    },
+    {
+      "path": "public/panoramas-native/french/master.jpg",
+      "sha256": "bb27e2f37c9d10fc7239e7015da95d6a5bfb79fe59c15068966ca44ffef51bb2"
+    },
+    {
+      "path": "public/panoramas-native/french/study-mobile.jpg",
+      "sha256": "91e27e05e81606923603218a143eda0d4c2dca1d131f88e3dd08eebe58601e6e"
+    },
+    {
+      "path": "public/panoramas-native/french/study-thumb.jpg",
+      "sha256": "7eb80426b2e7e3c23a2e03fd3e85fe2bfc9a4e0ad0ff39d563d5647d56802077"
+    },
+    {
+      "path": "public/panoramas-native/french/study.jpg",
+      "sha256": "8b9a5e4138cf69adb088eed12139e052ad48bd639e3044dd174b8719a24e959b"
+    },
+    {
+      "path": "public/panoramas-native/japanese/bathroom-mobile.jpg",
+      "sha256": "2d76b9c3f5a058ea7716239aa759cd003937c340e4bdf032f1ae56865f12f824"
+    },
+    {
+      "path": "public/panoramas-native/japanese/bathroom-thumb.jpg",
+      "sha256": "9050de8f9c57582414c2e2945dc32eb0d0fad5abce45224acd279b7a5580a440"
+    },
+    {
+      "path": "public/panoramas-native/japanese/bathroom.jpg",
+      "sha256": "375aa8a81ec694ddbd360f8a1d9a4a66b394f3a3c7be443cff9243d51dcaf4a0"
+    },
+    {
+      "path": "public/panoramas-native/japanese/dining-mobile.jpg",
+      "sha256": "e35e466a962635ba13efa8da9a53ef4b8dbad6699ad1a6c250aa8d6b889cf633"
+    },
+    {
+      "path": "public/panoramas-native/japanese/dining-thumb.jpg",
+      "sha256": "561e833cee670f5736836c9f4e525e4d798a60c99fe9515ca7fb14ad69b47c95"
+    },
+    {
+      "path": "public/panoramas-native/japanese/dining.jpg",
+      "sha256": "d73b3c7435be596043875f920e9a16d660a9372cc0053d5d3c448188504f9a82"
+    },
+    {
+      "path": "public/panoramas-native/japanese/guest-mobile.jpg",
+      "sha256": "b268d346cb203abb78c5b8ddc428a9be5da269271494331193fe9b1cfc964335"
+    },
+    {
+      "path": "public/panoramas-native/japanese/guest-thumb.jpg",
+      "sha256": "6893752463e0b1eafb88d06c7371686cfcf90333e9519f55ce0e549c5733b805"
+    },
+    {
+      "path": "public/panoramas-native/japanese/guest.jpg",
+      "sha256": "049ad3c95db364d84bb39c69ffe2c48588b5bf7673d25111f5120983ee4fc223"
+    },
+    {
+      "path": "public/panoramas-native/japanese/kitchen-mobile.jpg",
+      "sha256": "40178918a21ef675cd304ad39851380eedde9681d96952e687235ea9cecc1cd1"
+    },
+    {
+      "path": "public/panoramas-native/japanese/kitchen-thumb.jpg",
+      "sha256": "69a4c698f1a1638a4a02a53e33a824716777ced60ca03bc84a31deae2cb9b7b8"
+    },
+    {
+      "path": "public/panoramas-native/japanese/kitchen.jpg",
+      "sha256": "1acc2f32aab73b43f2bf1bdb98fccf10739a5cc78abce506c932146403247b85"
+    },
+    {
+      "path": "public/panoramas-native/japanese/living-mobile.jpg",
+      "sha256": "c7bf6b57ad4974836541ddb50189edbcd70b2a732c29e01015d4f1d4ce71b588"
+    },
+    {
+      "path": "public/panoramas-native/japanese/living-thumb.jpg",
+      "sha256": "a44f3df12850bf965f4b399e68853903c853e2b364534832b250ce0d0f3395b6"
+    },
+    {
+      "path": "public/panoramas-native/japanese/living.jpg",
+      "sha256": "f5279b3f77bdb270d37ba7c164a4f4bff3c231f392e5298096f5de8c6eec85a4"
+    },
+    {
+      "path": "public/panoramas-native/japanese/master-mobile.jpg",
+      "sha256": "db6af01c9f37dcdf6bfa9d78e5bd6cbbc74f2986e691733d18ee50b9e5c418c5"
+    },
+    {
+      "path": "public/panoramas-native/japanese/master-thumb.jpg",
+      "sha256": "fdc6c8f7f2d334dbb0c8a376e4d6c0d9b582e50cf40c71f1407945aca1c73408"
+    },
+    {
+      "path": "public/panoramas-native/japanese/master.jpg",
+      "sha256": "155b9cf6917e93a13bb2947a9ed62da7e1502e8ed9e73c07af9dfd23aa9fb013"
+    },
+    {
+      "path": "public/panoramas-native/japanese/study-mobile.jpg",
+      "sha256": "9f910e4a09166b3ac6640e3dde69aeccec952b29c1cab9d1fdfc0f50fb7acd88"
+    },
+    {
+      "path": "public/panoramas-native/japanese/study-thumb.jpg",
+      "sha256": "bf8c5876bd999105ed7ca0fc1efbba360fe2dc1fea1552ae03ae2a6997497f42"
+    },
+    {
+      "path": "public/panoramas-native/japanese/study.jpg",
+      "sha256": "488a05b09b4d45e1e4ab380d8e3372b833a04699467c3ff0a07d65060661f1f2"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/bathroom-mobile.jpg",
+      "sha256": "5326977a61c40ac11c1967e55c0244240418a9c7db217d83f812a19706963efa"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/bathroom-thumb.jpg",
+      "sha256": "a147e0c9dbb7fb4c6a13c5ff4e020847b87d3097a1ea6874a285854fa081911c"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/bathroom.jpg",
+      "sha256": "86b129f4c8523a24b719c3099a344ef0f937fe2df732aca2bac0c23a0eaa0ef4"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/dining-mobile.jpg",
+      "sha256": "c8d3e9fc1b2fea4bc167f86d52e2c55dcda629a66b133ff1b40e412adcfb60cf"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/dining-thumb.jpg",
+      "sha256": "06a4ab5e8540d8601b6fc6765c30013aa5a693687462e9a3df6be0f3d67e1dd4"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/dining.jpg",
+      "sha256": "9a94d167fcc615ab4c83e047f2b3141c5d617b0231f8ec42d9b8aaaba33941d4"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/guest-mobile.jpg",
+      "sha256": "be71e76e703eca998e056a69e05dd4e3e3374bc9a7b1fc9b2ee1f4010be7d7af"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/guest-thumb.jpg",
+      "sha256": "c4841e7712390777b4c5fb6f2c57d95f0c7d520a7b7fbc13bb1f3b47b0e750a4"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/guest.jpg",
+      "sha256": "951faf26563ef2ebcbc547ac443368b08c43b17d6d3c42ff74ae5bade3562c08"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/kitchen-mobile.jpg",
+      "sha256": "3d4ab58db660cc79fcfd42bf71402dab94cc643ad58807e84e023096de5ca529"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/kitchen-thumb.jpg",
+      "sha256": "248e748a92e2d9435da1f5b8f1ede291daef90b15dabb0d93e538a4410890224"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/kitchen.jpg",
+      "sha256": "05d7e07e0bcbebf841eacab672f238b675e058592d51548ebd2dc44dcb514c28"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/living-mobile.jpg",
+      "sha256": "bb3e749f5154d77d1eae2dff3b79eea5a9c294f0e2a8a8eb606225d1d5b2739f"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/living-thumb.jpg",
+      "sha256": "67a486fe043cbd4c3a64899b30f0c55002ee4728c9f05d895beeb02fbd2953ac"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/living.jpg",
+      "sha256": "8bae29bdeed144046c2c49741b790178299e2a1dd0a661a08226541040d201f5"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/master-mobile.jpg",
+      "sha256": "39ba3234a0543898f1ba98b65eb4e8afa8daa7622b5169ce50c33ce222bb286c"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/master-thumb.jpg",
+      "sha256": "b52f6547b9ab878d56341169a70876542e0b60dcee6080b0a00eeb2a902b517a"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/master.jpg",
+      "sha256": "bfe2ed6b985cf24d3c992c915d2c59068255a9137a3178c8624d339f1865e6b1"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/study-mobile.jpg",
+      "sha256": "497ccd9e1236f24b50129a90193b33451261813106b839f12ac1b5051bc0f811"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/study-thumb.jpg",
+      "sha256": "aef9b22128d422ab7d990df6df416e5c02de2a028070b91031953ab97c571893"
+    },
+    {
+      "path": "public/panoramas-native/sunlit/study.jpg",
+      "sha256": "aee0f8578a2f2d1de35a7dcd17958e950a7f118f999fa571032a61984e66691b"
+    }
+  ]
+}

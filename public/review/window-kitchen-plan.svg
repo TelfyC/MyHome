@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1120" viewBox="0 0 1400 1120" role="img" aria-labelledby="title description">
+  <title id="title">窗边放松区与中式厨房拟定规划</title>
+  <desc id="description">厨房按约310乘244厘米边界绘制。北230厘米洗炒线、东北70厘米冰箱保留，东85厘米短台与南135乘55厘米备餐柜连成L。对向台面净距估算129厘米，南侧门组向左叠收，目标净开口125至130厘米。所有家具、柜体、门组和通路均为拟定，非施工图。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 1 L9 5 L0 9 Z" fill="#6e7867"/></marker>
+    <marker id="red-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 1 L9 5 L0 9 Z" fill="#a05e42"/></marker>
+    <pattern id="shared-corner" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#d8dcc6"/><path d="M-2 2 L2 -2 M0 10 L10 0 M8 12 L12 8" stroke="#a2ad89" stroke-width="1"/></pattern>
+    <style>
+      text{font-family:'Noto Sans SC','Microsoft YaHei',sans-serif;fill:#384438}.title{font-size:30px;font-weight:600}.subtitle{font-size:14px;fill:#697563}.heading{font-size:20px;font-weight:600}.body{font-size:14px}.small{font-size:12px}.tiny{font-size:10px}.muted{fill:#75816d}.center{text-anchor:middle}.boundary{fill:none;stroke:#4c5b48;stroke-width:5}.counter{fill:#d8dfca;stroke:#76846c;stroke-width:2}.glass{stroke:#7dabb0;stroke-width:4;fill:none}.dim{stroke:#6e7867;stroke-width:1;fill:none;marker-start:url(#arrow);marker-end:url(#arrow)}.extension{stroke:#b7bcae;stroke-width:1}.clearance{stroke:#a05e42;stroke-width:1.5;fill:none;marker-start:url(#red-arrow);marker-end:url(#red-arrow)}.proposed{stroke:#bd864f;stroke-width:8;fill:none}.panel{fill:#f2f1e7;stroke:#d7dbcc;stroke-width:1}.note{fill:#925f42}.dash{stroke-dasharray:6 5}
+    </style>
+  </defs>
+  <rect width="1400" height="1120" fill="#fbfaf5"/>
+  <text x="65" y="63" class="title">把窗边留给放松，把厨房留给洗炒、备餐与储物。</text>
+  <text x="65" y="94" class="subtitle">2026-10-28 · 四套风格共用功能规划 · 全部尺寸拟定，需现场复测与产品深化</text>
+  <text x="65" y="126" class="small note">本轮不扩大房间、不移原窗及东北冰箱机位；原粗三维模型未同步，仅作原始边界参考。</text>
+
+  <!-- Kitchen: 1 cm = 2.2 SVG units. Nominal boundary: 310 × 244 cm. -->
+  <text x="115" y="166" class="heading">中式厨房 · 拟定概念平面</text>
+  <path d="M115 185 H797" class="dim"/>
+  <text x="456" y="179" class="small center">围合边界约 310 cm</text>
+  <path d="M115 192 V215 M797 192 V215" class="extension"/>
+  <rect x="115" y="215" width="682" height="536.8" fill="#eeece0"/>
+  <path d="M115 215 H797 V751.8" class="boundary"/>
+  <path d="M82 215 V751.8" class="dim"/>
+  <path d="M89 215 H115 M89 751.8 H115" class="extension"/>
+  <text x="65" y="485" class="small center" transform="rotate(-90 65 485)">边界进深约 244 cm</text>
+
+  <!-- North 230 × 60 cm working run, 10 cm nominal closure gap, NE 70 cm fridge. -->
+  <rect x="115" y="215" width="506" height="132" class="counter"/>
+  <path d="M115 207 H621" class="dim"/>
+  <text x="368" y="201" class="small center">北侧洗炒线 230 × 60 cm（拟定）</text>
+  <path d="M378 214 H620" class="glass"/>
+  <path d="M378 208 H620" stroke="#bdd4d4" stroke-width="2"/>
+  <text x="522" y="236" class="small center">原窗保留</text>
+  <rect x="165" y="252" width="125" height="63" rx="5" fill="#f9faf3" stroke="#6f7a66"/>
+  <circle cx="198" cy="283" r="20" fill="none" stroke="#52614c" stroke-width="3"/>
+  <circle cx="257" cy="283" r="20" fill="none" stroke="#52614c" stroke-width="3"/>
+  <text x="228" y="337" class="small center">双眼燃气灶＋烟机</text>
+  <text x="376" y="282" class="body center">洗炒间操作面</text>
+  <text x="376" y="305" class="tiny center muted">灶窗间距与排烟待深化</text>
+  <rect x="478" y="251" width="112" height="65" rx="8" fill="#f7f9f4" stroke="#7a8d89" stroke-width="2"/>
+  <rect x="489" y="260" width="89" height="45" rx="6" fill="#dce6e0" stroke="#9baea3"/>
+  <text x="535" y="337" class="small center">原窗下单槽</text>
+  <rect x="643" y="215" width="154" height="154" rx="3" fill="#d9ddd4" stroke="#63705e" stroke-width="2"/>
+  <path d="M650 290 H790" stroke="#9ea797"/>
+  <text x="720" y="276" class="body center">东北冰箱</text>
+  <text x="720" y="301" class="small center">原约 70 cm 机位</text>
+  <text x="720" y="325" class="tiny center muted">位置保持 · 机型待选</text>
+  <path d="M797 405 V653" class="glass"/>
+  <path d="M803 405 V653" stroke="#bdd4d4" stroke-width="2"/>
+  <text x="821" y="492" class="tiny center muted" transform="rotate(90 821 492)">原侧窗保留 · 位置示意</text>
+  <rect x="643" y="369" width="154" height="161" fill="#efe4c544" stroke="#b79a65" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="720" y="411" class="small center muted">门 / 抽屉</text>
+  <text x="720" y="433" class="small center muted">开启投影示意</text>
+  <text x="720" y="461" class="tiny center muted">按实选机型复核</text>
+  <text x="720" y="484" class="tiny center muted">短台起点不向冰箱北移</text>
+
+  <!-- East 85 × 60 cm run ends at the south boundary. The 60 × 55 cm corner is shared. -->
+  <rect x="665" y="564.8" width="132" height="187" class="counter"/>
+  <text x="731" y="550" class="small center">东侧原短台 85 × 60 cm（拟定）</text>
+  <rect x="698" y="577" width="65" height="42" rx="12" fill="#faf9f1" stroke="#818c76"/>
+  <path d="M712 576 Q731 563 750 576" fill="none" stroke="#818c76"/>
+  <text x="731" y="607" class="tiny center">电饭煲位</text>
+  <rect x="500" y="630.8" width="297" height="121" class="counter"/>
+  <rect x="665" y="630.8" width="132" height="121" fill="url(#shared-corner)" stroke="#87936f"/>
+  <text x="648" y="657" class="body center">南侧主备餐台 135 × 55 cm</text>
+  <text x="648" y="681" class="small center">目标至少约 110 cm 连续可备餐</text>
+  <text x="731" y="713" class="tiny center">共享 L 角</text>
+  <text x="731" y="730" class="tiny center">60 × 55 cm</text>
+  <text x="581" y="718" class="tiny center muted">统一台高约 88 cm</text>
+  <text x="581" y="735" class="tiny center muted">石面、踢脚、分缝连续</text>
+
+  <path d="M550 351 V626" class="clearance"/>
+  <path d="M530 347 H568 M530 630.8 H568" stroke="#bf9e89" stroke-width="1"/>
+  <text x="528" y="480" class="body" text-anchor="end">台面对向净距</text>
+  <text x="528" y="506" class="heading note" text-anchor="end">约 129 cm</text>
+  <text x="528" y="529" class="tiny muted" text-anchor="end">244 − 60 − 55</text>
+  <text x="365" y="571" class="small center muted">通路估算不含站人、拉抽屉与开冰箱</text>
+
+  <!-- Closeable west bank and the remaining south bank, drawn schematically. -->
+  <path d="M115 215 V751.8" class="glass dash"/>
+  <path d="M121 215 V751.8" stroke="#afc4c1" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <text x="136" y="475" class="small" transform="rotate(-90 136 475)">西侧五扇保留可闭 · 收至原窗侧（拟定）</text>
+  <path d="M115 751.8 H500" class="glass dash"/>
+  <path d="M500 751.8 H610" class="proposed"/>
+  <path d="M610 751.8 H797" stroke="#58664f" stroke-width="8"/>
+  <path d="M500 760 H797" class="glass"/>
+  <g fill="#c9dcda" stroke="#7dabb0" stroke-width="1">
+    <rect x="115" y="727" width="110" height="5"/><rect x="115" y="734" width="110" height="5"/>
+    <rect x="115" y="741" width="110" height="5"/><rect x="115" y="748" width="110" height="5"/>
+  </g>
+  <path d="M225 780 H500" class="dim"/>
+  <text x="362" y="775" class="small center">目标净开口约 125–130 cm</text>
+  <text x="277" y="806" class="small center">南侧四扇向左叠收 · 叠收约占 45–50 cm</text>
+  <text x="551" y="802" class="tiny center note">相邻原活动玻璃约 50 cm</text>
+  <text x="551" y="819" class="tiny center note">改固定低围合，上部固定清玻璃</text>
+  <path d="M551 784 V763" stroke="#bd864f" stroke-width="1"/>
+  <text x="707" y="802" class="tiny center muted">原回墙约 85–97 cm</text>
+  <text x="707" y="819" class="tiny center muted">图按 85 cm 示意，现场校准</text>
+  <text x="456" y="851" class="small center muted">台后固定界面约 135 cm；原回墙长度决定新增固定段实际长度。</text>
+
+  <!-- Living-room detail: furniture footprints only, no invented room dimensions. -->
+  <text x="895" y="166" class="heading">电视左窗边 · 放松位</text>
+  <rect x="875" y="190" width="460" height="358" rx="10" class="panel"/>
+  <path d="M910 236 H1298" class="glass"/>
+  <path d="M910 250 H1298" stroke="#b8b8a0" stroke-width="8" stroke-dasharray="4 5"/>
+  <text x="1105" y="221" class="small center muted">原外窗保留 · 帘布收拢</text>
+  <rect x="982" y="288" width="140" height="158" rx="31" fill="#cbd3b6" stroke="#79876b" stroke-width="2"/>
+  <rect x="998" y="310" width="108" height="78" rx="21" fill="#e4e7d8" stroke="#a7b294"/>
+  <path d="M992 302 Q1052 273 1112 302" stroke="#8d9b7e" stroke-width="9" fill="none"/>
+  <rect x="1140" y="350" width="79" height="70" rx="8" fill="#d2bca0" stroke="#998b71" stroke-width="2"/>
+  <path d="M1148 359 H1211" stroke="#aa967c"/>
+  <text x="1179" y="390" class="tiny center">45 × 40</text>
+  <text x="1179" y="436" class="tiny center muted">移动收纳脚凳</text>
+  <circle cx="938" cy="344" r="28" fill="#d4c2a7" stroke="#9d8d72" stroke-width="2"/>
+  <text x="938" y="349" class="tiny center">约 32 cm</text>
+  <text x="938" y="390" class="tiny center muted">边几</text>
+  <path d="M1147 281 V332 M1137 330 H1157 M1147 281 L1127 282" stroke="#7d785f" stroke-width="4" fill="none"/>
+  <path d="M1127 282 L1116 302 L1138 302 Z" fill="#9f9879"/>
+  <path d="M1126 305 L1103 334" stroke="#c9b777" stroke-width="2" stroke-dasharray="3 4"/>
+  <path d="M1257 311 V282 M1257 294 Q1229 268 1240 266 Q1260 270 1257 294 M1257 286 Q1277 262 1282 275 Q1277 288 1257 286" fill="#8fa17d" stroke="#73866b" stroke-width="2"/>
+  <path d="M1245 311 H1269 L1265 330 H1249 Z" fill="#c8c0ad" stroke="#9d9b87"/>
+  <text x="1258" y="351" class="tiny center muted">仅一窄植物</text>
+  <text x="1052" y="471" class="small center">躺读椅约 75–82 cm 宽、85–90 cm 深</text>
+  <text x="1105" y="503" class="small center">帘布余量目标 15–20 cm · 通路目标 85–90 cm</text>
+  <text x="1105" y="527" class="tiny center muted">局部家具占位示意；不表示已经量得窗边净宽</text>
+
+  <rect x="875" y="573" width="460" height="278" rx="10" class="panel"/>
+  <text x="900" y="605" class="heading">下柜分工 · 转角先深化再下单</text>
+  <g stroke="#adb69c" stroke-width="1">
+    <rect x="905" y="628" width="177.78" height="72" fill="#d3ddc3"/>
+    <rect x="1082.78" y="628" width="133.33" height="72" fill="#e4dfca"/>
+    <rect x="1216.11" y="628" width="88.89" height="72" fill="#d1d9d0"/>
+  </g>
+  <text x="994" y="655" class="small center">约 60 cm</text><text x="994" y="680" class="small center">餐具深抽</text>
+  <text x="1149" y="655" class="small center">约 45 cm</text><text x="1149" y="680" class="small center">米面干货</text>
+  <text x="1260" y="655" class="small center">约 30 cm</text><text x="1260" y="680" class="small center">瓶罐</text>
+  <text x="900" y="727" class="small">此为 135 cm 储物功能分配，不是三只独立成品柜。</text>
+  <text x="900" y="750" class="small">L 角共享 60 × 55 cm，抽屉方向、转角机构与检修待深化。</text>
+  <text x="900" y="779" class="small">灶下放锅具但留检修；水槽下分清洁与垃圾。</text>
+  <text x="900" y="802" class="small">冰箱顶收偶用器；窗与玻璃前不设笨重上柜。</text>
+  <text x="900" y="827" class="tiny muted">柜体、门组及器具选型均拟定；图上不作安装与验收保证。</text>
+
+  <rect x="65" y="890" width="1270" height="166" rx="10" fill="#edf0e5" stroke="#d4ddc7"/>
+  <text x="90" y="924" class="heading">台面增量算清楚，房间边界不变。</text>
+  <text x="90" y="957" class="body">旧台面：2.30 × 0.60 ＋ 0.85 × 0.60 ＝ 1.89 ㎡</text>
+  <text x="90" y="986" class="body">新增净台面：1.35 × 0.55 − 0.60 × 0.55（共享 L 角）＝ 0.4125 ㎡</text>
+  <text x="90" y="1018" class="body">新合计约 2.30 ㎡，增加约 22%；未扣灶槽开孔，不能按图量取施工尺寸。</text>
+  <text x="959" y="970" class="title center">1.89 → 2.30 ㎡</text>
+  <text x="959" y="1005" class="body center">名义台面面积约 ＋22%</text>
+  <text x="65" y="1087" class="small muted">可完整围合、通风、独立排烟为深化方向；燃气接口、窗侧热源间距及供气条件由当地供气企业与现场人员复核。</text>
+  <text x="65" y="1108" class="tiny muted">图中“北/东/南/西”指绘图相对方位，不认定地理朝向。原创规划示意 · 非施工图 · 全部尺寸拟定。</text>
+</svg>

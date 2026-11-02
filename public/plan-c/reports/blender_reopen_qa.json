@@ -1,0 +1,80 @@
+{
+  "status": "pass",
+  "inspection": "reopened_blender_datablocks",
+  "scene_revision": 1,
+  "scene_hash": "faa0addceab80e3f0c4af8299881edc7686572582853b7c92f1cb0c3a512076c",
+  "build_id": "build_bfea00ba37c139d7",
+  "project_blend_sha256": "2c353348c7ab8344dcf7853d8ae0c09730b8cd98ec725a0f8dc644b92de0bbda",
+  "expected_source_entity_count": 111,
+  "actual_source_entity_count": 111,
+  "missing_scene_ids": [],
+  "coincident_finish_cells": {
+    "floor": 0,
+    "ceiling": 0
+  },
+  "finish_cell_counts": {
+    "floor": 233,
+    "ceiling": 233
+  },
+  "missing_textures": [],
+  "camera_projections": {
+    "camera_living_still": {
+      "type": "PERSP",
+      "panorama_type": null
+    },
+    "camera_living_360": {
+      "type": "PANO",
+      "panorama_type": "EQUIRECTANGULAR"
+    },
+    "camera_dining_still": {
+      "type": "PERSP",
+      "panorama_type": null
+    },
+    "camera_dining_360": {
+      "type": "PANO",
+      "panorama_type": "EQUIRECTANGULAR"
+    },
+    "camera_master_still": {
+      "type": "PERSP",
+      "panorama_type": null
+    },
+    "camera_master_360": {
+      "type": "PANO",
+      "panorama_type": "EQUIRECTANGULAR"
+    },
+    "camera_guest_still": {
+      "type": "PERSP",
+      "panorama_type": null
+    },
+    "camera_guest_360": {
+      "type": "PANO",
+      "panorama_type": "EQUIRECTANGULAR"
+    },
+    "camera_study_still": {
+      "type": "PERSP",
+      "panorama_type": null
+    },
+    "camera_study_360": {
+      "type": "PANO",
+      "panorama_type": "EQUIRECTANGULAR"
+    },
+    "camera_kitchen_still": {
+      "type": "PERSP",
+      "panorama_type": null
+    },
+    "camera_kitchen_360": {
+      "type": "PANO",
+      "panorama_type": "EQUIRECTANGULAR"
+    },
+    "camera_bathroom_still": {
+      "type": "PERSP",
+      "panorama_type": null
+    },
+    "camera_bathroom_360": {
+      "type": "PANO",
+      "panorama_type": "EQUIRECTANGULAR"
+    }
+  },
+  "problems": [],
+  "scope": "Technical scene consistency only; production geometry/asset approval remains separate."
+}

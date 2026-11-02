@@ -1,0 +1,47 @@
+{
+  "id": "kitchen",
+  "structureHash": "55109a3278522c23193668b0d8593d2269158842dc652de130f1a6677d40d4f8",
+  "sceneGlbSha256": "a8bd2a3be9e537cd5f7fa8881ce3ba4155b8626eed90bae38fd4786c1be0be59",
+  "camera": "camera-kitchen",
+  "cameraPositionBlender": [
+    9.569999694824219,
+    -1.2699999809265137,
+    1.5800000429153442
+  ],
+  "lensMm": 15.0,
+  "projection": "PERSP",
+  "resolution": [
+    1536,
+    1024
+  ],
+  "samples": 10,
+  "threads": 8,
+  "blenderVersion": "4.5.3 LTS",
+  "renderEngine": "CYCLES",
+  "wallsHidden": false,
+  "ceilingHidden": false,
+  "durationSeconds": 37.53,
+  "sha256": "b976c96edb0c04f2e99381e26b153b7e7d8a25225cad67cb32915e4ec420a1c4",
+  "source": "deterministic Blender render of exported latest Three scene",
+  "renderScriptSha256": "6cecbc2fca84819ad6533da5581ed5f605a8b615e5700e33a71bf5c24b65b534",
+  "sourceCamera": {
+    "id": "kitchen",
+    "roomId": "kitchen",
+    "position": [
+      9.57,
+      1.58,
+      1.27
+    ],
+    "target": [
+      11.4,
+      1.08,
+      1.15
+    ],
+    "lensMm": 15,
+    "type": "main",
+    "projection": "perspective",
+    "sensorWidthMm": 36,
+    "fovDegrees": 100.38885781546962,
+    "structureVisibility": "Actual full walls retained; camera inside room footprint."
+  }
+}

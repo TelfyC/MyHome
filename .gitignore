@@ -1,9 +1,22 @@
 node_modules/
 dist/
 artifacts/
+output/imagegen/
 *.log
 .DS_Store
 home-design-review/skills/
 
 home-design-review/input/before-detail-20261026/
 home-design-review/input/retired-cream-20261026/
+
+# Plan C local runtime and reproducible render workspace
+planC/.tools/
+planC/.venv/
+planC/.runtime/
+planC/.state/
+planC/outputs/
+planC/**/__pycache__/
+planC/.pytest_cache/
+planC/*.egg-info/
+planC/**/*.pyc
+*.blend1

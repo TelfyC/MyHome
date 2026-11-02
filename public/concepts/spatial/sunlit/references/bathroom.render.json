@@ -1,0 +1,47 @@
+{
+  "id": "bathroom",
+  "structureHash": "55109a3278522c23193668b0d8593d2269158842dc652de130f1a6677d40d4f8",
+  "sceneGlbSha256": "a8bd2a3be9e537cd5f7fa8881ce3ba4155b8626eed90bae38fd4786c1be0be59",
+  "camera": "camera-bathroom",
+  "cameraPositionBlender": [
+    6.75,
+    -3.369999885559082,
+    1.5800000429153442
+  ],
+  "lensMm": 18.0,
+  "projection": "PERSP",
+  "resolution": [
+    1536,
+    1024
+  ],
+  "samples": 10,
+  "threads": 8,
+  "blenderVersion": "4.5.3 LTS",
+  "renderEngine": "CYCLES",
+  "wallsHidden": false,
+  "ceilingHidden": false,
+  "durationSeconds": 45.46,
+  "sha256": "d326e4ddbb0e9bfe78acb2925cefa736ad7d482333aab8130484731536c6303e",
+  "source": "deterministic Blender render of exported latest Three scene",
+  "renderScriptSha256": "6cecbc2fca84819ad6533da5581ed5f605a8b615e5700e33a71bf5c24b65b534",
+  "sourceCamera": {
+    "id": "bathroom",
+    "roomId": "bathroom",
+    "position": [
+      6.75,
+      1.58,
+      3.37
+    ],
+    "target": [
+      5.82,
+      1.05,
+      1.57
+    ],
+    "lensMm": 18,
+    "type": "main",
+    "projection": "perspective",
+    "sensorWidthMm": 36,
+    "fovDegrees": 90,
+    "structureVisibility": "Actual full walls retained; camera inside room footprint."
+  }
+}

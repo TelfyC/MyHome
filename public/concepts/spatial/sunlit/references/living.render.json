@@ -1,0 +1,47 @@
+{
+  "id": "living",
+  "structureHash": "55109a3278522c23193668b0d8593d2269158842dc652de130f1a6677d40d4f8",
+  "sceneGlbSha256": "a8bd2a3be9e537cd5f7fa8881ce3ba4155b8626eed90bae38fd4786c1be0be59",
+  "camera": "camera-living",
+  "cameraPositionBlender": [
+    9.119999885559082,
+    -5.53000020980835,
+    1.5800000429153442
+  ],
+  "lensMm": 21.0,
+  "projection": "PERSP",
+  "resolution": [
+    1536,
+    1024
+  ],
+  "samples": 10,
+  "threads": 8,
+  "blenderVersion": "4.5.3 LTS",
+  "renderEngine": "CYCLES",
+  "wallsHidden": false,
+  "ceilingHidden": false,
+  "durationSeconds": 42.61,
+  "sha256": "1d25d81e15c0b1a633719bcb5e88384954ea5d5a355c4ca8e1d7ec5b5a2bb8de",
+  "source": "deterministic Blender render of exported latest Three scene",
+  "renderScriptSha256": "6cecbc2fca84819ad6533da5581ed5f605a8b615e5700e33a71bf5c24b65b534",
+  "sourceCamera": {
+    "id": "living",
+    "roomId": "living",
+    "position": [
+      9.12,
+      1.58,
+      5.53
+    ],
+    "target": [
+      7.25,
+      1.1,
+      7.73
+    ],
+    "lensMm": 21,
+    "type": "main",
+    "projection": "perspective",
+    "sensorWidthMm": 36,
+    "fovDegrees": 81.20258929000894,
+    "structureVisibility": "Actual full walls retained; camera inside room footprint."
+  }
+}

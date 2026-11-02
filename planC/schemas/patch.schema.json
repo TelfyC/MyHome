@@ -1,0 +1,153 @@
+{
+  "$defs": {
+    "PatchOperation": {
+      "additionalProperties": true,
+      "properties": {
+        "op": {
+          "enum": [
+            "translate",
+            "rotate",
+            "set_material",
+            "update_wall",
+            "remove_wall"
+          ],
+          "title": "Op",
+          "type": "string"
+        },
+        "object_id": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+          "title": "Object Id",
+          "type": "string"
+        },
+        "delta_m": {
+          "anyOf": [
+            {
+              "maxItems": 3,
+              "minItems": 3,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Delta M"
+        },
+        "rotation_euler_rad": {
+          "anyOf": [
+            {
+              "maxItems": 3,
+              "minItems": 3,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rotation Euler Rad"
+        },
+        "material_id": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Material Id"
+        },
+        "values": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Values"
+        }
+      },
+      "required": [
+        "op",
+        "object_id"
+      ],
+      "title": "PatchOperation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": true,
+  "properties": {
+    "project_id": {
+      "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+      "title": "Project Id",
+      "type": "string"
+    },
+    "expected_revision": {
+      "minimum": 1,
+      "title": "Expected Revision",
+      "type": "integer"
+    },
+    "patch_id": {
+      "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+      "title": "Patch Id",
+      "type": "string"
+    },
+    "requested_by": {
+      "default": "design_agent",
+      "title": "Requested By",
+      "type": "string"
+    },
+    "operations": {
+      "items": {
+        "$ref": "#/$defs/PatchOperation"
+      },
+      "maxItems": 100,
+      "minItems": 1,
+      "title": "Operations",
+      "type": "array"
+    },
+    "validate_before_commit": {
+      "const": true,
+      "default": true,
+      "title": "Validate Before Commit",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "project_id",
+    "expected_revision",
+    "patch_id",
+    "operations"
+  ],
+  "title": "ScenePatch",
+  "type": "object"
+}

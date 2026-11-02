@@ -1,0 +1,419 @@
+{
+  "title": "四种家的表情 · 概念设计图册",
+  "date": "2026-10-30",
+  "method": "built-in image_gen",
+  "imageCount": 36,
+  "mainViews": 28,
+  "detailViews": 8,
+  "scope": "Interior style, materials, furniture and decoration concepts. Independent camera views; not measured construction drawings.",
+  "images": [
+    {
+      "style": "forest",
+      "styleName": "林中树屋",
+      "room": "living",
+      "roomName": "客厅",
+      "file": "forest/living.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2691086,
+      "sha256": "edac54f16747405e6f4ca9a534e4dad4e7c5aca48049b2c407141acf2adb8924"
+    },
+    {
+      "style": "forest",
+      "styleName": "林中树屋",
+      "room": "dining",
+      "roomName": "餐厅与咖啡角",
+      "file": "forest/dining.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2653938,
+      "sha256": "5186772968d9aee0555590f0673bd521cba9055ed981eec9733b4db5a963b3be"
+    },
+    {
+      "style": "forest",
+      "styleName": "林中树屋",
+      "room": "master",
+      "roomName": "主卧与衣帽区",
+      "file": "forest/master.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2620054,
+      "sha256": "5a8c7b71d478fc03d918455cc2d92e16d21e3a60bf5f43f4dfcc9f31c6f4c729"
+    },
+    {
+      "style": "forest",
+      "styleName": "林中树屋",
+      "room": "study",
+      "roomName": "电竞房",
+      "file": "forest/study.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2415910,
+      "sha256": "26d48c61d16cb0b81e512a0139c3b47d7022979f23a286de1d55d614eb42efc7"
+    },
+    {
+      "style": "forest",
+      "styleName": "林中树屋",
+      "room": "guest",
+      "roomName": "次卧 / 书房",
+      "file": "forest/guest.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2737902,
+      "sha256": "1343e4e572a4d9b8eb7259f8da9a7110ad445f40a35f65e6328e898444470589"
+    },
+    {
+      "style": "forest",
+      "styleName": "林中树屋",
+      "room": "kitchen",
+      "roomName": "可开合厨房",
+      "file": "forest/kitchen.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2242664,
+      "sha256": "51591e2509b81a13132ed34952095ce3e27ab317eb388cb3d8cb4fb983f8d8dd"
+    },
+    {
+      "style": "forest",
+      "styleName": "林中树屋",
+      "room": "bathroom",
+      "roomName": "卫生间",
+      "file": "forest/bathroom.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2508026,
+      "sha256": "2c071a11148b33a79ced949ef6fd61438c216ba72b2be918a458bccb3b5d6e36"
+    },
+    {
+      "style": "forest",
+      "styleName": "林中树屋",
+      "room": "living-detail",
+      "roomName": "窗边阅读位 · 细节",
+      "file": "forest/living-detail.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2699218,
+      "sha256": "8af037dbf33b497f11b5709f0c6528d516d9a90b905437949085f003467f918a"
+    },
+    {
+      "style": "forest",
+      "styleName": "林中树屋",
+      "room": "dining-detail",
+      "roomName": "咖啡角 · 细节",
+      "file": "forest/dining-detail.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2540915,
+      "sha256": "4a2255a4f3ba87f724ada25155f4150db36cdf00c3a1de3a7a6c832c1599e01e"
+    },
+    {
+      "style": "japanese",
+      "styleName": "现代日式中古风",
+      "room": "living",
+      "roomName": "客厅",
+      "file": "japanese/living.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2481147,
+      "sha256": "fa864a73735d0f408954d50fd55ae59c44b61f8316a15fd4b2a04e2a04456c95"
+    },
+    {
+      "style": "japanese",
+      "styleName": "现代日式中古风",
+      "room": "dining",
+      "roomName": "餐厅与咖啡角",
+      "file": "japanese/dining.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2544791,
+      "sha256": "0f936aec8e8797c0be39bc2f278d9e94c8c0abb0372c83d3f5a37710e4295d8e"
+    },
+    {
+      "style": "japanese",
+      "styleName": "现代日式中古风",
+      "room": "master",
+      "roomName": "主卧与衣帽区",
+      "file": "japanese/master.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2579650,
+      "sha256": "6f6b76f5ff77826566519e6d2fd51db3c2bdf14e7957ebd96d2e658a2c8a93e7"
+    },
+    {
+      "style": "japanese",
+      "styleName": "现代日式中古风",
+      "room": "study",
+      "roomName": "电竞房",
+      "file": "japanese/study.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2468175,
+      "sha256": "2720f3acc902a32f2c6a9687b2d09a0afef772263b71a8f70da72812b765c56d"
+    },
+    {
+      "style": "japanese",
+      "styleName": "现代日式中古风",
+      "room": "guest",
+      "roomName": "次卧 / 书房",
+      "file": "japanese/guest.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2528926,
+      "sha256": "07a9f2481f340cae7ab1f0e80563676a59af7c51154b84ad9de452c367a509ad"
+    },
+    {
+      "style": "japanese",
+      "styleName": "现代日式中古风",
+      "room": "kitchen",
+      "roomName": "可开合厨房",
+      "file": "japanese/kitchen.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2347347,
+      "sha256": "efcbbc95b5f5494b706a9f5936867024cd8fd1ed4e570e11f4e3613fd3e0270b"
+    },
+    {
+      "style": "japanese",
+      "styleName": "现代日式中古风",
+      "room": "bathroom",
+      "roomName": "卫生间",
+      "file": "japanese/bathroom.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2390696,
+      "sha256": "e5d603220716dffa25337f620bc6a9e4bed5d88f1fc9a417d226cb5d56088463"
+    },
+    {
+      "style": "japanese",
+      "styleName": "现代日式中古风",
+      "room": "living-detail",
+      "roomName": "窗边阅读位 · 细节",
+      "file": "japanese/living-detail.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2745429,
+      "sha256": "80d1231a5e29a260f0825912ad2ebe54e01719b42d6965f428643e28ea3c5067"
+    },
+    {
+      "style": "japanese",
+      "styleName": "现代日式中古风",
+      "room": "dining-detail",
+      "roomName": "咖啡角 · 细节",
+      "file": "japanese/dining-detail.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2394188,
+      "sha256": "5f83b46ba6b850bab74cebdbd79c5d1efe23beda4decdeb6fe9d399721ed4aa3"
+    },
+    {
+      "style": "french",
+      "styleName": "轻法式复古原木风",
+      "room": "living",
+      "roomName": "客厅",
+      "file": "french/living.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2535095,
+      "sha256": "fb4aefd2184daeeabc54d2e4876de37aac2b6ef512db0096d84711a95ff2a47a"
+    },
+    {
+      "style": "french",
+      "styleName": "轻法式复古原木风",
+      "room": "dining",
+      "roomName": "餐厅与咖啡角",
+      "file": "french/dining.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2452003,
+      "sha256": "826173fa92b1cf25311128ed6d556594cd6d0e22e9290ceb38b1de25ab3532da"
+    },
+    {
+      "style": "french",
+      "styleName": "轻法式复古原木风",
+      "room": "master",
+      "roomName": "主卧与衣帽区",
+      "file": "french/master.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2507192,
+      "sha256": "d8ced404be7f65c8e051c72b932345c9f81665b1ddf2e902aeedec8b818d2c97"
+    },
+    {
+      "style": "french",
+      "styleName": "轻法式复古原木风",
+      "room": "study",
+      "roomName": "电竞房",
+      "file": "french/study.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2744460,
+      "sha256": "440c7a9aaf3cb457b7b30e5568bf75c20f932559f85f3085e5f025eaee5783cf"
+    },
+    {
+      "style": "french",
+      "styleName": "轻法式复古原木风",
+      "room": "guest",
+      "roomName": "次卧 / 书房",
+      "file": "french/guest.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2577081,
+      "sha256": "e0de7cb1653042324c1c80ed3e0f77ed5baebff422f0fe92651858f7103232d5"
+    },
+    {
+      "style": "french",
+      "styleName": "轻法式复古原木风",
+      "room": "kitchen",
+      "roomName": "可开合厨房",
+      "file": "french/kitchen.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2284394,
+      "sha256": "fa663fd57bf58fca799c812285c55194e371c9a0d2eefc92fd91b694e05a0ec6"
+    },
+    {
+      "style": "french",
+      "styleName": "轻法式复古原木风",
+      "room": "bathroom",
+      "roomName": "卫生间",
+      "file": "french/bathroom.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2587612,
+      "sha256": "47d0be30d29a6f863b6cd4233e134d0d1499debed73145e11f963447400fac39"
+    },
+    {
+      "style": "french",
+      "styleName": "轻法式复古原木风",
+      "room": "living-detail",
+      "roomName": "窗边阅读位 · 细节",
+      "file": "french/living-detail.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2798636,
+      "sha256": "3edc1fc80996e448150dd4bca3e83c7ad986b5127c7341198ccc07a2c56fdece"
+    },
+    {
+      "style": "french",
+      "styleName": "轻法式复古原木风",
+      "room": "dining-detail",
+      "roomName": "咖啡角 · 细节",
+      "file": "french/dining-detail.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2242896,
+      "sha256": "e5e3b84467716134a379f312ac144a78bdb6aaee0973fad2632771cec0bbdd19"
+    },
+    {
+      "style": "sunlit",
+      "styleName": "日光花园原木",
+      "room": "living",
+      "roomName": "客厅",
+      "file": "sunlit/living.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2434688,
+      "sha256": "1bd0990ef3f070b1e4328f530453eeabf574faf7b5ba81180ac5fe19a2fe15fa"
+    },
+    {
+      "style": "sunlit",
+      "styleName": "日光花园原木",
+      "room": "dining",
+      "roomName": "餐厅与咖啡角",
+      "file": "sunlit/dining.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2340561,
+      "sha256": "e9edf278479be0dfcb173c64556ef8604d5d97eadee2d9d75553abaac941f426"
+    },
+    {
+      "style": "sunlit",
+      "styleName": "日光花园原木",
+      "room": "master",
+      "roomName": "主卧与衣帽区",
+      "file": "sunlit/master.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2419529,
+      "sha256": "e6a16077c63ef4b99b884b2818839ac2c90c28a57420e8153e693f21655a03c2"
+    },
+    {
+      "style": "sunlit",
+      "styleName": "日光花园原木",
+      "room": "study",
+      "roomName": "电竞房",
+      "file": "sunlit/study.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2574398,
+      "sha256": "4dfd87d35ba14a2724ffbc7e7732150d2c44e2a57caced09d432d5cbf363e5f6"
+    },
+    {
+      "style": "sunlit",
+      "styleName": "日光花园原木",
+      "room": "guest",
+      "roomName": "次卧 / 书房",
+      "file": "sunlit/guest.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2656788,
+      "sha256": "5d6f10a3ebff031b599007fc855a5f53de6b73fd3bd4576cf86406123408590f"
+    },
+    {
+      "style": "sunlit",
+      "styleName": "日光花园原木",
+      "room": "kitchen",
+      "roomName": "可开合厨房",
+      "file": "sunlit/kitchen.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2234843,
+      "sha256": "6515a1d455f516e3dc11f7c0ef6f6e5530a947889d85b0cb6881e4cace14dcd0"
+    },
+    {
+      "style": "sunlit",
+      "styleName": "日光花园原木",
+      "room": "bathroom",
+      "roomName": "卫生间",
+      "file": "sunlit/bathroom.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2151197,
+      "sha256": "cfb2ecd67b9a83db82fc1644c5df2a307dcb67c4b3143bc0f0ba7331093407f8"
+    },
+    {
+      "style": "sunlit",
+      "styleName": "日光花园原木",
+      "room": "living-detail",
+      "roomName": "窗边阅读位 · 细节",
+      "file": "sunlit/living-detail.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2899286,
+      "sha256": "bca0649158756fef08d13543d5060d8dad6465985c77509e39adf2e636d900e3"
+    },
+    {
+      "style": "sunlit",
+      "styleName": "日光花园原木",
+      "room": "dining-detail",
+      "roomName": "咖啡角 · 细节",
+      "file": "sunlit/dining-detail.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2235047,
+      "sha256": "b6f82dc136ca1124000148cd68a9c0482b8e2e54d2a7b59b161f10fed88337e5"
+    }
+  ],
+  "updates": [
+    {
+      "date": "2026-11-02",
+      "style": "sunlit",
+      "imageCount": 9,
+      "manifest": "optimized/sunlit/manifest.json",
+      "page": "sunlit-refined.html"
+    }
+  ],
+  "galleryDefaults": {
+    "sunlit": "optimized/sunlit/"
+  }
+}

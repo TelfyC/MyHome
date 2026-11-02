@@ -1,0 +1,227 @@
+{
+  "version": "sunlit-spatial-20261102-r1",
+  "created": "2026-11-02T07:17:33.900Z",
+  "structureHash": "55109a3278522c23193668b0d8593d2269158842dc652de130f1a6677d40d4f8",
+  "sources": [
+    {
+      "path": "src/dimensions.ts",
+      "sha256": "0831f6b220aced84342ea75c0a497a4f1248a7b679120c5b0c4a20c343cd52fc"
+    },
+    {
+      "path": "src/plan.ts",
+      "sha256": "f2a49287cf9a8799ee98467dc2fc73c82b687b57daaea8bb5a2e2c5c82c2142b"
+    },
+    {
+      "path": "src/model.ts",
+      "sha256": "3d4ceab445ebc95711699cc769d46aeb3944d4eb67026c64929bfd2db23a7412"
+    },
+    {
+      "path": "src/sunlit-spatial-scene.ts",
+      "sha256": "775fad65e2241a111fe127803a0bd7108eff903b7fe060bc746599302cf344a0"
+    },
+    {
+      "path": "docs/newStructure.jpg",
+      "sha256": "288b22373043e575213305b4bee239481ac6d9b4179783fee6ab7fc631c5d206"
+    },
+    {
+      "path": "public/references/plan.png",
+      "sha256": "3ecb2474c0a74dc9ff605c2b27d60d53133e84aaf9eecb4c7ee3ce2b400a948c"
+    },
+    {
+      "path": "docs/窗边放松区与中式厨房_20261028.md",
+      "sha256": "71b181489435ebf8a727ef3b2b1b27507ff33492f2b9367fbf2a115049eb5b0a"
+    }
+  ],
+  "scene": {
+    "path": "scene.json",
+    "sha256": "27e53db0fb56c1c2e85d5eafb2b6c488471645000d3ebfd3bb0c682c915ea6a6"
+  },
+  "model": {
+    "path": "scene.glb",
+    "bytes": 19704228,
+    "sha256": "a8bd2a3be9e537cd5f7fa8881ce3ba4155b8626eed90bae38fd4786c1be0be59"
+  },
+  "cameras": [
+    {
+      "id": "living",
+      "roomId": "living",
+      "position": [
+        9.12,
+        1.58,
+        5.53
+      ],
+      "target": [
+        7.25,
+        1.1,
+        7.73
+      ],
+      "lensMm": 21,
+      "type": "main",
+      "projection": "perspective",
+      "sensorWidthMm": 36,
+      "fovDegrees": 81.20258929000894,
+      "structureVisibility": "Actual full walls retained; camera inside room footprint."
+    },
+    {
+      "id": "dining",
+      "roomId": "dining",
+      "position": [
+        8.95,
+        1.58,
+        2.45
+      ],
+      "target": [
+        7.65,
+        1.13,
+        -0.12
+      ],
+      "lensMm": 21,
+      "type": "main",
+      "projection": "perspective",
+      "sensorWidthMm": 36,
+      "fovDegrees": 81.20258929000894,
+      "structureVisibility": "Actual full walls retained; camera inside room footprint."
+    },
+    {
+      "id": "kitchen",
+      "roomId": "kitchen",
+      "position": [
+        9.57,
+        1.58,
+        1.27
+      ],
+      "target": [
+        11.4,
+        1.08,
+        1.15
+      ],
+      "lensMm": 15,
+      "type": "main",
+      "projection": "perspective",
+      "sensorWidthMm": 36,
+      "fovDegrees": 100.38885781546962,
+      "structureVisibility": "Actual full walls retained; camera inside room footprint."
+    },
+    {
+      "id": "master",
+      "roomId": "master",
+      "position": [
+        2.68,
+        1.58,
+        5.4
+      ],
+      "target": [
+        1.42,
+        1.05,
+        8.19
+      ],
+      "lensMm": 22,
+      "type": "main",
+      "projection": "perspective",
+      "sensorWidthMm": 36,
+      "fovDegrees": 78.57881372500071,
+      "structureVisibility": "Actual full walls retained; camera inside room footprint."
+    },
+    {
+      "id": "study",
+      "roomId": "study",
+      "position": [
+        5.73,
+        1.58,
+        5.91
+      ],
+      "target": [
+        3.86,
+        1.13,
+        7.18
+      ],
+      "lensMm": 21,
+      "type": "main",
+      "projection": "perspective",
+      "sensorWidthMm": 36,
+      "fovDegrees": 81.20258929000894,
+      "structureVisibility": "Actual full walls retained; camera inside room footprint."
+    },
+    {
+      "id": "guest",
+      "roomId": "guest",
+      "position": [
+        4.05,
+        1.58,
+        3.45
+      ],
+      "target": [
+        3.51,
+        1.08,
+        1.26
+      ],
+      "lensMm": 20,
+      "type": "main",
+      "projection": "perspective",
+      "sensorWidthMm": 36,
+      "fovDegrees": 83.97442499163333,
+      "structureVisibility": "Actual full walls retained; camera inside room footprint."
+    },
+    {
+      "id": "bathroom",
+      "roomId": "bathroom",
+      "position": [
+        6.75,
+        1.58,
+        3.37
+      ],
+      "target": [
+        5.82,
+        1.05,
+        1.57
+      ],
+      "lensMm": 18,
+      "type": "main",
+      "projection": "perspective",
+      "sensorWidthMm": 36,
+      "fovDegrees": 90,
+      "structureVisibility": "Actual full walls retained; camera inside room footprint."
+    },
+    {
+      "id": "living-detail",
+      "roomId": "living",
+      "position": [
+        8.16,
+        1.42,
+        7.75
+      ],
+      "target": [
+        7.02,
+        1,
+        8.72
+      ],
+      "lensMm": 25,
+      "type": "detail",
+      "projection": "perspective",
+      "sensorWidthMm": 36,
+      "fovDegrees": 71.5077745088735,
+      "structureVisibility": "Actual full walls retained; camera inside room footprint."
+    },
+    {
+      "id": "dining-detail",
+      "roomId": "dining",
+      "position": [
+        8.64,
+        1.48,
+        0.84
+      ],
+      "target": [
+        7.44,
+        1.24,
+        -0.04
+      ],
+      "lensMm": 30,
+      "type": "detail",
+      "projection": "perspective",
+      "sensorWidthMm": 36,
+      "fovDegrees": 61.92751306414704,
+      "structureVisibility": "Actual full walls retained; camera inside room footprint."
+    }
+  ],
+  "status": "deterministic-reference; inferred source dimensions retained"
+}

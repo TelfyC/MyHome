@@ -1,0 +1,306 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "home1_sunlit",
+  "assets": [
+    {
+      "asset_id": "custom_armchair",
+      "name": "Plan C custom development armchair",
+      "category": "armchair",
+      "generator": "armchair",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    },
+    {
+      "asset_id": "custom_bed",
+      "name": "Plan C custom development bed",
+      "category": "bed",
+      "generator": "bed",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    },
+    {
+      "asset_id": "custom_bedside_table",
+      "name": "Plan C custom development bedside_table",
+      "category": "bedside_table",
+      "generator": "bedside_table",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    },
+    {
+      "asset_id": "custom_bookcase",
+      "name": "Plan C custom development bookcase",
+      "category": "bookcase",
+      "generator": "bookcase",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    },
+    {
+      "asset_id": "custom_cabinet",
+      "name": "Plan C custom development cabinet",
+      "category": "cabinet",
+      "generator": "cabinet",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    },
+    {
+      "asset_id": "custom_coffee_table",
+      "name": "Plan C custom development coffee_table",
+      "category": "coffee_table",
+      "generator": "coffee_table",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    },
+    {
+      "asset_id": "custom_desk",
+      "name": "Plan C custom development desk",
+      "category": "desk",
+      "generator": "desk",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    },
+    {
+      "asset_id": "custom_dining_chair",
+      "name": "Plan C custom development dining_chair",
+      "category": "dining_chair",
+      "generator": "dining_chair",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    },
+    {
+      "asset_id": "custom_dining_table",
+      "name": "Plan C custom development dining_table",
+      "category": "dining_table",
+      "generator": "dining_table",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    },
+    {
+      "asset_id": "custom_fridge",
+      "name": "Plan C custom development fridge",
+      "category": "fridge",
+      "generator": "fridge",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    },
+    {
+      "asset_id": "custom_kitchen_run",
+      "name": "Plan C custom development kitchen_run",
+      "category": "kitchen_run",
+      "generator": "kitchen_run",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    },
+    {
+      "asset_id": "custom_office_chair",
+      "name": "Plan C custom development office_chair",
+      "category": "office_chair",
+      "generator": "office_chair",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    },
+    {
+      "asset_id": "custom_pendant",
+      "name": "Plan C custom development pendant",
+      "category": "pendant",
+      "generator": "pendant",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    },
+    {
+      "asset_id": "custom_plant",
+      "name": "Plan C custom development plant",
+      "category": "plant",
+      "generator": "plant",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    },
+    {
+      "asset_id": "custom_rug",
+      "name": "Plan C custom development rug",
+      "category": "rug",
+      "generator": "rug",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    },
+    {
+      "asset_id": "custom_shower",
+      "name": "Plan C custom development shower",
+      "category": "shower",
+      "generator": "shower",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    },
+    {
+      "asset_id": "custom_sofa",
+      "name": "Plan C custom development sofa",
+      "category": "sofa",
+      "generator": "sofa",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    },
+    {
+      "asset_id": "custom_toilet",
+      "name": "Plan C custom development toilet",
+      "category": "toilet",
+      "generator": "toilet",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    },
+    {
+      "asset_id": "custom_tv",
+      "name": "Plan C custom development tv",
+      "category": "tv",
+      "generator": "tv",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    },
+    {
+      "asset_id": "custom_vanity",
+      "name": "Plan C custom development vanity",
+      "category": "vanity",
+      "generator": "vanity",
+      "quality_tier": "custom_fixture",
+      "approval_status": "development_fixture",
+      "license": {
+        "license_id": "project_custom_fixture",
+        "commercial_use_allowed": true,
+        "attribution_required": false,
+        "source_url": null,
+        "note": "Project-authored parametric mesh; no external model or texture. Not reviewed as a production hero asset."
+      }
+    }
+  ]
+}

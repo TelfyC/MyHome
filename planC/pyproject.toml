@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "home-archviz-planc"
+version = "0.1.0"
+description = "Versioned scene, geometry gates and deterministic Blender worker for Home Plan C"
+requires-python = ">=3.11"
+dependencies = ["fastapi==0.122.0", "pydantic==2.12.5", "uvicorn==0.38.0", "pillow>=11,<13"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10", "httpx>=0.28,<0.29"]
+
+[project.scripts]
+archviz = "archviz.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["archviz*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

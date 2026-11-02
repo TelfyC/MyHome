@@ -1,0 +1,187 @@
+{
+  "$defs": {
+    "AssetRecord": {
+      "additionalProperties": true,
+      "properties": {
+        "asset_id": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,127}$",
+          "title": "Asset Id",
+          "type": "string"
+        },
+        "name": {
+          "default": "",
+          "title": "Name",
+          "type": "string"
+        },
+        "category": {
+          "title": "Category",
+          "type": "string"
+        },
+        "quality_tier": {
+          "title": "Quality Tier",
+          "type": "string"
+        },
+        "generator": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Generator"
+        },
+        "format": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Format"
+        },
+        "dimensions_m": {
+          "anyOf": [
+            {
+              "maxItems": 3,
+              "minItems": 3,
+              "prefixItems": [
+                {
+                  "exclusiveMinimum": 0,
+                  "type": "number"
+                },
+                {
+                  "exclusiveMinimum": 0,
+                  "type": "number"
+                },
+                {
+                  "exclusiveMinimum": 0,
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Dimensions M"
+        },
+        "file_uri": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "File Uri"
+        },
+        "file_sha256": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "File Sha256"
+        },
+        "license": {
+          "$ref": "#/$defs/License"
+        },
+        "approved": {
+          "default": false,
+          "title": "Approved",
+          "type": "boolean"
+        },
+        "approval_evidence": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Approval Evidence"
+        },
+        "validation": {
+          "additionalProperties": true,
+          "title": "Validation",
+          "type": "object"
+        }
+      },
+      "required": [
+        "asset_id",
+        "category",
+        "quality_tier",
+        "license"
+      ],
+      "title": "AssetRecord",
+      "type": "object"
+    },
+    "License": {
+      "additionalProperties": true,
+      "properties": {
+        "license_id": {
+          "title": "License Id",
+          "type": "string"
+        },
+        "commercial_use_allowed": {
+          "title": "Commercial Use Allowed",
+          "type": "boolean"
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Url"
+        },
+        "attribution_required": {
+          "default": false,
+          "title": "Attribution Required",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "license_id",
+        "commercial_use_allowed"
+      ],
+      "title": "License",
+      "type": "object"
+    }
+  },
+  "additionalProperties": true,
+  "properties": {
+    "assets": {
+      "items": {
+        "$ref": "#/$defs/AssetRecord"
+      },
+      "title": "Assets",
+      "type": "array"
+    }
+  },
+  "required": [
+    "assets"
+  ],
+  "title": "AssetManifest",
+  "type": "object"
+}

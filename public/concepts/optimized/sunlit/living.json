@@ -1,0 +1,20 @@
+{
+  "room": "living",
+  "date": "2026-11-02",
+  "tool": "built-in image_gen",
+  "use_case": "precise-object-edit",
+  "input": [
+    "public/concepts/sunlit/living.png",
+    "public/concepts/variants/sunlit/dining-dark-cherry.png"
+  ],
+  "prompt": "Use case: precise-object-edit.\nAsset type: refined photorealistic interior concept image for an existing apartment, landscape 1536x1024.\nInput images: Image 1 is the EDIT TARGET: current Sunlit Garden living room. Image 2 is WOOD COLOR REFERENCE ONLY: use its matte deep chestnut/cherry brown dining-table color (roughly #6b4435), not its composition.\nPrimary request: Refine Image 1 into a cohesive bright Sunlit Garden room with warm-white, pale honey oak, sage green, very restrained dusty pink, and a little deep warm wood. Preserve the target room and exact view.\nEdits: Change ONLY the small round reading-side table beside the window armchair to the same warm dark chestnut wood as reference Image 2, keep its slim form and position. Change the round tray on the white coffee table to the same deep matte wood. Give the long pale oak TV cabinet a very thin warm-white stone-look top, retaining all pale oak fronts, base, feet, scale and position. Reduce decorative objects on that cabinet: at its left end keep a small sage ceramic vase with a few airy stems and two books; at its right keep just one small leafy plant and one simple photograph, leaving most of the top clear. Keep the cream fine-stripe sofa, pale wood-framed cream striped reading armchair, pale wood storage footstool and white-top coffee table. Keep a single dusty-pink cushion on the reading chair and one muted sage plus one dusty-pink cushion on sofa, no extra pillows. A single green throw can rest neatly on sofa.\nDetails: The slim warm-white directional reading floor lamp stands clear of the chair arms, its shade aimed toward reading pages. The dark side table holds just a ceramic cup and open book. Keep one slim tall plant near the window to right of the armchair, with space for curtain operation; do not create a forest in the chair's foot space. Existing ivory sheers and sage curtains remain. No TV wires, no objects floating, straight plausible furniture legs and grain, cabinet gaps consistent.\nInvariants: exact original camera, framing, windows, walls, black TV, sofa/table/armchair/footstool locations, all room dimensions and pale oak floor. Keep bright fresh neutral daylight and exposure, gentle believable shadows, warm whites that remain white. Retain lightweight lines and a relaxed lived-in room, no dramatic yellow/orange tint, no dark or rustic overhaul, no additional windows, no text, labels, people, watermark or collage.",
+  "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f1-bbaf-7021-afc8-a5688aa9e8f6/exec-0263288d-2068-4141-ba54-e9e4c8c56567.png",
+  "review": {
+    "status": "selected",
+    "camera_and_layout": "Preserved original camera and major room/furniture geometry.",
+    "wood_hierarchy": "Only side table and coffee tray become deep warm brown; pale cabinet fronts/feet, armchair frame and storage footstool remain light.",
+    "surfaces": "Thin warm-white TV cabinet top echoes existing white coffee-table surface.",
+    "decor": "Cabinet objects reduced to left vase/books and right plant/photo; cream stripes, sage curtains and restrained pink retained.",
+    "caveat": "Concept image; furniture and installation dimensions require site verification."
+  }
+}

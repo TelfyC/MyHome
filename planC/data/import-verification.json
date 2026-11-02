@@ -1,0 +1,34 @@
+{
+  "status": "pass",
+  "blender_version": "4.5.3 LTS",
+  "test": "local_asset_import_and_permission_gates",
+  "asset_quality": "technical_fixture_only",
+  "evidence": [
+    {
+      "format": ".blend",
+      "imported_meshes": 1,
+      "size_m": [
+        1.399999976158142,
+        0.5,
+        0.699999988079071
+      ],
+      "bottom_z_m": 0.0,
+      "sha_mismatch_rejected": true,
+      "path_escape_rejected": true,
+      "noncommercial_rejected": true
+    },
+    {
+      "format": ".glb",
+      "imported_meshes": 1,
+      "size_m": [
+        1.399999976158142,
+        0.5,
+        0.699999988079071
+      ],
+      "bottom_z_m": 0.0,
+      "sha_mismatch_rejected": true,
+      "path_escape_rejected": true,
+      "noncommercial_rejected": true
+    }
+  ]
+}

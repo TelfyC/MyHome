@@ -1,0 +1,25 @@
+{
+  "room": "master",
+  "date": "2026-11-02",
+  "method": "built-in image_gen",
+  "useCase": "precise-object-edit",
+  "inputImages": [
+    "public/concepts/sunlit/master.png",
+    "public/concepts/variants/sunlit/dining-dark-cherry.png"
+  ],
+  "file": "master.png",
+  "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f3-7bc2-7c33-980d-93c72a16a54d/exec-1ddcdbd8-c75e-47a5-870b-74d730bfc1f1.png",
+  "prompt": "Use case: precise-object-edit.\nAsset type: updated bedroom concept photograph for the Sunlit Garden home.\nInput images: Image 1 is the EDIT TARGET, the existing master bedroom. Image 2 is only a WOOD FINISH REFERENCE, its dining table's warm dark chestnut cherry-brown; do not copy that room or lighting.\nPrimary request: Carefully refine the bedroom's material hierarchy and everyday details while keeping the SAME bedroom, same landscape composition and same camera. Unify the bed wood frame, slim legs, and both bedside tables to matte warm chestnut/cherry brown, about #6b4435 in neutral diffuse light, warm brown with subtle red undertone and fine real wood grain, never black or red lacquer. This slightly deeper coordinated bed ensemble should contrast with the original light oak floor and warm-white closed wardrobe. Keep the bedside furniture's existing size, shapes and locations.\nKeep the fitted wardrobe fronts warm ivory-white, fine pale wood handles, and the original dressing niche. The dressing niche has only one small coordinated ceramic vessel and a small dark wood catchall tray; remove reed diffuser clutter. Keep enough empty dressing counter for daily use. Dressing stool stays ivory linen. Blind slats remain medium-light warm wood, not stained as dark as the bed.\nTextiles: ivory fine stripe linen bedcover and two pillows, one muted sage green small cushion, one thin dusty pale pink throw folded across the foot. Remove extra pillow layers if any. Bed looks inviting and crisp with credible folds. Keep one restrained botanical picture. Both existing bedside reading lamps remain independent, with warm-white shades and soft neutral warm light, not orange; light from window remains bright natural daylight and the room has a fresh warm white balance instead of heavy amber tint.\nDetail quality: intact pillow seams, straight wardrobe panel gaps, lamp bases grounded, glass of water safely centered on bedside table, discreetly arranged charging cords, no loose wire loops. Preserve all window dimensions and position, blind geometry, door frame, 1.8m bed footprint, wardrobe and dressing niche placement, pale floor, walking space, perspective and crop.\nDeliver a single photorealistic landscape 1536x1024 image. No added window, no new furniture, no persons, no text, no logo, no watermark, no collage.",
+  "review": {
+    "status": "selected",
+    "findings": [
+      "床框与床头柜为协调的哑光深栗木色，与浅地板及暖白衣柜形成深浅层次。",
+      "原窗口、木百叶、床与衣柜梳妆区的位置及机位保持。",
+      "细条纹米白床品、灰粉薄毯、鼠尾草绿靠枕保留，梳妆台去除扩香器并减少陈设。",
+      "床边双灯、独立储物与水杯位置自然；没有新增可见杂线。"
+    ],
+    "limitations": [
+      "风格概念图，不用于核定实际尺寸或电位。"
+    ]
+  }
+}

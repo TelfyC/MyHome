@@ -1,0 +1,449 @@
+{
+  "date": "2026-10-28",
+  "purpose": "window relaxation area and Chinese gas kitchen; existing panorama edits, not coarse-model renders",
+  "assets": [
+    {
+      "style": "forest",
+      "room": "living",
+      "generated_path": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-db359631-192d-4ddf-8d16-89d62869e08c.png",
+      "prompt": "Use case: precise-object-edit. EDIT TARGET is this exact existing woodland living-room 360 panorama. Output one full 360x180 equirectangular image, exact 2:1 aspect, seamless left/right longitude wrap, same camera and longitude orientation, largest native resolution available. This must remain a full spherical panorama, NOT a perspective rendering, NOT a cropped photograph or collage. Change ONLY the underused corner between the LEFT side of the TV console and the existing exterior window. Replace the loose tall plant / lamp-on-stool grouping with a carefully designed usable one-person relaxation nook. Add ONE compact low-back lounge armchair about 75cm wide x85cm deep, refined dark-cherry exposed frame and moss/flax finely woven linen cushions, angled about30degrees into the room so the occupant can read, look outside and turn toward the TV. Put ONE mobile upholstered storage footstool about45x45cm directly in front, stowable close to the chair. Place ONE small round side table about30cm diameter by the inner arm, with one cup on a coaster and an open book. A slender bronze adjustable reading lamp sits behind the chair, light aimed at the seat rather than the TV. Keep only ONE modest narrow plant in the far window corner; remove the large plant that consumes the sitting position. Keep curtain stacks usable, a small separation between chair and curtains, existing window handles reachable, and a clear walking route along the room toward dining. Use the EXISTING corner footprint, do not enlarge the room or invent a platform, wall opening, fixed window bench, huge chaise, bookcase wall, decorative cabinet, or a second lounge chair. Preserve the exact location, shape and scale of the TV/console, sofa, rug, coffee table, dining opening, all existing walls/windows/doors and ceiling light. Preserve the established forest palette, wall texture, floor, neutral daylight, all other furniture and lived-in styling. Maintain longitudinal wrap if the corner crosses the image seam. Keep high-end realistic interior-photography detail: plausible fine wood grain, restrained linen weave, convincing joins and contact shadows; avoid cartoon CGI, oversized fabric texture, random clutter, plastic shine, fake HDR or aggressive sharpening. No people, text, labels, logos or watermarks.",
+      "reference_paths": [
+        "public/panoramas/forest/living.jpg"
+      ],
+      "status": "selected after visual review",
+      "selected_master": "home-design-review/input/window-kitchen-20261028/masters/forest-living.png",
+      "generated_png_sha256": "020f26c7722bcaab3406f9f6ef878cb45415450be4b598730814d929009092d7",
+      "staged_base": "artifacts/window-kitchen-20261028/staged-public/panoramas/forest/living.jpg",
+      "source_sha256": "4e5e5ccda7cf1dc66b686b33b42ecb5b7af620185e21d5178981a00f4b2f3a0d",
+      "before": [
+        {
+          "path": "public/panoramas/forest/living.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/forest/living.jpg",
+          "sha256": "57b157d7112ecc417589fc5396e8dbc1f73fecc7bed01ad5c5f426603812478c"
+        },
+        {
+          "path": "public/panoramas/forest/living-thumb.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/forest/living-thumb.jpg",
+          "sha256": "39de84669c4dca116cd08a25318e111e72c717a0c4a9967c8f2b14c94351c495"
+        },
+        {
+          "path": "public/panoramas-hd/forest/living.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/forest/living.jpg",
+          "sha256": "2a356e9045559a40518883a011793c6b8864d3e78805383029cc3047cca63412"
+        },
+        {
+          "path": "public/panoramas-hd/forest/living-2x.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/forest/living-2x.jpg",
+          "sha256": "e5d70990592420a7db1f4dbdc8709f96efee6fe3fbdfee3ecbc661f1167e09b6"
+        }
+      ]
+    },
+    {
+      "style": "forest",
+      "room": "kitchen",
+      "generated_path": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-44122560-e46f-4507-87e1-81c4e6bde45b.png",
+      "prompt": "Use case: precise-object-edit. EDIT TARGET is the supplied existing woodland kitchen 360 panorama. Produce ONE complete 360x180 equirectangular interior panorama, exact2:1, same camera and longitude orientation, seamless left/right wrap. Do NOT output a normal perspective, collage, plan or cropped view. Replan ONLY the kitchen for serious everyday Chinese cooking, while preserving the existing approx3.10m x2.44m enlarged footprint, ALL actual exterior windows and black frames, original wall outline, northeast refrigerator location, adjacent dining/living layout, materials, color palette and daylight. Do not enlarge the apartment. PRIMARY HOT/WET RUN: retain the existing2.30m main counter against the original north wall. Replace the flat induction hob with an obvious domestic TWO-BURNER GAS COOKTOP with two separate black cast-iron wok trivets, circular gas burners, front manual knobs, one real wok resting on a trivet, burners OFF. A matching efficient overhead extractor hood is directly above it on the solid wall section, never under the window. Keep single-bowl sink beneath its original window; keep a clear transition surface between sink and hob. Use wipeable noncombustible backsplash and warm off-white matte stone/porcelain worktops; no curtains, plants or objects next to burner heat. MAIN IMPROVEMENT ON OPPOSITE SIDE: remove the awkward isolated right-hand decorative cabinet and bulky upper-box/open display arrangement. Rebuild it as ONE integrated LOW L-SHAPED preparation zone: the existing approximately85cm side run remains BELOW the right window and clear of refrigerator door swing; connect it at the southeast corner to a NEW135cm-long x55cm-deep SOUTH return counter facing the main hot/wet run. Both legs must have the same approximately88cm height, continuous matching worktop, aligned plinth and coherent drawer fronts. This replaces about50cm of the old south glass opening with a fixed lower return and clear fixed glazing ABOVE the counter, so it reads as a coherent kitchen boundary, not a random chest standing in circulation. Retain a usable glazed entry to the LEFT of this new return, with south telescopic glass doors parking toward the left; preserve the west dining-side clear-glass enclosure. Show both glazed openings CLOSED in this kitchen view so it is an ENCLOSABLE gas-cooking kitchen, while the dining room remains visible through clear glass. Thin frames and proper overhead tracks, no island or bar, no continuous floor rail, no extra exterior wall, no blocked window. Maintain about1.25-1.30m clear aisle between opposing counter fronts; preserve refrigerator access and door/drawer opening space. The135cm main prep top should have at least110cm clearly empty for chopping, making dumplings and plating. Below it provide organized closed storage through plausible60cm/45cm/30cm drawer modules for bowls/utensils, rice/flour/dry food and bottles; pots go in appropriate large drawers near the hob, cleaning/bin storage below sink, accessible gas fittings must not be sealed away. Keep the rice cooker/small appliance on the short side run, not occupying the long chopping surface, steam able to escape; put occasional storage only above the fridge or real solid wall, never across a window or glazed door. No decorative overhead cupboards floating over the new return. Preserve the woodland dark-cherry/natural-wood cabinet character, light stone, restrained sage accents, neutral daylight and fine credible joinery. Keep very few practical objects and realistic contact shadows, no dense plant decor, random jars or showroom clutter. NO people, labels, readable text, logos, watermarks, cartoon CGI, plastic textures or fake HDR. Prioritize a physically modest practical Chinese gas kitchen with a genuinely useful opposite preparation counter, not a luxury enlarged room.",
+      "reference_paths": [
+        "public/panoramas/forest/kitchen.jpg"
+      ],
+      "status": "selected after visual review",
+      "selected_master": "home-design-review/input/window-kitchen-20261028/masters/forest-kitchen.png",
+      "generated_png_sha256": "05977a843edb545a5733a77ea5b83e3ef69902f575d0b1a601bc13c8dbd3464d",
+      "staged_base": "artifacts/window-kitchen-20261028/staged-public/panoramas/forest/kitchen.jpg",
+      "source_sha256": "613053dff170fc8a4060af6cb6a61efcf971096a3087ff862c580f4bbf894c03",
+      "before": [
+        {
+          "path": "public/panoramas/forest/kitchen.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/forest/kitchen.jpg",
+          "sha256": "3ccb39aa58f8ee1b5cb3cde82ca1fed8f2cafa80333c27545255e95e2409a6a5"
+        },
+        {
+          "path": "public/panoramas/forest/kitchen-thumb.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/forest/kitchen-thumb.jpg",
+          "sha256": "ed0d58acf01f76c00778e3fcf222a0e261e1fe6fddfff16ac2e7c0999d511937"
+        },
+        {
+          "path": "public/panoramas-hd/forest/kitchen.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/forest/kitchen.jpg",
+          "sha256": "42ecf203b481ce76bde55300bc593d97843fd466f1fcb23c13d8610d1ad8097d"
+        },
+        {
+          "path": "public/panoramas-hd/forest/kitchen-2x.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/forest/kitchen-2x.jpg",
+          "sha256": "c70d793bc250e6635d0fdaf16a787724ea21c0daa02417e92a2a1f0112d4d2b3"
+        }
+      ]
+    },
+    {
+      "style": "forest",
+      "room": "dining",
+      "generated_path": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-72e3f45c-e049-45b6-902f-aca05abe7972.png",
+      "prompt": "Use case: precise-object-edit. INPUT ROLES: Image1 is the exact DINING 360 panorama to edit and controls camera, full room geometry, all windows and dining-room furniture. Image2 shows the updated kitchen that must be consistent when seen through the existing kitchen opening. Image3 shows the updated living-room reading nook, to match only if visible in the background. Output ONE full360x180 equirectangular image, exact2:1, same camera/longitude orientation and seamless left/right wrap as Image1. Do NOT replace it with a perspective view, collage, plan or close-up. Keep dining table, bench/chairs, coffee sideboard, shelves, artwork, all walls and exterior windows, curtains, lighting and established woodland palette of Image1 unchanged. Update ONLY the kitchen visible through its opening to match Image2: real TWO-BURNER GAS hob with black cast-iron wok supports under its extractor; existing single-bowl sink and northeast fridge; opposite side reorganized into an integrated LOW L-shaped preparation counter with135cm return and clear glazing above it, coherent drawer fronts, unobstructed fridge opening and central aisle. Match the kitchen's dark-cherry/natural-wood cabinetry and pale stone from Image2 instead of retaining contradictory white freestanding cabinets. Remove the awkward isolated kitchen cabinet/open decorative shelving, no kitchen island, bar stools, added walls or extra windows. The kitchen clear-glass enclosure can be CLOSED with dining/kitchen still visibly connected through it; slim frames and overhead tracks, no opaque blocking wall. Through the existing living-room opening, show the SAME compact armchair, small movable upholstered storage footstool, one reachable side table and slim reading lamp at the existing window to the LEFT of the TV as Image3, only where that corner is actually in frame. Preserve the main sofa/TV arrangement, perspective and scale, do not force the nook into an area hidden by a wall. Preserve all other styling. High-detail natural architectural photography, coherent neutral daylight, realistic fine material texture and contact shadows, no overdone props, cartoon CGI, plastic surfaces, aggressive sharpening, people, text, labels, logos or watermark.",
+      "reference_paths": [
+        "public/panoramas/forest/dining.jpg",
+        "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-44122560-e46f-4507-87e1-81c4e6bde45b.png",
+        "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-db359631-192d-4ddf-8d16-89d62869e08c.png"
+      ],
+      "status": "selected after visual review",
+      "selected_master": "home-design-review/input/window-kitchen-20261028/masters/forest-dining.png",
+      "generated_png_sha256": "d84417b91cb809eee0812214b5d1a919ee9434d4b2d094fa239da7523032c60b",
+      "staged_base": "artifacts/window-kitchen-20261028/staged-public/panoramas/forest/dining.jpg",
+      "source_sha256": "31ef595cc5d560f7ddb6dbffd65e1cddb7062c282766ec77b2a0fa11158b7b72",
+      "before": [
+        {
+          "path": "public/panoramas/forest/dining.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/forest/dining.jpg",
+          "sha256": "56ce678f4adb960dd2327c9123cd4d6954ff7b7d0a6da3ff5b27b2786c2b4392"
+        },
+        {
+          "path": "public/panoramas/forest/dining-thumb.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/forest/dining-thumb.jpg",
+          "sha256": "9d526e4f2fd6369151669b32cbecabae4359865959f2d1ba96a0cef155619ffc"
+        },
+        {
+          "path": "public/panoramas-hd/forest/dining.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/forest/dining.jpg",
+          "sha256": "2598f671f435dca89553d3d97c7dfa20ffa6397f96ea69571bd1dc6e73bd2062"
+        },
+        {
+          "path": "public/panoramas-hd/forest/dining-2x.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/forest/dining-2x.jpg",
+          "sha256": "7e15d74947d3763996a58486b4aff3366a8ee59dfca8e67d097bcaa8574bab9b"
+        }
+      ]
+    },
+    {
+      "style": "japanese",
+      "room": "living",
+      "generated_path": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-c5add8dc-e0d3-4116-9e88-4e426bab52b9.png",
+      "prompt": "Use case: precise-object-edit. EDIT TARGET is this exact existing Japanese vintage living-room 360 panorama. Output one full 360x180 equirectangular image, exact 2:1 aspect, seamless left/right longitude wrap, same camera and longitude orientation, largest native resolution available. This must remain a full spherical panorama, NOT a perspective rendering, NOT a cropped photograph or collage. Change ONLY the underused corner between the LEFT side of the TV console and the existing exterior window. Replace the loose tall plant / lamp-on-stool grouping with a carefully designed usable one-person relaxation nook. Add ONE compact low-back lounge armchair about 75cm wide x85cm deep, slender walnut frame with natural oatmeal woven cushions and one olive-green accent cushion, angled about30degrees into the room so the occupant can read, look outside and turn toward the TV. Put ONE mobile upholstered storage footstool about45x45cm directly in front, stowable close to the chair. Place ONE small round side table about30cm diameter by the inner arm, with one cup on a coaster and an open book. A slender bronze adjustable reading lamp sits behind the chair, light aimed at the seat rather than the TV. Keep only ONE modest narrow plant in the far window corner; remove the large plant that consumes the sitting position. Keep curtain stacks usable, a small separation between chair and curtains, existing window handles reachable, and a clear walking route along the room toward dining. Use the EXISTING corner footprint, do not enlarge the room or invent a platform, wall opening, fixed window bench, huge chaise, bookcase wall, decorative cabinet, or a second lounge chair. Preserve the exact location, shape and scale of the TV/console, sofa, rug, coffee table, dining opening, all existing walls/windows/doors and ceiling light. Preserve the established Japanese vintage palette, wall texture, floor, neutral daylight, all other furniture and lived-in styling. Maintain longitudinal wrap if the corner crosses the image seam. Keep high-end realistic interior-photography detail: plausible fine wood grain, restrained linen weave, convincing joins and contact shadows; avoid cartoon CGI, oversized fabric texture, random clutter, plastic shine, fake HDR or aggressive sharpening. No people, text, labels, logos or watermarks.",
+      "reference_paths": [
+        "public/panoramas/japanese/living.jpg"
+      ],
+      "status": "selected after visual review",
+      "selected_master": "home-design-review/input/window-kitchen-20261028/masters/japanese-living.png",
+      "generated_png_sha256": "5a2c9905fbe08c101aa5fd650e133435ce3233241e5e7454ae6835b0631b013b",
+      "staged_base": "artifacts/window-kitchen-20261028/staged-public/panoramas/japanese/living.jpg",
+      "source_sha256": "b7e7de80dca9fcba465cefb1896f8dd02634591eca70173ef6fc11259c28e110",
+      "before": [
+        {
+          "path": "public/panoramas/japanese/living.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/japanese/living.jpg",
+          "sha256": "57a7737a53e96536f0a914a719fd5e5c6ba88f6c4ac23e86916224dbea0e3543"
+        },
+        {
+          "path": "public/panoramas/japanese/living-thumb.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/japanese/living-thumb.jpg",
+          "sha256": "ec1609fece8b6227cc19aa3788bb3fa9700e48c65a0c80cad9b1acbe1cf1aeea"
+        },
+        {
+          "path": "public/panoramas-hd/japanese/living.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/japanese/living.jpg",
+          "sha256": "1de0239c8bb63744b5be63abc0bf1b98e47e14ec82f8f0a645fe6826b5bb39a0"
+        },
+        {
+          "path": "public/panoramas-hd/japanese/living-2x.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/japanese/living-2x.jpg",
+          "sha256": "181d260ccbcdf59825f82732ff6d93d46ce9902ab4c484a32ff2b11ba2ffcbd9"
+        }
+      ]
+    },
+    {
+      "style": "japanese",
+      "room": "kitchen",
+      "generated_path": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-fffbc61f-68d9-47e3-b16c-e59d205063e5.png",
+      "prompt": "INPUT ROLES: Image1 is the exact EDIT TARGET and controls its style, camera, original windows and room boundary. Image2 is ONLY a functional layout reference for the updated gas kitchen and integrated low L-shaped opposite preparation counter; do not copy its colors or add its objects. Use case: precise-object-edit. EDIT TARGET is the supplied existing Japanese vintage kitchen 360 panorama. Produce ONE complete 360x180 equirectangular interior panorama, exact2:1, same camera and longitude orientation, seamless left/right wrap. Do NOT output a normal perspective, collage, plan or cropped view. Replan ONLY the kitchen for serious everyday Chinese cooking, while preserving the existing approx3.10m x2.44m enlarged footprint, ALL actual exterior windows and black frames, original wall outline, northeast refrigerator location, adjacent dining/living layout, materials, color palette and daylight. Do not enlarge the apartment. PRIMARY HOT/WET RUN: retain the existing2.30m main counter against the original north wall. Replace the flat induction hob with an obvious domestic TWO-BURNER GAS COOKTOP with two separate black cast-iron wok trivets, circular gas burners, front manual knobs, one real wok resting on a trivet, burners OFF. A matching efficient overhead extractor hood is directly above it on the solid wall section, never under the window. Keep single-bowl sink beneath its original window; keep a clear transition surface between sink and hob. Use wipeable noncombustible backsplash and warm off-white matte stone/porcelain worktops; no curtains, plants or objects next to burner heat. MAIN IMPROVEMENT ON OPPOSITE SIDE: remove the awkward isolated right-hand decorative cabinet and bulky upper-box/open display arrangement. Rebuild it as ONE integrated LOW L-SHAPED preparation zone: the existing approximately85cm side run remains BELOW the right window and clear of refrigerator door swing; connect it at the southeast corner to a NEW135cm-long x55cm-deep SOUTH return counter facing the main hot/wet run. Both legs must have the same approximately88cm height, continuous matching worktop, aligned plinth and coherent drawer fronts. This replaces about50cm of the old south glass opening with a fixed lower return and clear fixed glazing ABOVE the counter, so it reads as a coherent kitchen boundary, not a random chest standing in circulation. Retain a usable glazed entry to the LEFT of this new return, with south telescopic glass doors parking toward the left; preserve the west dining-side clear-glass enclosure. Show both glazed openings CLOSED in this kitchen view so it is an ENCLOSABLE gas-cooking kitchen, while the dining room remains visible through clear glass. Thin frames and proper overhead tracks, no island or bar, no continuous floor rail, no extra exterior wall, no blocked window. Maintain about1.25-1.30m clear aisle between opposing counter fronts; preserve refrigerator access and door/drawer opening space. The135cm main prep top should have at least110cm clearly empty for chopping, making dumplings and plating. Below it provide organized closed storage through plausible60cm/45cm/30cm drawer modules for bowls/utensils, rice/flour/dry food and bottles; pots go in appropriate large drawers near the hob, cleaning/bin storage below sink, accessible gas fittings must not be sealed away. Keep the rice cooker/small appliance on the short side run, not occupying the long chopping surface, steam able to escape; put occasional storage only above the fridge or real solid wall, never across a window or glazed door. No decorative overhead cupboards floating over the new return. Preserve the original Japanese-vintage walnut lower cabinets, warm off-white fronts where already present, pale stone and subdued bronze, neutral daylight and fine credible joinery. Keep very few practical objects and realistic contact shadows, no dense plant decor, random jars or showroom clutter. NO people, labels, readable text, logos, watermarks, cartoon CGI, plastic textures or fake HDR. Prioritize a physically modest practical Chinese gas kitchen with a genuinely useful opposite preparation counter, not a luxury enlarged room.",
+      "reference_paths": [
+        "public/panoramas/japanese/kitchen.jpg",
+        "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-44122560-e46f-4507-87e1-81c4e6bde45b.png"
+      ],
+      "status": "selected after visual review",
+      "selected_master": "home-design-review/input/window-kitchen-20261028/masters/japanese-kitchen.png",
+      "generated_png_sha256": "1f31a3626a326f1fd0d7fab82474b7f63f9096a3a8e1e41480cf88366486896f",
+      "staged_base": "artifacts/window-kitchen-20261028/staged-public/panoramas/japanese/kitchen.jpg",
+      "source_sha256": "6f5ff81aef55d1e25aa6da714545bc154326dff563e0586c579c92b832b490c4",
+      "before": [
+        {
+          "path": "public/panoramas/japanese/kitchen.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/japanese/kitchen.jpg",
+          "sha256": "ee1596b18cfe382eb18af7e442c3ce568f100e819de50d03ece6ed6995ca8001"
+        },
+        {
+          "path": "public/panoramas/japanese/kitchen-thumb.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/japanese/kitchen-thumb.jpg",
+          "sha256": "296919a9322d65675e7f95540a58bd82f9ebda2d9f19c7805a7eee3bf9adc271"
+        },
+        {
+          "path": "public/panoramas-hd/japanese/kitchen.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/japanese/kitchen.jpg",
+          "sha256": "f9fa00fa1c9d53859b17fb6514296aaa7701463566df091ded46de215e8c778f"
+        },
+        {
+          "path": "public/panoramas-hd/japanese/kitchen-2x.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/japanese/kitchen-2x.jpg",
+          "sha256": "7d2e95dd93931e5bc942a22a1d30a687700412701829f42f1c6fea6bf5c88875"
+        }
+      ]
+    },
+    {
+      "style": "japanese",
+      "room": "dining",
+      "generated_path": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-d6aec161-36a3-4814-8d37-b07e12cdd96c.png",
+      "prompt": "Use case: precise-object-edit. INPUT ROLES: Image1 is the exact DINING 360 panorama to edit and controls camera, full room geometry, all windows and dining-room furniture. Image2 shows the updated kitchen that must be consistent when seen through the existing kitchen opening. Image3 shows the updated living-room reading nook, to match only if visible in the background. Output ONE full360x180 equirectangular image, exact2:1, same camera/longitude orientation and seamless left/right wrap as Image1. Do NOT replace it with a perspective view, collage, plan or close-up. Keep dining table, bench/chairs, coffee sideboard, shelves, artwork, all walls and exterior windows, curtains, lighting and established Japanese vintage palette of Image1 unchanged. Update ONLY the kitchen visible through its opening to match Image2: real TWO-BURNER GAS hob with black cast-iron wok supports under its extractor; existing single-bowl sink and northeast fridge; opposite side reorganized into an integrated LOW L-shaped preparation counter with135cm return and clear glazing above it, coherent drawer fronts, unobstructed fridge opening and central aisle. Match the kitchen's warm walnut / warm off-white cabinetry and pale stone from Image2, rather than retaining the former mismatched freestanding cabinet. Remove the awkward isolated kitchen cabinet/open decorative shelving, no kitchen island, bar stools, added walls or extra windows. The kitchen clear-glass enclosure can be CLOSED with dining/kitchen still visibly connected through it; slim frames and overhead tracks, no opaque blocking wall. Through the existing living-room opening, show the SAME compact armchair, small movable upholstered storage footstool, one reachable side table and slim reading lamp at the existing window to the LEFT of the TV as Image3, only where that corner is actually in frame. Preserve the main sofa/TV arrangement, perspective and scale, do not force the nook into an area hidden by a wall. Preserve all other styling. High-detail natural architectural photography, coherent neutral daylight, realistic fine material texture and contact shadows, no overdone props, cartoon CGI, plastic surfaces, aggressive sharpening, people, text, labels, logos or watermark.",
+      "reference_paths": [
+        "public/panoramas/japanese/dining.jpg",
+        "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-fffbc61f-68d9-47e3-b16c-e59d205063e5.png",
+        "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-c5add8dc-e0d3-4116-9e88-4e426bab52b9.png"
+      ],
+      "status": "selected after visual review",
+      "selected_master": "home-design-review/input/window-kitchen-20261028/masters/japanese-dining.png",
+      "generated_png_sha256": "e1bf82c08edc964e9c87637b13d766dfad68dfff9edaeea58296f07d333f5100",
+      "staged_base": "artifacts/window-kitchen-20261028/staged-public/panoramas/japanese/dining.jpg",
+      "source_sha256": "32612e4601f9f57ff8a1e4d0e4756b7af4533414c448588483e3fe87f50a702f",
+      "before": [
+        {
+          "path": "public/panoramas/japanese/dining.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/japanese/dining.jpg",
+          "sha256": "25b3a5868c9d1535f32084a18a1b101ae6b7fb3e47b1ee9725568d0ebaa01668"
+        },
+        {
+          "path": "public/panoramas/japanese/dining-thumb.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/japanese/dining-thumb.jpg",
+          "sha256": "c9f5254c56e2c1981f5cbb459d888beffe52faa0e441363a6cadd88f68ee8c5d"
+        },
+        {
+          "path": "public/panoramas-hd/japanese/dining.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/japanese/dining.jpg",
+          "sha256": "6ab759e5f0b2eb58d19c12d3ef53d8adf8d845847a36eb52233d5005d1a028f9"
+        },
+        {
+          "path": "public/panoramas-hd/japanese/dining-2x.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/japanese/dining-2x.jpg",
+          "sha256": "02f56b8ccef76edc54ec19c6528b393b121a7d1902c3193bcf529e8bc9d0dc24"
+        }
+      ]
+    },
+    {
+      "style": "french",
+      "room": "living",
+      "generated_path": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-2e8dc9ff-eeac-45a5-82d4-a657595329e3.png",
+      "prompt": "Use case: precise-object-edit. EDIT TARGET is this exact existing light French vintage living-room 360 panorama. Output one full 360x180 equirectangular image, exact 2:1 aspect, seamless left/right longitude wrap, same camera and longitude orientation, largest native resolution available. This must remain a full spherical panorama, NOT a perspective rendering, NOT a cropped photograph or collage. Change ONLY the underused corner between the LEFT side of the TV console and the existing exterior window. Replace the loose tall plant / lamp-on-stool grouping with a carefully designed usable one-person relaxation nook. Add ONE compact low-back lounge armchair about 75cm wide x85cm deep, light honey-oak gently curved frame with ivory linen cushions and one muted gray-blue lumbar cushion, angled about30degrees into the room so the occupant can read, look outside and turn toward the TV. Put ONE mobile upholstered storage footstool about45x45cm directly in front, stowable close to the chair. Place ONE small round side table about30cm diameter by the inner arm, with one cup on a coaster and an open book. A slender bronze adjustable reading lamp sits behind the chair, light aimed at the seat rather than the TV. Keep only ONE modest narrow plant in the far window corner; remove the large plant that consumes the sitting position. Keep curtain stacks usable, a small separation between chair and curtains, existing window handles reachable, and a clear walking route along the room toward dining. Use the EXISTING corner footprint, do not enlarge the room or invent a platform, wall opening, fixed window bench, huge chaise, bookcase wall, decorative cabinet, or a second lounge chair. Preserve the exact location, shape and scale of the TV/console, sofa, rug, coffee table, dining opening, all existing walls/windows/doors and ceiling light. Preserve the established light French vintage palette, wall texture, floor, neutral daylight, all other furniture and lived-in styling. Maintain longitudinal wrap if the corner crosses the image seam. Keep high-end realistic interior-photography detail: plausible fine wood grain, restrained linen weave, convincing joins and contact shadows; avoid cartoon CGI, oversized fabric texture, random clutter, plastic shine, fake HDR or aggressive sharpening. No people, text, labels, logos or watermarks.",
+      "reference_paths": [
+        "public/panoramas/french/living.jpg"
+      ],
+      "status": "selected after visual review",
+      "selected_master": "home-design-review/input/window-kitchen-20261028/masters/french-living.png",
+      "generated_png_sha256": "fc4bfe3e6681c7819704a42bde00367aae422d486c51fbc55380d691cb23f744",
+      "staged_base": "artifacts/window-kitchen-20261028/staged-public/panoramas/french/living.jpg",
+      "source_sha256": "804572b3c8fb5dd3e38d6004316c058f56256b7057562b812467c169531b4ba7",
+      "before": [
+        {
+          "path": "public/panoramas/french/living.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/french/living.jpg",
+          "sha256": "73b0eedf30e521814eb5599225eb362fa420a0ef637c205ed851a124ad11b0e4"
+        },
+        {
+          "path": "public/panoramas/french/living-thumb.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/french/living-thumb.jpg",
+          "sha256": "0322f523527e81b1793f07caa139655cc3275cda727ab6f709342d184913996b"
+        },
+        {
+          "path": "public/panoramas-hd/french/living.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/french/living.jpg",
+          "sha256": "d5fed840ec0154e7718cea45f936038bff73aeb8f8c82640e1e4f5f9a88fc277"
+        },
+        {
+          "path": "public/panoramas-hd/french/living-2x.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/french/living-2x.jpg",
+          "sha256": "1d2ca79f69db1121bbb346f36e3912204bb563046a94568bc2062e6cae4c2813"
+        }
+      ]
+    },
+    {
+      "style": "french",
+      "room": "kitchen",
+      "generated_path": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-f20b2f12-ab4b-488e-98b9-814a806f26b7.png",
+      "prompt": "INPUT ROLES: Image1 is the exact EDIT TARGET and controls its style, camera, original windows and room boundary. Image2 is ONLY a functional layout reference for the updated gas kitchen and integrated low L-shaped opposite preparation counter; do not copy its colors or add its objects. Use case: precise-object-edit. EDIT TARGET is the supplied existing light French vintage kitchen 360 panorama. Produce ONE complete 360x180 equirectangular interior panorama, exact2:1, same camera and longitude orientation, seamless left/right wrap. Do NOT output a normal perspective, collage, plan or cropped view. Replan ONLY the kitchen for serious everyday Chinese cooking, while preserving the existing approx3.10m x2.44m enlarged footprint, ALL actual exterior windows and black frames, original wall outline, northeast refrigerator location, adjacent dining/living layout, materials, color palette and daylight. Do not enlarge the apartment. PRIMARY HOT/WET RUN: retain the existing2.30m main counter against the original north wall. Replace the flat induction hob with an obvious domestic TWO-BURNER GAS COOKTOP with two separate black cast-iron wok trivets, circular gas burners, front manual knobs, one real wok resting on a trivet, burners OFF. A matching efficient overhead extractor hood is directly above it on the solid wall section, never under the window. Keep single-bowl sink beneath its original window; keep a clear transition surface between sink and hob. Use wipeable noncombustible backsplash and warm off-white matte stone/porcelain worktops; no curtains, plants or objects next to burner heat. MAIN IMPROVEMENT ON OPPOSITE SIDE: remove the awkward isolated right-hand decorative cabinet and bulky upper-box/open display arrangement. Rebuild it as ONE integrated LOW L-SHAPED preparation zone: the existing approximately85cm side run remains BELOW the right window and clear of refrigerator door swing; connect it at the southeast corner to a NEW135cm-long x55cm-deep SOUTH return counter facing the main hot/wet run. Both legs must have the same approximately88cm height, continuous matching worktop, aligned plinth and coherent drawer fronts. This replaces about50cm of the old south glass opening with a fixed lower return and clear fixed glazing ABOVE the counter, so it reads as a coherent kitchen boundary, not a random chest standing in circulation. Retain a usable glazed entry to the LEFT of this new return, with south telescopic glass doors parking toward the left; preserve the west dining-side clear-glass enclosure. Show both glazed openings CLOSED in this kitchen view so it is an ENCLOSABLE gas-cooking kitchen, while the dining room remains visible through clear glass. Thin frames and proper overhead tracks, no island or bar, no continuous floor rail, no extra exterior wall, no blocked window. Maintain about1.25-1.30m clear aisle between opposing counter fronts; preserve refrigerator access and door/drawer opening space. The135cm main prep top should have at least110cm clearly empty for chopping, making dumplings and plating. Below it provide organized closed storage through plausible60cm/45cm/30cm drawer modules for bowls/utensils, rice/flour/dry food and bottles; pots go in appropriate large drawers near the hob, cleaning/bin storage below sink, accessible gas fittings must not be sealed away. Keep the rice cooker/small appliance on the short side run, not occupying the long chopping surface, steam able to escape; put occasional storage only above the fridge or real solid wall, never across a window or glazed door. No decorative overhead cupboards floating over the new return. Preserve the original light-French ivory cabinet fronts, honey-oak accents, restrained brass handles and warm pale stone, neutral daylight and fine credible joinery. Keep very few practical objects and realistic contact shadows, no dense plant decor, random jars or showroom clutter. NO people, labels, readable text, logos, watermarks, cartoon CGI, plastic textures or fake HDR. Prioritize a physically modest practical Chinese gas kitchen with a genuinely useful opposite preparation counter, not a luxury enlarged room.",
+      "reference_paths": [
+        "public/panoramas/french/kitchen.jpg",
+        "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-44122560-e46f-4507-87e1-81c4e6bde45b.png"
+      ],
+      "status": "selected after visual review",
+      "selected_master": "home-design-review/input/window-kitchen-20261028/masters/french-kitchen.png",
+      "generated_png_sha256": "9ff8b7b08b057f275f0817d07a137d06901336c1107261f5b2246f878b89c8f8",
+      "staged_base": "artifacts/window-kitchen-20261028/staged-public/panoramas/french/kitchen.jpg",
+      "source_sha256": "4df467afa90b050aa6d5d45b95a7c08b951fb32d2209c38cc13d39d896020118",
+      "before": [
+        {
+          "path": "public/panoramas/french/kitchen.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/french/kitchen.jpg",
+          "sha256": "7ac628847de8fcbdacb3f8dbe4cfac9a1a0636c360ec97fd1b07127a70c7bb8f"
+        },
+        {
+          "path": "public/panoramas/french/kitchen-thumb.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/french/kitchen-thumb.jpg",
+          "sha256": "9dba22adcd8f60d60749205d8da2363b2eb04dd972bef94e3c84a11fda22de4f"
+        },
+        {
+          "path": "public/panoramas-hd/french/kitchen.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/french/kitchen.jpg",
+          "sha256": "3cb3be1fad076ab474b7b2731605e7df9acdd70a834e39c1e0a977987b81394d"
+        },
+        {
+          "path": "public/panoramas-hd/french/kitchen-2x.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/french/kitchen-2x.jpg",
+          "sha256": "6088ff848bef1e77dfedc07c8a4010735309d8456fd0f9282bd4aa9915ff86ba"
+        }
+      ]
+    },
+    {
+      "style": "french",
+      "room": "dining",
+      "generated_path": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-f0ad1a8e-ce35-492f-b829-71303abc4820.png",
+      "prompt": "Use case: precise-object-edit. Image1 is the exact dining360 EDIT TARGET. Image2 is the updated matching French kitchen reference. Correct ONLY one consistency issue: the original tall SILVER REFRIGERATOR in the kitchen's NORTHEAST corner must remain present, in the exact corner shown in Image2, immediately right of the main sink run and before the short right-window auxiliary counter. In Image1 this appliance was accidentally omitted or hidden by new cabinet surfaces. Restore its correct credible visible portion as seen from the DINING camera, with realistic occlusion by existing walls where necessary; do not move it into a passage, in front of a window or to the dining room. Do not enlarge the kitchen, invent any window or remove a window. Keep every other pixel-layout relationship of Image1: same camera, longitude orientation, full360x180 equirectangular2:1 projection and seamless wrap; dining table/bench/chairs/coffee sideboard, all artwork, curtains, light, living-room reading nook, and the existing new gas cooktop and low L-shaped135cm prep counter must remain. The room retains its ivory/honey-oak/brass French palette. This is a single-appliance consistency repair, not another redesign. High quality natural interior photography, no text/people/watermark, no plastic CGI or cartoon. Output ONE complete2:1 panoramic image, not a normal perspective/crop/collage.",
+      "reference_paths": [
+        "public/panoramas/french/dining.jpg",
+        "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-f20b2f12-ab4b-488e-98b9-814a806f26b7.png",
+        "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-2e8dc9ff-eeac-45a5-82d4-a657595329e3.png"
+      ],
+      "status": "selected after visual review",
+      "selected_master": "home-design-review/input/window-kitchen-20261028/masters/french-dining.png",
+      "generated_png_sha256": "8e465cb0851b3cb8fc60a51f02837a495da9b28f4daa9ed4c727c7be63272156",
+      "staged_base": "artifacts/window-kitchen-20261028/staged-public/panoramas/french/dining.jpg",
+      "source_sha256": "9501da4a53cba741df6ae72a23df7326d39cff7f4fcec37879ec49187f88c673",
+      "before": [
+        {
+          "path": "public/panoramas/french/dining.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/french/dining.jpg",
+          "sha256": "729bce8d2e00d40fa47fbe7854780f65b8df62ed6645f4c1bad0830cecc3b149"
+        },
+        {
+          "path": "public/panoramas/french/dining-thumb.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/french/dining-thumb.jpg",
+          "sha256": "51d5d2bbb67c45f5c79620eefdb03c8c47e75b07daf8fc9a86c3098fc1be78da"
+        },
+        {
+          "path": "public/panoramas-hd/french/dining.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/french/dining.jpg",
+          "sha256": "a7c4e2fb83e0d1e1339c12f558defca36f91f29a898626eded6d8f46a6012e53"
+        },
+        {
+          "path": "public/panoramas-hd/french/dining-2x.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/french/dining-2x.jpg",
+          "sha256": "f611af4fc5839e88863b3a81f8b4858e6a7c52bf21a7131c8730c8421282375b"
+        }
+      ]
+    },
+    {
+      "style": "sunlit",
+      "room": "living",
+      "generated_path": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-e5ba6cbd-43d0-45b6-9888-579bcd573b51.png",
+      "prompt": "Use case: precise-object-edit. EDIT TARGET is this exact existing sunlit garden living-room 360 panorama. Output one full 360x180 equirectangular image, exact 2:1 aspect, seamless left/right longitude wrap, same camera and longitude orientation, largest native resolution available. This must remain a full spherical panorama, NOT a perspective rendering, NOT a cropped photograph or collage. Change ONLY the underused corner between the LEFT side of the TV console and the existing exterior window. Replace the loose tall plant / lamp-on-stool grouping with a carefully designed usable one-person relaxation nook. Add ONE compact low-back lounge armchair about 75cm wide x85cm deep, light oak frame with cream finely woven cushions and one narrow green-and-white striped cushion, angled about30degrees into the room so the occupant can read, look outside and turn toward the TV. Put ONE mobile upholstered storage footstool about45x45cm directly in front, stowable close to the chair. Place ONE small round side table about30cm diameter by the inner arm, with one cup on a coaster and an open book. A slender warm-white adjustable reading lamp sits behind the chair, light aimed at the seat rather than the TV. Keep only ONE modest narrow plant in the far window corner; remove the large plant that consumes the sitting position. Keep curtain stacks usable, a small separation between chair and curtains, existing window handles reachable, and a clear walking route along the room toward dining. Use the EXISTING corner footprint, do not enlarge the room or invent a platform, wall opening, fixed window bench, huge chaise, bookcase wall, decorative cabinet, or a second lounge chair. Preserve the exact location, shape and scale of the TV/console, sofa, rug, coffee table, dining opening, all existing walls/windows/doors and ceiling light. Preserve the established sunlit garden palette, wall texture, floor, neutral daylight, all other furniture and lived-in styling. Maintain longitudinal wrap if the corner crosses the image seam. Keep high-end realistic interior-photography detail: plausible fine wood grain, restrained linen weave, convincing joins and contact shadows; avoid cartoon CGI, oversized fabric texture, random clutter, plastic shine, fake HDR or aggressive sharpening. No people, text, labels, logos or watermarks.",
+      "reference_paths": [
+        "public/panoramas/sunlit/living.jpg"
+      ],
+      "status": "selected after visual review",
+      "selected_master": "home-design-review/input/window-kitchen-20261028/masters/sunlit-living.png",
+      "generated_png_sha256": "b83585cb71f759facfb8569f7b68cadd5847de0244a1e03954aa88a1cb39c522",
+      "staged_base": "artifacts/window-kitchen-20261028/staged-public/panoramas/sunlit/living.jpg",
+      "source_sha256": "7957283cf4e7efb5f4a064d137a74996a45811c9e06f4162468e66c4c7286dd2",
+      "before": [
+        {
+          "path": "public/panoramas/sunlit/living.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/sunlit/living.jpg",
+          "sha256": "d13e39507db09025368448ebb9dbb039fe9d2665620622e8cd9f400c58cd5f28"
+        },
+        {
+          "path": "public/panoramas/sunlit/living-thumb.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/sunlit/living-thumb.jpg",
+          "sha256": "ed5f1d65b753cd6cccc1bbeff5f5ae84422d8a891843b184e7c9773b2a1e923f"
+        },
+        {
+          "path": "public/panoramas-hd/sunlit/living.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/sunlit/living.jpg",
+          "sha256": "533b7842a907c8ea33ec9d6b860f17c8514eddb3ceadc9cdfba0d28556edbe0e"
+        },
+        {
+          "path": "public/panoramas-hd/sunlit/living-2x.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/sunlit/living-2x.jpg",
+          "sha256": "7ef9dd1be24cf6702902ca87dde3089441b2ca8e883f8694ab3fe4a2ab5b865f"
+        }
+      ]
+    },
+    {
+      "style": "sunlit",
+      "room": "kitchen",
+      "generated_path": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-4072df74-c82d-4d7b-bd51-44635cfe0d91.png",
+      "prompt": "INPUT ROLES: Image1 is the exact EDIT TARGET and controls its style, camera, original windows and room boundary. Image2 is ONLY a functional layout reference for the updated gas kitchen and integrated low L-shaped opposite preparation counter; do not copy its colors or add its objects. Use case: precise-object-edit. EDIT TARGET is the supplied existing sunlit garden kitchen 360 panorama. Produce ONE complete 360x180 equirectangular interior panorama, exact2:1, same camera and longitude orientation, seamless left/right wrap. Do NOT output a normal perspective, collage, plan or cropped view. Replan ONLY the kitchen for serious everyday Chinese cooking, while preserving the existing approx3.10m x2.44m enlarged footprint, ALL actual exterior windows and black frames, original wall outline, northeast refrigerator location, adjacent dining/living layout, materials, color palette and daylight. Do not enlarge the apartment. PRIMARY HOT/WET RUN: retain the existing2.30m main counter against the original north wall. Replace the flat induction hob with an obvious domestic TWO-BURNER GAS COOKTOP with two separate black cast-iron wok trivets, circular gas burners, front manual knobs, one real wok resting on a trivet, burners OFF. A matching efficient overhead extractor hood is directly above it on the solid wall section, never under the window. Keep single-bowl sink beneath its original window; keep a clear transition surface between sink and hob. Use wipeable noncombustible backsplash and warm off-white matte stone/porcelain worktops; no curtains, plants or objects next to burner heat. MAIN IMPROVEMENT ON OPPOSITE SIDE: remove the awkward isolated right-hand decorative cabinet and bulky upper-box/open display arrangement. Rebuild it as ONE integrated LOW L-SHAPED preparation zone: the existing approximately85cm side run remains BELOW the right window and clear of refrigerator door swing; connect it at the southeast corner to a NEW135cm-long x55cm-deep SOUTH return counter facing the main hot/wet run. Both legs must have the same approximately88cm height, continuous matching worktop, aligned plinth and coherent drawer fronts. This replaces about50cm of the old south glass opening with a fixed lower return and clear fixed glazing ABOVE the counter, so it reads as a coherent kitchen boundary, not a random chest standing in circulation. Retain a usable glazed entry to the LEFT of this new return, with south telescopic glass doors parking toward the left; preserve the west dining-side clear-glass enclosure. Show both glazed openings CLOSED in this kitchen view so it is an ENCLOSABLE gas-cooking kitchen, while the dining room remains visible through clear glass. Thin frames and proper overhead tracks, no island or bar, no continuous floor rail, no extra exterior wall, no blocked window. Maintain about1.25-1.30m clear aisle between opposing counter fronts; preserve refrigerator access and door/drawer opening space. The135cm main prep top should have at least110cm clearly empty for chopping, making dumplings and plating. Below it provide organized closed storage through plausible60cm/45cm/30cm drawer modules for bowls/utensils, rice/flour/dry food and bottles; pots go in appropriate large drawers near the hob, cleaning/bin storage below sink, accessible gas fittings must not be sealed away. Keep the rice cooker/small appliance on the short side run, not occupying the long chopping surface, steam able to escape; put occasional storage only above the fridge or real solid wall, never across a window or glazed door. No decorative overhead cupboards floating over the new return. Preserve the original sunlit-garden pale-oak lower cabinets, warm white tile and pale worktops, light wood edge details and restrained green accents, neutral daylight and fine credible joinery. Keep very few practical objects and realistic contact shadows, no dense plant decor, random jars or showroom clutter. NO people, labels, readable text, logos, watermarks, cartoon CGI, plastic textures or fake HDR. Prioritize a physically modest practical Chinese gas kitchen with a genuinely useful opposite preparation counter, not a luxury enlarged room.",
+      "reference_paths": [
+        "public/panoramas/sunlit/kitchen.jpg",
+        "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-44122560-e46f-4507-87e1-81c4e6bde45b.png"
+      ],
+      "status": "selected after visual review",
+      "selected_master": "home-design-review/input/window-kitchen-20261028/masters/sunlit-kitchen.png",
+      "generated_png_sha256": "fe65fc8549f2429206cad18ccf5bf7bdacfc22127a7f20a994b9823b4606c050",
+      "staged_base": "artifacts/window-kitchen-20261028/staged-public/panoramas/sunlit/kitchen.jpg",
+      "source_sha256": "c04ee18c501dc1acc7b940abe6a0ffa741e9e3632229dc6037c3ede550e97522",
+      "before": [
+        {
+          "path": "public/panoramas/sunlit/kitchen.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/sunlit/kitchen.jpg",
+          "sha256": "5e973fc3bc889ffedc59256caf6b517eba26464d1ddcc1daed385113d2ffb562"
+        },
+        {
+          "path": "public/panoramas/sunlit/kitchen-thumb.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/sunlit/kitchen-thumb.jpg",
+          "sha256": "b343af10f060f977084229a53edc624adf6195d3fdaacd8619233e6ed2c71be5"
+        },
+        {
+          "path": "public/panoramas-hd/sunlit/kitchen.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/sunlit/kitchen.jpg",
+          "sha256": "fb973f7588545b83acb28ff693976b9dd3004c7210a6f97cc0e52a41d671cb3c"
+        },
+        {
+          "path": "public/panoramas-hd/sunlit/kitchen-2x.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/sunlit/kitchen-2x.jpg",
+          "sha256": "2520b119f8d6b19eb7ca274a499075747028e94f920a5491e0e697a6e07eee78"
+        }
+      ]
+    },
+    {
+      "style": "sunlit",
+      "room": "dining",
+      "generated_path": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-8a0ef611-98e3-42f1-94f5-4766cd0b2d65.png",
+      "prompt": "Use case: precise-object-edit. INPUT ROLES: Image1 is the exact DINING 360 panorama to edit and controls camera, full room geometry, all windows and dining-room furniture. Image2 shows the updated kitchen that must be consistent when seen through the existing kitchen opening. Image3 shows the updated living-room reading nook, to match only if visible in the background. Output ONE full360x180 equirectangular image, exact2:1, same camera/longitude orientation and seamless left/right wrap as Image1. Do NOT replace it with a perspective view, collage, plan or close-up. Keep dining table, bench/chairs, coffee sideboard, shelves, artwork, all walls and exterior windows, curtains, lighting and established sunlit garden palette of Image1 unchanged. Update ONLY the kitchen visible through its opening to match Image2: real TWO-BURNER GAS hob with black cast-iron wok supports under its extractor; existing single-bowl sink and northeast fridge; opposite side reorganized into an integrated LOW L-shaped preparation counter with135cm return and clear glazing above it, coherent drawer fronts, unobstructed fridge opening and central aisle. Match the kitchen's pale oak with warm-white tile cabinetry and pale stone from Image2, rather than retaining the former mismatched freestanding cabinet. Remove the awkward isolated kitchen cabinet/open decorative shelving, no kitchen island, bar stools, added walls or extra windows. The kitchen clear-glass enclosure can be CLOSED with dining/kitchen still visibly connected through it; slim frames and overhead tracks, no opaque blocking wall. Through the existing living-room opening, show the SAME compact armchair, small movable upholstered storage footstool, one reachable side table and slim reading lamp at the existing window to the LEFT of the TV as Image3, only where that corner is actually in frame. Preserve the main sofa/TV arrangement, perspective and scale, do not force the nook into an area hidden by a wall. Preserve all other styling. High-detail natural architectural photography, coherent neutral daylight, realistic fine material texture and contact shadows, no overdone props, cartoon CGI, plastic surfaces, aggressive sharpening, people, text, labels, logos or watermark.",
+      "reference_paths": [
+        "public/panoramas/sunlit/dining.jpg",
+        "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-4072df74-c82d-4d7b-bd51-44635cfe0d91.png",
+        "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a17cb6-4c1d-74d2-8925-77d20f26445a/exec-e5ba6cbd-43d0-45b6-9888-579bcd573b51.png"
+      ],
+      "status": "selected after visual review",
+      "selected_master": "home-design-review/input/window-kitchen-20261028/masters/sunlit-dining.png",
+      "generated_png_sha256": "8b7a6bbb340d040f8f09be13d8c1f7cfa357d2fbb0abcfd3dfc28a9fc0040ae4",
+      "staged_base": "artifacts/window-kitchen-20261028/staged-public/panoramas/sunlit/dining.jpg",
+      "source_sha256": "37293331bb242714325cc7f978a605266038e5e95949c5bf3fef8e027da80b25",
+      "before": [
+        {
+          "path": "public/panoramas/sunlit/dining.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/sunlit/dining.jpg",
+          "sha256": "027df9325b58c6fc0452c7bcfdcb74453af53fd4de069b4808600c1feb4ad481"
+        },
+        {
+          "path": "public/panoramas/sunlit/dining-thumb.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas/sunlit/dining-thumb.jpg",
+          "sha256": "beebf7e0ad921b36afca774f83b2d1298bf49929a14d7ef1297885ed5591e1d8"
+        },
+        {
+          "path": "public/panoramas-hd/sunlit/dining.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/sunlit/dining.jpg",
+          "sha256": "ab9172071ae06cd592ac7bfd1fb44ce2b0c6c55eae8a3d470749f4cc51083f83"
+        },
+        {
+          "path": "public/panoramas-hd/sunlit/dining-2x.jpg",
+          "backup": "artifacts/window-kitchen-20261028/before/panoramas-hd/sunlit/dining-2x.jpg",
+          "sha256": "2374b004517b969794f6c3ff9e9bf4f79100f7b3569b04296eb05bbd8a31cb41"
+        }
+      ]
+    }
+  ]
+}

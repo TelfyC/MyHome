@@ -1,0 +1,25 @@
+{
+  "project_id": "home1_sunlit",
+  "scene_revision": 1,
+  "scene_hash": "faa0addceab80e3f0c4af8299881edc7686572582853b7c92f1cb0c3a512076c",
+  "build_id": "build_bfea00ba37c139d7",
+  "render_job_id": "render_be4c99cc245faae8",
+  "camera_id": "camera_study_360",
+  "render_profile_id": "panorama_preview",
+  "projection": "equirectangular",
+  "resolution_px": [
+    2048,
+    1024
+  ],
+  "samples": 32,
+  "render_engine": "CYCLES",
+  "device": "CPU",
+  "blender_version": "4.5.3 LTS",
+  "image_uri": "study-360.png",
+  "file_sha256": "0a0cd2273313a8dc448beee4338db4600ecf26b0593f3eb65cabd7e7842398d0",
+  "duration_s": 177.46,
+  "quality_status": "preview_only",
+  "created_at_unix": 1793324125.6295114,
+  "render_script_sha256": "8e00c38bf9b95aa29cdf540312a2151cd816d84db2976a3f47217e0e9248d0b8",
+  "project_blend_sha256": "2c353348c7ab8344dcf7853d8ae0c09730b8cd98ec725a0f8dc644b92de0bbda"
+}

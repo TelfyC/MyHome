@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "status": "pending",
+  "scope": "Independent visual comparison of each delivered image with its deterministic same-camera structural reference. This is separate from automatic geometry checks.",
+  "reviewer": "layout_audit",
+  "geometryReport": "geometry-check.json",
+  "geometryDoesNotCertifyImagePixels": true,
+  "images": [
+    {
+      "id": "living",
+      "status": "pending",
+      "structuralReference": "references/living.png",
+      "designImage": null,
+      "observations": [],
+      "notVisibleOrNotVerified": []
+    },
+    {
+      "id": "dining",
+      "status": "pending",
+      "structuralReference": "references/dining.png",
+      "designImage": null,
+      "observations": [],
+      "notVisibleOrNotVerified": []
+    },
+    {
+      "id": "master",
+      "status": "pending",
+      "structuralReference": "references/master.png",
+      "designImage": null,
+      "observations": [],
+      "notVisibleOrNotVerified": []
+    },
+    {
+      "id": "study",
+      "status": "pending",
+      "structuralReference": "references/study.png",
+      "designImage": null,
+      "observations": [],
+      "notVisibleOrNotVerified": []
+    },
+    {
+      "id": "guest",
+      "status": "pending",
+      "structuralReference": "references/guest.png",
+      "designImage": null,
+      "observations": [],
+      "notVisibleOrNotVerified": []
+    },
+    {
+      "id": "kitchen",
+      "status": "pending",
+      "structuralReference": "references/kitchen.png",
+      "designImage": null,
+      "observations": [],
+      "notVisibleOrNotVerified": []
+    },
+    {
+      "id": "bathroom",
+      "status": "pending",
+      "structuralReference": "references/bathroom.png",
+      "designImage": null,
+      "observations": [],
+      "notVisibleOrNotVerified": []
+    },
+    {
+      "id": "living-detail",
+      "status": "pending",
+      "structuralReference": "references/living-detail.png",
+      "designImage": null,
+      "observations": [],
+      "notVisibleOrNotVerified": []
+    },
+    {
+      "id": "dining-detail",
+      "status": "pending",
+      "structuralReference": "references/dining-detail.png",
+      "designImage": null,
+      "observations": [],
+      "notVisibleOrNotVerified": []
+    }
+  ],
+  "limitations": [
+    "图未齐全前不标为已目视核验。",
+    "不入画墙角/开口不能通过该图认定正确。",
+    "生成图的像素尺寸不能用scene.json自动认证。"
+  ]
+}

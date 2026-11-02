@@ -1,0 +1,971 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-02",
+  "styleId": "sunlit",
+  "title": "日光花园：房型与摆位核验约束",
+  "coordinateSystem": {
+    "units": "m",
+    "planAxes": "x=图右,z=图下；不是地理东/南",
+    "sceneAxes": "Three.js x/y-up/z；Blender x/-z/y",
+    "trueNorthKnown": false,
+    "wallCoordinates": "墙中心线。净尺寸须扣除墙体；本图不能测量施工。"
+  },
+  "authority": {
+    "principle": "最新用户确认 > 后续专项布局 > 手写尺寸与校准说明 > 当前已接受墙线 > 旧图转录 > 风格效果图。存在冲突逐项合成，不能按文件日期整份覆盖。",
+    "confirmedDesign": [
+      "中央独立卫浴",
+      "主卧/次卧西侧无窗",
+      "电竞桌靠主卧共墙，客厅电视后为实墙",
+      "左床右桌次卧",
+      "餐阳台3.45m含上阳台",
+      "厨房向餐厅借0.50m",
+      "北洗炒+东南L备餐柜",
+      "南侧厨房门向左叠收",
+      "电视左侧窗边阅读位",
+      "深木餐桌+暖白移动插排"
+    ],
+    "dimensionType": "transcribed_handwritten_dimensions; not an as-built survey",
+    "existingModelsAreNotUnconditionallyAuthoritative": true
+  },
+  "sources": [
+    {
+      "id": "handwritten-dimensions",
+      "path": "docs/newStructure.jpg",
+      "priority": 2,
+      "scope": "采用手写净尺寸，不照抄旧隔墙、窗符号、旧卫浴/储物间。与public/references/dimensions.jpg完全相同。",
+      "sha256": "288b22373043e575213305b4bee239481ac6d9b4179783fee6ab7fc631c5d206"
+    },
+    {
+      "id": "original-outline",
+      "path": "public/references/original.png",
+      "priority": 4,
+      "scope": "外形/相邻关系辅助，图上明确局部估算且非统一比例。与docs/方案B/home1.png完全相同。",
+      "sha256": "37ffe816257f6efd53770170ac7ed784246a828a14d45120816a49dd263f96b5"
+    },
+    {
+      "id": "accepted-calibration",
+      "path": "docs/尺寸校准说明.md",
+      "priority": 2,
+      "scope": "主次卧删西窗、尺寸链、餐阳台合并深3.45；旧双人桌和玻璃书房叙述被后续专项替代。",
+      "sha256": "5453086d15e8cd0d1fc9f2fa629c3d633f4a69af76f1092451cf8c3eb507bf0f"
+    },
+    {
+      "id": "gaming-layout",
+      "path": "docs/电竞房布局与走线.md",
+      "priority": 1,
+      "scope": "西墙电竞桌、北侧玻璃收藏柜、原南窗与入口，替代旧窗下双桌/临时床。",
+      "sha256": "6121f0ee9e510c1fe39e4603a599bfa0448623855b3a15653af02cc48d0e7716"
+    },
+    {
+      "id": "guest-layout",
+      "path": "docs/次卧与四套风格细节修订.md",
+      "priority": 1,
+      "scope": "一人次卧左床右桌/两侧书架/西南衣柜。",
+      "sha256": "64df9aef2ef7fb4b52a97ebf78c9515aa8ed625a72a6d45e8ee040f88d959187"
+    },
+    {
+      "id": "latest-kitchen-reading",
+      "path": "docs/窗边放松区与中式厨房_20261028.md",
+      "priority": 1,
+      "scope": "新增南135×55台与东85×60台成L；南柜后固定界面，剩余四扇向左收；最新阅读位，数值拟定。",
+      "sha256": "71b181489435ebf8a727ef3b2b1b27507ff33492f2b9367fbf2a115049eb5b0a"
+    },
+    {
+      "id": "latest-style",
+      "path": "docs/日光花园_风格整体优化_20261102.md",
+      "priority": 1,
+      "scope": "仅风格/色彩/材质/咖啡移动插排，不据其推导墙体或门窗。",
+      "sha256": "c1f3b75d46e2a423c9762146e420c9fe412e3ec53f4ea261a48c3f8ff773d619"
+    },
+    {
+      "id": "current-model-walls",
+      "path": "src/model.ts",
+      "priority": 3,
+      "scope": "175–214行实际建筑墙线/开口；客厅阅读家具及厨房南台/门组仍须按专项更新。",
+      "sha256": "3d4ceab445ebc95711699cc769d46aeb3944d4eb67026c64929bfd2db23a7412"
+    },
+    {
+      "id": "dimension-chain",
+      "path": "src/dimensions.ts",
+      "priority": 2,
+      "scope": "手写尺寸组成统一坐标。0.22墙厚、2.70层高和缺尺寸偏移仍是假设。",
+      "sha256": "0831f6b220aced84342ea75c0a497a4f1248a7b679120c5b0c4a20c343cd52fc"
+    },
+    {
+      "id": "legacy-plan-c",
+      "path": "planC/data/sunlit/scene.json",
+      "priority": 5,
+      "scope": "旧图转录，旧卫浴/侧窗/厨房与尺寸不符，不作为本轮场景事实源。"
+    },
+    {
+      "id": "latest-concept-photos",
+      "path": "public/concepts/optimized/sunlit/",
+      "priority": 6,
+      "scope": "11.02九张图仅提取风格与装饰，不从其虚构门窗、测量尺度。"
+    }
+  ],
+  "geometry": {
+    "wallThickness": {
+      "value": 0.22,
+      "certainty": "model_assumption"
+    },
+    "ceilingHeight": {
+      "value": 2.7,
+      "certainty": "model_assumption"
+    },
+    "outline": {
+      "vertexCount": 20,
+      "certainty": "accepted_concept_outline",
+      "source": "dimension-chain/current-model-walls",
+      "vertices": [
+        [
+          -0.11,
+          3.92
+        ],
+        [
+          1.99,
+          3.92
+        ],
+        [
+          1.99,
+          -0.11
+        ],
+        [
+          7.13,
+          -0.11
+        ],
+        [
+          7.13,
+          -1.01
+        ],
+        [
+          9.85,
+          -1.01
+        ],
+        [
+          9.85,
+          -0.11
+        ],
+        [
+          12.69,
+          -0.11
+        ],
+        [
+          12.69,
+          2.66
+        ],
+        [
+          11.72,
+          2.66
+        ],
+        [
+          11.72,
+          4.93
+        ],
+        [
+          9.85,
+          4.93
+        ],
+        [
+          9.85,
+          7.48
+        ],
+        [
+          8.5,
+          7.48
+        ],
+        [
+          8.5,
+          9.5
+        ],
+        [
+          6.33,
+          9.5
+        ],
+        [
+          6.33,
+          8.79
+        ],
+        [
+          3.36,
+          8.79
+        ],
+        [
+          3.36,
+          9.55
+        ],
+        [
+          -0.11,
+          9.55
+        ]
+      ]
+    },
+    "roomIds": [
+      "living",
+      "dining",
+      "master",
+      "study",
+      "guest",
+      "kitchen",
+      "bathroom",
+      "balcony",
+      "entry"
+    ],
+    "physicalRoomBoundaries": {
+      "master": [
+        [
+          -0.11,
+          3.92
+        ],
+        [
+          2.9,
+          3.92
+        ],
+        [
+          2.9,
+          5.17
+        ],
+        [
+          3.36,
+          5.17
+        ],
+        [
+          3.36,
+          9.55
+        ],
+        [
+          -0.11,
+          9.55
+        ]
+      ],
+      "guest": [
+        [
+          1.99,
+          0
+        ],
+        [
+          5.26,
+          0
+        ],
+        [
+          5.26,
+          3.92
+        ],
+        [
+          1.99,
+          3.92
+        ]
+      ],
+      "study": [
+        [
+          3.36,
+          5.17
+        ],
+        [
+          6.33,
+          5.17
+        ],
+        [
+          6.33,
+          8.79
+        ],
+        [
+          3.36,
+          8.79
+        ]
+      ],
+      "living": [
+        [
+          6.33,
+          5.17
+        ],
+        [
+          9.85,
+          5.17
+        ],
+        [
+          9.85,
+          7.48
+        ],
+        [
+          8.5,
+          7.48
+        ],
+        [
+          8.5,
+          9.5
+        ],
+        [
+          6.33,
+          9.5
+        ]
+      ],
+      "bathroom": [
+        [
+          5.26,
+          0
+        ],
+        [
+          7.13,
+          0
+        ],
+        [
+          7.13,
+          3.92
+        ],
+        [
+          5.26,
+          3.92
+        ]
+      ],
+      "dining": [
+        [
+          7.13,
+          -1.01
+        ],
+        [
+          9.35,
+          -1.01
+        ],
+        [
+          9.35,
+          2.66
+        ],
+        [
+          7.13,
+          2.66
+        ]
+      ],
+      "balcony": [
+        [
+          7.13,
+          -1.01
+        ],
+        [
+          9.35,
+          -1.01
+        ],
+        [
+          9.35,
+          0.25
+        ],
+        [
+          7.13,
+          0.25
+        ]
+      ],
+      "kitchen": [
+        [
+          9.35,
+          -1.01
+        ],
+        [
+          9.85,
+          -1.01
+        ],
+        [
+          9.85,
+          0
+        ],
+        [
+          12.69,
+          0
+        ],
+        [
+          12.69,
+          2.66
+        ],
+        [
+          9.35,
+          2.66
+        ]
+      ],
+      "entry": [
+        [
+          2.9,
+          3.92
+        ],
+        [
+          7.13,
+          3.92
+        ],
+        [
+          7.13,
+          2.66
+        ],
+        [
+          11.72,
+          2.66
+        ],
+        [
+          11.72,
+          4.93
+        ],
+        [
+          9.85,
+          4.93
+        ],
+        [
+          9.85,
+          5.17
+        ],
+        [
+          2.9,
+          5.17
+        ]
+      ]
+    },
+    "masterEntranceReturns": [
+      {
+        "id": "north-dressing-wall",
+        "start": [
+          -0.11,
+          3.92
+        ],
+        "end": [
+          2.9,
+          3.92
+        ]
+      },
+      {
+        "id": "east-short-return",
+        "start": [
+          2.9,
+          4.94
+        ],
+        "end": [
+          2.9,
+          5.17
+        ]
+      }
+    ],
+    "sharedWalls": [
+      {
+        "id": "study-living-solid",
+        "rooms": [
+          "study",
+          "living"
+        ],
+        "start": [
+          6.33,
+          5.17
+        ],
+        "end": [
+          6.33,
+          9.5
+        ],
+        "certainty": "confirmed_design"
+      },
+      {
+        "id": "master-study",
+        "rooms": [
+          "master",
+          "study"
+        ],
+        "start": [
+          3.36,
+          5.17
+        ],
+        "end": [
+          3.36,
+          9.55
+        ],
+        "certainty": "accepted_model"
+      }
+    ],
+    "windows": [
+      {
+        "id": "guest-north",
+        "roomId": "guest",
+        "kind": "window",
+        "start": [
+          2.685,
+          0
+        ],
+        "end": [
+          4.035,
+          0
+        ],
+        "sill": 0.85,
+        "height": 1.43,
+        "certainty": "existing_model_assumption",
+        "source": "current-model-walls"
+      },
+      {
+        "id": "bathroom-north-high",
+        "roomId": "bathroom",
+        "kind": "window",
+        "start": [
+          5.37,
+          0
+        ],
+        "end": [
+          7.02,
+          0
+        ],
+        "sill": 1.45,
+        "height": 0.85,
+        "certainty": "existing_model_assumption",
+        "source": "current-model-walls"
+      },
+      {
+        "id": "dining-balcony-north",
+        "roomId": "dining",
+        "kind": "window",
+        "start": [
+          7.13,
+          -1.01
+        ],
+        "end": [
+          9.85,
+          -1.01
+        ],
+        "sill": 0.6,
+        "height": 1.85,
+        "certainty": "existing_model_assumption",
+        "source": "current-model-walls"
+      },
+      {
+        "id": "kitchen-north",
+        "roomId": "kitchen",
+        "kind": "window",
+        "start": [
+          10.685,
+          0
+        ],
+        "end": [
+          11.785,
+          0
+        ],
+        "sill": 0.85,
+        "height": 1.43,
+        "certainty": "existing_model_assumption",
+        "source": "current-model-walls"
+      },
+      {
+        "id": "kitchen-east",
+        "roomId": "kitchen",
+        "kind": "window",
+        "start": [
+          12.69,
+          0.975
+        ],
+        "end": [
+          12.69,
+          2.1
+        ],
+        "sill": 1.2,
+        "height": 1.08,
+        "certainty": "existing_model_assumption",
+        "source": "current-model-walls"
+      },
+      {
+        "id": "living-step-east",
+        "roomId": "living",
+        "kind": "window",
+        "start": [
+          8.5,
+          7.48
+        ],
+        "end": [
+          8.5,
+          8.34
+        ],
+        "sill": 0.85,
+        "height": 1.43,
+        "certainty": "existing_model_assumption",
+        "source": "current-model-walls"
+      },
+      {
+        "id": "living-south",
+        "roomId": "living",
+        "kind": "window",
+        "start": [
+          6.33,
+          9.5
+        ],
+        "end": [
+          8.5,
+          9.5
+        ],
+        "sill": 0.85,
+        "height": 1.43,
+        "certainty": "existing_model_assumption",
+        "source": "current-model-walls"
+      },
+      {
+        "id": "master-south",
+        "roomId": "master",
+        "kind": "window",
+        "start": [
+          0.65,
+          9.55
+        ],
+        "end": [
+          2.3,
+          9.55
+        ],
+        "sill": 0.85,
+        "height": 1.43,
+        "certainty": "existing_model_assumption",
+        "source": "current-model-walls"
+      },
+      {
+        "id": "study-south",
+        "roomId": "study",
+        "kind": "window",
+        "start": [
+          4.55,
+          8.79
+        ],
+        "end": [
+          6.33,
+          8.79
+        ],
+        "sill": 0.84,
+        "height": 1.41,
+        "certainty": "existing_model_assumption",
+        "source": "current-model-walls"
+      }
+    ],
+    "doors": [
+      {
+        "id": "guest-door",
+        "roomId": "guest",
+        "kind": "door",
+        "start": [
+          4.13,
+          3.92
+        ],
+        "end": [
+          5.15,
+          3.92
+        ],
+        "height": 2.15,
+        "certainty": "existing_model_assumption",
+        "source": "current-model-walls"
+      },
+      {
+        "id": "bathroom-door",
+        "roomId": "bathroom",
+        "kind": "door",
+        "start": [
+          6.15,
+          3.92
+        ],
+        "end": [
+          7.02,
+          3.92
+        ],
+        "height": 2.15,
+        "certainty": "existing_model_assumption",
+        "source": "current-model-walls"
+      },
+      {
+        "id": "master-door",
+        "roomId": "master",
+        "kind": "door",
+        "start": [
+          2.9,
+          3.92
+        ],
+        "end": [
+          2.9,
+          4.94
+        ],
+        "height": 2.15,
+        "certainty": "existing_model_assumption",
+        "source": "current-model-walls"
+      },
+      {
+        "id": "study-door",
+        "roomId": "study",
+        "kind": "door",
+        "start": [
+          5.15,
+          5.17
+        ],
+        "end": [
+          6.22,
+          5.17
+        ],
+        "height": 2.15,
+        "certainty": "existing_model_assumption",
+        "source": "current-model-walls"
+      },
+      {
+        "id": "entry-door",
+        "roomId": "entry",
+        "kind": "door",
+        "start": [
+          11.72,
+          2.89
+        ],
+        "end": [
+          11.72,
+          3.91
+        ],
+        "height": 2.15,
+        "certainty": "existing_model_assumption",
+        "source": "current-model-walls"
+      }
+    ],
+    "kitchenEnclosure": {
+      "certainty": "proposed_concept_design",
+      "west": {
+        "x": 9.35,
+        "panels": 5,
+        "stackDirection": "drawing_north",
+        "floorTrack": false
+      },
+      "south": {
+        "z": 2.66,
+        "panels": 4,
+        "stackDirection": "drawing_left",
+        "fixedCounterLength": 1.35,
+        "counterDepth": 0.55,
+        "targetClearOpeningRange": [
+          1.25,
+          1.3
+        ],
+        "floorTrack": false
+      },
+      "originalSoutheastReturn": {
+        "start": [
+          11.72,
+          2.66
+        ],
+        "end": [
+          12.69,
+          2.66
+        ],
+        "mustRemain": true
+      },
+      "keepNorthAndEastWindows": true,
+      "noIsland": true,
+      "implementedAnchorNotes": {
+        "northCounterFrontZ": 0.74,
+        "southCounterFrontZ": 2.0,
+        "staticCounterGapM": 1.26,
+        "southDoorClearOpeningM": 1.39,
+        "certainty": "derived_from_accepted_model_anchors_not_surveyed",
+        "nominalDocumentGapM": 1.29,
+        "nominalDocumentDoorTargetRangeM": [
+          1.25,
+          1.3
+        ]
+      }
+    },
+    "dimensions": {
+      "masterSleeping": [
+        3.25,
+        3.35
+      ],
+      "dressing": [
+        2.12,
+        1.94
+      ],
+      "guestWidth": 3.05,
+      "gaming": [
+        2.75,
+        3.4
+      ],
+      "bathroom": [
+        1.65,
+        3.7
+      ],
+      "diningOriginalWidth": 2.5,
+      "diningBalconyCombinedDepth": 3.45,
+      "kitchenOriginal": [
+        2.62,
+        2.44
+      ],
+      "kitchenProposed": [
+        3.1,
+        2.44
+      ],
+      "publicPassage": 1.03,
+      "livingMain": [
+        3.3,
+        4.6
+      ],
+      "livingLowerAlcove": [
+        1.95,
+        1.8
+      ],
+      "entry": [
+        1.65,
+        2.05
+      ]
+    },
+    "dimensionNotes": [
+      "上述净尺寸来自手写转录，非现场复测报告。",
+      "次卧进深由中央卫浴共边推定，没有独立实测标注。",
+      "餐阳台3.45包含阳台，二者分界未单独测量。",
+      "厨房南回墙原长约85–97cm，两组约数不能直接下单。",
+      "主卧入口0.93m原通道用于组织，不恢复旧隔墙。"
+    ]
+  },
+  "placement": {
+    "certainty": "design_positions_not_existing_site_survey",
+    "allowedOverlaps": [],
+    "rules": [
+      {
+        "id": "guest-bed-west-of-desk",
+        "kind": "order",
+        "roles": [
+          "guest-bed",
+          "guest-desk"
+        ],
+        "axis": "x"
+      },
+      {
+        "id": "gaming-desk-near-master-wall",
+        "kind": "range",
+        "roles": [
+          "gaming-desk"
+        ],
+        "property": "x",
+        "min": 3.7,
+        "max": 4.05
+      },
+      {
+        "id": "dining-bench-west-of-table",
+        "kind": "order",
+        "roles": [
+          "dining-bench",
+          "dining-table"
+        ],
+        "axis": "x"
+      },
+      {
+        "id": "coffee-west-side",
+        "kind": "range",
+        "roles": [
+          "coffee-sideboard"
+        ],
+        "property": "x",
+        "min": 7.35,
+        "max": 7.55
+      },
+      {
+        "id": "coffee-north-end",
+        "kind": "range",
+        "roles": [
+          "coffee-sideboard"
+        ],
+        "property": "z",
+        "min": -0.2,
+        "max": 0.2
+      },
+      {
+        "id": "sofa-east-of-tv",
+        "kind": "order",
+        "roles": [
+          "tv-console",
+          "living-sofa"
+        ],
+        "axis": "x"
+      },
+      {
+        "id": "sofa-tv-opposite",
+        "kind": "same_axis",
+        "roles": [
+          "tv-console",
+          "living-sofa"
+        ],
+        "axis": "z",
+        "tolerance": 0.08
+      },
+      {
+        "id": "reading-at-living-south",
+        "kind": "range",
+        "roles": [
+          "reading-chair"
+        ],
+        "property": "z",
+        "min": 8.0,
+        "max": 9.1
+      },
+      {
+        "id": "kitchen-ne-fridge-x",
+        "kind": "range",
+        "roles": [
+          "refrigerator"
+        ],
+        "property": "x",
+        "min": 12.05,
+        "max": 12.3
+      },
+      {
+        "id": "kitchen-ne-fridge-z",
+        "kind": "range",
+        "roles": [
+          "refrigerator"
+        ],
+        "property": "z",
+        "min": 0.42,
+        "max": 0.6
+      },
+      {
+        "id": "bathroom-north-to-south",
+        "kind": "order",
+        "roles": [
+          "shower",
+          "toilet",
+          "washer",
+          "basin"
+        ],
+        "axis": "z"
+      }
+    ],
+    "functionalNotes": {
+      "living": "约75–82cm阅读椅、45×40脚凳、32cm小边几，帘布与通路余量待选型复测；深木点缀不改变窗/折角。",
+      "dining": "120×70桌长轴图上下，西凳、两端椅；东边留通路，不加东侧椅。",
+      "coffee": "150×48白柜浅台沿西墙北段，面朝图右；暖白有线移动插排，可拆固定，开关可达，收线避水和热。",
+      "master": "1.80床，北入口衣帽区闭柜；保留东西界内折与单一南窗，西墙完整。",
+      "guest": "西1.20×2.10抽屉床，东2.30×.65桌，两侧浅架，西南衣柜，东南原门。",
+      "study": "西墙1.80×.75桌、洞洞板；北侧门左玻璃移门展示柜；椅后通路，不增加RGB或床。",
+      "kitchen": "北230×60洗炒，灶西实墙/槽北窗；东北70cm冰箱；东85×60+南135×55成L，共享转角不重复算面积。",
+      "bathroom": "西墙北至南淋浴/马桶/洗衣机/台盆，洗盆148cm共台，东侧通路。"
+    },
+    "allowedOpenZoneCrossings": {
+      "dining-chair-south": [
+        "entry"
+      ]
+    },
+    "allowedOpenZoneCrossingNote": "餐厅南侧与公共区连续开放，南端椅后缘越过餐厅功能分区约0.10m；允许进入入口公共区，不穿墙也不放宽门口占位。端椅有人就坐/拉出时须让行。"
+  },
+  "verification": {
+    "geometry": "scripts/check-sunlit-spatial.py checks actual exported scene rather than prompt text.",
+    "visual": "Each generated main/detail image is checked against same-camera deterministic reference; cannot be certified by geometry checks.",
+    "rejectImageIf": [
+      "房型拐角消失/新增墙洞",
+      "门窗数量或所在墙变化",
+      "家具方向/位置与结构底图不一致",
+      "对照近景与全景门窗/物件互相矛盾",
+      "AI把短柜/台面延伸堵住入口或冰箱",
+      "镜像房型或大幅扩大空间"
+    ],
+    "doNotClaim": "不能声称生成照片经自动几何核验或保证与实测户型完全一致。",
+    "requiredImageIds": [
+      "living",
+      "dining",
+      "master",
+      "study",
+      "guest",
+      "kitchen",
+      "bathroom",
+      "living-detail",
+      "dining-detail"
+    ]
+  },
+  "limitations": [
+    "原始尺寸照片有透视且缺尺寸，不能按单一像素比例补齐。",
+    "墙厚、层高、门窗宽高、窗台及部分偏移为当前模型假设。",
+    "地理北向、日照、承重属性未确认；图纸上方不是已确认地理北。",
+    "自动核验仅覆盖导出确定性几何、声明家具footprint及开口，不覆盖AI像素。",
+    "家具产品未选定，活动门扇、抽屉和人体动态净距仍需现场深化。",
+    "风格效果图可目视筛选结构偏差，不能替代施工图与现场复核。"
+  ]
+}

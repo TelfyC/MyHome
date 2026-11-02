@@ -1,0 +1,26 @@
+{
+  "room": "guest",
+  "date": "2026-11-02",
+  "method": "built-in image_gen",
+  "useCase": "precise-object-edit",
+  "inputImages": [
+    "public/concepts/sunlit/guest.png",
+    "public/concepts/variants/sunlit/dining-dark-cherry.png"
+  ],
+  "file": "guest.png",
+  "source": "/home/juntao.ji@formal-tech.group/.codex-openai/generated_images/01a199f3-7bc2-7c33-980d-93c72a16a54d/exec-88844d38-c571-4690-bb02-8506b747e9d8.png",
+  "prompt": "Use case: precise-object-edit.\nAsset type: refined Sunlit Garden secondary bedroom and study concept photograph.\nInput images: Image 1 is the EDIT TARGET, preserve the original small bedroom. Image 2 is ONLY a wood-finish reference, use its matte warm dark chestnut/cherry-brown dining table color on the bedside cabinet and one tiny desk accessory.\nPrimary request: Polish this existing bedroom's style and details to reduce all-over same-tone honey wood. Make ONLY the compact bedside drawer cabinet beside the bed dark warm chestnut cherry-brown around #6b4435, including legs, subtle fine real wood grain and low matte sheen. Keep its existing shape, handles, position and size. Repeat that deeper brown in one small simple catchall tray on the desk and a slim desk-side botanical picture frame only. Keep the left drawer bed, long right desk body/edge, left wardrobe and all shallow wall bookshelves in the original pale honey oak. Preserve the desk's warm-white tabletop.\nTextiles: muted sage green and ivory fine stripe bedcover, simple ivory linen pillow and one sage pillow, small ivory throw. Keep plain sage green curtains at the one far end window, avoid further pattern and pillow clutter. Maintain the chair's original pale wood and muted green upholstered seat.\nImportant detail refinement: remove plants and trailing leaves from shelves directly over the bed so nothing dangles over the pillows. Remove loose small objects from those left shelves and group fewer books with generous empty lengths of shelf. Keep high shelf positions and plausible substantial shelf supports. On desk-side shelves use a few tidy book groups and one simple cream ceramic vessel; no many dangling plants. At window retain only one compact plant off to a side, leave window handle clear and let curtains open naturally. Keep the bedside top clear enough for a book and cup; no plant dominating it.\nEveryday function: long desktop remains mostly open around computer, keyboard and task lamp, only two pencil tools and one small tray. Consolidate visible computer cable neatly into one rear desktop route with no impossible floating wire. Keep realistic furniture seams and drawers, no overlap of chair with desk, uncluttered central walking aisle, drawers can open. Neutral warm natural daylight, clean warm-white walls and gentle shadows, no exaggerated yellow/orange filter.\nInvariants: SAME camera, landscape 1536x1024 crop, room boundary, original single end wall window only, curtains, left approximately 1.2m drawer bed, right approximately 2.3m long desk, both shallow shelf rows, wardrobe and original floor. No new side window, no additional furniture, no people, no text, no logo, no watermark. Deliver a single beautiful realistic interior photograph.",
+  "review": {
+    "status": "selected",
+    "findings": [
+      "仅小床头柜改为暖栗深棕，右侧小托盘和细画框形成少量呼应；床、长桌与书架仍浅木。",
+      "左床右白台长桌、原正面单窗及绿色帘布保留，没有新增侧窗。",
+      "移除床上方绿植及垂藤，书本分组留白；桌面小植物移除，窗口植物缩为单组。",
+      "绿白细条纹、米白织物、绿色座垫和工作灯保持统一；中央通路和桌面更清楚。"
+    ],
+    "limitations": [
+      "层板固定、实际开窗与椅后净距仍需现场核对。",
+      "风格概念图，不用于核定实际尺寸。"
+    ]
+  }
+}

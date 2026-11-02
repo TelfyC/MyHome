@@ -1,0 +1,131 @@
+{
+  "verification_date": "2026-10-30",
+  "unit_tests": {
+    "command": "planC/.venv/bin/python -m pytest planC/tests -q",
+    "passed": 46,
+    "failed": 0,
+    "duration_s": 2.27,
+    "warnings": [
+      "Starlette TestClient reports an upstream AnyIO BlockingPortal deprecation."
+    ]
+  },
+  "api_smoke": {
+    "job_id": "job_b552fc2e10ca4f43",
+    "scene_revision": 1,
+    "terminal_state": "LOOKDEV_PREVIEWED",
+    "build_id": "build_ed07cbeac7e5c978",
+    "builder_sha256": "f48697c134d3b84d4a893152f83bed9b70107899178e1d958eee277c37513409",
+    "builder_script_sha256": "1d100821129986972965d0eaa059f352287a0551ed6dade74da300a7a61a1fcb",
+    "asset_importer_sha256": "c2f1d891b605c640154bb8ddabea91d3c8e09cec894530b1e6d19a2c1590aad6",
+    "source_scene_hash": "47f6d9e8b4f2910d7ce5b67dfc539ea7765ee2e71570de7c2679838e9e43024f",
+    "asset_manifest_hash": "f7086bf44c940f9cbadb1588fd42aa9df0b82f9f33cbf072a9b58201a9afbccd",
+    "resolution_px": [
+      960,
+      540
+    ],
+    "build_duration_s": 150.3,
+    "render_duration_s": 32.14,
+    "artifact_directory": "planC/outputs/home1_sunlit/r1/job_b552fc2e10ca4f43",
+    "report_source": "/tmp/planc-api-current-builder-smoke-report.json",
+    "qa": {
+      "build": {
+        "project_id": "home1_sunlit",
+        "scene_revision": 1,
+        "status": "pass",
+        "issues": [],
+        "evidence": [
+          {
+            "path": "/home/juntao.ji@formal-tech.group/Desktop/home3D/planC/outputs/home1_sunlit/r1/job_b552fc2e10ca4f43/project.blend",
+            "sha256": "529c8c7184441acce956b9171c6767f4bf72309ba745241843f92840ef6539e0",
+            "build_id": "build_ed07cbeac7e5c978",
+            "inspection_path": "/home/juntao.ji@formal-tech.group/Desktop/home3D/planC/outputs/home1_sunlit/r1/job_b552fc2e10ca4f43/inspection.json"
+          }
+        ]
+      },
+      "render": {
+        "project_id": "home1_sunlit",
+        "scene_revision": 1,
+        "status": "pass",
+        "issues": [],
+        "evidence": [
+          {
+            "path": "/home/juntao.ji@formal-tech.group/Desktop/home3D/planC/outputs/home1_sunlit/r1/job_b552fc2e10ca4f43/renders/camera_living_still_preview_fast.png",
+            "sha256": "5d0cffb27d1aa7f2e207be62970d0f57772b329388925d24f542e95c48734105",
+            "resolution_px": [
+              960,
+              540
+            ],
+            "build_id": "build_ed07cbeac7e5c978",
+            "camera_id": "camera_living_still"
+          }
+        ]
+      }
+    }
+  },
+  "limits": [
+    "Development fixtures and image-inferred structure remain preview-only.",
+    "A visual reviewer has not approved a production photo-realistic delivery."
+  ],
+  "previous_api_smokes": [
+    {
+      "job_id": "job_9f5276c9a8fb4a44",
+      "scene_revision": 1,
+      "terminal_state": "LOOKDEV_PREVIEWED",
+      "build_id": "build_73e6e9d0dc7dba3b",
+      "builder_sha256": "27db3a510f03c9e9b4c46f4412ba08257d11d5ff6c54a6f2b7306893123199a6",
+      "source_scene_hash": "0cffaa68d6162f12b4f9e4101dea769112033d2296142b9c6e75a23e16229c72",
+      "asset_manifest_hash": "f7086bf44c940f9cbadb1588fd42aa9df0b82f9f33cbf072a9b58201a9afbccd",
+      "resolution_px": [
+        960,
+        540
+      ],
+      "build_duration_s": 76.84,
+      "render_duration_s": 23.35,
+      "artifact_directory": "planC/outputs/home1_sunlit/r1/job_9f5276c9a8fb4a44",
+      "report_source": "/tmp/planc-api-smoke-report.json",
+      "qa": {
+        "build": {
+          "project_id": "home1_sunlit",
+          "scene_revision": 1,
+          "status": "pass",
+          "issues": [],
+          "evidence": [
+            {
+              "path": "planC/outputs/home1_sunlit/r1/job_9f5276c9a8fb4a44/project.blend",
+              "sha256": "b75931bbbf20e46cb4ac6e9bfc498c3462f0089a9fb08ef9623b515364272c3c",
+              "build_id": "build_73e6e9d0dc7dba3b",
+              "inspection_path": "planC/outputs/home1_sunlit/r1/job_9f5276c9a8fb4a44/inspection.json"
+            }
+          ]
+        },
+        "render": {
+          "project_id": "home1_sunlit",
+          "scene_revision": 1,
+          "status": "pass",
+          "issues": [],
+          "evidence": [
+            {
+              "path": "planC/outputs/home1_sunlit/r1/job_9f5276c9a8fb4a44/renders/camera_living_still_preview_fast.png",
+              "sha256": "5969ffa972523006c825f3867ef0e4eb0fd43c548dbef6503119b730cae24728",
+              "resolution_px": [
+                960,
+                540
+              ],
+              "build_id": "build_73e6e9d0dc7dba3b",
+              "camera_id": "camera_living_still"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "material_serialization_regression": {
+    "command": "planC/.venv/bin/python -m pytest planC/tests/test_assets_jobs_qa.py -k worker_serialization -q",
+    "passed": 1,
+    "failed": 0,
+    "checks": [
+      "All seven fixture materials have finite non-null PBR defaults in the worker snapshot.",
+      "Unknown latitude, longitude and true north remain null."
+    ]
+  }
+}
